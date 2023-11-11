@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Blueprint</title>
-  <link href="/.modules/bootstrap/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="/.modules/bootstrap/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
   <link href="/.modules/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" crossorigin="anonymous">
   <link href="./index.css" rel="stylesheet" crossorigin="anonymous">
 </head>
@@ -15,12 +15,12 @@
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/" class="d-flex align-items-center mb-2 me-2 mb-lg-0 link-body-emphasis text-decoration-none">
-          <img src="https://i.imgur.com/zQjZqGq.jpg" width="35" height="35" class="rounded-3" alt="" />
+          <img src="/.assets/brand/logoBlue.jpg" width="35" height="35" class="rounded-3" alt="" />
         </a>
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+          <li><a href="/" class="nav-link px-2 link-secondary">Home</a></li>
           <li><a href="#" class="nav-link px-2 link-body-emphasis">Extensions <span class="badge text-bg-primary">Coming Soon</span></a></li>
-          <li><a href="#" class="nav-link px-2 link-body-emphasis">Documentation</a></li>
+          <li><a href="/docs" class="nav-link px-2 link-body-emphasis">Documentation</a></li>
         </ul>
         <a href="#"><button type="button" class="btn btn-primary">Download</button></a>
       </div>
@@ -31,15 +31,15 @@
   <div class="p-2 d-lg-none d-inline"></div>
   <nav class="navbar bg-dark-subtle fixed-top d-lg-none d-inline">
     <div class="container-fluid">
-      <a href="/" class="d-flex align-items-center mb-2 me-2 mt-2 mb-lg-0 link-body-emphasis text-decoration-none"><img src="https://i.imgur.com/zQjZqGq.jpg" width="40" height="40" class="rounded-3" alt="" /></a>
+      <a href="/" class="d-flex align-items-center mb-2 me-2 mt-2 mb-lg-0 link-body-emphasis text-decoration-none"><img src="/.assets/brand/logoBlue.jpg" width="40" height="40" class="rounded-3" alt="" /></a>
       <div class="dropdown">
         <button class="btn btn-secondary bg-dark-subtle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           <span class="navbar-toggler-icon"></span>
         </button>
         <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 border-0 shadow w-220px">
-          <li><a class="dropdown-item rounded-2 disabled" href="#">Home</a></li>
+          <li><a class="dropdown-item rounded-2 disabled" href="/">Home</a></li>
           <li><a class="dropdown-item rounded-2" href="#">Extensions <span class="badge text-bg-primary">Coming Soon</span></a></li>
-          <li><a class="dropdown-item rounded-2" href="#">Documentation</a></li>
+          <li><a class="dropdown-item rounded-2" href="/docs">Documentation</a></li>
           <li>
             <hr class="dropdown-divider">
           </li>
@@ -49,12 +49,14 @@
     </div>
   </nav>
 
+
+
   <!-- Content -->
   
   <!-- Hero -->
   <div class="bp-grid">
     <div class="px-4 my-5 text-center bp-hero">
-      <img class="d-block mx-auto mb-3 rounded-5" src="https://i.imgur.com/drAEl6A.png" alt="" width="85" height="85">
+      <img class="d-block mx-auto mb-3 rounded-5" src="/.assets/brand/logoTransparent.png" alt="" width="85" height="85">
       <h1 class="col-lg-7 mx-auto display-4 fw-bold text-body-emphasis">Build powerful themes and extensions with Blueprint.</h1>
       <div class="col-lg-6 mx-auto">
         <p class="lead my-3">
@@ -73,7 +75,7 @@
   <div class="px-4 pt-5 my-5 text-center border-bottom">
     <div class="overflow-hidden bp-screenshot-cutoff" style="max-height: 30vh;">
       <div class="container px-1">
-        <img src="https://i.imgur.com/7OFrAJQ.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Admin Screenshot" loading="lazy" width="700" height="500">
+        <img src="/.assets/storage/misc/jpg/1.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Admin Screenshot" loading="lazy" width="700" height="500">
       </div>
     </div>
   </div>
@@ -98,7 +100,7 @@
         </div>
         <h3 class="fs-2 text-body-emphasis">Documentation</h3>
         <p>Learn to build extensions with step-by-step guides and refer to documentation of Blueprint's features and extension apis.</p>
-        <a href="#" class="icon-link">
+        <a href="/docs" class="icon-link">
           Read more
           <i class="bi bi-chevron-right" style="font-size: 1em; height: 1.2em; width: 1em;"></i>
         </a>
@@ -109,8 +111,8 @@
         </div>
         <h3 class="fs-2 text-body-emphasis">Templates</h3>
         <p>Start your next extension project from scratch or start from a template, all without leaving your command line.</p>
-        <a href="#" class="icon-link">
-          Template repository
+        <a href="" class="icon-link">
+          Browse templates <span class="badge text-bg-primary">Coming Soon</span>
           <i class="bi bi-chevron-right" style="font-size: 1em; height: 1.2em; width: 1em;"></i>
         </a>
       </div>
@@ -121,7 +123,7 @@
         </div>
         <h3 class="fs-2 text-body-emphasis">Donation-funded</h3>
         <p>People just like you fund future development for Blueprint by donating.</p>
-        <a href="#" class="icon-link">
+        <a href="https://liberapay.com/blueprint" class="icon-link">
           Donate
           <i class="bi bi-chevron-right" style="font-size: 1em; height: 1.2em; width: 1em;"></i>
         </a>
@@ -132,8 +134,8 @@
         </div>
         <h3 class="fs-2 text-body-emphasis">Beginner-friendly</h3>
         <p>Both installing and developing extensions is made to be less complicated than conventional methods.</p>
-        <a href="#" class="icon-link">
-          Begin with installation
+        <a href="/docs" class="icon-link">
+          Install Blueprint
           <i class="bi bi-chevron-right" style="font-size: 1em; height: 1.2em; width: 1em;"></i>
         </a>
       </div>
@@ -163,11 +165,13 @@
         </div>
       </div>
       <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-          <img class="rounded-3 d-lg-inline d-none" src="https://i.imgur.com/pjlaaeV.png" alt="" width="720">
+          <img class="rounded-3 d-lg-inline d-none" src="/.assets/storage/misc/png/1.png" alt="" width="720">
       </div>
     </div>
   </div>
   
+
+
   <!-- Footer -->
   <div class="container">
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -184,12 +188,12 @@
     </div>
 
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-      <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-discord" width="24" height="24"></i></a></li>
-      <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-github" width="24" height="24"></i></a></li>
-      <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-chat-right-heart-fill" width="24" height="24"></i></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="https://discord.gg/CUwHwv6xRe"><i class="bi bi-discord" width="24" height="24"></i></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="https://github.com/teamblueprint/main"><i class="bi bi-github" width="24" height="24"></i></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="https://liberapay.com/blueprint"><i class="bi bi-chat-right-heart-fill" width="24" height="24"></i></a></li>
     </ul>
   </footer>
 </div>
 
-  <script src="/.modules/bootstrap/js/bootstrap.bundle.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="/.modules/bootstrap/js/bootstrap.bundle.js" crossorigin="anonymous"></script>
 </body>
