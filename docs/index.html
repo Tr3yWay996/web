@@ -58,9 +58,9 @@
       <div class="col-2">
         <div class="docs-category pb-4">
           <span class="ps-2 fw-bolder">Getting started</span><br>
-          <button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Installation</button><br>
-          <button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Extension development</button><br>
-          <button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Contribute</button><br>
+          <a href="?page=getting-started/Installation"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Installation</button></a><br>
+          <a href="?page=getting-started/Extension-development"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Extension development</button></a><br>
+          <a href="?page=getting-started/Contribute"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Contribute</button></a><br>
         </div>
         <div class="docs-category pb-4">
           <span class="ps-2 fw-bolder">Guides</span><br>
@@ -71,9 +71,12 @@
           <button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Custom controllers</button><br>
         </div>
       </div>
-      <div class="col-10">
-        <h2><i class="bi bi-journal-code"></i> Documentation</h2>
-        <p>Select something from the sidebar to get started.</p>
+      <div class="col-10" id="content">
+        <div class="d-flex justify-content-center">
+          <div class="spinner-border spinner-border-sm text-secondary mt-4" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -86,22 +89,44 @@
     <div class="col-md-4 d-flex align-items-center">
       <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
         <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" width="30" height="24" fill="#aeb2b6">
-  <rect x="0" y="166.6666" width="166.6666" height="166.6666"/>
-  <rect x="166.6666" y="0" width="166.6666" height="166.6666"/>
-  <rect x="166.6666" y="333.3332" width="333.3332" height="166.6666"/>
-  <rect x="333.3332" y="166.6666" width="166.667" height="333.3332"/>
-</svg>
+          <rect x="0" y="166.6666" width="166.6666" height="166.6666"/>
+          <rect x="166.6666" y="0" width="166.6666" height="166.6666"/>
+          <rect x="166.6666" y="333.3332" width="333.3332" height="166.6666"/>
+          <rect x="333.3332" y="166.6666" width="166.667" height="333.3332"/>
+        </svg>
       </a>
       <span class="mb-3 mb-md-0 text-body-secondary">© 2023 prpl.wtf</span>
     </div>
 
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-      <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-discord" width="24" height="24"></i></a></li>
-      <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-github" width="24" height="24"></i></a></li>
-      <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-chat-right-heart-fill" width="24" height="24"></i></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="https://discord.gg/CUwHwv6xRe"><i class="bi bi-discord" width="24" height="24"></i></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="https://github.com/teamblueprint/main"><i class="bi bi-github" width="24" height="24"></i></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="https://liberapay.com/blueprint"><i class="bi bi-chat-right-heart-fill" width="24" height="24"></i></a></li>
     </ul>
   </footer>
 </div>
 
   <script src="/.modules/bootstrap/js/bootstrap.bundle.js" crossorigin="anonymous"></script>
+  <script src="/.modules/marked/marked.min.js" crossorigin="anonymous"></script>
+  <script>
+    var u = new URL(window.location.href);
+    var d = u.searchParams.get('page');
+    try { document.querySelector('a[href="?page='+d+'"] button').classList.add("disabled") } catch {  }
+    if(d) { a = './pages/'+d+'.md' } else { a = './pages/Documentation.md' }
+    fetch(a)
+      .then(b => {
+        if (!b.ok) {
+          throw new Error(`Network response was not ok: ${b.status}`);
+          window.location="?page=Error"
+        }
+        return b.text();
+      })
+      .then(markdownContent => {
+        document.getElementById('content').innerHTML = marked.parse(markdownContent);
+      })
+      .catch(c => {
+        console.error('Error fetching the Markdown content:', c);
+        window.location="?page=Error"
+      });
+  </script>
 </body>
