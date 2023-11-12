@@ -1,5 +1,5 @@
 # placeholders
-<h4 class="fw-light">Strings that are automatically replaced with specific values upon extension installation.</h4><br/>
+<h4 class="fw-light">Strings that are automatically replaced with specific values upon extension installation</h4><br/>
 
 ### **What are placeholders?**
 Placeholders allow extensions to easily get information from each and every file in their extension, preventing the need to ask users for the Pterodactyl installation path for example.
@@ -10,16 +10,16 @@ Placeholders allow extensions to easily get information from each and every file
 
 ##### Static information
 `^#version#^`\
-Version defined in conf.yml.
+Version defined in [conf.yml](?page=documentation/confyml).
 
 `^#author#^`\
-Author defined in conf.yml.
+Author defined in [conf.yml](?page=documentation/confyml).
 
 `^#identifier#^`\
-Identifier defined in conf.yml.
+Identifier defined in [conf.yml](?page=documentation/confyml).
 
 `^#name#^`\
-Display name defined in conf.yml.
+Display name defined in [conf.yml](?page=documentation/confyml).
 
 <br/>
 
