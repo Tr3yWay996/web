@@ -8,14 +8,13 @@
 <br/>
 
 ### **What is $blueprint?**
-$blueprint (short for BlueprintExtensionLibrary) allows extensions to do operations like databasing inside of custom controllers (if imported), admin wrappers and dashboard wrappers.
+\$blueprint (short for BlueprintExtensionLibrary) allows extensions to do operations like databasing inside of custom controllers (if imported), admin wrappers and dashboard wrappers.
 
 The BlueprintExtensionLibrary is automatically imported to dashboard wrappers, admin wrappers and default admin controllers. It's mainly used to carry over configuration options from the extension's admin page to anywhere else but can also be used to read, make and wipe files or display notifications to administrators.
 
 <br/>
 
 ### **Functions**
-<br/>
 
 ##### Databasing <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">Universal</span>
 `dbGet(table, record)`\
