@@ -4,7 +4,6 @@
   <title>Blueprint</title>
   <link href="/.modules/bootstrap/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
   <link href="/.modules/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" crossorigin="anonymous">
-  <link href="./index.css" rel="stylesheet" crossorigin="anonymous">
 </head>
 
 <body data-bs-theme="dark">
@@ -57,21 +56,28 @@
     <div class="row">
       <div class="col-lg-2 col-md-4 col-sm-12">
         <div class="docs-category pb-4">
-          <span class="ps-2 fw-bolder">Getting started</span><br>
+          <div class="ms-2"><span class="fw-bolder">Getting started</span><br></div>
           <a href="?page=getting-started/Installation"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Installation</button></a><br>
           <a href="?page=getting-started/Extension-development"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Extension development</button></a><br>
           <a href="?page=getting-started/Frequently-asked-questions"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Frequently Asked Questions</button></a><br>
         </div>
         <div class="docs-category pb-4">
-          <span class="ps-2 fw-bolder">Guides</span><br>
-          <button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Writing extensions</button><br>
-          <button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Packaging extensions</button><br>
-          <button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Importing $blueprint</button><br>
-          <button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Admin configuration</button><br>
-          <button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Custom controllers</button><br>
+          <div class="ms-2"><span class="fw-bolder">Developing extensions</span><br></div>
+          <a href="?page=developing-extensions/Writing-extensions"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Writing extensions</button><br></a>
+          <a href="?page=developing-extensions/Packaging-extensions"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Packaging extensions</button><br></a>
+          <a href="?page=developing-extensions/Importing-$blueprint"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Importing $blueprint</button><br></a>
+          <a href="?page=developing-extensions/Admin-configuration"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Admin configuration</button><br></a>
+          <a href="?page=developing-extensions/Custom-controllers"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Custom controllers</button><br></a>
+        </div>
+        <div class="docs-category pb-4">
+          <div class="ms-2"><span class="fw-bolder">Documentation</span><br></div>
+          <a href="?page=documentation/$blueprint"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">$blueprint</button><br></a>
+          <a href="?page=documentation/confyml"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">conf.yml</button><br></a>
+          <a href="?page=documentation/placeholders"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">placeholders</button><br></a>
+          <a href="?page=documentation/flags"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">flags</button><br></a>
         </div>
       </div>
-      <div class="d-lg-none d-md-none d-sm-inline border-bottom mb-4"></div>
+      <div class="container d-lg-none d-md-none d-sm-inline mb-4"><div class="border-bottom"></div></div>
       <div class="col-lg-10 col-md-8 col-sm-12" id="content">
         <div class="d-flex justify-content-center">
           <div class="spinner-border spinner-border-sm text-secondary mt-4" role="status">

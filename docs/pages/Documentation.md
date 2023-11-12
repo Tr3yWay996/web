@@ -1,2 +1,32 @@
 # Documentation
 <h4 class="fw-light">Guides and feature documentation for developers and system administrators</h4>
+
+<div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-3 pt-4">
+  <div class="col">
+    <a href="?page=getting-started/Installation" class="link-underline-opacity-0 link-underline">
+      <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark-subtle bg-hover-dark">
+        <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+          <h3 class="fw-bolder">Installation</h3>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="col">
+    <a href="?page=getting-started/Extension-development"  class="link-underline-opacity-0 link-underline">
+      <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark-subtle">
+        <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+          <h3 class="fw-bold">Extension development</h3>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="col">
+    <a href="?page=getting-started/Frequently-asked-questions" class="link-underline-opacity-0 link-underline">
+      <div class="card card-cover h-auto overflow-hidden rounded-4 bg-dark-subtle">
+        <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+          <h3 class="fw-bold">Frequently Asked Questions</h3>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
