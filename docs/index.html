@@ -4,6 +4,7 @@
   <title>Blueprint</title>
   <link href="/.modules/bootstrap/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
   <link href="/.modules/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="/.modules/highlight.js/styles/atom-one-dark.css" rel="stylesheet" crossorigin="anonymous">
 </head>
 
 <body data-bs-theme="dark">
@@ -64,10 +65,10 @@
         <div class="docs-category pb-4">
           <div class="ms-2"><span class="fw-bolder">Developing extensions</span><br></div>
           <a href="?page=developing-extensions/Writing-extensions"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Writing extensions</button><br></a>
-          <a href="?page=developing-extensions/Packaging-extensions"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Packaging extensions</button><br></a>
+          <a href="?page=developing-extensions/Custom-controllers"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Custom controllers</button><br></a>
           <a href="?page=developing-extensions/Importing-$blueprint"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Importing $blueprint</button><br></a>
           <a href="?page=developing-extensions/Admin-configuration"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Admin configuration</button><br></a>
-          <a href="?page=developing-extensions/Custom-controllers"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Custom controllers</button><br></a>
+          <a href="?page=developing-extensions/Packaging-extensions"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Packaging extensions</button><br></a>
         </div>
         <div class="docs-category pb-4">
           <div class="ms-2"><span class="fw-bolder">Documentation</span><br></div>
@@ -121,6 +122,7 @@
 
   <script src="/.modules/bootstrap/js/bootstrap.bundle.js" crossorigin="anonymous"></script>
   <script src="/.modules/marked/marked.min.js" crossorigin="anonymous"></script>
+  <script src="/.modules/highlight.js/highlight.min.js" crossorigin="anonymous"></script>
   <script>
     var u = new URL(window.location.href);
     var d = u.searchParams.get('page');
@@ -136,6 +138,7 @@
       })
       .then(markdownContent => {
         document.getElementById('content').innerHTML = marked.parse(markdownContent);
+        hljs.highlightAll(document.getElementById('content'));
       })
       .catch(c => {
         console.error('Error fetching the Markdown content:', c);

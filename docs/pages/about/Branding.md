@@ -9,17 +9,17 @@ Want to use Blueprint’s brand resources? Awesome! We have only a few guideline
 We have a bunch of different versions of our logo which you may use when referring to or referencing Blueprint. You may not modify them. Using our logo for your own open and/or closed source projects is not allowed.
 
 <div class="row">
-  <div class="col-4">
+  <div class="col-lg-4 col-md-12">
     <div class="px-2 py-5 mb-3 border rounded-3">
       <img src="/.assets/brand/logo.jpg" width="200" height="200" class="d-block mx-auto rounded-2" alt="Blueprint"/>
     </div>
   </div>
-  <div class="col-4">
+  <div class="col-lg-4 col-md-12">
     <div class="px-2 py-5 mb-3 border rounded-3">
       <img src="/.assets/brand/logoBlue.jpg" width="200" height="200" class="d-block mx-auto rounded-2" alt="Blueprint"/>
     </div>
   </div>
-  <div class="col-4">
+  <div class="col-lg-4 col-md-12">
     <div class="px-2 py-5 mb-3 border rounded-3">
       <img src="/.assets/brand/logoTransparent.png" width="200" height="200" class="d-block mx-auto rounded-2" alt="Blueprint"/>
     </div>
@@ -29,12 +29,12 @@ We have a bunch of different versions of our logo which you may use when referri
 Blueprint's assets folder also contains an older unused version of our logo, do not use them when referring to or referencing Blueprint.
 
 <div class="row">
-  <div class="col-6">
+  <div class="col-lg-6 col-md-12">
     <div class="px-2 py-5 mb-3 rounded-3 bg-success border border-success-subtle">
       <img src="/.assets/brand/logoTransparent.png" width="200" height="200" class="d-block mx-auto rounded-2" alt="Blueprint"/>
     </div>
   </div>
-  <div class="col-6">
+  <div class="col-lg-6 col-md-12">
     <div class="px-2 py-5 mb-3 rounded-3 bg-danger border border-danger-subtle">
       <img src="/.assets/brand/logoTransparentOld.png" width="200" height="200" class="d-block mx-auto rounded-2" alt="Blueprint"/>
     </div>

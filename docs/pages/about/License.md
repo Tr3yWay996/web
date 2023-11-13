@@ -5,7 +5,7 @@
   <div class="ps-3 ms-3">This license is used for <a href="https://github.com/teamblueprint/main" class="alert-link">teamblueprint/main</a>, <a href="https://github.com/teamblueprint/templates" class="alert-link">teamblueprint/templates</a> and <a href="https://github.com/teamblueprint/web" class="alert-link">teamblueprint/web</a>. Extensions might ship with different licenses.</div>
 </div><br/>
 
-```
+```txt
 MIT License
 
 Copyright (c) 2023 Dion den Engelsen
@@ -27,5 +27,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
 ```

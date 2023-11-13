@@ -45,147 +45,255 @@
     </a>
   </div>
   <div class="col">
-    <a href="" class="link-underline-opacity-0 link-underline">
-      <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
-        <div class="d-flex flex-column h-100 p-4 text-shadow-1">
-          <h3 class="fw-bold text-secondary">alpha-VKL</h3>
-        </div>
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">alpha-VKL</h3>
       </div>
-    </a>
+    </div>
   </div>
   <div class="col">
-    <a href="" class="link-underline-opacity-0 link-underline">
-      <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
-        <div class="d-flex flex-column h-100 p-4 text-shadow-1">
-          <h3 class="fw-bold text-secondary">alpha-83W</h3>
-        </div>
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">alpha-83W</h3>
       </div>
-    </a>
+    </div>
   </div>
   <div class="col">
-    <a href="" class="link-underline-opacity-0 link-underline">
-      <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
-        <div class="d-flex flex-column h-100 p-4 text-shadow-1">
-          <h3 class="fw-bold text-secondary">alpha-L53</h3>
-        </div>
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">alpha-L53</h3>
       </div>
-    </a>
+    </div>
   </div>
   <div class="col">
-    <a href="" class="link-underline-opacity-0 link-underline">
-      <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
-        <div class="d-flex flex-column h-100 p-4 text-shadow-1">
-          <h3 class="fw-bold text-secondary">alpha-YE5</h3>
-        </div>
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">alpha-YE5</h3>
       </div>
-    </a>
+    </div>
   </div>
   <div class="col">
-    <a href="" class="link-underline-opacity-0 link-underline">
-      <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
-        <div class="d-flex flex-column h-100 p-4 text-shadow-1">
-          <h3 class="fw-bold text-secondary">alpha-LV5</h3>
-        </div>
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">alpha-LV5</h3>
       </div>
-    </a>
+    </div>
   </div>
   <div class="col">
-    <a href="" class="link-underline-opacity-0 link-underline">
-      <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
-        <div class="d-flex flex-column h-100 p-4 text-shadow-1">
-          <h3 class="fw-bold text-secondary">alpha-4TK</h3>
-        </div>
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">alpha-4TK</h3>
       </div>
-    </a>
+    </div>
   </div>
   <div class="col">
-    <a href="" class="link-underline-opacity-0 link-underline">
-      <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
-        <div class="d-flex flex-column h-100 p-4 text-shadow-1">
-          <h3 class="fw-bold text-secondary">alpha-A9X</h3>
-        </div>
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">alpha-A9X</h3>
       </div>
-    </a>
+    </div>
   </div>
   <div class="col">
-    <a href="" class="link-underline-opacity-0 link-underline">
-      <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
-        <div class="d-flex flex-column h-100 p-4 text-shadow-1">
-          <h3 class="fw-bold text-secondary">alpha-Y4Y</h3>
-        </div>
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">alpha-Y4Y</h3>
       </div>
-    </a>
+    </div>
   </div>
   <div class="col">
-    <a href="" class="link-underline-opacity-0 link-underline">
-      <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
-        <div class="d-flex flex-column h-100 p-4 text-shadow-1">
-          <h3 class="fw-bold text-secondary">alpha-7FZ</h3>
-        </div>
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">alpha-7FZ</h3>
       </div>
-    </a>
+    </div>
   </div>
   <div class="col">
-    <a href="" class="link-underline-opacity-0 link-underline">
-      <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
-        <div class="d-flex flex-column h-100 p-4 text-shadow-1">
-          <h3 class="fw-bold text-secondary">alpha-EV0</h3>
-        </div>
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">alpha-EV0</h3>
       </div>
-    </a>
+    </div>
   </div>
   <div class="col">
-    <a href="" class="link-underline-opacity-0 link-underline">
-      <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
-        <div class="d-flex flex-column h-100 p-4 text-shadow-1">
-          <h3 class="fw-bold text-secondary">alpha-5KB</h3>
-        </div>
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">alpha-5KB</h3>
       </div>
-    </a>
+    </div>
   </div>
   <div class="col">
-    <a href="" class="link-underline-opacity-0 link-underline">
-      <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
-        <div class="d-flex flex-column h-100 p-4 text-shadow-1">
-          <h3 class="fw-bold text-secondary">alpha-ML7</h3>
-        </div>
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">alpha-ML7</h3>
       </div>
-    </a>
+    </div>
   </div>
   <div class="col">
-    <a href="" class="link-underline-opacity-0 link-underline">
-      <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
-        <div class="d-flex flex-column h-100 p-4 text-shadow-1">
-          <h3 class="fw-bold text-secondary">alpha-T0R</h3>
-        </div>
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">alpha-T0R</h3>
       </div>
-    </a>
+    </div>
   </div>
   <div class="col">
-    <a href="" class="link-underline-opacity-0 link-underline">
-      <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
-        <div class="d-flex flex-column h-100 p-4 text-shadow-1">
-          <h3 class="fw-bold text-secondary">alpha-DB4</h3>
-        </div>
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">alpha-DB4</h3>
       </div>
-    </a>
+    </div>
   </div>
   <div class="col">
-    <a href="" class="link-underline-opacity-0 link-underline">
-      <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
-        <div class="d-flex flex-column h-100 p-4 text-shadow-1">
-          <h3 class="fw-bold text-secondary">alpha-XFC</h3>
-        </div>
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">alpha-XFC</h3>
       </div>
-    </a>
+    </div>
   </div>
   <div class="col">
-    <a href="" class="link-underline-opacity-0 link-underline">
-      <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
-        <div class="d-flex flex-column h-100 p-4 text-shadow-1">
-          <h3 class="fw-bold text-secondary">alpha-X34</h3>
-        </div>
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">alpha-X34</h3>
       </div>
-    </a>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">indev-AXN</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">index-8X2</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">index-1GG</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">index-OXG</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">index-M29</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">index-QNH</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">index-WI9</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">index-TC2</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">index-4N3</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">index-MS7</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">index-DW2</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">index-00A</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">index-D6G</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">index-7WA</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">index-YNM</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">index-CIX</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">index-IV8</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">index-MSA</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">index-T5W</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark">
+      <div class="d-flex flex-column h-100 p-4 text-shadow-1">
+        <h3 class="fw-bold text-secondary">index-R4U</h3>
+      </div>
+    </div>
   </div>
 </div>
