@@ -21,6 +21,9 @@ Skip applying alphabet (a-z, _) placeholders. This is automatically disabled whe
 `hasInstallScript`\
 Right before the installation completes, extensions with this flag will be able to run a shell script. This script must be called "install.sh" and be in the root of your data directory.
 
+`hasRemovalScript` <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Developer branch</span>\
+Right before starting the extension removal process, extensions with this flag will be able to run a shell script to undo some changes Blueprint isn't able to. This script must be called "remove.sh" and be in the root of your data directory.
+
 <br/>
 
 ##### Developer flags
