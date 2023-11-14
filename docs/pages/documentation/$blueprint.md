@@ -1,8 +1,8 @@
 # $blueprint
 <h4 class="fw-light">Library for extensions to simplify admin notifications, databasing and more</h4><br/>
 
-<div class="alert alert-info" role="alert">
-  <i class="bi bi-info-lg me-2 mt-1 mb-1" style="font-size:23px; float: left;"></i>
+<div class="alert alert-dark" role="alert">
+  <i class="bi bi-currency-dollar me-2 mt-1 mb-1" style="font-size:23px; float: left;"></i>
   <div class="ps-3 ms-3"><b>BlueprintExtensionLibrary</b> (or $blueprint) is added automatically when using the default controller by leaving your controller path option blank. For custom controllers, you may refer to <a href="?page=developing-extensions/Importing-$blueprint" class="alert-link">this guide</a>.</div>
 </div>
 <br/>
