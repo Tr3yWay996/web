@@ -6,6 +6,7 @@
 - New installation timestamp placeholder: `^#timestamp#^`
 - New public directory placeholder: `^#publicpath#^`
 - Add website button icon for Patreon, Reddit and Trello.
+- Uninstallation script has been added that allows extensions to remove extension files that Blueprint cannot keep track of.
 
 <br/>
 
@@ -15,4 +16,4 @@
 <br/>
 
 #### Breaking Changes
-- 
+- None yet.
