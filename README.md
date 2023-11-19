@@ -9,8 +9,15 @@
 <br/>
 
 ## Information
-**teamblueprint/web** is the repository for [teamblueprint/main](https://github.com/teamblueprint/main)'s landing and documentation website and is specifically made to both improve the user and developer's experience with Blueprint.\
-Made with [Bootstrap](https://getbootstrap.com), [Bootstrap Icons](https://icons.getbootstrap.com), [highlight.js](https://highlightjs.org), [marked.js](https://marked.js.org) and [Tinydocs](https://github.com/prplwtf/tinydocs) and hosted on GitHub Pages.
+**teamblueprint/web** is the repository for [teamblueprint/main](https://github.com/teamblueprint/main)'s landing and documentation website and is specifically made to both improve the user and developer's experience with Blueprint.
+
+Blueprint's website is made with the following *(mostly open source)* projects, services, frameworks and libraries.
+- [Bootstrap](https://getbootstrap.com)
+- [Bootstrap Icons](https://icons.getbootstrap.com)
+- [highlight.js](https://highlightjs.org)
+- [marked.js](https://marked.js.org)
+- [Tinydocs](https://github.com/prplwtf/tinydocs)
+- GitHub Pages.
 
 <br/>
 
