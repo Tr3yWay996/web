@@ -23,6 +23,8 @@
 * Linux and Pterodactyl knowledge.
 * Common sense.
 
+<br/>
+
 ### **Installation Steps**
 
 **1.** Navigate to your Pterodactyl folder. (most likely `/var/www/pterodactyl`)
@@ -48,9 +50,3 @@ chmod +x blueprint.sh
 bash blueprint.sh
 ```
 6. After waiting for the installation script to finish, open up your Pterodactyl admin panel and click on the puzzle icon in the top right of the website to verify your installation.
-
-<br/>
-
-### **Need Installation Help?**
-
-Join our [Discord](https://discord.gg/vmQCKV5NsM)! You can create a forum post in our Discord and our community can help you out with your installation.
