@@ -24,6 +24,9 @@ Right before the installation completes, extensions with this flag will be able 
 `hasRemovalScript` <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Developer branch</span>\
 Right before starting the extension removal process, extensions with this flag will be able to run a shell script to undo some changes Blueprint isn't able to. This script must be called "remove.sh" and be in the root of your data directory.
 
+`hasExportScript` <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Developer branch</span>\
+In the middle of the export process, extensions with this flag will be able to run a shell script to automate additional changes for distribution. This script must be called "export.sh" and be in the root of your data directory, but is not included in the exported extension.
+
 <br/>
 
 ##### Developer flags
