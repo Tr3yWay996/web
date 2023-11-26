@@ -1,0 +1,138 @@
+# Announcements
+- name: Announcements
+  author: prplwtf
+  description: Create announcements for your Pterodactyl dashboard.
+  thumbnail: :thumbnail/announcements.webp
+  category: extensions
+  downloads:
+  - name: sourceXchange
+    icon: :logo/SXC.png
+    url: https://www.sourcexchange.net/products/announcements
+  - name: PterodactylMarket
+    icon: :logo/PM.png
+    url: https://pterodactylmarket.com/resource/679
+
+# Arc.io Intergration
+- name: Arc.io Intergration
+  author: Ssmidge
+  description: Add ArcIO to your panel within minutes.
+  thumbnail: :thumbnail/arcio.png
+  category: extensions
+  downloads:
+  - name: BuiltByBit
+    icon: :logo/BBB.png
+    url: https://builtbybit.com/resources/pterodactyl-v1-addon-arc-integration.32109/
+
+# Cats
+- name: Cats
+  author: prplwtf
+  description: Random cats in your admin panel!
+  thumbnail: :thumbnail/cats.jpg
+  category: extensions
+  downloads:
+  - name: sourceXchange
+    icon: :logo/SXC.png
+    url: https://www.sourcexchange.net/products/cats
+
+# Cookies
+- name: Cookies
+  author: prplwtf
+  description: Customizable cookie disclaimer for Pterodactyl.
+  thumbnail: :thumbnail/cookies.webp
+  category: extensions
+  downloads:
+  - name: sourceXchange
+    icon: :logo/SXC.png
+    url: https://www.sourcexchange.net/products/cookies
+
+# dbEdit
+- name: dbEdit
+  author: prplwtf
+  description: Basic extension to modify database values.
+  thumbnail: :thumbnail/dbedit.jpg
+  category: extensions
+  downloads:
+  - name: GitHub
+    icon: :logo/GH.png
+    url: https://github.com/prplwtf/blueprint-dbedit
+
+# Loader
+- name: Loader
+  author: prplwtf
+  description: Awesome loading animation for Pterodactyl.
+  thumbnail: :thumbnail/loader.jpg
+  category: extensions
+  downloads:
+  - name: sourceXchange
+    icon: :logo/SXC.png
+    url: https://www.sourcexchange.net/products/loader
+
+# Nebula
+- name: Nebula
+  author: prplwtf
+  description: Pterodactyl takes flight.
+  thumbnail: :thumbnail/nebula.jpg
+  category: themes
+  downloads:
+  - name: sourceXchange
+    icon: :logo/SXC.png
+    url: https://www.sourcexchange.net/products/nebula
+  - name: PterodactylMarket
+    icon: :logo/PM.png
+    url: https://pterodactylmarket.com/resource/698
+  - name: BuiltByBit
+    icon: :logo/BBB.png
+    url: https://builtbybit.com/resources/nebula-for-blueprint.32442/
+
+# Recolor
+- name: Recolor
+  author: sp11rum
+  description: A fresh coat of paint for your panel.
+  thumbnail: :thumbnail/recolor.jpg
+  category: themes
+  downloads:
+  - name: sourceXchange
+    icon: :logo/SXC.png
+    url: https://www.sourcexchange.net/products/recolor
+  - name: BuiltByBit
+    icon: :logo/BBB.png
+    url: https://builtbybit.com/resources/recolor.33818/
+  - name: GitHub
+    icon: :logo/GH.png
+    url: https://github.com/sp11rum/recolor
+
+# Redirect
+- name: Redirect
+  author: prplwtf
+  description: Create URL redirects within seconds.
+  thumbnail: :thumbnail/redirect.jpg
+  category: extensions
+  downloads:
+  - name: PterodactylMarket
+    icon: :logo/PM.png
+    url: https://pterodactylmarket.com/resource/664
+  - name: GitHub
+    icon: :logo/GH.png
+    url: https://github.com/prplwtf/blueprint-redirect
+
+# Show Node IDs
+- name: Show Node IDs
+  author: EwweKovacevic
+  description: Show the UUID and ID of nodes in the admin panel.
+  thumbnail: :thumbnail/shownodeids.webp
+  category: extensions
+  downloads:
+  - name: BuiltByBit
+    icon: :logo/BBB.png
+    url: https://builtbybit.com/resources/show-node-ids.35196/
+
+# Simple Footers
+- name: Simple Footers
+  author: PatrickYu17
+  description: Create a custom panel footer.
+  thumbnail: :thumbnail/simplefooters.png
+  category: extensions
+  downloads:
+  - name: BuiltByBit
+    icon: :logo/BBB.png
+    url: https://builtbybit.com/resources/simple-footers.35488/

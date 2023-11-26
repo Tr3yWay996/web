@@ -1,0 +1,25 @@
+.backdrop-blur {
+  background-color: #00000059;
+  backdrop-filter: blur(10px);
+  border-color: #ffffff23;
+  color: rgba(255, 255, 255, .75);
+  background: hex(#00000059) !important;
+}
+.backdrop-blur:hover, backdrop-blur:active {
+  background-color: #0000007e !important;
+  backdrop-filter: blur(10px) !important;
+  border-color: #ffffff35 !important;
+  color: rgba(255, 255, 255, .95) !important;
+}
+
+.img-dim:hover {
+  opacity: .7;
+}
+.img-dim {
+  transition: opacity .3s;
+}
+
+.product-image {
+  aspect-ratio: 16/9;
+  object-fit: cover
+}

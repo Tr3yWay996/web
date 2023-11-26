@@ -1,4 +1,5 @@
-<span class="badge bg-warning-subtle border border-warning-subtle text-warning-emphasis rounded-pill"><i class="bi bi-binoculars-fill"></i> Pre-release</span>
+<span class="badge bg-success-subtle border border-success-subtle text-success-emphasis rounded-pill"><i class="bi bi-check-lg"></i> Latest</span>
+<span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill"><i class="bi bi-hash"></i> Supported</span>
 # alpha-3ZX
 <br/>
 
@@ -24,8 +25,3 @@
 - Database values were not being synced when running the install script for the first time after upgrading.
 - "Unknown file or directory" errors every time Blueprint logs something when the debug log file is missing.
 - Remove stray .gitkeep file in `.blueprint/extensions/`.
-
-<br/>
-
-#### Breaking Changes
-- None yet.

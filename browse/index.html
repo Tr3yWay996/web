@@ -1,0 +1,227 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blueprint</title>
+  <link href="/.modules/bootstrap/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="/.modules/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="./index.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+
+<body data-bs-theme="dark">
+
+  <!-- Desktop Navbar -->
+  <div class="p-2 d-lg-inline d-none"></div>
+  <header class="p-3 mb-3 border-bottom fixed-top bg-dark-subtle d-lg-inline d-none">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 me-2 mb-lg-0 link-body-emphasis text-decoration-none">
+          <img src="/.assets/brand/logoBlue.jpg" width="35" height="35" class="rounded-3" alt="" />
+        </a>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="/" class="nav-link px-2 link-body-emphasis">Home</a></li>
+          <li><a href="/browse" class="nav-link px-2 link-secondary">Browse</a></li>
+          <li><a href="/docs" class="nav-link px-2 link-body-emphasis">Documentation</a></li>
+        </ul>
+        <a href="#"><button type="button" class="btn btn-primary">Download</button></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile/Tablet Navbar -->
+  <div class="p-2 d-lg-none d-inline"></div>
+  <nav class="navbar bg-dark-subtle fixed-top d-lg-none d-inline">
+    <div class="container-fluid">
+      <a href="/" class="d-flex align-items-center mb-2 me-2 mt-2 mb-lg-0 link-body-emphasis text-decoration-none"><img src="/.assets/brand/logoBlue.jpg" width="40" height="40" class="rounded-3" alt="" /></a>
+      <div class="dropdown">
+        <button class="btn btn-secondary bg-dark-subtle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 border-0 shadow w-220px">
+          <li><a class="dropdown-item rounded-2" href="/">Home</a></li>
+          <li><a class="dropdown-item rounded-2 disabled" href="/browse">Browse</a></li>
+          <li><a class="dropdown-item rounded-2" href="/docs">Documentation</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item rounded-2" href="#">Download</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- Content -->
+  <div class="container my-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 pt-5">
+      <div class="col-lg-7 col-sm-12">
+        <h1 class="display-4 fw-normal lh-1 mb-3 d-lg-inline d-none" style="color: #bbd7ff">Discover <b>powerful extensions</b>.</h1>
+        <h1 class="display-4 fw-normal lh-1 mb-2 d-lg-none d-block text-center" style="color: #fff">Discover <b>powerful extensions</b>.</h1>
+      </div>
+      <div class="col-5 d-none d-sm-none d-lg-inline">
+        <img src="/.assets/storage/misc/png/3.png" class="d-block mx-lg-auto img-fluid" alt="byte.sh" loading="lazy" width="700" height="500">
+      </div>
+    </div>
+  </div>
+
+  <!-- Sorting -->
+  <div class="container mb-4 position-sticky g-5" style="top: 90px; z-index: 5;">
+    <div class="row bg-dark-subtle rounded-3 border" style="border: rgba(255,255,255,0.15) 1px">
+      <div class="col-auto py-3 mx-2">
+        <i class="bi bi-filter text-body-tertiary text-center" style="font-size:30px"></i>
+      </div>
+      <div class="col" style="padding-top:13px">
+        <div class="bg-dark float-end py-1 px-3 rounded-2 mx-2">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="filterExtensions">
+            <label class="form-check-label text-body-tertiary" style="margin-top:.5px" for="filterExtensions">
+              Extensions
+            </label>
+          </div>
+        </div>
+        <div class="bg-dark float-end py-1 px-3 rounded-2 mx-2">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="filterThemes">
+            <label class="form-check-label text-body-tertiary" style="margin-top:.5px" for="filterThemes">
+              Themes
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Products -->
+  <div class="container">
+    <div class="row" id="products"></div>
+  </div>
+
+
+  <!-- Footer -->
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" width="30" height="24" fill="#aeb2b6">
+            <rect x="0" y="166.6666" width="166.6666" height="166.6666"/>
+            <rect x="166.6666" y="0" width="166.6666" height="166.6666"/>
+            <rect x="166.6666" y="333.3332" width="333.3332" height="166.6666"/>
+            <rect x="333.3332" y="166.6666" width="166.667" height="333.3332"/>
+          </svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-body-secondary">© 2023 prpl.wtf</span>
+      </div>
+
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-body-secondary" href="https://discord.gg/CUwHwv6xRe"><i class="bi bi-discord" width="24" height="24"></i></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="https://github.com/teamblueprint"><i class="bi bi-github" width="24" height="24"></i></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="https://liberapay.com/blueprint"><i class="bi bi-chat-right-heart-fill" width="24" height="24"></i></a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <script src="/.modules/bootstrap/js/bootstrap.bundle.js" crossorigin="anonymous"></script>
+  <script src="/.modules/js-yaml/js-yaml.min.js" crossorigin="anonymous"></script>
+  <script>
+    function loadYAML(url, callback) {
+      var xhr = new XMLHttpRequest()
+      xhr.open("GET", url, true)
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          var result = jsyaml.load(xhr.responseText)
+          callback(result)
+        }
+      }
+      xhr.send()
+    }
+
+    function displayProducts(products) {
+      var productList = document.getElementById("products")
+
+      products.forEach(function (product) {
+        var listItem = document.createElement("div")
+        if(product.category == "themes")     { categoryClass="filter-themes" }
+        if(product.category == "extensions") { categoryClass="filter-extensions" }
+        listItem.className = "col-sm-12 col-md-6 col-lg-4 mb-4 "+categoryClass
+
+        listItem.innerHTML = `
+          <div class="card overflow-hidden bg-dark-subtle">
+            <img src="${product.thumbnail}" class="card-img-top img-dim product-image" alt="${product.name}">
+            <div class="btn-group position-absolute" style="left: 11px; top: 10px">
+              <button type="button" class="btn btn-secondary dropdown-toggle backdrop-blur" data-bs-toggle="dropdown" aria-expanded="false">
+                Get
+              </button>
+              <ul class="dropdown-menu">
+                ${product.downloads.map(download => `
+                  <li><a class="dropdown-item" href="${download.url}"><img src="${download.icon}" alt="" width="24" height="24"> ${download.name}</a></li>
+                `).join('')}
+              </ul>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-truncate">${product.name}</h5>
+              <p class="card-text text-truncate">${product.description}</p>
+            </div>
+          </div>
+        `
+
+        productList.appendChild(listItem)
+      })
+    }
+
+    loadYAML("./:repository/repository.yml", displayProducts)
+  </script>
+  <style id="css-filter-themes"></style>
+  <style id="css-filter-extensions"></style>
+  <script>
+    function param(key, value) {
+      let u = new URL(window.location.href)
+      u.searchParams.set(key, value)
+      window.history.replaceState({}, '', u.toString())
+    }
+
+
+    var filterThemes = document.getElementById('filterThemes')
+    var filterExtensions = document.getElementById('filterExtensions')
+
+    function handleThemeFilter() { 
+      var a = document.getElementById("css-filter-themes");
+      if (filterThemes.checked) { 
+        param('1', 'y') 
+        a.innerHTML = ""; 
+      } else { 
+        param('1', 'n') 
+        a.innerHTML = ".filter-themes { display: none }"; 
+      }
+    }
+    function handleExtensionFilter() { 
+      var a = document.getElementById("css-filter-extensions");
+      if (filterExtensions.checked) { 
+        param('2', 'y')
+        a.innerHTML = ""; 
+      } else { 
+        param('2', 'n'); 
+        a.innerHTML = ".filter-extensions { display: none }"; 
+      } 
+    }
+
+    filterThemes.addEventListener('change', handleThemeFilter)
+    filterExtensions.addEventListener('change', handleExtensionFilter)
+
+    function filter() {
+      var url = new URL(window.location.href)
+      var a = document.getElementById("css-filter-themes")
+      var b = document.getElementById("css-filter-extensions")
+      var c = document.getElementById('filterThemes')
+      var d = document.getElementById('filterExtensions')
+
+      if(url.searchParams.get('1') == 'y') { a.innerHTML = ""; c.checked = true }
+      else if(url.searchParams.get('1') == 'n') { a.innerHTML = ".filter-themes { display: none }"; c.checked = false }
+      else { a.innerHTML = ""; c.checked = true }
+
+      if(url.searchParams.get('2') == 'y') { b.innerHTML = ""; d.checked = true }
+      else if(url.searchParams.get('2') == 'n') { b.innerHTML = ".filter-extensions { display: none }"; d.checked = false }
+      else { b.innerHTML = ""; d.checked = true }
+    }
+    filter()
+  </script>
+</body>

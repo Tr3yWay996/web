@@ -30,7 +30,7 @@ The path to the host's Pterodactyl installation folder. You should always use th
 `^#datapath#^`\
 Path to your extension's data directory. To keep your extension from breaking in the future, it's always a good idea to use this placeholder instead of guessing.
 
-`^#publicpath#^` <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Developer branch</span>\
+`^#publicpath#^`\
 Path to your extension's public data directory. This directory is exposed to the internet, so don't store keys or sensitive information in there! To keep your extension from breaking in the future, it's always a good idea to use this placeholder instead of guessing.
 
 `^#installmode#^`\
@@ -39,5 +39,5 @@ Information about how the extension was installed. Is "normal" when the extensio
 `^#blueprintversion#^`\
 Blueprint version that installed/built your extension.
 
-`^#timestamp#^` <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Developer branch</span>\
+`^#timestamp#^`\
 Timestamp of when your extension started installation, specifically the timestamp of when Blueprint started applying extension placeholders.
