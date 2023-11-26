@@ -15,7 +15,7 @@
 # Arc.io Intergration
 - name: Arc.io Intergration
   author: Ssmidge
-  description: Add ArcIO to your panel within minutes.
+  description: Add Arc to your panel within minutes.
   thumbnail: :thumbnail/arcio.png
   category: extensions
   downloads:
