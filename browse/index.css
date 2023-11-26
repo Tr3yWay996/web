@@ -23,3 +23,13 @@
   aspect-ratio: 16/9;
   object-fit: cover
 }
+
+.bp-grid {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, #ffffff10 1px, transparent 1px),
+    linear-gradient(to bottom, #ffffff10 1px, transparent 1px);
+}
+.bp-fade {
+  background-image: linear-gradient(to bottom, #21252900, #212529);
+}
