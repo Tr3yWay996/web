@@ -98,6 +98,9 @@
   <!-- Products -->
   <div class="container">
     <div class="row" id="products"></div>
+    <div class="row" id="byte-confused" style="display: none">
+      <p class="text-center"><img src="/.assets/storage/misc/png/6.png" style="width: 150px; opacity: .2"></p>
+    </div>
   </div>
 
 
@@ -196,6 +199,7 @@
         param('1', 'n') 
         a.innerHTML = ".filter-themes { display: none }"; 
       }
+      byteconfused()
     }
     function handleExtensionFilter() { 
       var a = document.getElementById("css-filter-extensions");
@@ -205,7 +209,16 @@
       } else { 
         param('2', 'n'); 
         a.innerHTML = ".filter-extensions { display: none }"; 
-      } 
+      }
+      byteconfused()
+    }
+
+    function byteconfused() {
+      var byte = document.getElementById("byte-confused")
+      var url = new URL(window.location.href)
+
+      if(url.searchParams.get('1') == 'n' && url.searchParams.get('2') == 'n') { byte.style.display = "inline" }
+      else { byte.style.display = "none" }
     }
 
     filterThemes.addEventListener('change', handleThemeFilter)
@@ -225,6 +238,7 @@
       if(url.searchParams.get('2') == 'y') { b.innerHTML = ""; d.checked = true }
       else if(url.searchParams.get('2') == 'n') { b.innerHTML = ".filter-extensions { display: none }"; d.checked = false }
       else { b.innerHTML = ""; d.checked = true }
+      byteconfused()
     }
     filter()
   </script>
