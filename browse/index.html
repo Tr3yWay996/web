@@ -99,7 +99,7 @@
   <div class="container">
     <div class="row" id="products"></div>
     <div class="row" id="byte-confused" style="display: none">
-      <p class="text-center"><img src="/.assets/storage/misc/png/6.png" style="width: 150px; opacity: .2"></p>
+      <p class="text-center"><img src="/.assets/storage/misc/png/5.png" style="width: 150px; opacity: .2"></p>
     </div>
   </div>
 
@@ -216,9 +216,12 @@
     function byteconfused() {
       var byte = document.getElementById("byte-confused")
       var url = new URL(window.location.href)
+      var c = document.getElementById('filterThemes')
+      var d = document.getElementById('filterExtensions')
 
       if(url.searchParams.get('1') == 'n' && url.searchParams.get('2') == 'n') { byte.style.display = "inline" }
-      else { byte.style.display = "none" }
+      else if(!c.checked && !d.checked) { byte.style.display = "inline" }
+      else byte.style.display = "none"
     }
 
     filterThemes.addEventListener('change', handleThemeFilter)
@@ -241,5 +244,6 @@
       byteconfused()
     }
     filter()
+    byteconfused()
   </script>
 </body>
