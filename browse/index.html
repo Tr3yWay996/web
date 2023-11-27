@@ -71,15 +71,16 @@
   <!-- Sorting -->
   <div class="container mb-4 position-sticky g-5" style="top: 90px; z-index: 5;">
     <div class="row bg-dark-subtle rounded-3 border" style="border: rgba(255,255,255,0.15) 1px">
-      <div class="col-auto py-3 mx-2">
-        <i class="bi bi-filter text-body-tertiary text-center" style="font-size:30px"></i>
+      <div class="col-1">
+        <i class="bi bi-filter text-body-tertiary text-start py-3 mx-2 float-start" style="font-size:30px"></i>
       </div>
       <div class="col" style="padding-top:13px">
         <div class="bg-dark float-end py-1 px-3 rounded-2 mx-2">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="filterExtensions">
             <label class="form-check-label text-body-tertiary" style="margin-top:.5px" for="filterExtensions">
-              Extensions
+              <i class="bi bi-puzzle-fill d-lg-none d-inline" style="margin-top:.1px"></i> 
+              <span class="d-lg-inline d-none">Extensions</span>
             </label>
           </div>
         </div>
@@ -87,7 +88,8 @@
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="filterThemes">
             <label class="form-check-label text-body-tertiary" style="margin-top:.5px" for="filterThemes">
-              Themes
+              <i class="bi bi-palette2 d-lg-none d-inline" style="margin-top:.1px"></i>
+              <span class="d-lg-inline d-none">Themes</span>
             </label>
           </div>
         </div>
