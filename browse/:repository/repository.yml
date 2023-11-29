@@ -108,6 +108,9 @@
   thumbnail: :thumbnail/redirect.jpg
   category: extensions
   downloads:
+  - name: sourceXchange
+    icon: :logo/SXC.png
+    url: https://www.sourcexchange.net/products/redirect
   - name: PterodactylMarket
     icon: :logo/PM.png
     url: https://pterodactylmarket.com/resource/664

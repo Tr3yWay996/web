@@ -6,7 +6,6 @@
 </div><br/>
 
 ### **Quick start**
-
 Get started by beginning from a template, naming and describing your extension through the initialize command.
 ```sh
 blueprint -init
@@ -21,6 +20,13 @@ cd .blueprint/dev
   <i class="bi bi-terminal-fill me-2 mt-1 mb-1" style="font-size:23px; float: left;"></i>
   <div class="ps-3 ms-3">While you can develop extensions without ever leaving your terminal emulator, you can also transfer files from your local machine to your server using SFTP or use specific applications to automate this process (such as <a href="https://open-vsx.org/extension/Natizyskunk/sftp" class="alert-link">this VSCode extension</a>).</div>
 </div><br/>
+
+
+### **Applying changes**
+To apply any changes you've made and preview them on your panel, run the following developer command. This command installs extension files from `.blueprint/dev/` like it were a normal extension.
+```sh
+blueprint -build
+```
 
 <div class="btn-group" role="group" aria-label="Navigation" style="float: right">
   <button type="button" class="btn btn-dark bg-light-subtle border-light-subtle text-secondary disabled">Previous</button>
