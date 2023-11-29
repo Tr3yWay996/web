@@ -10,6 +10,8 @@ The Barebones template includes two files by default, `conf.yml` and `admin.blad
 <a style="color: #ef5b5b">&lt;code&gt;</a>^#identifier#^<a style="color: #ef5b5b">&lt;/code&gt;</a> is the identifier of this extension.
 The current version is <a style="color: #ef5b5b">&lt;i&gt;</a>^#version#^<a style="color: #ef5b5b">&lt;/i&gt;</a>.</code></pre>
 
+<img src="/.assets/storage/misc/png/7.png" class="rounded-4">
+
 <div class="btn-group" role="group" aria-label="Navigation" style="float: right">
   <a href="?page=getting-started/Extension-development" class="btn btn-dark bg-light-subtle border-light-subtle">Previous</a>
   <a href="?page=developing-extensions/Custom-controllers" class="btn btn-dark bg-light-subtle border-light-subtle">Next</a>
