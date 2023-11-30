@@ -1,0 +1,30 @@
+hl- { color: #ef5b5b }
+s-::before { content: "<"; color: #ef5b5b }
+e-::before { content: ">"; color: #ef5b5b }
+
+/* <p> </p> */
+p--::before, pstart-::before { content: "<p>"; color: #ef5b5b }
+p--::after, pend-::before { content: "</p>"; color: #ef5b5b }
+pstart--::before { content: "<p"; color: #ef5b5b }
+/* <b> </b> */
+b--::before, bstart-::before { content: "<b>"; color: #ef5b5b }
+b--::after, bend-::before { content: "</b>"; color: #ef5b5b }
+bstart--::before { content: "<b"; color: #ef5b5b }
+/* <a> </a> */
+a--::before, astart-::before { content: "<a>"; color: #ef5b5b }
+a--::after, aend-::before { content: "</a>"; color: #ef5b5b }
+astart--::before { content: "<a"; color: #ef5b5b }
+/* <i> </i> */
+i--::before, istart-::before { content: "<i>"; color: #ef5b5b }
+i--::after, iend-::before { content: "</i>"; color: #ef5b5b }
+istart--::before { content: "<i"; color: #ef5b5b }
+/* <div> </div> */
+div--::before, divstart-::before { content: "<div>"; color: #ef5b5b }
+div--::after, divend-::before { content: "</div>"; color: #ef5b5b }
+divstart--::before { content: "<div"; color: #ef5b5b }
+/* <code> </code> */
+code--::before, codestart-::before { content: "<code>"; color: #ef5b5b }
+code--::after, codeend-::before { content: "</code>"; color: #ef5b5b }
+codestart--::before { content: "<code"; color: #ef5b5b }
+/* <br> */
+br--::before { content: "<br>"; color: #ef5b5b }
