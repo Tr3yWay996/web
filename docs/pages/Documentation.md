@@ -3,7 +3,7 @@
 
 <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-3 pt-4">
   <div class="col">
-    <a href="?page=about/Changelog" class="link-underline-opacity-0 link-underline">
+    <a href="?page=getting-started/Extension-development" class="link-underline-opacity-0 link-underline">
       <div class="card card-cover h-100 overflow-hidden rounded-4 bg-primary border-primary">
         <div class="d-flex flex-column h-100 p-4 text-shadow-1 text">
           <h3 class="fw-bolder"><i class="bi bi-puzzle-fill" style="font-size:27px"></i> Create</h3>
