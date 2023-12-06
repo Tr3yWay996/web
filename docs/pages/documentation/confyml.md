@@ -54,11 +54,11 @@ Path to blade code that you want to add to the Pterodactyl admin dashboard layou
 <br/>
 
 ##### dashboard
-`wrapper`\
-Path to blade code that you want to add to the Pterodactyl client dashboard layout.
-
 `css`\
 Add custom css to the Pterodactyl client panel, provide the path to your .css file here.
+
+`wrapper`\
+Path to blade code that you want to add to the Pterodactyl client dashboard layout.
 
 <br/>
 
