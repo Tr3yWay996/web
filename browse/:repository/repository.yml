@@ -129,6 +129,17 @@
     icon: :logo/BBB.png
     url: https://builtbybit.com/resources/show-node-ids.35196/
 
+# Simple Favicons
+- name: Simple Favicons
+  author: PatrickYu17
+  description: Change your panel favicon.
+  thumbnail: :thumbnail/simplefavicons.png
+  category: extensions
+  downloads:
+  - name: BuiltByBit
+    icon: :logo/BBB.png
+    url: https://builtbybit.com/resources/simple-favicons.36020/
+
 # Simple Footers
 - name: Simple Footers
   author: PatrickYu17
