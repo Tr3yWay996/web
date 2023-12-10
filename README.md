@@ -1,6 +1,6 @@
 <h2><img src="https://github.com/teamblueprint/web/assets/103201875/fc5c0ed6-a83d-4d7c-be40-e41faa0d9961" style="height:30px;padding-right:1px"></img></h2>
 
-[Blueprint ➚](https://github.com/teamblueprint/main)
+[**Blueprint ➚**](https://github.com/teamblueprint/main)
 
 [Information](#information)\
 [Contributors](#contributors)\
@@ -17,12 +17,12 @@ Blueprint's website is made with the following *(mostly open source)* projects, 
 - [highlight.js](https://highlightjs.org)
 - [marked.js](https://marked.js.org)
 - [Tinydocs](https://github.com/prplwtf/tinydocs)
-- GitHub Pages.
+- GitHub Pages
 
 <br/>
 
 ## Contributors
-[prplwtf](https://github.com/prplwtf) - creator and maintainer\
+[**prplwtf**](https://github.com/prplwtf) - creator and maintainer\
 [patrickyu17](https://github.com/PatrickYu17) - contributor
 
 <br/>
