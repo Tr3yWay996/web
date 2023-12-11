@@ -164,3 +164,17 @@
   - name: BuiltByBit
     icon: :logo/BBB.png
     url: https://builtbybit.com/resources/slate-for-pterodactyl.36101/
+
+# Snowflakes
+- name: Snowflakes
+  author: prplwtf
+  description: Add snowflakes to your Pterodactyl dashboard!
+  thumbnail: :thumbnail/snowflakes.jpg
+  category: themes
+  downloads:
+  - name: sourceXchange
+    icon: :logo/SXC.png
+    url: https://www.sourcexchange.net/products/snowflakes
+  - name: GitHub
+    icon: :logo/GH.png
+    url: https://github.com/prplwtf/blueprint-snowflakes
