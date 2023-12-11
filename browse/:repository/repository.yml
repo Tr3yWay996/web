@@ -16,7 +16,7 @@
 - name: Arc.io Intergration
   author: Ssmidge
   description: Add Arc to your panel within minutes.
-  thumbnail: :thumbnail/arcio.png
+  thumbnail: :thumbnail/arcio.jpg
   category: extensions
   downloads:
   - name: BuiltByBit
