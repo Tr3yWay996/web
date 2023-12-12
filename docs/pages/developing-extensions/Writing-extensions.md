@@ -40,7 +40,7 @@ Right now all lines or on the same row. This is due to how Blueprint builds your
 
 This looks a bit plain, doesn't it? We can spice things up and add a bit of depth with box containers, a fancy title and a much better user experience.
 
-We can achieve this with the `box` css class, which is included in the Pterodactyl admin panel by default. To add a nice color alongside the box, you can make use of the following classes: <a class="text-primary">`box-primary`</a>, <a class="text-info">`box-info`</a>, <a class="text-warning">`box-warning`</a> and <a class="text-danger">`box-danger`</a>.
+We can achieve this with the `box` css class, which is included in the Pterodactyl admin panel by default. To add a nice color alongside the box, you can make use of the following classes: <a class="text-primary">`box-primary`</a>, <a class="text-info">`box-info`</a>, <a class="text-success">`box-success`</a>, <a class="text-warning">`box-warning`</a> and <a class="text-danger">`box-danger`</a>.
 
 <div class="row container mb-2">
   <div class="col rounded-1 py-2" style="background-color: #282c34">
