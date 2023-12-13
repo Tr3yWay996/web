@@ -1,7 +1,6 @@
-# Writing extensions
-<h4 class="fw-light">Learn the basics of extension development</h4><br/>
+# Admin views
+<h4 class="fw-light">Learn the basics of extension admin pages</h4><br/>
 
-### <i class="bi bi-gear-wide-connected"></i> **Creating an admin page**
 After setting up your development template (Barebones) in the previous guide, you can now start writing an admin view.
 
 The Barebones template includes two files by default, `conf.yml` and `admin.blade.php`. We'll take a look at `conf.yml` later, but first, open `admin.blade.php` and add the following code:
