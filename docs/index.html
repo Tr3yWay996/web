@@ -125,28 +125,64 @@
   <script src="/.modules/marked/marked.min.js" crossorigin="anonymous"></script>
   <script src="/.modules/highlight.js/highlight.min.js" crossorigin="anonymous"></script>
   <script>
-    var u = new URL(window.location.href);
-    var d = u.searchParams.get('page');
-    try { document.querySelector('a[href="?page='+d+'"] button').classList.add("disabled") } catch {  }
-    if(d) { a = './pages/'+d+'.md' } else { a = './pages/Documentation.md' }
-    fetch(a)
-      .then(b => {
-        if (!b.ok) {
-          throw new Error(`Network response was not ok: ${b.status}`);
-          window.location="?page=Error"
-        }
-        return b.text();
-      })
-      .then(markdownContent => {
-        document.getElementById('content').innerHTML = marked.parse(markdownContent);
-        document.querySelectorAll(".hl-escape").forEach(function(element) {
-          element.innerHTML = element.innerHTML.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
-        });
-        hljs.highlightAll(document.getElementById('content'));
-      })
-      .catch(c => {
-        console.error('Error fetching the Markdown content:', c);
+  var u = new URL(window.location.href);
+  var d = u.searchParams.get('page');
+  try { document.querySelector('a[href="?page='+d+'"] button').classList.add("disabled") } catch {  }
+  if(d) { a = './pages/'+d+'.md' } else { a = './pages/Documentation.md' }
+  fetch(a)
+    .then(b => {
+      if (!b.ok) {
+        throw new Error(`Network response was not ok: ${b.status}`);
         window.location="?page=Error"
+      }
+      return b.text();
+    })
+    .then(markdownContent => {
+      document.getElementById('content').innerHTML = marked.parse(markdownContent);
+      document.querySelectorAll(".hl-escape").forEach(function(element) {
+        element.innerHTML = element.innerHTML.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
       });
+      hljs.highlightAll(document.getElementById('content'));
+
+      // Add "Edit on GitHub" button
+      const contentDiv = document.getElementById('content');
+      if (contentDiv) {
+        addGitHubEditButton(d, contentDiv); // Call the function to add the button
+      }
+    })
+    .catch(c => {
+      console.error('Error fetching the Markdown content:', c);
+      window.location="?page=Error"
+    });
+
+    function addGitHubEditButton(page, contentDiv) {
+    // Construct the correct GitHub URL for the markdown file
+    const githubRepoURL = 'https://github.com/teamblueprint/web/edit/main/docs/pages/';
+    const githubEditURL = `${githubRepoURL}${page}.md`;
+
+    const editButton = document.createElement('a');
+    editButton.href = githubEditURL;
+    editButton.target = '_blank';
+    editButton.rel = 'noopener noreferrer';
+    editButton.innerHTML = '<button type="button" class="btn btn-dark" style="margin-right: 5px;"><i class="bi bi-pencil-fill"></i> Edit this page</button>';
+
+    // Find the parent element of the btn-group in the contentDiv
+    const btnGroup = contentDiv.querySelector('.btn-group');
+    if (btnGroup) {
+      editButton.style.marginRight = '10px'; // Optional: Adjust margin between the buttons
+
+      const parentElement = btnGroup.parentElement;
+      if (parentElement) {
+        parentElement.insertBefore(editButton, btnGroup); // Insert the button before the btn-group
+      } else {
+        console.error('Parent element not found.');
+      }
+    } else {
+      console.error('btn-group element not found.');
+    }
+  }
+
   </script>
+  
+
 </body>
