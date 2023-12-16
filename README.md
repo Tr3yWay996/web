@@ -30,7 +30,7 @@ Blueprint's website is made with the following *(mostly open source)* projects, 
 
 ## Related Links
 [**teamblueprint/main**](https://github.com/teamblueprint/main) is our extension framework that aims to make Pterodactyl extensible.\
-[**teamblueprint/tempalates**](https://github.com/teamblueprint/templates) is a repository with initialization templates for extension development.\
+[**teamblueprint/templates**](https://github.com/teamblueprint/templates) is a repository with initialization templates for extension development.\
 [**Pterodactyl**](https://pterodactyl.io/) is a free, open-source game server management panel built with PHP, React, and Go.\
 [**Tinydocs**](https://github.com/prplwtf/tinydocs) is a markdown documentation website made with just HTML, Bootstrap and JS.\
 [**marked.js**](https://marked.js.org) is used for rendering the markdown documentation.\
