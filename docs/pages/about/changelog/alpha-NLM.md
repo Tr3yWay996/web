@@ -13,6 +13,11 @@
 - Add new `logoCoverTextPurple` asset.
 - Admin cache no longer directly modifies `pterodactyl.css` but instead goes through a file made specifically for extension css importing.
 - Add "Byte" to the Blueprint admin page.
+- All file and folder paths defined by an extension are validated upon installing or building it.
+- Add a separate function for assinging extention flags to variables for `-install`, `-remove` and `-export`.
+- Check for extensions flags through variables instead of checking the `$info_flags` string each if statement that validated a specific flag on `-install`, `-remove` and `-export`.
+- Address multiple [ShellCheck](https://www.shellcheck.net/wiki/) advisories across `blueprint.sh` and it's libraries.
+- Add new `developerIgnoreRebuild` flag that allows developers to skip rebuilding all panel assets when editing panel css upon running `-build`.
 
 <br/>
 
@@ -23,6 +28,9 @@
 - `conf.yml` had a different order for "wrapper" and "css" values across "dashboard" and "admin".
 - `-info` would show log function names when some values were empty.
 - Running `bash blueprint.sh` after installing Blueprint would show a `[WARNING]` log which should be `[FATAL]` for consistency.
+- "Checking dependencies" was ran before asking administrators for confirmation when running `-remove`.
+- If extension script flags were present but the extension did not have given script, Blueprint would throw a weird error.
+- The debug file path defined in `lib/bash_colors.sh` was relative, which would cause an error if not ran in the Pterodactyl directory.
 
 <br/>
 
