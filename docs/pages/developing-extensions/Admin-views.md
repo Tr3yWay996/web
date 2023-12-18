@@ -1,7 +1,7 @@
 # Admin views
 <h4 class="fw-light">Learn the basics of extension admin pages</h4><br/>
 
-After setting up your development template (Barebones) in the previous guide, you can now start writing an admin view.
+After setting up your development template (Barebones) [in the previous guide](?page=getting-started/Extension-development), you can now start writing an admin view.
 
 The Barebones template includes two files by default, `conf.yml` and `admin.blade.php`. We'll take a look at `conf.yml` later, but first, open `admin.blade.php` and add the following code:
 
@@ -60,7 +60,9 @@ We can achieve this with the `box` css class, which is included in the Pterodact
       <img src="/.assets/storage/docs/png/6.png">
     </div>
   </div>
-</div>
+</div><br>
+
+You have now created your very own admin page through Blueprint. Customize it however you like, we won't judge.
 
 <br/>
 <div class="btn-group" role="group" aria-label="Navigation" style="float: right">

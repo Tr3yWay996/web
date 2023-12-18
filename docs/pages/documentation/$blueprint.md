@@ -16,7 +16,7 @@ The BlueprintExtensionLibrary is automatically imported to dashboard wrappers, a
 
 ### **Functions**
 
-##### Databasing <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">Universal</span>
+##### Databasing <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Universal</span>
 `dbGet(table, record)`\
 Returns a database value. Will be fetched as "table::record".
 
@@ -25,7 +25,7 @@ Sets a database value. Will be set as "table::record", "value".
 
 <br/>
 
-##### Notifications <span class="badge bg-secondary-subtle border border-secondary-subtle text-secondary-emphasis rounded-pill">Admin</span>
+##### Notifications <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill">Admin</span>
 `notify(text)`\
 Allows you to show notifications on the admin panel. Appears on next reload.
 
@@ -37,7 +37,7 @@ Allows you to show notifications on the admin panel after a delay. This behaves 
 
 <br/>
 
-##### Files <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">Universal</span>
+##### Files <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Universal</span>
 `fileRead(path)`\
 Returns the contents of the file defined in "path".
 
