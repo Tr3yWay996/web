@@ -16,8 +16,11 @@
 - All file and folder paths defined by an extension are validated upon installing or building it.
 - Add a separate function for assinging extention flags to variables for `-install`, `-remove` and `-export`.
 - Check for extensions flags through variables instead of checking the `$info_flags` string each if statement that validated a specific flag on `-install`, `-remove` and `-export`.
-- Address multiple [ShellCheck](https://www.shellcheck.net/wiki/) advisories across `blueprint.sh` and it's libraries.
+- Address all [ShellCheck](https://www.shellcheck.net/wiki/) advisories across `blueprint.sh` and it's libraries.
 - Add new `developerIgnoreRebuild` flag that allows developers to skip rebuilding all panel assets when editing panel css upon running `-build`.
+- Speed up "Checking Dependencies" by dumping `npm ls` and just looking for the module in the `node_modules` folder.
+- Add new `-debug` command, which can be used to easily print all recent information and muted logs.
+- The `-help` command can now also be triggered by providing zero arguments to the `blueprint` CLI tool.
 
 <br/>
 
@@ -31,6 +34,7 @@
 - "Checking dependencies" was ran before asking administrators for confirmation when running `-remove`.
 - If extension script flags were present but the extension did not have given script, Blueprint would throw a weird error.
 - The debug file path defined in `lib/bash_colors.sh` was relative, which would cause an error if not ran in the Pterodactyl directory.
+- Extension file paths defined in `conf.yml` could escape the temporarily directory.
 
 <br/>
 
