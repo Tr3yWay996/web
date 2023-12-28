@@ -154,6 +154,17 @@
     icon: :logo/BBB.png
     url: https://builtbybit.com/resources/simple-footers.35488/
 
+# Simple Visuals
+- name: Simple Visuals
+  author: PatrickYu17
+  description: A unique, modern and simple visual theme for Pterodactyl.
+  thumbnail: :thumbnail/simplevisuals.png
+  category: themes
+  downloads:
+  - name: BuiltByBit
+    icon: :logo/BBB.png
+    url: https://builtbybit.com/resources/simple-visuals.36709/
+
 # Slate
 - name: Slate
   author: prplwtf
