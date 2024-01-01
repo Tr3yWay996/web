@@ -70,14 +70,16 @@
           <a href="?page=developing-extensions/Importing-$blueprint"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Importing $blueprint</button><br></a>
           <a href="?page=developing-extensions/Admin-configuration"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Admin configuration</button><br></a>
           <a href="?page=developing-extensions/Dashboard-modifications"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Dashboard modifications</button><br></a>
+          <a href="?page=developing-extensions/React-components"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">React components</button><br></a>
           <a href="?page=developing-extensions/Packaging-extensions"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Packaging extensions</button><br></a>
         </div>
         <div class="docs-category pb-4">
           <div class="ms-2"><span class="fw-bolder">Documentation</span><br></div>
           <a href="?page=documentation/$blueprint"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">$blueprint</button><br></a>
           <a href="?page=documentation/confyml"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">conf.yml</button><br></a>
-          <a href="?page=documentation/placeholders"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">placeholders</button><br></a>
-          <a href="?page=documentation/flags"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">flags</button><br></a>
+          <a href="?page=documentation/componentsyml"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Components.yml</button><br></a>
+          <a href="?page=documentation/placeholders"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Placeholders</button><br></a>
+          <a href="?page=documentation/flags"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Flags</button><br></a>
         </div>
         <div class="docs-category pb-4">
           <div class="ms-2"><span class="fw-bolder">About</span><br></div>
@@ -128,7 +130,7 @@
   <script>
   var u = new URL(window.location.href);
   var d = u.searchParams.get('page');
-  try { document.querySelector('a[href="?page='+d+'"] button').classList.add("disabled") } catch {  }
+  try { document.querySelector('a[href="?page='+d+'"] button').classList += ("disabled border border-4 text-primary-emphasis border-primary border-top-0 border-end-0 border-bottom-0 rounded-0 fw-bolder text-start") } catch {  }
   if(d) { a = './pages/'+d+'.md' } else { a = './pages/Documentation.md' }
   fetch(a)
     .then(b => {

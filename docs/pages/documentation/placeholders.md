@@ -15,11 +15,11 @@ Version defined in [conf.yml](?page=documentation/confyml).
 `^#author#^`\
 Author defined in [conf.yml](?page=documentation/confyml).
 
-`^#identifier#^`\
-Identifier defined in [conf.yml](?page=documentation/confyml).
-
 `^#name#^`\
 Display name defined in [conf.yml](?page=documentation/confyml).
+
+`^#identifier#^`\
+Identifier defined in [conf.yml](?page=documentation/confyml).
 
 <br/>
 
@@ -41,3 +41,6 @@ Blueprint version that installed/built your extension.
 
 `^#timestamp#^`\
 Timestamp of when your extension started installation, specifically the timestamp of when Blueprint started applying extension placeholders.
+
+`^#componentroot#^` <span class="badge text-primary-emphasis"><i class="bi bi-stars"></i> New in <b>alpha-NLM</b></span>\
+Root path to your component directory in the format `@/blueprint/extensions/identifier`. Extension developers should refrain from using this path as a filesystem path.

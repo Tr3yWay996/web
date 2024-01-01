@@ -49,6 +49,6 @@ We hope you can create something that suits your needs with the export script fe
 
 
 <div class="btn-group" role="group" aria-label="Navigation" style="float: right">
-  <a href="?page=developing-extensions/Dashboard-modifications" class="btn btn-dark bg-light-subtle border-light-subtle">Previous</a>
+  <a href="?page=developing-extensions/React-components" class="btn btn-dark bg-light-subtle border-light-subtle">Previous</a>
   <button type="button" class="btn btn-dark bg-light-subtle border-light-subtle text-secondary disabled">Next</button>
 </div>

@@ -21,6 +21,9 @@
 - Speed up "Checking Dependencies" by dumping `npm ls` and just looking for the module in the `node_modules` folder.
 - Add new `-debug` command, which can be used to easily print all recent information and muted logs.
 - The `-help` command can now also be triggered by providing zero arguments to the `blueprint` CLI tool.
+- Internal placeholders `@version`, `&bp.version&` and `&bp.folder&` have been renamed to `::v` and `::f`.
+- Developers can now add components to the Pterodactyl navigation bar through React. 
+- Add GitHub sponsors section and link to Blueprint's `README.md`.
 
 <br/>
 
@@ -35,6 +38,8 @@
 - If extension script flags were present but the extension did not have given script, Blueprint would throw a weird error.
 - The debug file path defined in `lib/bash_colors.sh` was relative, which would cause an error if not ran in the Pterodactyl directory.
 - Extension file paths defined in `conf.yml` could escape the temporarily directory.
+- Onboarding admin notification was not being displayed and has now been removed.
+- Puzzle navbar button in the admin panel would normally flash upon first load with Blueprint, but didn't.
 
 <br/>
 

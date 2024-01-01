@@ -1,5 +1,5 @@
-# Dashboard modifications
-<h4 class="fw-light">Extend the Pterodactyl client-side dashboard within the Laravel blade wrapper.</h4><br/>
+# React components
+<h4 class="fw-light">Add your own component on specific places in the Pterodactyl panel.</h4><br/>
 
 <div class="alert alert-dark bg-body mt-3 rounded-4 border" role="alert">
   <i class="bi bi-x mb-1" style="font-size:23px; float: left;"></i>
@@ -7,6 +7,6 @@
 </div><br/>
 
 <div class="btn-group" role="group" aria-label="Navigation" style="float: right">
-  <a href="?page=developing-extensions/Admin-configuration" class="btn btn-dark bg-light-subtle border-light-subtle">Previous</a>
-  <a href="?page=developing-extensions/React-components" class="btn btn-dark bg-light-subtle border-light-subtle">Next</a>
+  <a href="?page=developing-extensions/Dashboard-modifications" class="btn btn-dark bg-light-subtle border-light-subtle">Previous</a>
+  <a href="?page=developing-extensions/Packaging-extensions" class="btn btn-dark bg-light-subtle border-light-subtle">Next</a>
 </div>

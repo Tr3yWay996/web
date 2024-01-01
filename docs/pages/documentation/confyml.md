@@ -60,6 +60,9 @@ Add custom css to the Pterodactyl client panel, provide the path to your .css fi
 `wrapper`\
 Path to blade code that you want to add to the Pterodactyl client dashboard layout.
 
+`components` <span class="badge text-primary-emphasis"><i class="bi bi-stars"></i> New in <b>alpha-NLM</b></span>\
+Directory with React components which can be used to integrate your extension directly with the Pterodactyl frontend.
+
 <br/>
 
 ##### data
