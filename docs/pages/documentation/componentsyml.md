@@ -1,11 +1,6 @@
 # Components.yml
 <h4 class="fw-light">Define which React components should be added on given views.</h4><br/>
 
-<div class="alert alert-dark bg-body mt-3 rounded-4 border" role="alert">
-  <i class="bi bi-pin-angle-fill mb-1" style="font-size:23px; float: left;"></i>
-  <div class="ps-3 ms-3"><b>This documentation page is still being written.</b> You might run into unfinished explainations, incorrect instructions, outdated or misinformation.</div>
-</div><br/>
-
 ### **What is Components.yml?**
 While you can add React components to your extension without a `Components.yml` file, they won't be applied anywhere. `Components.yml` allows you to tell Blueprint where to apply a specific component, one or multiple targets.
 
