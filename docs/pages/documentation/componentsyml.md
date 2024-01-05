@@ -15,6 +15,19 @@ Navigation:
     BeforeNavigation: ""
     AdditionalItems: ""
     AfterNavigation: ""
+
+Server:
+  Terminal:
+    BeforeContent: ""
+    AfterContent: ""
+  Files:
+    Browse:
+      BeforeContent: ""
+      FileButtons: ""
+      AfterContent: ""
+    Edit:
+      BeforeEdit: ""
+      AfterEdit: ""
 ```
 
 <br/>
