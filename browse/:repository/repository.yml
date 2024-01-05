@@ -48,6 +48,17 @@
     icon: :logo/SXC.png
     url: https://www.sourcexchange.net/products/cookies
 
+# Darkenate
+- name: Darkenate
+  author: JasonHorkles
+  description: A Pterodactyl dark theme inspired by bloom.host's colors and the Recolor theme.
+  thumbnail: :thumbnail/darkenate.jpg
+  category: themes
+  downloads:
+  - name: GitHub
+    icon: :logo/GH.png
+    url: https://github.com/JasonHorkles/darkenate
+
 # dbEdit
 - name: dbEdit
   author: prplwtf
