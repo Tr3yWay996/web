@@ -15,8 +15,8 @@
     icon: :logo/BBB.png
     url: https://builtbybit.com/resources/announcements-for-pterodactyl.32546
 
-# Arc.io Intergration
-- name: Arc.io Intergration
+# Arc.io Integration
+- name: Arc.io Integration
   author: Ssmidge
   description: Add Arc to your panel within minutes.
   thumbnail: :thumbnail/arcio.jpg
