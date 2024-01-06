@@ -38,6 +38,21 @@ Server:
     Edit:
       BeforeEdit: ""
       AfterEdit: ""
+  Users:
+    BeforeContent: ""
+    AfterContent: ""
+  Backups:
+    BeforeContent: ""
+    AfterContent: ""
+  Network:
+    BeforeContent: ""
+    AfterContent: ""
+  Startup:
+    BeforeContent: ""
+    AfterContent: ""
+  Settings:
+    BeforeContent: ""
+    AfterContent: ""
 ```
 
 <br/>
