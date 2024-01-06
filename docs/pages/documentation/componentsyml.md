@@ -36,6 +36,23 @@ Navigation:
     BeforeNavigation: ""
     AdditionalItems: ""
     AfterNavigation: ""
+  SubNavigation:
+    BeforeSubNavigation: ""
+    AdditionalServerItems: ""
+    AdditionalAccountItems: ""
+    AfterSubNavigation: ""
+  Routes:
+    AdditionalDashboardRoutes: ""
+    AdditionalServerRoutes: ""
+    AdditionalGuestRoutes: ""
+
+Dashboard:
+  ServerRow:
+    BeforeEntryName: ""
+    AfterEntryName: ""
+    BeforeEntryDescription: ""
+    AfterEntryDescription: ""
+    ResourceLimits: ""
 
 Account:
   Overview:
@@ -56,6 +73,7 @@ Server:
     Browse:
       BeforeContent: ""
       FileButtons: ""
+      DropdownItems: ""
       AfterContent: ""
     Edit:
       BeforeEdit: ""
@@ -75,6 +93,7 @@ Server:
     AfterContent: ""
   Backups:
     BeforeContent: ""
+    DropdownItems: ""
     AfterContent: ""
   Network:
     BeforeContent: ""
