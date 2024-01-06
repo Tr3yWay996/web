@@ -22,8 +22,9 @@
 - Add new `-debug` command, which can be used to easily print all recent information and muted logs.
 - The `-help` command can now also be triggered by providing zero arguments to the `blueprint` CLI tool.
 - Internal placeholders `@version`, `&bp.version&` and `&bp.folder&` have been renamed to `::v` and `::f`.
-- Developers can now add components to the Pterodactyl navigation bar through React. 
+- Developers can now add components to the Pterodactyl navigation bar, account configuration pages and server management pages through [Components.yml](?page=documentation/componentsyml). 
 - Add GitHub sponsors section and link to Blueprint's `README.md`.
+- Improve error detection across `blueprint.sh`, mostly for extension installation and removal.
 
 <br/>
 
@@ -40,8 +41,10 @@
 - Extension file paths defined in `conf.yml` could escape the temporarily directory.
 - Onboarding admin notification was not being displayed and has now been removed.
 - Puzzle navbar button in the admin panel would normally flash upon first load with Blueprint, but didn't.
+- Extensions with the identifier `extensions` will no longer break dashboard CSS.
 
 <br/>
 
 #### Breaking Changes
 - Website URL changed from [`ptero.shop`](https://ptero.shop) to [`blueprint.zip`](https://blueprint.zip) which means some extensions might need to update the "Requires Blueprint" banner on their marketplace listings.
+- Incorrect paths for `conf.yml` options will now result in a fatal error, which may break some extensions.
