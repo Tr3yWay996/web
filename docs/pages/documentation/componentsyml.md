@@ -11,7 +11,7 @@ The YAML file shown below contains all configuration options that are currently 
 
 ```yaml
 Navigation:
-  NavigationBar:
+  NavigationBar: 
     BeforeNavigation: ""
     AdditionalItems: ""
     AfterNavigation: ""
@@ -24,6 +24,16 @@ Server:
     Browse:
       BeforeContent: ""
       FileButtons: ""
+      AfterContent: ""
+    Edit:
+      BeforeEdit: ""
+      AfterEdit: ""
+  Databases:
+    BeforeContent: ""
+    AfterContent: ""
+  Schedules:
+    List:
+      BeforeContent: ""
       AfterContent: ""
     Edit:
       BeforeEdit: ""
