@@ -41,10 +41,6 @@ Navigation:
     AdditionalServerItems: ""
     AdditionalAccountItems: ""
     AfterSubNavigation: ""
-  Routes:
-    AdditionalDashboardRoutes: ""
-    AdditionalServerRoutes: ""
-    AdditionalGuestRoutes: ""
 
 Dashboard:
   ServerRow:
