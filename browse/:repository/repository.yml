@@ -29,7 +29,7 @@
 # Cats
 - name: Cats
   author: prplwtf
-  description: Random cats in your admin panel!
+  description: The fluffiest Blueprint extension out there.
   thumbnail: :thumbnail/cats.jpg
   category: extensions
   downloads:
