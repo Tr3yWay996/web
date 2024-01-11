@@ -68,7 +68,7 @@
   downloads:
   - name: sourceXchange
     icon: :logo/SXC.png
-    url:
+    url: https://www.sourcexchange.net/products/dogs
 
 # dbEdit
 - name: dbEdit
