@@ -26,6 +26,17 @@
     icon: :logo/BBB.png
     url: https://builtbybit.com/resources/pterodactyl-v1-addon-arc-integration.32109/
 
+# Automation
+- name: Automation
+  author: ExperimentalX
+  description: Execute power/command actions on multiple servers at once.
+  thumbnail: :thumbnail/automation.jpg
+  category: extensions
+  downloads:
+  - name: BuiltByBit
+    icon: :logo/BBB.png
+    url: https://builtbybit.com/resources/automation.37282/
+
 # Cats
 - name: Cats
   author: prplwtf
