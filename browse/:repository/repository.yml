@@ -30,7 +30,7 @@
 - name: Automation
   author: ExperimentalX
   description: Execute power/command actions on multiple servers at once.
-  thumbnail: :thumbnail/automation.jpg
+  thumbnail: :thumbnail/sysautomation.jpg
   category: extensions
   downloads:
   - name: BuiltByBit
