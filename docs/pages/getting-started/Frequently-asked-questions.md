@@ -22,7 +22,7 @@
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
       <div class="accordion-body">
-        We are working on a brand new extension discovery page, until then, you can find all known extensions <a href="https://github.com/teamblueprint/main/blob/main/blueprint/misc/extensions.md">here</a>.
+        We have a "browse" section on our website, which you can find <a href="/browse">here</a>. You'll be able to find awesome themes and extensions there which are made with the extension framework.
       </div>
     </div>
   </div>
@@ -34,9 +34,9 @@
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
       <div class="accordion-body">
-        To <b>install</b> or <b>update</b> an extension, upload the <code>[IDENTIFIER].blueprint</code> file to your Pterodactyl installation folder and run <code>blueprint -install [IDENTIFIER]</code>.
+        To <b>install</b> or <b>update</b> an extension, upload the <code>example.blueprint</code> file to your Pterodactyl installation folder (commonly <code>/var/www/pterodactyl</code>) and run <code>blueprint -install example</code>.
         <br><br>
-        To <b>remove</b> and extension, run <code>blueprint -remove [IDENTIFIER].blueprint</code>.
+        To <b>remove</b> an extension, run <code>blueprint -remove example</code>.
       </div>
     </div>
   </div>
