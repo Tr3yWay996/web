@@ -92,6 +92,17 @@
     icon: :logo/SXC.png
     url: https://www.sourcexchange.net/products/dogs
 
+# Foxes
+- name: Foxes
+  author: SolidSilk
+  description: The cutest fox-related Pterodactyl modification.
+  thumbnail: :thumbnail/foxes.jpg
+  category: extensions
+  downloads:
+  - name: sourceXchange
+    icon: :logo/SXC.png
+    url: https://www.sourcexchange.net/products/foxes
+
 # Loader
 - name: Loader
   author: prplwtf
