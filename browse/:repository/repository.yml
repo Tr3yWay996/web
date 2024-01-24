@@ -161,9 +161,6 @@
   - name: sourceXchange
     icon: :logo/SXC.png
     url: https://www.sourcexchange.net/products/redirect
-  - name: PterodactylMarket
-    icon: :logo/PM.png
-    url: https://pterodactylmarket.com/resource/664
   - name: BuiltByBit
     icon: :logo/BBB.png
     url: https://builtbybit.com/resources/redirect.38191
