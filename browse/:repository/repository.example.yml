@@ -8,9 +8,6 @@
   - name: sourceXchange
     icon: :logo/SXC.png
     url:
-  - name: PterodactylMarket
-    icon: :logo/PM.png
-    url:
   - name: BuiltByBit
     icon: :logo/BBB.png
     url:
