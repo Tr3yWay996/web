@@ -9,6 +9,7 @@
 - The `-upgrade` command's script has now been moved onto `blueprint.sh` as it was only responsible for creating a temporarily folder, pulling latest release files and moving them.
 - Remove the `tools` directory as all scripts inside it have been implemented directly into `-upgrade` and `-debug`.
 - Step away from the `bash_colors` and `throwError` shell-based library used by `blueprint.sh` and group multiple small libraries into one library called `misc`.
+- Redesign placeholder extension icons which are used when an extension does not ship with an icon.
 
 <br/>
 
