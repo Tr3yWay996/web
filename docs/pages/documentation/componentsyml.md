@@ -42,7 +42,7 @@ Navigation:
     AdditionalAccountItems: ""
     AfterSubNavigation: ""
   Routes:
-    - { Name: "", Path: "", Type: "", Component: "" }
+  # - { Name: "", Path: "", Type: "", Component: "" }
 
 Dashboard:
   ServerRow:
@@ -51,6 +51,11 @@ Dashboard:
     BeforeEntryDescription: ""
     AfterEntryDescription: ""
     ResourceLimits: ""
+
+Authentication:
+  Container:
+    BeforeContent: ""
+    AfterContent: ""
 
 Account:
   Overview:
