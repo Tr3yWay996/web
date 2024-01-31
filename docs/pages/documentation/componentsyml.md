@@ -41,6 +41,8 @@ Navigation:
     AdditionalServerItems: ""
     AdditionalAccountItems: ""
     AfterSubNavigation: ""
+  Routes:
+    - { Name: "", Path: "", Type: "", Component: "" }
 
 Dashboard:
   ServerRow:
