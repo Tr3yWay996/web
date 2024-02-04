@@ -71,7 +71,7 @@ public function index(): View
   );
 }
 ```
-After adding this function, you should be able to load your extension's admin page when attempting to visit it after building your extension.
+After adding this function, you should be able to load your extension's admin page when attempting to visit it.
 
 
 <div class="btn-group" role="group" aria-label="Navigation" style="float: right">
