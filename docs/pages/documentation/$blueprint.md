@@ -3,7 +3,7 @@
 
 <div class="alert alert-dark" role="alert">
   <i class="bi bi-currency-dollar me-2 mt-1 mb-1" style="font-size:23px; float: left;"></i>
-  <div class="ps-3 ms-3"><b>BlueprintExtensionLibrary</b> (or $blueprint) is added automatically when using the default controller by leaving your controller path option blank. For custom controllers, you may refer to <a href="?page=developing-extensions/Importing-$blueprint" class="alert-link">this guide</a>.</div>
+  <div class="ps-3 ms-3"><b>BlueprintExtensionLibrary</b> (or $blueprint) is added automatically when using the default controller by leaving your controller path option blank. For custom controllers, you may refer to <a href="?page=developing-extensions/Custom-controllers" class="alert-link">this guide</a>.</div>
 </div>
 <br/>
 

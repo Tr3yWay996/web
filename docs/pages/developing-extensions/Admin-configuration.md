@@ -7,6 +7,6 @@
 </div><br/>
 
 <div class="btn-group" role="group" aria-label="Navigation" style="float: right">
-  <a href="?page=developing-extensions/Importing-$blueprint" class="btn btn-dark bg-light-subtle border-light-subtle">Previous</a>
+  <a href="?page=developing-extensions/Custom-controllers" class="btn btn-dark bg-light-subtle border-light-subtle">Previous</a>
   <a href="?page=developing-extensions/Dashboard-modifications" class="btn btn-dark bg-light-subtle border-light-subtle">Next</a>
 </div>
