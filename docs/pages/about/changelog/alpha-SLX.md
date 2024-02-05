@@ -10,11 +10,18 @@
 - Remove the `tools` directory as all scripts inside it have been implemented directly into `-upgrade` and `-debug`.
 - Step away from the `bash_colors` and `throwError` shell-based library used by `blueprint.sh` and group multiple small libraries into one library called `misc`.
 - Redesign placeholder extension icons which are used when an extension does not ship with an icon.
+- Improved error validation and detection in `blueprint.sh`.
+- Extensions can now create routes inside of their `Components.yml` file, allowing for adding pages to the Pterodactyl client panel.
+- Massively speed up `blueprint.sh` by grouping some commands and adding a bunch of optimization.
+- Improve code readability across multiple parts of `blueprint.sh`.
+- Rename the `controller.php` build file to `controller.build`.
+- Step away from null (`NUL`) characters in build files for placeholders, start using brackets instead.
 
 <br/>
 
 #### Bugfixes
 - The `blueprint` CLI command would return exit code `1` in all cases, even successful events. This has been replaced by `0` for "SUCCESS" events, `1` for "ERROR" events, `2` for "USER-ERROR" events.
+- `SubNavigation` options in `Components.yml` had an inconsistency in component placement across similar options.
 
 <br/>
 
