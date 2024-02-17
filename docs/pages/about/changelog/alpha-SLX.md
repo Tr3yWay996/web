@@ -15,13 +15,21 @@
 - Massively speed up `blueprint.sh` by grouping some commands and adding a bunch of optimization.
 - Improve code readability across multiple parts of `blueprint.sh`.
 - Rename the `controller.php` build file to `controller.build`.
-- Step away from null (`NUL`) characters in build files for placeholders, start using brackets instead.
+- We are stepping away from null (`NUL`) characters in build file placeholders, wrapper start/end identifiers, extension template placeholders (preperations made, not enforced until older versions become deprecated) and more.
+- Made small changes to both the `admin.extensions` and `admin.extensions.blueprint` view.
+- Installing and removing extensions now clears the application cache.
+- Add `-add`, which is an alias of `-install`.
+- Abort extension removal if argument one ends with `.blueprint`.
+- `ExtensionsController` and Blueprint's database migration have been switched over to 2-space indentation.
+- Admin view routes have been moved to `routes/blueprint.php`.
+- Admin and dashboard wrappers have now been moved to `partials/blueprint/`.
 
 <br/>
 
 #### Bugfixes
 - The `blueprint` CLI command would return exit code `1` in all cases, even successful events. This has been replaced by `0` for "SUCCESS" events, `1` for "ERROR" events, `2` for "USER-ERROR" events.
 - `SubNavigation` options in `Components.yml` had an inconsistency in component placement across similar options.
+- The `admin.extensions.blueprint` view had auto-complete enabled on it's input form which caused unsaved options to be cached.
 
 <br/>
 
