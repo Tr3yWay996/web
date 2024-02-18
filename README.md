@@ -23,6 +23,7 @@ Blueprint's website is made with the following *(mostly open source)* projects, 
 
 ## Contributors
 [**prplwtf**](https://github.com/prplwtf) - creator and maintainer\
+[**ahwxorg**](https://github.com/ahwxorg) - contributor\
 [patrickyu17](https://github.com/PatrickYu17) - contributor\
 [slimi1](https://github.com/Slimi1) - contributor\
 [itzbenoitxd](https://github.com/ItzBenoitXD) - contributor
