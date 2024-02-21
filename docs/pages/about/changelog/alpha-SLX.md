@@ -23,6 +23,7 @@
 - `ExtensionsController` and Blueprint's database migration have been switched over to 2-space indentation.
 - Admin view routes have been moved to `routes/blueprint.php`.
 - Admin and dashboard wrappers have now been moved to `partials/blueprint/`.
+- Webpack build process is now shown when Blueprint needs to rebuild panel assets.
 
 <br/>
 
@@ -30,8 +31,4 @@
 - The `blueprint` CLI command would return exit code `1` in all cases, even successful events. This has been replaced by `0` for "SUCCESS" events, `1` for "ERROR" events, `2` for "USER-ERROR" events.
 - `SubNavigation` options in `Components.yml` had an inconsistency in component placement across similar options.
 - The `admin.extensions.blueprint` view had auto-complete enabled on it's input form which caused unsaved options to be cached.
-
-<br/>
-
-#### Breaking Changes
-- None yet.
+- `-remove` would default every unknown response as 'yes' on it's confirmation question, which should be defaulted to 'no'.
