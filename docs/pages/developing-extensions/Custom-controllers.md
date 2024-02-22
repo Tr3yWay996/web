@@ -1,11 +1,6 @@
 # Custom controllers
 <h4 class="fw-light">Write custom controllers instead of using the premade one</h4><br/>
 
-<div class="alert alert-dark bg-body mt-3 rounded-4 border" role="alert">
-  <i class="bi bi-pin-angle-fill mb-1" style="font-size:23px; float: left;"></i>
-  <div class="ps-3 ms-3"><b>This guide is still being written.</b> You might run into unfinished explainations, incorrect instructions, outdated or misinformation.</div>
-</div><br/>
-
 Controllers allow for added functionality and flexibility to your extension's admin page. This can be useful when making configuration pages, calculating certain things beforehand, query APIs and much more.
 
 Before you start writing your custom controller, you will need to create a `controller.php` file. After doing so, you'll want to define it in your extension's [conf.yml](?page=documentation/confyml):
@@ -71,7 +66,7 @@ public function index(): View
   );
 }
 ```
-After adding this function, you should be able to load your extension's admin page when attempting to visit it.
+After adding this function, you should be able to load your extension's admin page when attempting to visit it and use [`$blueprint`](?page=documentation/$blueprint) inside of the view and controller.
 
 
 <div class="btn-group" role="group" aria-label="Navigation" style="float: right">
