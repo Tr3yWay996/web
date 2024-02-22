@@ -3,7 +3,7 @@
 
 <div class="alert alert-dark bg-body mt-3 rounded-4 border" role="alert">
   <i class="bi bi-pin-angle-fill mb-1" style="font-size:23px; float: left;"></i>
-  <div class="ps-3 ms-3"><b>This guide is still being written.</b> You might run into unfinished explainations, incorrect instructions, outdated or misinformation.</div>
+  <div class="ps-3 ms-3"><b>This guide is still being written.</b> You might run into unfinished explanations, incorrect instructions, outdated or misinformation.</div>
 </div><br/>
 
 Blueprint extensions can add custom pages to Pterodactyl and content to existing pages through the [Components.yml](?page=documentation/componentsyml) feature.
