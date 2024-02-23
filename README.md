@@ -26,7 +26,8 @@ Blueprint's website is made with the following *(mostly open source)* projects, 
 [**ahwxorg**](https://github.com/ahwxorg) - contributor\
 [patrickyu17](https://github.com/PatrickYu17) - contributor\
 [slimi1](https://github.com/Slimi1) - contributor\
-[itzbenoitxd](https://github.com/ItzBenoitXD) - contributor
+[itzbenoitxd](https://github.com/ItzBenoitXD) - contributor\
+[arnaudlier](https://github.com/ArnaudLier) - contributor
 
 <br/>
 
