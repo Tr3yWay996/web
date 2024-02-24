@@ -3,12 +3,13 @@
 <br/>
 
 #### Changes
-- None yet.
+- `blueprint.sh` now has a variable to change the webserver permission user which will persist over updates.
 
 <br/>
 
 #### Bugfixes
-- None yet.
+- Admin CSS from extensions and Blueprint was imported __before__ other stylesheets, causing them to override extension CSS.
+- The green tag in the admin panel had a bright background color, causing it's text to become hard to read.
 
 <br/>
 

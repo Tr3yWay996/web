@@ -122,8 +122,8 @@
 
 # Modpack Installer
 - name: Modpack Installer
-  author: arnaudlier
-  description: One-click install "Minecraft Java Edition" modpacks right from the comfort of your Pterodactyl Panel.
+  author: ric-rac
+  description: Install Minecraft modpacks right from the comfort of your Pterodactyl Panel.
   thumbnail: :thumbnail/modpackinstaller.webp
   category: extensions
   downloads:
@@ -256,3 +256,14 @@
   - name: GitHub
     icon: :logo/GH.png
     url: https://github.com/prplwtf/blueprint-snowflakes
+
+# World Manager
+- name: World Manager
+  author: ric-rac
+  description: Manage Minecraft worlds right from Pterodactyl Panel.
+  thumbnail: :thumbnail/minecraftworldmanager.webp
+  category: extensions
+  downloads:
+  - name: sourceXchange
+    icon: :logo/SXC.png
+    url: https://www.sourcexchange.net/products/minecraft-world-manager-for-blueprint
