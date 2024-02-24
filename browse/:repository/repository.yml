@@ -130,6 +130,9 @@
   - name: sourceXchange
     icon: :logo/SXC.png
     url: https://www.sourcexchange.net/products/modpack-installer-for-blueprint
+  - name: BuiltByBit
+    icon: :logo/BBB.png
+    url: https://builtbybit.com/resources/modpack-installer-for-blueprint.40083
 
 # Nebula
 - name: Nebula
@@ -267,3 +270,6 @@
   - name: sourceXchange
     icon: :logo/SXC.png
     url: https://www.sourcexchange.net/products/minecraft-world-manager-for-blueprint
+  - name: BuiltByBit
+    icon: :logo/BBB.png
+    url: https://builtbybit.com/resources/minecraft-world-manager-for-blueprint.40088
