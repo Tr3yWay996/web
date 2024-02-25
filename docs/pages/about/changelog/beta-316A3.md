@@ -4,6 +4,8 @@
 
 #### Changes
 - `blueprint.sh` now has a variable to change the webserver permission user which will persist over updates.
+- Having nothing as input in `-init` questions will now select the placeholder option.
+- New `adminOnly` scope for custom extension routes, which allows developers to limit pages to administrators.
 
 <br/>
 
