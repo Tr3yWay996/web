@@ -61,7 +61,7 @@ export default Content;
 ```
 ```tsx
 // ExampleComponent.tsx
-import Content from '@/blueprint/extensions/__identifier__/Content';
+import Content from '^#componentroot#^/Content';
 ```
 ```tsx
 // ExampleComponent.tsx

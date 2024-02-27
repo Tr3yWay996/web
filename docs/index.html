@@ -114,90 +114,30 @@
 
   <!-- Footer -->
   <div class="container">
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-    <div class="col-md-4 d-flex align-items-center">
-      <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" width="30" height="24" fill="#aeb2b6">
-          <rect x="0" y="166.6666" width="166.6666" height="166.6666"/>
-          <rect x="166.6666" y="0" width="166.6666" height="166.6666"/>
-          <rect x="166.6666" y="333.3332" width="333.3332" height="166.6666"/>
-          <rect x="333.3332" y="166.6666" width="166.667" height="333.3332"/>
-        </svg>
-      </a>
-      <span class="mb-3 mb-md-0 text-body-secondary">© 2023-2024 <a href="https://prpl.wtf" class="text-body-secondary" target="_blank">prpl.wtf</a></span>
-    </div>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" width="30" height="24" fill="#aeb2b6">
+            <rect x="0" y="166.6666" width="166.6666" height="166.6666"/>
+            <rect x="166.6666" y="0" width="166.6666" height="166.6666"/>
+            <rect x="166.6666" y="333.3332" width="333.3332" height="166.6666"/>
+            <rect x="333.3332" y="166.6666" width="166.667" height="333.3332"/>
+          </svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-body-secondary">© 2023-2024 <a href="https://prpl.wtf" class="text-body-secondary" target="_blank">prpl.wtf</a></span>
+      </div>
 
-    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-      <li class="ms-3"><a class="text-body-secondary" href="https://discord.gg/CUwHwv6xRe"><i class="bi bi-discord" width="24" height="24"></i></a></li>
-      <li class="ms-3"><a class="text-body-secondary" href="https://github.com/teamblueprint/main"><i class="bi bi-github" width="24" height="24"></i></a></li>
-      <li class="ms-3"><a class="text-body-secondary" href="https://liberapay.com/blueprint"><i class="bi bi-chat-right-heart-fill" width="24" height="24"></i></a></li>
-    </ul>
-  </footer>
-</div>
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-body-secondary" href="https://discord.gg/CUwHwv6xRe"><i class="bi bi-discord" width="24" height="24"></i></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="https://github.com/teamblueprint/main"><i class="bi bi-github" width="24" height="24"></i></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="https://liberapay.com/blueprint"><i class="bi bi-chat-right-heart-fill" width="24" height="24"></i></a></li>
+      </ul>
+    </footer>
+  </div>
 
   <script src="/.modules/bootstrap/js/bootstrap.bundle.js" crossorigin="anonymous"></script>
   <script src="/.modules/marked/marked.min.js" crossorigin="anonymous"></script>
   <script src="/.modules/highlight.js/highlight.min.js" crossorigin="anonymous"></script>
-  <script>
-  var u = new URL(window.location.href);
-  var d = u.searchParams.get('page');
-  try { document.querySelector('a[href="?page='+d+'"] button').classList += ("disabled border border-2 text-secondary border-secondary border-top-0 border-end-0 border-bottom-0 rounded-0 text-start") } catch {  }
-  if(d) { a = './pages/'+d+'.md' } else { a = './pages/Documentation.md' }
-  fetch(a)
-    .then(b => {
-      if (!b.ok) {
-        throw new Error(`Network response was not ok: ${b.status}`);
-        window.location="?page=Error"
-      }
-      return b.text();
-    })
-    .then(markdownContent => {
-      document.getElementById('content').innerHTML = marked.parse(markdownContent);
-      document.querySelectorAll(".hl-escape").forEach(function(element) {
-        element.innerHTML = element.innerHTML.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
-      });
-      hljs.highlightAll(document.getElementById('content'));
-
-      // Add "Edit on GitHub" button
-      const contentDiv = document.getElementById('content');
-      if (contentDiv) {
-        addGitHubEditButton(d, contentDiv); // Call the function to add the button
-      }
-    })
-    .catch(c => {
-      console.error('Error fetching the Markdown content:', c);
-      window.location="?page=Error"
-    });
-
-    function addGitHubEditButton(page, contentDiv) {
-    // Construct the correct GitHub URL for the markdown file
-    const githubRepoURL = 'https://github.com/teamblueprint/web/edit/main/docs/pages/';
-    const githubEditURL = `${githubRepoURL}${page}.md`;
-
-    const editButton = document.createElement('a');
-    editButton.href = githubEditURL;
-    editButton.target = '_blank';
-    editButton.rel = 'noopener noreferrer';
-    editButton.classList = 'float-end'
-    editButton.innerHTML = '<button type="button" class="btn btn-dark bg-light-subtle border-light-subtle" style="margin-right: 5px;"><i class="bi bi-git mx-1"></i></button>';
-
-    // Find the parent element of the btn-group in the contentDiv
-    const btnGroup = contentDiv.querySelector('.btn-group');
-    if (btnGroup) {
-      editButton.style.marginLeft = '10px'; // Optional: Adjust margin between the buttons
-
-      const parentElement = btnGroup.parentElement;
-      if (parentElement) {
-        parentElement.insertBefore(editButton, btnGroup); // Insert the button before the btn-group
-      } else {
-        console.error('Parent element not found.');
-      }
-    } else {
-      console.error('btn-group element not found.');
-    }
-  }
-
-  </script>
-  
+  <script src="./index.js" crossorigin="anonymous"></script>
 
 </body>

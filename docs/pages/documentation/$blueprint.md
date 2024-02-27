@@ -18,10 +18,10 @@ The BlueprintExtensionLibrary is automatically imported to dashboard wrappers, a
 
 ##### Databasing <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Universal</span>
 `dbGet(table, record)`\
-Returns a database value. Will be fetched as "table::record".
+Returns a database value. Will be fetched as `table::record`.
 
 `dbSet(table, record, value)`\
-Sets a database value. Will be set as "table::record", "value".
+Sets a database value. Will be set as `table::record`, `value`.
 
 <br/>
 
@@ -33,16 +33,22 @@ Allows you to show notifications on the admin panel. Appears on next reload.
 Allows you to show notifications on the admin panel after a delay. Admin page automatically reloads after specified delay.
 
 `notifyNow(text)`\
-Allows you to show notifications on the admin panel after a delay. This behaves similarly to using a delay of zero with "notifyAfter()".
+Allows you to show notifications on the admin panel after a delay. This behaves similarly to using a delay of zero with `notifyAfter()`.
 
 <br/>
 
 ##### Files <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Universal</span>
 `fileRead(path)`\
-Returns the contents of the file defined in "path".
+Returns the contents of the file defined in `path`.
 
 `fileMake(path)`\
-Make a new file with the name defined in "path".
+Make a new file with the name defined in `path`.
 
 `fileWipe(path)`\
-Removes the file defined in "path" from the filesystem.
+Removes the file defined in `path` from the filesystem.
+
+<br/>
+
+##### Extensions <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Universal</span>
+`extension(identifier)` <tag type="new" content="beta-316A3"/></tag>\
+Returns true if an extension with the identifier defined in `identifier` is installed, otherwise returns false.

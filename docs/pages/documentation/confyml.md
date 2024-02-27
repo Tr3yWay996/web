@@ -9,22 +9,22 @@ When installing extensions, Blueprint needs to know a lot of things about an ext
 ### **Options**
 
 ##### info
-`name` <span class="badge bg-danger-subtle text-danger-emphasis rounded-pill">Required</span>\
+`name` <tag type="required"/></tag>\
 The display name of your extension.
 
-`identifier` <span class="badge bg-danger-subtle text-danger-emphasis rounded-pill">Required</span>\
+`identifier` <tag type="required"/></tag>\
 Used for folder trees, routers, view names and more. Identifiers may only contain a-z lowercase characters and must be unique (two extensions cannot share the same identifier on one system).
 
-`description` <span class="badge bg-danger-subtle text-danger-emphasis rounded-pill">Required</span>\
+`description` <tag type="required"/></tag>\
 Describe your extension. This shows on the admin page of your extension.
 
 `flags`\
 Optional configuration string to apply advanced flags to your extensions. [Learn more about flags.](?page=documentation/flags)
 
-`version` <span class="badge bg-danger-subtle text-danger-emphasis rounded-pill">Required</span>\
+`version` <tag type="required"/></tag>\
 The version of your extension.
 
-`target` <span class="badge bg-danger-subtle text-danger-emphasis rounded-pill">Required</span>\
+`target` <tag type="required"/></tag>\
 The target version is compared to the currently installed version of Blueprint on installation. If this is not the same Blueprint will warn the user about your extension possibly not being able to function as expected.
 
 `author`\
@@ -39,7 +39,7 @@ URL to your extension's website. Will be linked on the extension's admin page.
 <br/>
 
 ##### admin
-`view` <span class="badge bg-danger-subtle text-danger-emphasis rounded-pill">Required</span>\
+`view` <tag type="required"/></tag>\
 Path to your admin view.
 
 `controller`\
@@ -60,7 +60,7 @@ Add custom css to the Pterodactyl client panel, provide the path to your .css fi
 `wrapper`\
 Path to blade code that you want to add to the Pterodactyl client dashboard layout.
 
-`components` <span class="badge text-primary-emphasis"><i class="bi bi-stars"></i> New in <b>alpha-NLM</b></span>\
+`components`\
 Directory with React components which can be used to integrate your extension directly with the Pterodactyl frontend.
 
 <br/>
@@ -71,6 +71,9 @@ Path to your data directory.
 
 `public`\
 Path to your public directory. All files in this folder are available publicly and can be seen by anyone, so don't store any secrets or keys here.
+
+`views` <tag type="new" content="beta-316A3"/></tag>\
+Path to your views directory. This directory is used for creating (partial) views made up of sections which you can import to your admin view and admin/dashboard wrapper.
 
 <br/>
 

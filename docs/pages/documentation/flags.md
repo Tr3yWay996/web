@@ -33,5 +33,5 @@ In the middle of the export process, extensions with this flag will be able to r
 `developerIgnoreInstallScript`\
 Ignore the custom extension installation script when installing your extension through developer commands.
 
-`developerIgnoreRebuild` <span class="badge text-primary-emphasis"><i class="bi bi-stars"></i> New in <b>alpha-NLM</b></span>\
+`developerIgnoreRebuild`\
 Skip rebuilding panel assets when installing your extension through developer commands.
