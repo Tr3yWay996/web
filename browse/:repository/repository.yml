@@ -3,6 +3,7 @@
   author: prplwtf
   description: Create announcements for your Pterodactyl dashboard.
   thumbnail: :thumbnail/announcements.webp
+  identifier: announcements
   category: extensions
   downloads:
   - name: sourceXchange
@@ -17,6 +18,7 @@
   author: Ssmidge
   description: Add Arc to your panel within minutes.
   thumbnail: :thumbnail/arcio.jpg
+  identifier: arcio
   category: extensions
   downloads:
   - name: BuiltByBit
@@ -28,6 +30,7 @@
   author: ExperimentalX
   description: Execute power/command actions on multiple servers at once.
   thumbnail: :thumbnail/sysautomation.jpg
+  identifier: sysautomation
   category: extensions
   downloads:
   - name: BuiltByBit
@@ -39,6 +42,7 @@
   author: prplwtf
   description: The fluffiest Blueprint extension out there.
   thumbnail: :thumbnail/cats.jpg
+  identifier: cats
   category: extensions
   downloads:
   - name: sourceXchange
@@ -50,6 +54,7 @@
   author: prplwtf
   description: Customizable cookie disclaimer for Pterodactyl.
   thumbnail: :thumbnail/cookies.webp
+  identifier: cookies
   category: extensions
   downloads:
   - name: sourceXchange
@@ -64,6 +69,7 @@
   author: Kiip
   description: Server sorting that just works.
   thumbnail: :thumbnail/customserversort.jpg
+  identifier: customserversort
   category: extensions
   downloads:
   - name: sourceXchange
@@ -75,6 +81,7 @@
   author: JasonHorkles
   description: A Pterodactyl dark theme inspired by bloom.host's colors and the Recolor theme.
   thumbnail: :thumbnail/darkenate.jpg
+  identifier: darkenate
   category: themes
   downloads:
   - name: GitHub
@@ -86,6 +93,7 @@
   author: prplwtf
   description: Basic extension to modify database values.
   thumbnail: :thumbnail/dbedit.jpg
+  identifier: dbedit
   category: extensions
   downloads:
   - name: GitHub
@@ -97,6 +105,7 @@
   author: Slimi
   description: Random dogs in your admin panel.
   thumbnail: :thumbnail/dogs.jpg
+  identifier: dogs
   category: extensions
   downloads:
   - name: sourceXchange
@@ -108,6 +117,7 @@
   author: SolidSilk
   description: The cutest fox-related Pterodactyl modification.
   thumbnail: :thumbnail/foxes.jpg
+  identifier: foxes
   category: extensions
   downloads:
   - name: sourceXchange
@@ -122,6 +132,7 @@
   author: prplwtf
   description: Awesome loading animation for Pterodactyl.
   thumbnail: :thumbnail/loader.jpg
+  identifier: loader
   category: extensions
   downloads:
   - name: sourceXchange
@@ -136,6 +147,7 @@
   author: ric-rac
   description: Install Minecraft modpacks right from the comfort of your Pterodactyl Panel.
   thumbnail: :thumbnail/modpackinstaller.webp
+  identifier: modpackinstaller
   category: extensions
   downloads:
   - name: sourceXchange
@@ -150,6 +162,7 @@
   author: prplwtf
   description: Pterodactyl takes flight.
   thumbnail: :thumbnail/nebula.jpg
+  identifier: nebula
   category: themes
   downloads:
   - name: sourceXchange
@@ -164,6 +177,7 @@
   author: sp11rum
   description: A fresh coat of paint for your panel.
   thumbnail: :thumbnail/recolor.jpg
+  identifier: recolor
   category: themes
   downloads:
   - name: sourceXchange
@@ -181,6 +195,7 @@
   author: prplwtf
   description: Create URL redirects within seconds.
   thumbnail: :thumbnail/redirect.jpg
+  identifier: redirect
   category: extensions
   downloads:
   - name: sourceXchange
@@ -198,6 +213,7 @@
   author: EwweKovacevic
   description: Show the UUID and ID of nodes in the admin panel.
   thumbnail: :thumbnail/shownodeids.webp
+  identifier: shownodeids
   category: extensions
   downloads:
   - name: BuiltByBit
@@ -209,6 +225,7 @@
   author: PatrickYu17
   description: Change your panel favicon.
   thumbnail: :thumbnail/simplefavicons.png
+  identifier: simplefavicons
   category: extensions
   downloads:
   - name: BuiltByBit
@@ -220,6 +237,7 @@
   author: PatrickYu17
   description: Create a custom panel footer.
   thumbnail: :thumbnail/simplefooters.png
+  identifier: simplefooters
   category: extensions
   downloads:
   - name: sourceXchange
@@ -234,6 +252,7 @@
   author: PatrickYu17
   description: A unique, modern and simple visual theme for Pterodactyl.
   thumbnail: :thumbnail/simplevisuals.webp
+  identifier: simplevisuals
   category: themes
   downloads:
   - name: BuiltByBit
@@ -245,6 +264,7 @@
   author: prplwtf
   description: Admin theming, done right.
   thumbnail: :thumbnail/slate.jpg
+  identifier: slate
   category: themes
   downloads:
   - name: sourceXchange
@@ -259,6 +279,7 @@
   author: prplwtf
   description: Add snowflakes to your Pterodactyl dashboard!
   thumbnail: :thumbnail/snowflakes.jpg
+  identifier: showflakes
   category: themes
   downloads:
   - name: sourceXchange
@@ -276,6 +297,7 @@
   author: Xenority
   description: Pterodactyl integration for the WidgetBot Discord bot.
   thumbnail: :thumbnail/widgetbot.jpg
+  identifier: widgetbot
   category: extensions
   downloads:
   - name: sourceXchange
@@ -287,6 +309,7 @@
   author: ric-rac
   description: Manage Minecraft worlds right from Pterodactyl Panel.
   thumbnail: :thumbnail/minecraftworldmanager.webp
+  identifier: minecraftworldmanager
   category: extensions
   downloads:
   - name: sourceXchange

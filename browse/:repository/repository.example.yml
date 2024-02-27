@@ -3,6 +3,7 @@
   author: author
   description: Description
   thumbnail: :thumbnail/thumbnail.jpg
+  identifier: extension
   category: themes/extensions
   downloads:
   - name: sourceXchange
