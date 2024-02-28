@@ -48,6 +48,9 @@
   - name: sourceXchange
     icon: :logo/SXC.png
     url: https://www.sourcexchange.net/products/cats
+  - name: BuiltByBit
+    icon: :logo/BBB.png
+    url: https://builtbybit.com/resources/cats.40300/
 
 # Cookies
 - name: Cookies
