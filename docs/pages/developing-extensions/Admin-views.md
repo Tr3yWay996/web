@@ -12,7 +12,7 @@ The Barebones template includes two files by default, `conf.yml` and `admin.blad
   <code>^#identifier#^</code> is the identifier of this extension.
   The current version is <i>^#version#^</i>.
 </p></code></pre>
-    <div class="border-top mb-3"></div>
+    <div class="border-top mb-3 code-spacer"></div>
     <div class="overflow-scroll">
       <img src="/.assets/storage/docs/png/3.png">
     </div>
@@ -30,7 +30,7 @@ Right now all lines or on the same row. This is due to how Blueprint builds your
   <code>^#identifier#^</code> is the identifier of this extension. <br>
   The current version is <i>^#version#^</i>. <br>
 </p></code></pre>
-    <div class="border-top mb-3"></div>
+    <div class="border-top mb-3 code-spacer"></div>
     <div class="overflow-scroll">
       <img src="/.assets/storage/docs/png/5.png">
     </div>
@@ -55,7 +55,7 @@ We can achieve this with the `box` css class, which is included in the Pterodact
     </p>
   </div>
 </div></code></pre>
-    <div class="border-top mb-3"></div>
+    <div class="border-top mb-3 code-spacer"></div>
     <div class="overflow-scroll">
       <img src="/.assets/storage/docs/png/6.png">
     </div>
@@ -64,7 +64,7 @@ We can achieve this with the `box` css class, which is included in the Pterodact
 
 You have now created your very own admin page through Blueprint. Try experimenting a bit with it, and once you are ready, move onto the next guide.
 
-<div class="btn-group" role="group" aria-label="Navigation" style="float: right">
+<div class="btn-group docs-navigator" role="group" aria-label="Navigation" style="float: right">
   <a href="?page=getting-started/Extension-development" class="btn btn-dark bg-light-subtle border-light-subtle">Previous</a>
   <a href="?page=developing-extensions/Custom-controllers" class="btn btn-dark bg-light-subtle border-light-subtle">Next</a>
 </div>

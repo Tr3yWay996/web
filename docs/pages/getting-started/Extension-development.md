@@ -28,7 +28,7 @@ To apply any changes you've made and preview them on your panel, run the followi
 blueprint -build
 ```
 
-<div class="btn-group" role="group" aria-label="Navigation" style="float: right">
+<div class="btn-group docs-navigator" role="group" aria-label="Navigation" style="float: right">
   <button type="button" class="btn btn-dark bg-light-subtle border-light-subtle text-secondary disabled">Previous</button>
   <a href="?page=developing-extensions/Admin-views" class="btn btn-dark bg-light-subtle border-light-subtle">Next</a>
 </div>

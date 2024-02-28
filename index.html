@@ -48,10 +48,10 @@
               <i class="bi bi-moon-stars-fill my-1 theme-icon-active"></i>
               <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
             </button>
-            <ul class="dropdown-menu dropdown-menu-end position-absolute" aria-labelledby="bd-theme-text">
-              <li><button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false"><i class="bi bi-sun-fill me-2 opacity-50"></i> Light</button></li>
-              <li><button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="dark" aria-pressed="true"><i class="bi bi-moon-stars-fill me-2 opacity-50"></i> Dark</button></li>
-              <li><button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false"><i class="bi bi-circle-half me-2 opacity-50"></i> Auto</button></li>
+            <ul class="dropdown-menu dropdown-menu-end position-absolute gap-1 p-2 rounded-3 mx-0 border-0 shadow w-220px" aria-labelledby="bd-theme-text">
+              <li><button type="button" class="theme-switcher-btn dropdown-item rounded-2 d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false"><i class="bi bi-sun-fill me-2 opacity-50"></i> Light</button></li>
+              <li><button type="button" class="theme-switcher-btn dropdown-item rounded-2 d-flex align-items-center active" data-bs-theme-value="dark" aria-pressed="true"><i class="bi bi-moon-stars-fill me-2 opacity-50"></i> Dark</button></li>
+              <li><button type="button" class="theme-switcher-btn dropdown-item rounded-2 d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false"><i class="bi bi-circle-half me-2 opacity-50"></i> Auto</button></li>
             </ul>
           </li>
         </ul>
@@ -61,11 +61,11 @@
 
   <!-- Mobile/Tablet Navbar -->
   <!--<div class="p-2 d-lg-none d-inline"></div>-->
-  <nav class="navbar bg-dark-subtle fixed-top d-lg-none d-inline">
+  <nav class="navbar fixed-top d-lg-none d-inline blueprint-navbar-mobile">
     <div class="container-fluid">
       <a href="/" class="d-flex align-items-center mb-2 me-2 mt-2 mb-lg-0 link-body-emphasis text-decoration-none"><img src="/.assets/brand/logoBlue.jpg" width="40" height="40" class="rounded-3" alt="" /></a>
       <div class="dropdown">
-        <button class="btn btn-secondary bg-dark-subtle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <button class="btn btn-secondary bg-dark-subtle border-0 nav-dropdown-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           <span class="navbar-toggler-icon"></span>
         </button>
         <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 border-0 shadow w-220px">
@@ -75,7 +75,11 @@
           <li>
             <hr class="dropdown-divider">
           </li>
-          <li><a class="dropdown-item rounded-2" href="https://github.com/teamblueprint/main/releases/latest">Download</a></li>
+          <div class="mobile-theme-switcher">
+            <a class="dropdown-item rounded-2 mobile-theme-switcher-btn" data-bs-theme-value="light"><i class="bi bi-sun-fill opacity-50"></i></a>
+            <a class="dropdown-item rounded-2 mobile-theme-switcher-btn" data-bs-theme-value="dark"><i class="bi bi-moon-stars-fill opacity-50"></i></a>
+            <a class="dropdown-item rounded-2 mobile-theme-switcher-btn" data-bs-theme-value="auto"><i class="bi bi-circle-half opacity-50"></i></a>
+          </div>
         </ul>
       </div>
     </div>

@@ -48,7 +48,7 @@ $BLUEPRINT_VERSION          # Blueprint version
 We hope you can create something that suits your needs with the export script feature, and if you don't have any use for it, at least you know that it exist.
 
 
-<div class="btn-group" role="group" aria-label="Navigation" style="float: right">
+<div class="btn-group docs-navigator" role="group" aria-label="Navigation" style="float: right">
   <a href="?page=developing-extensions/React-components" class="btn btn-dark bg-light-subtle border-light-subtle">Previous</a>
   <button type="button" class="btn btn-dark bg-light-subtle border-light-subtle text-secondary disabled">Next</button>
 </div>

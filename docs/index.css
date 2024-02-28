@@ -32,7 +32,17 @@ code.hljs {
   border-radius: 5px;
 }
 
-[data-bs-theme=light] .changelog-btn, .docs-link { background-color: #d4d4d4 !important; border-color: #e9e9e9 !important; }
+[data-bs-theme=light] .changelog-btn, [data-bs-theme=light] .docs-link { background-color: #d4d4d4 !important; border-color: #e9e9e9 !important; }
 [data-bs-theme=light] .changelog-btn-disabled { background-color: #e9e9e9 !important; border-color: #e9e9e9 !important; }
 [data-bs-theme=light] .changelog-btn { background-color: #d4d4d4 !important; border-color: #e9e9e9 !important; }
 [data-bs-theme=light] .docs-link-primary { border-color: #0d6efd !important; color: #fff; }
+
+[data-bs-theme=light] .docs-navigator > a,
+[data-bs-theme=light] .docs-navigator > a:hover,
+[data-bs-theme=light] .docs-navigator > a:active,
+[data-bs-theme=light] .git-button,
+[data-bs-theme=light] .git-button:active {
+  color: #4d4d4d
+}
+
+[data-bs-theme=light] .code-spacer { border-color: #434955 !important; }

@@ -69,7 +69,7 @@ public function index(): View
 After adding this function, you should be able to load your extension's admin page when attempting to visit it and use [`$blueprint`](?page=documentation/$blueprint) inside of the view and controller.
 
 
-<div class="btn-group" role="group" aria-label="Navigation" style="float: right">
+<div class="btn-group docs-navigator" role="group" aria-label="Navigation" style="float: right">
   <a href="?page=developing-extensions/Admin-views" class="btn btn-dark bg-light-subtle border-light-subtle">Previous</a>
   <a href="?page=developing-extensions/Admin-configuration" class="btn btn-dark bg-light-subtle border-light-subtle">Next</a>
 </div>

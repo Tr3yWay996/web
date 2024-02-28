@@ -1,12 +1,40 @@
-.blueprint-navbar {
+.blueprint-navbar, .blueprint-navbar-mobile {
   z-index: 100 !important;
   background-color: #08090a90;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 }
 
-[data-bs-theme=light] .blueprint-navbar {
-  background-color: #cad2d890;
+[data-bs-theme=light] .blueprint-navbar, [data-bs-theme=light] .blueprint-navbar-mobile {
+  background-color: #cad2d890 !important;
 }
 
+.nav-dropdown-btn { background-color: transparent !important; }
 [data-bs-theme=light] .invert-light { filter: invert() }
+
+.mobile-theme-switcher {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.mobile-theme-switcher-btn {
+  width: 33.33% !important;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.mobile-theme-switcher-btn.active i { opacity: 1 !important; }
+[data-bs-theme=light] .mobile-theme-switcher-btn.active i { color: #272727 !important }
+[data-bs-theme=light] .theme-switcher-btn.active,
+[data-bs-theme=light] .theme-switcher-btn:active { color: #272727 !important }
+
+[data-bs-theme=dark] .theme-switcher-btn.active,
+[data-bs-theme=dark] .theme-switcher-btn:active,
+[data-bs-theme=dark] .mobile-theme-switcher-btn.active,
+[data-bs-theme=dark] .mobile-theme-switcher-btn:active { background-color: #2b3035 !important }
+
+[data-bs-theme=light] .theme-switcher-btn.active,
+[data-bs-theme=light] .theme-switcher-btn:active,
+[data-bs-theme=light] .mobile-theme-switcher-btn.active,
+[data-bs-theme=light] .mobile-theme-switcher-btn:active { background-color: #dfdfdf !important }

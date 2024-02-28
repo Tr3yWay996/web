@@ -39,6 +39,7 @@
     const themeSwitcherText = document.querySelector('#bd-theme-text')
     const activeThemeIcon = document.querySelector('.theme-icon-active')
     const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+    const btnToActiveMobile = document.querySelector(`.mobile-theme-switcher-btn[data-bs-theme-value="${theme}"]`)
     const svgOfActiveBtn = btnToActive.querySelector('i').classList.toString()
       .replace("ms-auto d-none", "")
       .replace("me-2 opacity-50", "")
@@ -50,6 +51,7 @@
 
     btnToActive.classList.add('active')
     btnToActive.setAttribute('aria-pressed', 'true')
+    btnToActiveMobile.classList.add('active')
     activeThemeIcon.classList = svgOfActiveBtn + ' my-1 theme-icon-active'
     const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`
     themeSwitcher.setAttribute('aria-label', themeSwitcherLabel)

@@ -42,10 +42,10 @@ fetch(a)
     editButton.target = '_blank';
     editButton.rel = 'noopener noreferrer';
     editButton.classList = 'float-end'
-    editButton.innerHTML = '<button type="button" class="btn btn-dark bg-light-subtle border-light-subtle" style="margin-right: 5px;"><i class="bi bi-git mx-1"></i></button>';
+    editButton.innerHTML = '<button type="button" class="btn btn-dark bg-light-subtle border-light-subtle git-button" style="margin-right: 5px;"><i class="bi bi-git mx-1"></i></button>';
 
     // Find the parent element of the btn-group in the contentDiv
-    const btnGroup = contentDiv.querySelector('.btn-group');
+    const btnGroup = contentDiv.querySelector('.docs-navigator');
     if (btnGroup) {
       editButton.style.marginLeft = '10px'; // Optional: Adjust margin between the buttons
 
