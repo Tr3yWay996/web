@@ -11,8 +11,16 @@
     radial-gradient(ellipse at top right, rgba(var(--bp-hero-4), 0.5), transparent 50%),
     radial-gradient(ellipse at center right, rgba(var(--bp-hero-5), 0.5), transparent 50%),
     radial-gradient(ellipse at center left, rgba(var(--bp-hero-6), 0.5), transparent 50%);
-  padding-top: 100px;
+  padding-top: 150px;
   padding-bottom: 75px;
+}
+[data-bs-theme=light] .bp-hero {
+  --bp-hero-1: 59,137,214;
+  --bp-hero-2: 255,255,255;
+  --bp-hero-3: 42,147,252;
+  --bp-hero-4: 249,37,257;
+  --bp-hero-5: 178,40,214;
+  --bp-hero-6: 13,30,122;
 }
 
 .bp-grid {
@@ -20,6 +28,16 @@
   background-image:
     linear-gradient(to right, #ffffff10 1px, transparent 1px),
     linear-gradient(to bottom, #ffffff10 1px, transparent 1px);
+}
+[data-bs-theme=light] .bp-grid {
+  background-image:
+    linear-gradient(to right, transparent 1px, transparent 1px),
+    linear-gradient(to bottom, transparent 1px, transparent 1px);
+}
+
+[data-bs-theme=light] .dl-btn {
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
 }
 
 @media screen and (max-width: 600px) {.bp-screenshot-cutoff {max-height: 25vh !important}}

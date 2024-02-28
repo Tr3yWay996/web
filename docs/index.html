@@ -5,6 +5,8 @@
   <link href="/.modules/bootstrap/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
   <link href="/.modules/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" crossorigin="anonymous">
   <link href="/.modules/highlight.js/styles/atom-one-dark.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="/.modules/global/global.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="./index.css" rel="stylesheet" crossorigin="anonymous">
 
   <!-- Social Embeds -->
   <meta property="theme-color" content="#4642f5">
@@ -24,7 +26,7 @@
 
   <!-- Desktop Navbar -->
   <div class="p-2 d-lg-inline d-none"></div>
-  <header class="p-3 mb-3 border-bottom fixed-top bg-dark-subtle d-lg-inline d-none">
+  <header class="p-3 mb-3 border-bottom fixed-top d-lg-inline d-none blueprint-navbar">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/" class="d-flex align-items-center mb-2 me-2 mb-lg-0 link-body-emphasis text-decoration-none">
@@ -35,7 +37,25 @@
           <li><a href="/browse" class="nav-link px-2 link-body-emphasis">Browse</a></li>
           <li><a href="/docs" class="nav-link px-2 link-secondary">Documentation</a></li>
         </ul>
-        <a href="https://github.com/teamblueprint/main/releases/latest"><button type="button" class="btn btn-primary">Download</button></a>
+        <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+          <li class="nav-item me-1 ms-1 py-1"><a class="nav-link px-1" href="https://discord.gg/CUwHwv6xRe"><i class="bi bi-discord"></i></a></li>
+          <li class="nav-item me-1 ms-1 py-1"><a class="nav-link px-1" href="https://github.com/teamblueprint"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+          <li class="nav-item dropdown">
+            <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (dark)">
+              <i class="bi bi-moon-stars-fill my-1 theme-icon-active"></i>
+              <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end position-absolute" aria-labelledby="bd-theme-text">
+              <li><button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false"><i class="bi bi-sun-fill me-2 opacity-50"></i> Light</button></li>
+              <li><button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="dark" aria-pressed="true"><i class="bi bi-moon-stars-fill me-2 opacity-50"></i> Dark</button></li>
+              <li><button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false"><i class="bi bi-circle-half me-2 opacity-50"></i> Auto</button></li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
   </header>
@@ -71,32 +91,32 @@
       <div class="col-lg-2 col-md-4 col-sm-12">
         <div class="docs-category pb-4">
           <div class="ms-2"><span class="fw-bolder">Getting started</span><br></div>
-          <a href="?page=getting-started/Installation"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Installation</button></a><br>
-          <a href="?page=getting-started/Extension-development"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Extension development</button></a><br>
-          <a href="?page=getting-started/Frequently-asked-questions"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Frequently Asked Questions</button></a><br>
+          <a href="?page=getting-started/Installation"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Installation</button></a><br>
+          <a href="?page=getting-started/Extension-development"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Extension development</button></a><br>
+          <a href="?page=getting-started/Frequently-asked-questions"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Frequently Asked Questions</button></a><br>
         </div>
         <div class="docs-category pb-4">
           <div class="ms-2"><span class="fw-bolder">Developing extensions</span><br></div>
-          <a href="?page=developing-extensions/Admin-views"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Admin views</button><br></a>
-          <a href="?page=developing-extensions/Custom-controllers"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Custom controllers</button><br></a>
-          <a href="?page=developing-extensions/Admin-configuration"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Admin configuration</button><br></a>
-          <a href="?page=developing-extensions/Dashboard-modifications"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Dashboard modifications</button><br></a>
-          <a href="?page=developing-extensions/React-components"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">React components</button><br></a>
-          <a href="?page=developing-extensions/Packaging-extensions"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Packaging extensions</button><br></a>
+          <a href="?page=developing-extensions/Admin-views"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Admin views</button><br></a>
+          <a href="?page=developing-extensions/Custom-controllers"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Custom controllers</button><br></a>
+          <a href="?page=developing-extensions/Admin-configuration"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Admin configuration</button><br></a>
+          <a href="?page=developing-extensions/Dashboard-modifications"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Dashboard modifications</button><br></a>
+          <a href="?page=developing-extensions/React-components"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">React components</button><br></a>
+          <a href="?page=developing-extensions/Packaging-extensions"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Packaging extensions</button><br></a>
         </div>
         <div class="docs-category pb-4">
           <div class="ms-2"><span class="fw-bolder">Documentation</span><br></div>
-          <a href="?page=documentation/$blueprint"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">$blueprint</button><br></a>
-          <a href="?page=documentation/confyml"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">conf.yml</button><br></a>
-          <a href="?page=documentation/componentsyml"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Components.yml</button><br></a>
-          <a href="?page=documentation/placeholders"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Placeholders</button><br></a>
-          <a href="?page=documentation/flags"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Flags</button><br></a>
+          <a href="?page=documentation/$blueprint"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">$blueprint</button><br></a>
+          <a href="?page=documentation/confyml"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">conf.yml</button><br></a>
+          <a href="?page=documentation/componentsyml"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Components.yml</button><br></a>
+          <a href="?page=documentation/placeholders"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Placeholders</button><br></a>
+          <a href="?page=documentation/flags"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Flags</button><br></a>
         </div>
         <div class="docs-category pb-4">
           <div class="ms-2"><span class="fw-bolder">About</span><br></div>
-          <a href="?page=about/License"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">License</button><br></a>
-          <a href="?page=about/Changelog"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Changelog</button><br></a>
-          <a href="?page=about/Branding"><button type="button" class="btn btn-dark btn-sm text-start" style="--bs-btn-padding-y: .1rem;">Branding</button><br></a>
+          <a href="?page=about/License"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">License</button><br></a>
+          <a href="?page=about/Changelog"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Changelog</button><br></a>
+          <a href="?page=about/Branding"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Branding</button><br></a>
         </div>
       </div>
       <div class="container d-lg-none d-md-none d-sm-inline mb-4"><div class="border-bottom"></div></div>
@@ -136,6 +156,7 @@
   </div>
 
   <script src="/.modules/bootstrap/js/bootstrap.bundle.js" crossorigin="anonymous"></script>
+  <script src="/.modules/bootstrap/etc/theme-switcher.js" crossorigin="anonymous"></script>
   <script src="/.modules/marked/marked.min.js" crossorigin="anonymous"></script>
   <script src="/.modules/highlight.js/highlight.min.js" crossorigin="anonymous"></script>
   <script src="./index.js" crossorigin="anonymous"></script>

@@ -1,0 +1,12 @@
+.blueprint-navbar {
+  z-index: 100 !important;
+  background-color: #08090a90;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+[data-bs-theme=light] .blueprint-navbar {
+  background-color: #cad2d890;
+}
+
+[data-bs-theme=light] .invert-light { filter: invert() }

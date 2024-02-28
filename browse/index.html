@@ -4,6 +4,7 @@
   <title>Blueprint Extensions</title>
   <link href="/.modules/bootstrap/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
   <link href="/.modules/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="/.modules/global/global.css" rel="stylesheet" crossorigin="anonymous">
   <link href="./index.css" rel="stylesheet" crossorigin="anonymous">
 
   <!-- Social Embeds -->
@@ -24,7 +25,7 @@
 
   <!-- Desktop Navbar -->
   <div class="p-2 d-lg-inline d-none"></div>
-  <header class="p-3 mb-3 border-bottom fixed-top bg-dark-subtle d-lg-inline d-none">
+  <header class="p-3 mb-3 border-bottom fixed-top d-lg-inline d-none blueprint-navbar">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/" class="d-flex align-items-center mb-2 me-2 mb-lg-0 link-body-emphasis text-decoration-none">
@@ -35,7 +36,25 @@
           <li><a href="/browse" class="nav-link px-2 link-secondary">Browse</a></li>
           <li><a href="/docs" class="nav-link px-2 link-body-emphasis">Documentation</a></li>
         </ul>
-        <a href="https://github.com/teamblueprint/main/releases/latest"><button type="button" class="btn btn-primary">Download</button></a>
+        <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+          <li class="nav-item me-1 ms-1 py-1"><a class="nav-link px-1" href="https://discord.gg/CUwHwv6xRe"><i class="bi bi-discord"></i></a></li>
+          <li class="nav-item me-1 ms-1 py-1"><a class="nav-link px-1" href="https://github.com/teamblueprint"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+          <li class="nav-item dropdown">
+            <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (dark)">
+              <i class="bi bi-moon-stars-fill my-1 theme-icon-active"></i>
+              <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end position-absolute" aria-labelledby="bd-theme-text">
+              <li><button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false"><i class="bi bi-sun-fill me-2 opacity-50"></i> Light</button></li>
+              <li><button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="dark" aria-pressed="true"><i class="bi bi-moon-stars-fill me-2 opacity-50"></i> Dark</button></li>
+              <li><button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false"><i class="bi bi-circle-half me-2 opacity-50"></i> Auto</button></li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
   </header>
@@ -70,11 +89,11 @@
       <div class="container mt-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 pt-5">
           <div class="col-lg-7 col-sm-12">
-            <h1 class="display-4 fw-normal lh-1 mb-3 d-lg-inline d-none" style="color: #bbd7ff">Discover <b>powerful extensions</b>.</h1>
-            <h1 class="display-4 fw-normal lh-1 mb-2 d-lg-none d-block text-center" style="color: #fff">Discover <b>powerful extensions</b>.</h1>
+            <h1 class="display-4 fw-normal lh-1 mb-3 d-lg-inline d-none byte-txt" style="color: #bbd7ff">Discover <b>powerful extensions</b>.</h1>
+            <h1 class="display-4 fw-normal lh-1 mb-2 d-lg-none d-block text-center byte-txt" style="color: #fff">Discover <b>powerful extensions</b>.</h1>
           </div>
           <div class="col-5 d-none d-sm-none d-lg-inline">
-            <img src="/.assets/storage/misc/png/3.png" class="d-block mx-lg-auto img-fluid" alt="byte.sh" loading="lazy" width="700" height="500">
+            <img src="/.assets/storage/misc/png/3.png" class="d-block mx-lg-auto img-fluid byte-img" alt="byte.sh" loading="lazy" width="700" height="500">
           </div>
         </div>
       </div>
@@ -88,7 +107,7 @@
         <i class="bi bi-filter text-body-tertiary text-start py-3 mx-2 float-start" style="font-size:30px"></i>
       </div>
       <div class="col" style="padding-top:13px">
-        <div class="bg-dark float-end py-1 px-3 rounded-2 mx-2">
+        <div class="bg-dark float-end py-1 px-3 rounded-2 mx-2 sort-button">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="filterExtensions">
             <label class="form-check-label text-body-tertiary" style="margin-top:.5px" for="filterExtensions">
@@ -97,7 +116,7 @@
             </label>
           </div>
         </div>
-        <div class="bg-dark float-end py-1 px-3 rounded-2 mx-2">
+        <div class="bg-dark float-end py-1 px-3 rounded-2 mx-2 sort-button">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="filterThemes">
             <label class="form-check-label text-body-tertiary" style="margin-top:.5px" for="filterThemes">
@@ -114,7 +133,7 @@
   <div class="container">
     <div class="row" id="products"></div>
     <div class="row" id="byte-confused" style="display: none">
-      <p class="text-center"><img src="/.assets/storage/misc/png/5.png" style="width: 150px; opacity: .2"></p>
+      <p class="text-center"><img src="/.assets/storage/misc/png/5.png" class="byte-confused-img" style="width: 150px; opacity: .2"></p>
     </div>
   </div>
 
@@ -143,6 +162,7 @@
   </div>
 
   <script src="/.modules/bootstrap/js/bootstrap.bundle.js" crossorigin="anonymous"></script>
+  <script src="/.modules/bootstrap/etc/theme-switcher.js" crossorigin="anonymous"></script>
   <script src="/.modules/js-yaml/js-yaml.min.js" crossorigin="anonymous"></script>
   <script>
     function loadYAML(url, callback) {

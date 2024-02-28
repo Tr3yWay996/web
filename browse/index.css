@@ -33,3 +33,14 @@
 .bp-fade {
   background-image: linear-gradient(to bottom, #21252900, #212529);
 }
+
+[data-bs-theme=light] .bp-fade { background-image: linear-gradient(to bottom, #ffffff00, #ffffff); }
+[data-bs-theme=light] .bp-grid { 
+  background-image:
+    linear-gradient(to right, #00000010 1px, transparent 1px),
+    linear-gradient(to bottom, #00000010 1px, transparent 1px);
+}
+[data-bs-theme=light] .byte-img { content: url("/.assets/storage/misc/png/10.png"); }
+[data-bs-theme=light] .byte-confused-img { content: url("/.assets/storage/misc/png/11.png"); }
+[data-bs-theme=light] .byte-txt { color: #000 !important }
+[data-bs-theme=light] .sort-button { background-color: #bbc1c7 !important }
