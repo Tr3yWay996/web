@@ -44,3 +44,7 @@
 [data-bs-theme=light] .byte-confused-img { content: url("/.assets/storage/misc/png/11.png"); }
 [data-bs-theme=light] .byte-txt { color: #000 !important }
 [data-bs-theme=light] .sort-button { background-color: #bbc1c7 !important }
+
+.buy-btn i {
+  padding: 4px;
+}

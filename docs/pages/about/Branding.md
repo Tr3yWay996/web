@@ -21,7 +21,7 @@ We have a bunch of different versions of our logo which you may use when referri
   </div>
   <div class="col-lg-4 col-md-12">
     <div class="px-2 py-5 mb-3 border rounded-3">
-      <img src="/.assets/brand/logoTransparent.png" width="200" height="200" class="d-block mx-auto rounded-2" alt="Blueprint"/>
+      <img src="/.assets/brand/logoTransparent.png" width="200" height="200" class="d-block mx-auto rounded-2 invert-light" alt="Blueprint"/>
     </div>
   </div>
 </div>
@@ -48,13 +48,13 @@ Blueprint is called **Blueprint**, no capital P and no space between "blue" and 
 
 <div class="row">
   <div class="col-6">
-    <div class="px-2 py-3 mb-3 rounded-3 bg-dark border border-success-subtle">
+    <div class="px-2 py-3 mb-3 rounded-3 border border-success-subtle">
       <h2 class="text-center mx-auto pt-3">Blueprint</h2>
       <p class="text-center fw-bold text-success mx-auto">Correct</p>
     </div>
   </div>
   <div class="col-6">
-    <div class="px-2 py-3 mb-3 rounded-3 bg-dark border border-danger-subtle">
+    <div class="px-2 py-3 mb-3 rounded-3 border border-danger-subtle">
       <h2 class="text-center mx-auto pt-3">BluePrint</h2>
       <p class="text-center fw-bold text-danger mx-auto">Incorrect</p>
     </div>
