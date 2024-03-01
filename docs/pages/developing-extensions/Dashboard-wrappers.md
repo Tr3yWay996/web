@@ -1,5 +1,5 @@
-# Dashboard modifications
-<h4 class="fw-light">Extend the Pterodactyl client-side dashboard within the Laravel blade wrapper.</h4><br/>
+# Dashboard wrappers
+<h4 class="fw-light">Extend the Pterodactyl client and admin dashboard within the Laravel blade wrapper.</h4><br/>
 
 <div class="alert alert-dark bg-body mt-3 rounded-4 border" role="alert">
   <i class="bi bi-x mb-1" style="font-size:23px; float: left;"></i>

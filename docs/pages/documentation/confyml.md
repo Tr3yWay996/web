@@ -19,7 +19,7 @@ Used for folder trees, routers, view names and more. Identifiers may only contai
 Describe your extension. This shows on the admin page of your extension.
 
 `flags`\
-Optional configuration string to apply advanced flags to your extensions. [Learn more about flags.](?page=documentation/flags)
+Optional configuration string to apply advanced flags to your extensions. [Learn more](?page=documentation/flags) about flags.
 
 `version` <tag type="required"/></tag>\
 The version of your extension.
@@ -46,7 +46,7 @@ Path to your admin view.
 Path to your custom admin view controller.
 
 `css`\
-Add custom css to the Pterodactyl admin panel, provide the path to your .css file here.
+Add custom css to the Pterodactyl admin panel, provide the path to your `.css` file here.
 
 `wrapper`\
 Path to blade code that you want to add to the Pterodactyl admin dashboard layout.
@@ -55,19 +55,19 @@ Path to blade code that you want to add to the Pterodactyl admin dashboard layou
 
 ##### dashboard
 `css`\
-Add custom css to the Pterodactyl client panel, provide the path to your .css file here.
+Add custom css to the Pterodactyl client panel, provide the path to your `.css` file here.
 
 `wrapper`\
 Path to blade code that you want to add to the Pterodactyl client dashboard layout.
 
 `components`\
-Directory with React components which can be used to integrate your extension directly with the Pterodactyl frontend.
+Directory with React components which can be used to integrate your extension directly with the Pterodactyl frontend. [Learn more](?page=developing-extensions/React-components) about React components.
 
 <br/>
 
 ##### data
 `directory`\
-Path to your data directory.
+Path to your data directory. These are private extension-specific files which you can store anything in. Even without this option enabled, private directories still get utilized by Blueprint.
 
 `public`\
 Path to your public directory. All files in this folder are available publicly and can be seen by anyone, so don't store any secrets or keys here.

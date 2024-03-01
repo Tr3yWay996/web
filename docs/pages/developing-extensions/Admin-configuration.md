@@ -8,5 +8,5 @@
 
 <div class="btn-group docs-navigator" role="group" aria-label="Navigation" style="float: right">
   <a href="?page=developing-extensions/Custom-controllers" class="btn btn-dark bg-light-subtle border-light-subtle">Previous</a>
-  <a href="?page=developing-extensions/Dashboard-modifications" class="btn btn-dark bg-light-subtle border-light-subtle">Next</a>
+  <a href="?page=developing-extensions/Dashboard-wrappers" class="btn btn-dark bg-light-subtle border-light-subtle">Next</a>
 </div>
