@@ -1,5 +1,5 @@
 # Branding
-<h4 class="fw-light">Brand usage guidelines, assets and documentation</h4><br/>
+<h4 class="fw-light">Brand usage guidelines, assets and documentation.</h4><br/>
 
 Want to use Blueprint’s brand resources? Awesome! We have only a few guidelines we follow for everything we do, which we ask you to follow as well.
 

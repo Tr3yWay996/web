@@ -1,5 +1,5 @@
 # Packaging extensions
-<h4 class="fw-light">Package extensions into ".blueprint" files for distribution</h4><br/>
+<h4 class="fw-light">Package extensions into ".blueprint" files for distribution.</h4><br/>
 
 ### **Exporting extensions**
 To package an extension for distribution, we need to convert it into a `identifier.blueprint` file using Blueprint's command line utility. There are **two different commands** that you can use to export extensions.

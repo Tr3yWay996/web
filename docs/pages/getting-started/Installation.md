@@ -1,5 +1,5 @@
 # Installation
-<h4 class="fw-light">Learn how to install Blueprint on your Pterodactyl instance</h4><br/>
+<h4 class="fw-light">Learn how to install Blueprint on your Pterodactyl instance.</h4><br/>
 
 <div class="alert alert-warning" role="alert">
   <i class="bi bi-exclamation-triangle-fill mb-1" style="font-size:23px; float: left;"></i>

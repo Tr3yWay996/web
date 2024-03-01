@@ -1,5 +1,5 @@
 # Custom controllers
-<h4 class="fw-light">Write custom controllers instead of using the premade one</h4><br/>
+<h4 class="fw-light">Write custom controllers instead of using the premade one.</h4><br/>
 
 Controllers allow for added functionality and flexibility to your extension's admin page. This can be useful when making configuration pages, calculating certain things beforehand, query APIs and much more.
 

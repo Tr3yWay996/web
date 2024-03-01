@@ -1,5 +1,5 @@
 # Documentation
-<h4 class="fw-light">Guides and feature documentation for developers and system administrators</h4>
+<h4 class="fw-light">Guides and feature documentation for developers and system administrators.</h4>
 
 <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-3 pt-4">
   <div class="col">

@@ -1,5 +1,5 @@
 # Admin views
-<h4 class="fw-light">Learn the basics of extension admin pages</h4><br/>
+<h4 class="fw-light">Learn the basics of extension admin pages.</h4><br/>
 
 After setting up your development template (Barebones) [in the previous guide](?page=getting-started/Extension-development), you can now start writing an admin view.
 

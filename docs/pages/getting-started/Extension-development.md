@@ -1,5 +1,5 @@
 # Extension development
-<h4 class="fw-light">Set up your extension development environment</h4><br/>
+<h4 class="fw-light">Set up your extension development environment.</h4><br/>
 <div class="alert alert-dark" role="alert">
   <i class="bi bi-toggle-on me-2 mt-1 mb-1" style="font-size:23px; float: left;"></i>
   <div class="ps-3 ms-3"><b>Developer mode</b> needs to be turned on in your <b>admin panel</b> <p- class="opacity-50">(Admin > Extensions > Blueprint)</p-> before you can run developer commands. You only have to do this once.</div>

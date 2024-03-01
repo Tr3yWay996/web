@@ -1,5 +1,5 @@
 # $blueprint
-<h4 class="fw-light">Library for extensions to simplify admin notifications, databasing and more</h4><br/>
+<h4 class="fw-light">Library for extensions to simplify admin notifications, databasing and more.</h4><br/>
 
 <div class="alert alert-dark" role="alert">
   <i class="bi bi-currency-dollar me-2 mt-1 mb-1" style="font-size:23px; float: left;"></i>

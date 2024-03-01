@@ -1,5 +1,5 @@
 # conf.yml
-<h4 class="fw-light">Change extension configuration options, add extension flags and tell Blueprint what to do with your extension</h4><br/>
+<h4 class="fw-light">Change extension configuration options, add extension flags and tell Blueprint what to do with your extension.</h4><br/>
 
 ### **What is conf.yml?**
 When installing extensions, Blueprint needs to know a lot of things about an extension before it can start doing file operations. For this reason, every single extension is required to have a "conf.yml" file to inform Blueprint about what it should do with your extension.

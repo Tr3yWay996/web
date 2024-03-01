@@ -1,5 +1,5 @@
 # placeholders
-<h4 class="fw-light">Strings that are automatically replaced with specific values upon extension installation</h4><br/>
+<h4 class="fw-light">Strings that are automatically replaced with specific values upon extension installation.</h4><br/>
 
 ### **What are placeholders?**
 Placeholders allow extensions to easily get information from each and every file in their extension, preventing the need to ask users for the Pterodactyl installation path for example.

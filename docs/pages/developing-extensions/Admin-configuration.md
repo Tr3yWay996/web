@@ -1,5 +1,5 @@
 # Admin configuration
-<h4 class="fw-light">Add configuration options to your extension's admin page</h4><br/>
+<h4 class="fw-light">Add configuration options to your extension's admin page.</h4><br/>
 
 <div class="alert alert-dark bg-body mt-3 rounded-4 border" role="alert">
   <i class="bi bi-x mb-1" style="font-size:23px; float: left;"></i>

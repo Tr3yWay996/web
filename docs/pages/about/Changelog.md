@@ -1,5 +1,5 @@
 # Changelog
-<h4 class="fw-light">List of changes, improvements and bugfixes per version release</h4><br/>
+<h4 class="fw-light">List of changes, improvements and bugfixes per version release.</h4><br/>
 
 <h4 class="text-warning fw-bold">Pre-releases</h4>
 <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-3 pt-3">
