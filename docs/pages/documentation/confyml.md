@@ -72,8 +72,17 @@ Path to your data directory.
 `public`\
 Path to your public directory. All files in this folder are available publicly and can be seen by anyone, so don't store any secrets or keys here.
 
+<br/>
+
+##### requests
 `views` <tag type="new" content="beta-316A3"/></tag>\
-Path to your views directory. This directory is used for creating (partial) views made up of sections which you can import to your admin view and admin/dashboard wrapper.
+Path to your views directory. This directory is used for creating (partial) views made up of sections which you can import to your admin view and admin/dashboard wrapper. These views can be called from `blueprint.extensions.<identifier>.<view>`.
+
+`controllers` <tag type="new" content="beta-316A3"/></tag>\
+Directory pointing towards a folder with controllers you can use together with your routes. These controllers exist at `Pterodactyl\BlueprintFramework\Extensions\<identifier>`.
+
+`routes` <tag type="new" content="beta-316A3"/></tag>\
+File containing your own route definitions. Extensions can use this for creating custom APIs, additional pages, etc.
 
 <br/>
 
