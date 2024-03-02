@@ -24,7 +24,7 @@
 - `ExtensionsController` and Blueprint's database migration have been switched over to 2-space indentation.
 - Admin view routes have been moved to `routes/blueprint.php`.
 - Admin and dashboard wrappers have now been moved to `partials/blueprint/`.
-- Webpack build process is now shown when Blueprint needs to rebuild panel assets.
+- Webpack build progress is now shown when Blueprint needs to rebuild panel assets.
 
 <br/>
 

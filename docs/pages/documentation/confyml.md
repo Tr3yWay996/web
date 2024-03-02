@@ -81,8 +81,8 @@ Path to your views directory. This directory is used for creating (partial) view
 `controllers` <tag type="new" content="beta-316A3"/></tag>\
 Directory pointing towards a folder with controllers you can use together with your routes. These controllers exist at `Pterodactyl\BlueprintFramework\Extensions\<identifier>`.
 
-`routes` <tag type="new" content="beta-316A3"/></tag>\
-File containing your own route definitions. Extensions can use this for creating custom APIs, additional pages, etc.
+`router` <tag type="new" content="beta-316A3"/></tag>\
+File containing your own route definitions. Extensions can use this for creating custom APIs, additional pages, etc. Routes will be prefixed with `/extensions/<identifier>` to avoid conflicts.
 
 <br/>
 
