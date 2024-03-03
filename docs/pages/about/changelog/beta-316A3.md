@@ -9,10 +9,11 @@
 - Custom dashboard routes can now leave `name` empty to not have them show up inside of the SubNavigation element.
 - Developers can now use `SVG`, `GIF`, `WebP`, `PNG` and `JPEG` formats for their extension icons instead of having those formats ignored and forced onto a (possibly corrupted) `icon.jpg` file.
 - When building, installing or removing extensions Blueprint will now re-apply webserver permissions.
-- Add new extension APIs (`views`, `controllers` and `router`) which can be enabled from [conf.yml](?page=documentation/confyml). These new extension APIs can be useful for expanding extension functionality even further.
+- Add new extension APIs (`views`, `controllers` and `routers`) which can be enabled from [conf.yml](?page=documentation/confyml). These new extension APIs can be useful for expanding extension functionality even further.
 - Each installed extension now gets assigned a filesystem (`blueprint:<identifier>`) automatically which can be used for file uploading, automatic handling of files, etc.
 - Extensions can now check if another extension is installed through a new API in [$blueprint](?page=documentation/$blueprint).
 - Add new hint to the Blueprint admin page that only shows once and promotes the [`teamblueprint/main`](https://github.com/teamblueprint/main) GitHub repository.
+- When using `-upgrade` to update from **this version** to a **later version**, Blueprint will automatically migrate development files over if extension development files are found.
 
 <br/>
 

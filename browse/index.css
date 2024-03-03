@@ -45,6 +45,22 @@
 [data-bs-theme=light] .byte-txt { color: #000 !important }
 [data-bs-theme=light] .sort-button { background-color: #bbc1c7 !important }
 
-.buy-btn i {
-  padding: 4px;
+.buy-btn i { padding: 4px; font-size: 18px }
+[data-bs-theme=light] .buy-btn { background-color: #ffffff23; }
+[data-bs-theme=light] .buy-btn:hover, [data-bs-theme=light] .buy-btn:active { background-color: #ffffff40 !important; }
+[data-bs-theme=dark] .buy-btn { background-color: #00000059; }
+[data-bs-theme=dark] .buy-btn:hover, [data-bs-theme=dark] .buy-btn:active { background-color: #0000007e !important; }
+
+.buy-btn {
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-top-color: transparent !important;
+  border-top: none !important;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+}
+
+.buy-btn:focus-visible {
+  box-shadow: none !important
 }
