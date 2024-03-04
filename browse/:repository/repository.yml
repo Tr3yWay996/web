@@ -52,6 +52,18 @@
     icon: :logo/BBB.png
     url: https://builtbybit.com/resources/cats.40300/
 
+# Cherrydactyl
+- name: Cherrydactyl
+  author: PIP
+  description: Deep-red theme for Pterodactyl.
+  thumbnail: :thumbnail/cherrydactyl.jpg
+  identifier: cherrydactyl
+  category: themes
+  downloads:
+  - name: sourceXchange
+    icon: :logo/SXC.png
+    url: https://www.sourcexchange.net/products/cherrydactyl
+
 # Cookies
 - name: Cookies
   author: prplwtf
