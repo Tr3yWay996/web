@@ -262,6 +262,18 @@
     icon: :logo/BBB.png
     url: https://builtbybit.com/resources/simple-footers.35488/
 
+# Simple Versions
+- name: Simple Versions
+  author: PatrickYu17
+  description: Change the version of your Minecraft server with one click.
+  thumbnail: :thumbnail/simpleversions.webp
+  identifier: simpleversions
+  category: extensions
+  downloads:
+  - name: BuiltByBit
+    icon: :logo/BBB.png
+    url: https://builtbybit.com/resources/simple-versions.40914/
+
 # Simple Visuals
 - name: Simple Visuals
   author: PatrickYu17
