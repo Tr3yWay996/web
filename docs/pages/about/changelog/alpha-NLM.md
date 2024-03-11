@@ -7,7 +7,7 @@
 - `parse_yaml` inside of `.blueprint/lib` has been bumped to the latest commit.
 - Replace most (if not all) URLs leading to [`ptero.shop`](https://ptero.shop) with [`blueprint.zip`](https://blueprint.zip).
 - Update `installWithBlueprintBanner` asset inside of `.blueprint/assets` to include the new URL of Blueprint instead of the old one.
-- Change related link description for [`teamblueprint/web`](https://github.com/teamblueprint/web) alongside removing the extension list in `README.md`.
+- Change related link description for [`teamblueprint/web`](https://github.com/BlueprintFramework/web) alongside removing the extension list in `README.md`.
 - Remove all old versions of the Blueprint logo from `.blueprint/assets`.
 - Outdated cache overlay is now a tiny banner at the bottom of the admin panel instead of a fullscreen overlay.
 - Add new `logoCoverTextPurple` asset.

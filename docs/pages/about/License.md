@@ -2,7 +2,7 @@
 <h4 class="fw-light">License which source code is protected under.</h4><br/>
 <div class="alert alert-warning" role="alert">
   <i class="bi bi-exclamation-triangle-fill mb-1" style="font-size:23px; float: left;"></i>
-  <div class="ps-3 ms-3">This license is used for <a href="https://github.com/teamblueprint/main" class="alert-link">teamblueprint/main</a>, <a href="https://github.com/teamblueprint/templates" class="alert-link">teamblueprint/templates</a> and <a href="https://github.com/teamblueprint/web" class="alert-link">teamblueprint/web</a>. Extensions might ship with different licenses.</div>
+  <div class="ps-3 ms-3">This license is used for <a href="https://github.com/BlueprintFramework/main" class="alert-link">teamblueprint/main</a>, <a href="https://github.com/BlueprintFramework/templates" class="alert-link">teamblueprint/templates</a> and <a href="https://github.com/BlueprintFramework/web" class="alert-link">teamblueprint/web</a>. Extensions might ship with different licenses.</div>
 </div><br/>
 
 ```txt

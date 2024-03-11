@@ -13,7 +13,7 @@
 ### **Prerequisites:**
 
 **What you need:**
-* [The latest release of Blueprint.](https://github.com/teamblueprint/main/releases/latest)
+* [The latest release of Blueprint.](https://github.com/BlueprintFramework/main/releases/latest)
 * [`unzip`](https://pkgs.org/download/unzip)
 * [`zip`](https://pkgs.org/download/zip)
 * [`curl`](https://github.com/curl/curl)
@@ -40,7 +40,7 @@ apt-get install -y nodejs
 npm i -g yarn
 yarn
 ```
-**3.** Download [the latest release of Blueprint](https://github.com/teamblueprint/main/releases/latest) and extract it (stable build) or pull the files via git (bleeding-edge build).
+**3.** Download [the latest release of Blueprint](https://github.com/BlueprintFramework/main/releases/latest) and extract it (stable build) or pull the files via git (bleeding-edge build).
 
 **4.** If you haven't already, place the Blueprint files inside of your Pterodactyl folder. (common location is `/var/www/pterodactyl`)
 
