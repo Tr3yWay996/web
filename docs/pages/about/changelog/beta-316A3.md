@@ -14,6 +14,7 @@
 - Extensions can now check if another extension is installed through a new API in [$blueprint](?page=documentation/$blueprint).
 - Add new hint to the Blueprint admin page that only shows once and promotes the [`BlueprintFramework/main`](https://github.com/BlueprintFramework/main) GitHub repository.
 - When using `-upgrade` to update from **this version** to a **later version**, Blueprint will automatically migrate development files over if extension development files are found.
+- Improve the codebase of multiple internal services, controllers and views.
 
 <br/>
 
@@ -23,8 +24,11 @@
 - Path towards an extension's database migrations directory was not validated due to a mistyped variable.
 - `-debug` was throwing seemingly-random errors when receiving text input, which has now been fixed.
 - `-remove` had a leftover string when throwing a specific error, which has now been fixed.
+- Blueprint's admin page was making multiple of the same API calls per load, this has now been reduced to one API call.
+- Extension admin page was supposed to show an error when the version variable of Blueprint was `::v`, but did not.
 
 <br/>
 
 #### Breaking Changes
 - Blueprint's GitHub organization has been renamed from `teamblueprint` to `BlueprintFramework`. This should have minimal impact, but some things might break that are related to the GitHub API on older versions.
+- `BlueprintVariableService` has been removed. There are no known cases of extensions using this internal library, so it should have minimal effect.
