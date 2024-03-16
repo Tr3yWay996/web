@@ -141,6 +141,10 @@
     </div>
   </div>
 
+  <div class="container">
+    <p class="text-muted">Blueprint may earn compensation when purchasing extensions from some links on this page. Earnings go towards development and upkeep of the framework.</p>
+  </div>
+
 
   <!-- Footer -->
   <div class="container">
@@ -199,7 +203,15 @@
               </button>
               <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 border-0 shadow w-220px">
                 ${product.downloads.map(download => `
-                  <li><a class="dropdown-item rounded-2" href="${download.url}"><img src="${download.icon}" alt="" width="24" height="24"> ${download.name}</a></li>
+                  <li>
+                    <a
+                      class="dropdown-item rounded-2" 
+                      href="${(download.url.replace(/^https?:\/\//i, '').toLowerCase().startsWith('builtbybit.com'.toLowerCase())) ? 'https://' + download.url.replace(/^https?:\/\//i, '') + '?ref=449337' : download.url}"
+                    >
+                      <img src="${download.icon}" alt="" width="24" height="24">
+                      ${download.name}
+                    </a>
+                  </li>
                 `).join('')}
               </ul>
             </div>
