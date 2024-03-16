@@ -50,5 +50,5 @@ Removes the file defined in `path` from the filesystem.
 <br/>
 
 ##### Extensions <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Universal</span>
-`extension(identifier)` <tag type="new" content="beta-316A3"/></tag>\
+`extension(identifier)` <tag type="new" content="beta-7D18"/></tag>\
 Returns true if an extension with the identifier defined in `identifier` is installed, otherwise returns false.
