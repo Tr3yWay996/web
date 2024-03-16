@@ -15,6 +15,7 @@
 - Add new hint to the Blueprint admin page that only shows once and promotes the [`BlueprintFramework/main`](https://github.com/BlueprintFramework/main) GitHub repository.
 - When using `-upgrade` to update from **this version** to a **later version**, Blueprint will automatically migrate development files over if extension development files are found.
 - Improve the codebase of multiple internal services, controllers and views.
+- Build files (used for installing/updating extensions) have been made more modular by making use of partials and sections, allowing editing them to be much easier.
 
 <br/>
 
@@ -32,3 +33,4 @@
 #### Breaking Changes
 - Blueprint's GitHub organization has been renamed from `teamblueprint` to `BlueprintFramework`. This should have minimal impact, but some things might break that are related to the GitHub API on older versions.
 - `BlueprintVariableService` has been removed. There are no known cases of extensions using this internal library, so it should have minimal effect.
+- HTML syntax in extension descriptions will now be escaped for consistency across extension admin pages. There are no known cases of extensions using HTML in their descriptions, so it should have minimal effect.
