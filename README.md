@@ -1,40 +1,33 @@
-<h2><img src="https://github.com/BlueprintFramework/web/assets/103201875/fc5c0ed6-a83d-4d7c-be40-e41faa0d9961" style="height:30px;padding-right:1px"></img></h2>
+<!-- Header -->
+<br/><h3 align="center"><a href="https://github.com/BlueprintFramework"><code>BlueprintFramework</code></a>/<code>web</code></h3>
+<p align="center">
+  <a href="https://github.com/BlueprintFramework/main">Blueprint</a> <b>·</b>
+  <a href="https://blueprint.zip">Website</a> <b>·</b>
+  <a href="https://discord.gg/CUwHwv6xRe">Community</a>
+</p>
 
-[**Blueprint ➚**](https://github.com/BlueprintFramework/main)
 
-[Information](#information)\
-[Contributors](#contributors)\
-[Related Links](#related-links)
 
-<br/>
+<!-- Information -->
+<br/><h2 align="center">ℹ️ Information</h2>
 
-## Information
-**BlueprintFramework/web** is the repository for [BlueprintFramework/main](https://github.com/BlueprintFramework/main)'s landing and documentation website and is specifically made to both improve the user and developer's experience with Blueprint.
+**`BlueprintFramework/web`** is the repository for [`BlueprintFramework/main`](https://github.com/BlueprintFramework/main)'s landing and documentation website and is specifically made to both improve the user and developer's experience with Blueprint.
 
-Blueprint's website is made with the following *(mostly open source)* projects, services, frameworks and libraries.
-- [Bootstrap](https://getbootstrap.com)
+Blueprint's website is made with the following *(mostly open source)* projects, services, frameworks and libraries:
+- [Bootstrap 5](https://getbootstrap.com)
 - [Bootstrap Icons](https://icons.getbootstrap.com)
 - [highlight.js](https://highlightjs.org)
 - [marked.js](https://marked.js.org)
 - [Tinydocs](https://github.com/prplwtf/tinydocs)
 - GitHub Pages
 
-<br/>
 
-## Contributors
-[**prplwtf**](https://github.com/prplwtf) - creator and maintainer\
-[**ahwxorg**](https://github.com/ahwxorg) - contributor\
-[patrickyu17](https://github.com/PatrickYu17) - contributor\
-[slimi1](https://github.com/Slimi1) - contributor\
-[itzbenoitxd](https://github.com/ItzBenoitXD) - contributor\
-[arnaudlier](https://github.com/ArnaudLier) - contributor
 
-<br/>
+<!-- Contributors -->
+<br/><h2 align="center">👥 Contributors</h2>
 
-## Related Links
-[**BlueprintFramework/main**](https://github.com/BlueprintFramework/main) is our extension framework that aims to make Pterodactyl extensible.\
-[**BlueprintFramework/templates**](https://github.com/BlueprintFramework/templates) is a repository with initialization templates for extension development.\
-[**Pterodactyl**](https://pterodactyl.io/) is a free, open-source game server management panel built with PHP, React, and Go.\
-[**Tinydocs**](https://github.com/prplwtf/tinydocs) is a markdown documentation website made with just HTML, Bootstrap and JS.\
-[**marked.js**](https://marked.js.org) is used for rendering the markdown documentation.\
-[**highlight.js**](https://highlightjs.org) is used for syntax highlighting in documentation codeblocks.
+Contributors help shape the future of the Blueprint modding framework. To start contributing you have to [fork this repository](https://github.com/blueprintFramework/web/fork) and [open a pull request](https://github.com/BlueprintFramework/web/compare).
+
+<a href="https://github.com/BlueprintFramework/web/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=BlueprintFramework/web" />
+</a>
