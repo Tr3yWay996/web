@@ -26,6 +26,7 @@ fetch(a)
     // Snippets
     document.querySelectorAll("tag[type=new]").forEach(function(element) {element.innerHTML = '<span class="badge text-primary-emphasis"><i class="bi bi-stars"></i> New in <b>'+element.getAttribute("content")+'</b></span>'; });
     document.querySelectorAll("tag[type=required]").forEach(function(element) {element.innerHTML = '<span class="badge bg-danger-subtle text-danger-emphasis rounded-pill">Required</span>'; });
+    document.querySelectorAll("icon").forEach(function(element) {element.outerHTML = '<i class="bi bi-'+element.getAttribute("name")+'"></i>'; });
   })
   .catch(c => {
     console.error('Error fetching the Markdown content:', c);
