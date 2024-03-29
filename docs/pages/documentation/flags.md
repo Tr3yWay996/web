@@ -36,5 +36,5 @@ Ignore the custom extension installation script when installing your extension t
 `developerIgnoreRebuild`\
 Skip rebuilding panel assets when installing your extension through developer commands.
 
-`developerForceMigrate` <tag type="new" content="beta-7D18"/></tag>\
+`developerForceMigrate` <tag type="new" content="beta-A428"/></tag>\
 Forcefully migrate the database non-interactively when installing your extension through developer commands.

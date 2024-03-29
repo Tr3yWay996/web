@@ -1,5 +1,5 @@
 <span class="badge bg-warning-subtle border border-warning-subtle text-warning-emphasis rounded-pill"><i class="bi bi-binoculars-fill"></i> Pre-release</span>
-# beta-7D18
+# beta-A428
 <br/>
 
 #### Changes
@@ -16,6 +16,8 @@
 - When using `-upgrade` to update from **this version** to a **later version**, Blueprint will automatically migrate development files over if extension development files are found.
 - Improve the codebase of multiple internal services, controllers and views.
 - Build files (used for installing/updating extensions) have been made more modular by making use of partials and sections, allowing editing them to be much easier.
+- New permissions setting on all installed extensions allowing you to block an extension from impacting certain sections on your panel.
+- `-upgrade` will no longer import/update Blueprint's `.git` and `.github` folders.
 
 <br/>
 
@@ -27,6 +29,8 @@
 - `-remove` had a leftover string when throwing a specific error, which has now been fixed.
 - Blueprint's admin page was making multiple of the same API calls per load, this has now been reduced to one API call.
 - Extension admin page was supposed to show an error when the version variable of Blueprint was `::v`, but did not.
+- `-upgrade` did not half after encountering an error with fetching remote Blueprint releases.
+- Blueprint did not exit after updating it's Pterodactyl installation folder variable.
 
 <br/>
 
@@ -34,3 +38,4 @@
 - Blueprint's GitHub organization has been renamed from `teamblueprint` to `BlueprintFramework`. This should have minimal impact, but some things might break that are related to the GitHub API on older versions.
 - `BlueprintVariableService` has been removed. There are no known cases of extensions using this internal library, so it should have minimal effect.
 - HTML syntax in extension descriptions will now be escaped for consistency across extension admin pages. There are no known cases of extensions using HTML in their descriptions, so it should have minimal effect.
+- `-upgrade` no longer accepts the `dev` argument. Use the new `remote` argument instead.
