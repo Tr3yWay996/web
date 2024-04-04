@@ -26,7 +26,19 @@ fetch(a)
     // Snippets
     document.querySelectorAll("tag[type=new]").forEach(function(element) {element.innerHTML = '<span class="badge text-primary-emphasis"><i class="bi bi-stars"></i> New in <b>'+element.getAttribute("content")+'</b></span>'; });
     document.querySelectorAll("tag[type=required]").forEach(function(element) {element.innerHTML = '<span class="badge bg-danger-subtle text-danger-emphasis rounded-pill">Required</span>'; });
+    document.querySelectorAll("tag[type=deprecated]").forEach(function(element) {element.innerHTML = '<span class="badge text-danger-emphasis"><i class="bi bi-exclamation-triangle-fill"></i> Deprecated in <b>'+element.getAttribute("content")+'</b></span>'; });
+    //document.querySelectorAll("feature[type=true]").forEach(function(element) {element.outerHTML = '<span class="text-secondary-emphasis"><icon name="check2"></icon> '+element.getAttribute("name")+'</span><br>'; });
+    //document.querySelectorAll("feature[type=false]").forEach(function(element) {element.outerHTML = '<span class="text-secondary opacity-75"><icon name="x-lg"></icon> '+element.getAttribute("name")+'</span><br>'; });
     document.querySelectorAll("icon").forEach(function(element) {element.outerHTML = '<i class="bi bi-'+element.getAttribute("name")+'"></i>'; });
+
+    // Bootstrap shortcuts
+    //id=0
+    //document.querySelectorAll("row").forEach(function(element) {
+    //  let inner = element.innerHTML
+    //  id = id + 1
+    //  element.outerHTML = `<div class="row" id="row-`+id+'"></div>';
+    //  document.querySelector("#row-"+id).innerHTML = inner;
+    //});
   })
   .catch(c => {
     console.error('Error fetching the Markdown content:', c);

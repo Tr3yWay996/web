@@ -1,12 +1,117 @@
 # placeholders
 <h4 class="fw-light">Strings that are automatically replaced with specific values upon extension installation.</h4><br/>
+<div class="alert alert-dark" role="alert">
+  <i class="bi bi-regex me-2 mt-1 mb-1" style="font-size:23px; float: left;"></i>
+  <div class="ps-3 ms-3"><b>Placeholders are changing!</b> We are changing how placeholders function and adding some awesome new features for them.</div>
+</div><br/>
 
 ### **What are placeholders?**
 Placeholders allow extensions to easily get information from each and every file in their extension, preventing the need to ask users for the Pterodactyl installation path for example.
 
+<br/><br/>
+
+### **Placeholders `v2`** <tag type="new" content="beta-A428"/></tag>
+These are the available placeholders you can use on `beta` and later. <b>Unless you set your target version to a beta release</b>, these placeholders will <u>not</u> be available.
+<br/><br/>
+
+
+##### Configuration values
+This placeholder group counts for most extension-config-related values.
+
+<!-- Identifier -->
+<div class="container bg-dark-subtle rounded-3 p-3">
+  <div class="row">
+    <div class="col-9">
+      <b><code><icon name="hash"></icon>
+        <!-- Placeholder string --> {identifier}
+        <!-- Example value --> <span class="text-secondary">byte</span>
+      </code></b><br/>
+      Returns the extension's identifier. This identifier can be configured in your <a href="?page=documentation/confyml">conf.yml</a> and matches the identifier Blueprint uses for paths/variables related to your extension.
+    </div>
+    <div class="col-3">
+      <!-- Context -->
+      <div class="mb-3">
+        <b>Context</b><br>
+        <code><span class="text-primary-emphasis"><a href="?page=documentation/confyml">conf.yml</a></span></code><br/>
+      </div>
+      <!-- Modifiers -->
+      <div>
+        <b>Modifiers</b><br>
+        <code>
+          <!-- Modifier string --> {identifier^}
+          <!-- Example value --> <span class="text-secondary">Byte</span>
+        </code><br/>
+        <code>
+          <!-- Modifier string --> {identifier!}
+          <!-- Example value --> <span class="text-secondary">BYTE</span>
+        </code><br/>
+      </div>
+    </div>
+  </div>
+</div><br/>
+
+<!-- Name -->
+<div class="container bg-dark-subtle rounded-3 p-3">
+  <div class="row">
+    <div class="col-9">
+      <b><code><icon name="hash"></icon>
+        <!-- Placeholder string --> {name}
+        <!-- Example value --> <span class="text-secondary">Byte.sh</span>
+      </code></b><br/>
+      Returns the extension's display name which you configured in your <a href="?page=documentation/confyml">conf.yml</a>. Extension display names are not limited to a limited set of characters, so parse wisely.
+    </div>
+    <div class="col-3">
+      <!-- Context -->
+      <div class="mb-3">
+        <b>Context</b><br>
+        <code><span class="text-primary-emphasis"><a href="?page=documentation/confyml">conf.yml</a></span></code><br/>
+      </div>
+      <!-- Modifiers -->
+      <div>
+        <b>Modifiers</b><br>
+        <code>
+          <!-- Modifier string --> {name!}
+          <!-- Example value --> <span class="text-secondary">BYTE.SH</span>
+        </code><br/>
+      </div>
+    </div>
+  </div>
+</div><br/>
+
 <br/>
 
-### **Placeholders**
+##### Miscellaneous
+Uncategorized and advanced placeholders that do various things.
+
+<!-- Random -->
+<div class="container bg-dark-subtle rounded-3 p-3">
+  <div class="row">
+    <div class="col-9">
+      <b><code><icon name="hash"></icon>
+        <!-- Placeholder string --> {random}
+        <!-- Example value --> <span class="text-secondary">17388</span>
+      </code></b><br/>
+      This placeholder will be replaced with a 'random' number. This number is determined on a per-file basis: All random placeholders that are in the same file get assigned the <u>same</u> random number.
+    </div>
+    <div class="col-3">
+      <!-- Context -->
+      <div>
+        <b>Context</b><br>
+        <code><span class="text-primary-emphasis">$RANDOM</span></code><br/>
+      </div>
+    </div>
+  </div>
+</div><br/>
+
+
+
+
+<br/><br/>
+
+### **Placeholders `v1`** <tag type="deprecated" content="beta-A428"/></tag>
+Legacy placeholders __only__ work on extensions made for `alpha` or `indev` releases and are still around for backwards compatibility. If you are developing an extension, either switch to new placeholders once `beta-A428` releases or start developing on that version directly.
+
+<br/>
 
 ##### Static information
 `^#version#^`\

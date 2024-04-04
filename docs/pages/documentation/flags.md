@@ -9,10 +9,10 @@ Flags allow for enabling/disabling possibly advanced features that don't have th
 ### **Flags**
 
 ##### Feature-specifc flags
-`ignorePlaceholders`\
+`ignorePlaceholders` <tag type="deprecated" content="beta-A428"/></tag>\
 Skip applying placeholders. This improves installation speed for extensions with a lot of files, but is generally not recommended.
 
-`ignoreAlphabetPlaceholders`\
+`ignoreAlphabetPlaceholders` <tag type="deprecated" content="beta-A428"/></tag>\
 Skip applying alphabet (a-z, _) placeholders. This is automatically disabled when placeholders are disabled.
 
 <br/>
