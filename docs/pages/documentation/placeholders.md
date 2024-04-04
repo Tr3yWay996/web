@@ -78,6 +78,46 @@ This placeholder group counts for most extension-config-related values.
   </div>
 </div><br/>
 
+<!-- Author -->
+<div class="container bg-dark-subtle rounded-3 p-3">
+  <div class="row">
+    <div class="col-lg-9 col-md-8 col-xs-12">
+      <b><code><icon name="hash"></icon>
+        <!-- Placeholder string --> {author}
+        <!-- Example value --> <span class="text-secondary">prpl.wtf</span>
+      </code></b><br/>
+      Returns the extension's author (if defined in <a href="?page=documentation/confyml">conf.yml</a>).
+    </div>
+    <div class="col-lg-3 col-md-4 col-xs-12">
+      <!-- Context -->
+      <div>
+        <b>Context</b><br>
+        <code><span class="text-primary-emphasis"><a href="?page=documentation/confyml">conf.yml</a></span></code><br/>
+      </div>
+    </div>
+  </div>
+</div><br/>
+
+<!-- Version -->
+<div class="container bg-dark-subtle rounded-3 p-3">
+  <div class="row">
+    <div class="col-lg-9 col-md-8 col-xs-12">
+      <b><code><icon name="hash"></icon>
+        <!-- Placeholder string --> {version}
+        <!-- Example value --> <span class="text-secondary">1.4.3</span>
+      </code></b><br/>
+      Returns the active extension version which is defined in your extension's <a href="?page=documentation/confyml">conf.yml</a> configuration.
+    </div>
+    <div class="col-lg-3 col-md-4 col-xs-12">
+      <!-- Context -->
+      <div>
+        <b>Context</b><br>
+        <code><span class="text-primary-emphasis"><a href="?page=documentation/confyml">conf.yml</a></span></code><br/>
+      </div>
+    </div>
+  </div>
+</div><br/>
+
 <br/>
 
 ##### Miscellaneous
@@ -91,13 +131,33 @@ Uncategorized and advanced placeholders that do various things.
         <!-- Placeholder string --> {random}
         <!-- Example value --> <span class="text-secondary">17388</span>
       </code></b><br/>
-      This placeholder will be replaced with a 'random' number. This number is determined on a per-file basis: All random placeholders that are in the same file get assigned the <u>same</u> random number.
+      This placeholder will be replaced with a 'random' number. This number is determined on a per-file basis: All random placeholders that are in the same file get assigned the <u>same</u> random number. Random numbers may <b>vary in length</b>, so parse wisely.
     </div>
     <div class="col-lg-3 col-md-4 col-xs-12">
       <!-- Context -->
       <div>
         <b>Context</b><br>
         <code><span class="text-primary-emphasis">$RANDOM</span></code><br/>
+      </div>
+    </div>
+  </div>
+</div><br/>
+
+<!-- Timestamp -->
+<div class="container bg-dark-subtle rounded-3 p-3">
+  <div class="row">
+    <div class="col-lg-9 col-md-8 col-xs-12">
+      <b><code><icon name="hash"></icon>
+        <!-- Placeholder string --> {timestamp}
+        <!-- Example value --> <span class="text-secondary">1712239495</span>
+      </code></b><br/>
+      Returns a Unix timestamp that indicates (roughly) when the extension has been installed, specifically when placeholders started initializing.
+    </div>
+    <div class="col-lg-3 col-md-4 col-xs-12">
+      <!-- Context -->
+      <div>
+        <b>Context</b><br>
+        <code><span class="text-primary-emphasis"><a href="https://en.wikipedia.org/wiki/Unix_time">Unix time</a></span></code><br/>
       </div>
     </div>
   </div>
@@ -114,16 +174,16 @@ Legacy placeholders __only__ work on extensions made for `alpha` or `indev` rele
 <br/>
 
 ##### Static information
-`^#version#^`\
+`^#version#^` <icon name="check2"></icon>\
 Version defined in [conf.yml](?page=documentation/confyml).
 
-`^#author#^`\
+`^#author#^` <icon name="check2"></icon>\
 Author defined in [conf.yml](?page=documentation/confyml).
 
-`^#name#^`\
+`^#name#^` <icon name="check2"></icon>\
 Display name defined in [conf.yml](?page=documentation/confyml).
 
-`^#identifier#^`\
+`^#identifier#^` <icon name="check2"></icon>\
 Identifier defined in [conf.yml](?page=documentation/confyml).
 
 <br/>
@@ -144,7 +204,7 @@ Information about how the extension was installed. Is "normal" when the extensio
 `^#blueprintversion#^`\
 Blueprint version that installed/built your extension.
 
-`^#timestamp#^`\
+`^#timestamp#^` <icon name="check2"></icon>\
 Timestamp of when your extension started installation, specifically the timestamp of when Blueprint started applying extension placeholders.
 
 `^#componentroot#^`\
