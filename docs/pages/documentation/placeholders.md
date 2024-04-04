@@ -21,14 +21,14 @@ This placeholder group counts for most extension-config-related values.
 <!-- Identifier -->
 <div class="container bg-dark-subtle rounded-3 p-3">
   <div class="row">
-    <div class="col-9">
+    <div class="col-lg-9 col-md-8 col-xs-12">
       <b><code><icon name="hash"></icon>
         <!-- Placeholder string --> {identifier}
         <!-- Example value --> <span class="text-secondary">byte</span>
       </code></b><br/>
       Returns the extension's identifier. This identifier can be configured in your <a href="?page=documentation/confyml">conf.yml</a> and matches the identifier Blueprint uses for paths/variables related to your extension.
     </div>
-    <div class="col-3">
+    <div class="col-lg-3 col-md-4 col-xs-12">
       <!-- Context -->
       <div class="mb-3">
         <b>Context</b><br>
@@ -53,14 +53,14 @@ This placeholder group counts for most extension-config-related values.
 <!-- Name -->
 <div class="container bg-dark-subtle rounded-3 p-3">
   <div class="row">
-    <div class="col-9">
+    <div class="col-lg-9 col-md-8 col-xs-12">
       <b><code><icon name="hash"></icon>
         <!-- Placeholder string --> {name}
         <!-- Example value --> <span class="text-secondary">Byte.sh</span>
       </code></b><br/>
       Returns the extension's display name which you configured in your <a href="?page=documentation/confyml">conf.yml</a>. Extension display names are not limited to a limited set of characters, so parse wisely.
     </div>
-    <div class="col-3">
+    <div class="col-lg-3 col-md-4 col-xs-12">
       <!-- Context -->
       <div class="mb-3">
         <b>Context</b><br>
@@ -86,14 +86,14 @@ Uncategorized and advanced placeholders that do various things.
 <!-- Random -->
 <div class="container bg-dark-subtle rounded-3 p-3">
   <div class="row">
-    <div class="col-9">
+    <div class="col-lg-9 col-md-8 col-xs-12">
       <b><code><icon name="hash"></icon>
         <!-- Placeholder string --> {random}
         <!-- Example value --> <span class="text-secondary">17388</span>
       </code></b><br/>
       This placeholder will be replaced with a 'random' number. This number is determined on a per-file basis: All random placeholders that are in the same file get assigned the <u>same</u> random number.
     </div>
-    <div class="col-3">
+    <div class="col-lg-3 col-md-4 col-xs-12">
       <!-- Context -->
       <div>
         <b>Context</b><br>
