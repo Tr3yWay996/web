@@ -163,6 +163,26 @@ Uncategorized and advanced placeholders that do various things.
   </div>
 </div><br/>
 
+<!-- Mode -->
+<div class="container bg-dark-subtle rounded-3 p-3">
+  <div class="row">
+    <div class="col-lg-9 col-md-8 col-xs-12">
+      <b><code><icon name="hash"></icon>
+        <!-- Placeholder string --> {mode}
+        <!-- Example value --> <span class="text-secondary">local</span>
+      </code></b><br/>
+      Returns either <code>local</code> or <code>develop</code> depending on if the extension has been installed through a local "extension.blueprint" file or developer commands.
+    </div>
+    <div class="col-lg-3 col-md-4 col-xs-12">
+      <!-- Context -->
+      <div>
+        <b>Context</b><br>
+        <code><span class="text-primary-emphasis"><a href="?page=developing-extensions/Packaging-extensions">Packaging extensions</a></span></code><br/>
+      </div>
+    </div>
+  </div>
+</div><br/>
+
 
 
 
