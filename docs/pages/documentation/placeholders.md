@@ -86,7 +86,7 @@ This placeholder group counts for most extension-config-related values.
         <!-- Placeholder string --> {author}
         <!-- Example value --> <span class="text-secondary">prpl.wtf</span>
       </code></b><br/>
-      Returns the extension's author (if defined in <a href="?page=documentation/confyml">conf.yml</a>).
+      Returns the extension's author (if defined in <a href="?page=documentation/confyml">conf.yml</a>). If not defined, this placeholder will return <code>undefined</code>.
     </div>
     <div class="col-lg-3 col-md-4 col-xs-12">
       <!-- Context -->
@@ -183,12 +183,42 @@ Uncategorized and advanced placeholders that do various things.
   </div>
 </div><br/>
 
+<!-- Target -->
+<div class="container bg-dark-subtle rounded-3 p-3">
+  <div class="row">
+    <div class="col-lg-9 col-md-8 col-xs-12">
+      <b><code><icon name="hash"></icon>
+        <!-- Placeholder string --> {target}
+        <!-- Example value --> <span class="text-secondary">beta-A428</span>
+      </code></b><br/>
+      Returns the version of Blueprint the extension installed on. This placeholder <b>will not</b> return the extension's target version. Instead, it returns the version of Blueprint that is currently installed on that panel.
+    </div>
+    <div class="col-lg-3 col-md-4 col-xs-12">
+      <!-- Context -->
+      <div class="mb-3">
+        <b>Context</b><br>
+        <code><span class="text-primary-emphasis"><a href="?page=about/Changelog">Changelog</a></span></code><br/>
+      </div>
+      <!-- Conditions -->
+      <div>
+        <b>Conditions</b><br>
+        <code>
+          <!-- Condition string --> {is_target}
+          <!-- Example value --> <span class="text-secondary">true/false</span>
+        </code><br/>
+      </div>
+    </div>
+  </div>
+</div><br/>
+
 
 
 
 <br/><br/>
 
 ### **Placeholders `v1`** <tag type="deprecated" content="beta-A428"/></tag>
+**Placeholders marked with a <span class="text-primary-emphasis">checkmark <icon name="check2"></icon></span> have an equivilent placeholder in Placeholders v2.**
+
 Legacy placeholders __only__ work on extensions made for `alpha` or `indev` releases and are still around for backwards compatibility. If you are developing an extension, either switch to new placeholders once `beta-A428` releases or start developing on that version directly.
 
 <br/>
@@ -218,10 +248,10 @@ Path to your extension's data directory. To keep your extension from breaking in
 `^#publicpath#^`\
 Path to your extension's public data directory. This directory is exposed to the internet, so don't store keys or sensitive information in there! To keep your extension from breaking in the future, it's always a good idea to use this placeholder instead of guessing.
 
-`^#installmode#^`\
+`^#installmode#^` <icon name="check2"></icon>\
 Information about how the extension was installed. Is "normal" when the extension has been installed normally and "developer" when the extension was installed through developer commands.
 
-`^#blueprintversion#^`\
+`^#blueprintversion#^` <icon name="check2"></icon>\
 Blueprint version that installed/built your extension.
 
 `^#timestamp#^` <icon name="check2"></icon>\

@@ -337,6 +337,21 @@
     icon: :logo/GH.png
     url: https://github.com/prplwtf/blueprint-snowflakes
 
+# Subdomains
+- name: Subdomain manager
+  author: Corwin
+  description: Subdomain manager via Cloudflare!
+  thumbnail: :thumbnail/subdomains.jpg
+  identifier: subdomains
+  category: extensions
+  downloads:
+  - name: sourceXchange
+    icon: :logo/SXC.png
+    url: https://www.sourcexchange.net/products/subdomain-manager-for-pterodactyl
+  - name: BuiltByBit
+    icon: :logo/BBB.png
+    url: https://builtbybit.com/resources/subdomain-manager-for-pterodactyl.42401/
+
 # WidgetBot
 - name: WidgetBot
   author: Xenority
