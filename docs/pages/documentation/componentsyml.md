@@ -42,7 +42,7 @@ Navigation:
     AdditionalAccountItems: ""
     AfterSubNavigation: ""
   Routes:
-  # - { Name: "", Path: "", Type: "", Component: "" }
+  # - { Name: "", Path: "", Type: "account/server", Component: "", AdminOnly: "boolean" }
 
 Dashboard:
   ServerRow:
