@@ -42,7 +42,9 @@ fetch(a)
   })
   .catch(c => {
     console.error('Error fetching the Markdown content:', c);
-    window.location="?page=Error"
+    if(window.location.hostname != "127.0.0.1") {
+      window.location="?page=Error"
+    }
   });
 
   function addGitHubEditButton(page, contentDiv) {

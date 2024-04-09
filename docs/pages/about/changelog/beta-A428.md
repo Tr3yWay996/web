@@ -1,4 +1,5 @@
-<span class="badge bg-warning-subtle border border-warning-subtle text-warning-emphasis rounded-pill"><i class="bi bi-binoculars-fill"></i> Pre-release</span>
+<span class="badge bg-success-subtle border border-success-subtle text-success-emphasis rounded-pill"><i class="bi bi-check-lg"></i> Latest</span>
+<span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill"><i class="bi bi-hash"></i> Supported</span>
 # beta-A428
 <br/>
 
@@ -18,6 +19,10 @@
 - Build files (used for installing/updating extensions) have been made more modular by making use of partials and sections, allowing editing them to be much easier.
 - New permissions setting on all installed extensions allowing you to block an extension from impacting certain sections on your panel.
 - `-upgrade` will no longer import/update Blueprint's `.git` and `.github` folders.
+- `robots.txt` has been changed to allow crawlers on `/extensions/blueprint/index.html`.
+- Admin and dashboard wrappers now get imported from a symlinked file dynamically instead of being injected through `blueprint.sh`.
+- Docker users are now forced onto the `/app` directory as Pterodactyl directory.
+- Change the entire way [placeholders](?page=documentation/placeholders) work and add some brand new placeholder features.
 
 <br/>
 
@@ -31,6 +36,8 @@
 - Extension admin page was supposed to show an error when the version variable of Blueprint was `::v`, but did not.
 - `-upgrade` did not half after encountering an error with fetching remote Blueprint releases.
 - Blueprint did not exit after updating it's Pterodactyl installation folder variable.
+- Some issues with running Blueprint on Docker have been resolved. While it's still not officially supported, we try to make it work as well as possible.
+- Identifiers were able to consist of hyphens (`-`), underscores (`_`), periods (`.`) and spaces. Extensions that did use these characters in their identifiers ended up breaking some parts of the Pterodactyl panel in some way, shape or form.
 
 <br/>
 
@@ -39,3 +46,5 @@
 - `BlueprintVariableService` has been removed. There are no known cases of extensions using this internal library, so it should have minimal effect.
 - HTML syntax in extension descriptions will now be escaped for consistency across extension admin pages. There are no known cases of extensions using HTML in their descriptions, so it should have minimal effect.
 - `-upgrade` no longer accepts the `dev` argument. Use the new `remote` argument instead.
+- The `ignoreAlphabetPlaceholders` flag has been removed. There have been no known cases of this flag being used, so this should have minimal effect.
+- [Placeholders](?page=documentation/placeholders) have changed (for the better) and need to be updated. Extensions with a `alpha` or `indev` target version will still get the placeholders applied like before until the new placeholders are widely adopted. You can force legacy placeholder behavior by using the `forceLegacyPlaceholders` [flag](?page=documentation/flags).

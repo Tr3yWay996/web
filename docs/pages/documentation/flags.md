@@ -12,8 +12,8 @@ Flags allow for enabling/disabling possibly advanced features that don't have th
 `ignorePlaceholders`\
 Skip applying placeholders. This improves installation speed for extensions with a lot of files, but is generally not recommended.
 
-`ignoreAlphabetPlaceholders` <tag type="deprecated" content="beta-A428"/></tag>\
-Skip applying alphabet (a-z, _) placeholders. This is automatically disabled when placeholders are disabled.
+`forceLegacyPlaceholders` <tag type="new" content="beta-A428"/></tag>\
+Force Blueprint to apply legacy placeholders instead of the new ones on extensions with a higher target version than alpha or indev.
 
 <br/>
 

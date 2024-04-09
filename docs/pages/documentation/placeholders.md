@@ -211,29 +211,101 @@ Uncategorized and advanced placeholders that do various things.
   </div>
 </div><br/>
 
+<br/>
+
+##### Directories
+Placeholders that point towards certain directories or file paths.
+
+<!-- Root -->
+<div class="container bg-dark-subtle rounded-3 p-3">
+  <div class="row">
+    <div class="col-lg-9 col-md-8 col-xs-12">
+      <b><code><icon name="hash"></icon>
+        <!-- Placeholder string --> {root}
+        <!-- Example value --> <span class="text-secondary">/var/www/pterodactyl</span>
+      </code></b><br/>
+      Throws the root directory of the target Pterodactyl installation, which is commonly <code>/var/www/pterodactyl</code>. This placeholder has modifiers to fetch paths to specific folders.<br/>
+      <br/>
+      <code>{root/public}</code> will return the root path towards your extension's local public directory. <code>{root/data}</code> behaves the same but points towards your extension's data folder instead.
+    </div>
+    <div class="col-lg-3 col-md-4 col-xs-12">
+      <!-- Context -->
+      <div class="mb-3">
+        <b>Context</b><br>
+        <code><span class="text-primary-emphasis">Webserver directory</span></code><br/>
+      </div>
+      <!-- Modifiers -->
+      <div>
+        <b>Modifiers</b><br>
+        <code>
+          <!-- Modifier string --> {root/public}
+          <!-- Example value --> <span class="text-secondary">/var/www/pterodactyl/.blueprint/extensions/byte/public</span>
+        </code><br/>
+        <code>
+          <!-- Modifier string --> {root/data}
+          <!-- Example value --> <span class="text-secondary">/var/www/pterodactyl/.blueprint/extensions/byte/private</span>
+        </code><br/>
+      </div>
+    </div>
+  </div>
+</div><br/>
+
+<!-- Webroot -->
+<div class="container bg-dark-subtle rounded-3 p-3">
+  <div class="row">
+    <div class="col-lg-9 col-md-8 col-xs-12">
+      <b><code><icon name="hash"></icon>
+        <!-- Placeholder string --> {webroot}
+        <!-- Example value --> <span class="text-secondary">/</span>
+      </code></b><br/>
+      Returns paths from the outside's perspective. This can be used to easily fetch paths towards exposed directories.<br/>
+      <br/>
+      These paths should only be used for <b>outside-in</b> paths and <u>will not</u> work as local paths, parse wisely.
+    </div>
+    <div class="col-lg-3 col-md-4 col-xs-12">
+      <!-- Context -->
+      <div class="mb-3">
+        <b>Context</b><br>
+        <code><span class="text-primary-emphasis">Exposed directory</span></code><br/>
+      </div>
+      <!-- Modifiers -->
+      <div>
+        <b>Modifiers</b><br>
+        <code>
+          <!-- Modifier string --> {webroot/public}
+          <!-- Example value --> <span class="text-secondary">/extensions/byte</span>
+        </code><br/>
+        <code>
+          <!-- Modifier string --> {webroot/fs}
+          <!-- Example value --> <span class="text-secondary">/fs/extensions/byte</span>
+        </code><br/>
+      </div>
+    </div>
+  </div>
+</div><br/>
 
 
 
 <br/><br/>
 
-### **Placeholders `v1`** <tag type="deprecated" content="beta-A428"/></tag>
-**Placeholders marked with a <span class="text-primary-emphasis">checkmark <icon name="check2"></icon></span> have an equivilent placeholder in Placeholders v2.**
+### **Placeholders `v1`**
+**Placeholders marked as <span class="text-danger-emphasis">deprecated</span> do not have an equivilent placeholder in Placeholders v2.**
 
-Legacy placeholders __only__ work on extensions made for `alpha` or `indev` releases and are still around for backwards compatibility. If you are developing an extension, either switch to new placeholders once `beta-A428` releases or start developing on that version directly.
+Legacy placeholders __only__ work on extensions either made for `alpha` or `indev` releases or with the `forceLegacyPlaceholders` flag enabled. These placeholders are only around for backwards compatibility and will not receive any new features.
 
 <br/>
 
 ##### Static information
-`^#version#^` <icon name="check2"></icon>\
+`^#version#^`\
 Version defined in [conf.yml](?page=documentation/confyml).
 
-`^#author#^` <icon name="check2"></icon>\
+`^#author#^`\
 Author defined in [conf.yml](?page=documentation/confyml).
 
-`^#name#^` <icon name="check2"></icon>\
+`^#name#^`\
 Display name defined in [conf.yml](?page=documentation/confyml).
 
-`^#identifier#^` <icon name="check2"></icon>\
+`^#identifier#^`\
 Identifier defined in [conf.yml](?page=documentation/confyml).
 
 <br/>
@@ -248,14 +320,14 @@ Path to your extension's data directory. To keep your extension from breaking in
 `^#publicpath#^`\
 Path to your extension's public data directory. This directory is exposed to the internet, so don't store keys or sensitive information in there! To keep your extension from breaking in the future, it's always a good idea to use this placeholder instead of guessing.
 
-`^#installmode#^` <icon name="check2"></icon>\
+`^#installmode#^`\
 Information about how the extension was installed. Is "normal" when the extension has been installed normally and "developer" when the extension was installed through developer commands.
 
-`^#blueprintversion#^` <icon name="check2"></icon>\
+`^#blueprintversion#^`\
 Blueprint version that installed/built your extension.
 
-`^#timestamp#^` <icon name="check2"></icon>\
+`^#timestamp#^`\
 Timestamp of when your extension started installation, specifically the timestamp of when Blueprint started applying extension placeholders.
 
-`^#componentroot#^`\
+`^#componentroot#^` <tag type="deprecated" content="beta-A428"/></tag>\
 Root path to your component directory in the format `@/blueprint/extensions/identifier`. Extension developers should refrain from using this path as a filesystem path.
