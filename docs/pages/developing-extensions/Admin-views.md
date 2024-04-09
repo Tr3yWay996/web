@@ -8,9 +8,9 @@ The Barebones template includes two files by default, `conf.yml` and `admin.blad
 <div class="row container mb-2">
   <div class="col rounded-1 py-2" style="background-color: #282c34">
     <pre><code class="hljs language-html hl-escape"><p>
-  This extension is called <b>^#name#^</b>.
-  <code>^#identifier#^</code> is the identifier of this extension.
-  The current version is <i>^#version#^</i>.
+  This extension is called <b>{name}</b>.
+  <code>{identifier}</code> is the identifier of this extension.
+  The current version is <i>{version}</i>.
 </p></code></pre>
     <div class="border-top mb-3 code-spacer"></div>
     <div class="overflow-scroll">
@@ -19,16 +19,16 @@ The Barebones template includes two files by default, `conf.yml` and `admin.blad
   </div>
 </div>
 
-You might have already noticed that `^#name#^`, `^#identifier#^` and `^#version#^` have been replaced with the corresponding values automatically. These strings are referred to as [placeholders](?page=documentation/placeholders), which you can find documentation for [on this page](?page=documentation/placeholders).
+You might have already noticed that `{name}`, `{identifier}` and `{version}` have been replaced with the corresponding values automatically. These strings are referred to as [placeholders](?page=documentation/placeholders), which you can find documentation for [on this page](?page=documentation/placeholders).
 
 Right now all lines or on the same row. This is due to how Blueprint builds your admin view internally, as it doesn't handle linebreaks. We can fix this by adding `<br>` tags at the end of each line.
 
 <div class="row container mb-2">
   <div class="col rounded-1 py-2" style="background-color: #282c34">
     <pre><code class="hljs language-xml hl-escape"><p>
-  This extension is called <b>^#name#^</b>. <br>
-  <code>^#identifier#^</code> is the identifier of this extension. <br>
-  The current version is <i>^#version#^</i>. <br>
+  This extension is called <b>{name}</b>. <br>
+  <code>{identifier}</code> is the identifier of this extension. <br>
+  The current version is <i>{version}</i>. <br>
 </p></code></pre>
     <div class="border-top mb-3 code-spacer"></div>
     <div class="overflow-scroll">
@@ -49,9 +49,9 @@ We can achieve this with the `box` css class, which is included in the Pterodact
   </div>
   <div class="box-body">
     <p>
-      This extension is called <b>^#name#^</b>. <br>
-      <code>^#identifier#^</code> is the identifier of this extension. <br>
-      The current version is <i>^#version#^</i>. <br>
+      This extension is called <b>{name}</b>. <br>
+      <code>{identifier}</code> is the identifier of this extension. <br>
+      The current version is <i>{version}</i>. <br>
     </p>
   </div>
 </div></code></pre>
