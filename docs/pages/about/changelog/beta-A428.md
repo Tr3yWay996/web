@@ -23,6 +23,7 @@
 - Admin and dashboard wrappers now get imported from a symlinked file dynamically instead of being injected through `blueprint.sh`.
 - Docker users are now forced onto the `/app` directory as Pterodactyl directory.
 - Change the entire way [placeholders](?page=documentation/placeholders) work and add some brand new placeholder features.
+- <tag type="hotfix"></tag> Some elements (like NavigationBar and SubNavigation) now have static element IDs for easier styling.
 
 <br/>
 
@@ -41,6 +42,7 @@
 - <tag type="hotfix"></tag> Extension views were not parsed correctly resulting in empty view pages. This has been fixed in a hotfix.
 - <tag type="hotfix"></tag> Visiting extensions that had custom controllers in your admin panel caused a server error. This has been fixed in a hotfix as well.
 - <tag type="hotfix"></tag> Making use of the new placeholders would result in a bunch of errors, this has been fixed.
+- <tag type="hotfix"></tag> Add a timeout for requests towards the Blueprint API to prevent some pages from loading indefinitely.
 
 <br/>
 
