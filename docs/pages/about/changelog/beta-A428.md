@@ -1,6 +1,6 @@
 <span class="badge bg-success-subtle border border-success-subtle text-success-emphasis rounded-pill"><i class="bi bi-check-lg"></i> Latest</span>
 <span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill"><i class="bi bi-hash"></i> Supported</span>
-# beta-A428
+# beta-A428-1
 <br/>
 
 #### Changes
@@ -38,6 +38,8 @@
 - Blueprint did not exit after updating it's Pterodactyl installation folder variable.
 - Some issues with running Blueprint on Docker have been resolved. While it's still not officially supported, we try to make it work as well as possible.
 - Identifiers were able to consist of hyphens (`-`), underscores (`_`), periods (`.`) and spaces. Extensions that did use these characters in their identifiers ended up breaking some parts of the Pterodactyl panel in some way, shape or form.
+- <tag type="hotfix"></tag> Extension views were not parsed correctly resulting in empty view pages. This has been fixed in a hotfix.
+- <tag type="hotfix"></tag> Visiting extensions that had custom controllers in your admin panel caused a server error. This has been fixed in a hotfix as well.
 
 <br/>
 
