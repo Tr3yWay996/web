@@ -219,7 +219,7 @@
               </ul>
             </div>
             <div class="card-body">
-              <h5 class="card-title text-truncate">${product.name}</h5>
+              <h5 class="card-title text-truncate">${product.name} <span class="author-tag">by ${product.author}</span></h5>
               <p class="card-text text-truncate">${product.description}</p>
             </div>
           </div>
@@ -229,7 +229,11 @@
       })
     }
 
-    loadYAML("./:repository/repository.yml", displayProducts)
+    if(window.location.hostname == "127.0.0.1" && localStorage.getItem("LocalExampleRepository") == "true") {
+      loadYAML("./:repository/repository.example.yml", displayProducts)
+    } else {
+      loadYAML("./:repository/repository.yml", displayProducts)
+    }
   </script>
   <style id="css-filter-themes"></style>
   <style id="css-filter-extensions"></style>

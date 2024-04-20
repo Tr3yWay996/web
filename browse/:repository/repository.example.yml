@@ -4,14 +4,32 @@
   description: Description
   thumbnail: :thumbnail/thumbnail.jpg
   identifier: extension
-  category: themes/extensions
+  category: extensions
   downloads:
   - name: sourceXchange
     icon: :logo/SXC.png
-    url:
+    url: https://example.com
   - name: BuiltByBit
     icon: :logo/BBB.png
-    url:
+    url: https://example.com
   - name: GitHub
     icon: :logo/GH.png
-    url:
+    url: https://example.com
+
+# Theme
+- name: Theme
+  author: author
+  description: Description
+  thumbnail: :thumbnail/thumbnail.jpg
+  identifier: theme
+  category: themes
+  downloads:
+  - name: sourceXchange
+    icon: :logo/SXC.png
+    url: https://example.com
+  - name: BuiltByBit
+    icon: :logo/BBB.png
+    url: https://example.com
+  - name: GitHub
+    icon: :logo/GH.png
+    url: https://example.com

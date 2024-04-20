@@ -64,3 +64,8 @@
 .buy-btn:focus-visible {
   box-shadow: none !important
 }
+
+.author-tag {
+  opacity: .5;
+  font-size: 15px;
+}
