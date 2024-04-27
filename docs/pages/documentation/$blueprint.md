@@ -18,10 +18,13 @@ The BlueprintExtensionLibrary is automatically imported to dashboard wrappers, a
 
 ##### Databasing <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Universal</span>
 `dbGet(table, record)`\
-Returns a database value. Will be fetched as `table::record`.
+Fetch a record from the database.
 
 `dbSet(table, record, value)`\
-Sets a database value. Will be set as `table::record`, `value`.
+Set a database record.
+
+`dbForget(table, record)` <tag type="new" content="beta-CB38"/></tag>\
+Delete/forget a database record.
 
 <br/>
 
