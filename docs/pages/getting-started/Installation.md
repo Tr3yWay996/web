@@ -98,6 +98,6 @@ bash blueprint.sh
 <br>
 
 #### <i class="bi bi-check-circle-fill"></i> Mission complete!
-Blueprint should now be installed onto your Pterodactyl panel which means you'll be able to start installing or developing extensions.
+Blueprint should now be installed onto your Pterodactyl panel which means you'll be able to start installing or developing extensions. To learn more about Blueprint's command line utility, run `blueprint -help`. If you like the project, please <a href="https://github.com/blueprintframewor/main" class="text-warning-emphasis">star</a> it on GitHub.
 
-To learn more about Blueprint's command line utility, run `blueprint -help`. If you like the project, please <a href="https://github.com/blueprintframewor/main" class="text-warning-emphasis">star</a> it on GitHub.
+Get started with developing extensions through [this guide](?page=getting-started/Extension-development) or find new extensions on [the extension discovery list](/browse). There is so much to discover, welcome to Blueprint.
