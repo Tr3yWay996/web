@@ -44,7 +44,7 @@ yarn add cross-env</code></pre>
         Additional dependencies
       </b>
       <p>We make use of some additional dependencies that might not come preinstalled with your distribution. For this example, we'll use <code>apt</code>. Commands may differ for distributions that are not Debian-based.</p>
-      <pre><code class="language-bash">apt install -y zip unzip git curl wget tput</code></pre>
+      <pre><code class="language-bash">apt install -y zip unzip git curl wget</code></pre>
     </div>
   </div>
 </div><br><br>
@@ -82,7 +82,7 @@ This step allows Blueprint to function and know where itself and Pterodactyl are
 Modify the `$FOLDER` and `$OWNERSHIP` values to your needs. If you don't have a unusual webserver path or user/group, you can skip this step or run the command shown below without any modifications.
 
 ```bash
-FOLDER="/var/www/pterodactyl" OWNERSHIP="www-data:www-data" sed -i -E -e "s|FOLDER=\"/var/www/pterodactyl\" #;|FOLDER=\"$FOLDER\" #;|g" -e "s|OWNERSHIP=\"www-data:www-data\" #;|OWNERSHIP=\"$OWNERSHIP\" #;|g" blueprint.sh
+FOLDER="/var/www/pterodactyl"; OWNERSHIP="www-data:www-data"; sed -i -E -e "s|FOLDER=\"/var/www/pterodactyl\" #;|FOLDER=\"$FOLDER\" #;|g" -e "s|OWNERSHIP=\"www-data:www-data\" #;|OWNERSHIP=\"$OWNERSHIP\" #;|g" $FOLDER/blueprint.sh
 ```
 
 <br>
