@@ -2,7 +2,7 @@
 - name: Announcements
   author: prplwtf
   description: Create announcements for your Pterodactyl dashboard.
-  thumbnail: :thumbnail/announcements.webp
+  thumbnail: :thumbnail/announcements.jpg
   identifier: announcements
   category: extensions
   downloads:
