@@ -21,6 +21,7 @@
 - Fix bad exit code ([#32](https://github.com/BlueprintFramework/main/pull/32)) in `blueprint.sh`.
 - `ServerRouter.tsx` still had a leftover debug line, this has now been fixed. (Reported by [@ArnaudLier](https://github.com/ArnaudLier))
 - Extension information values could not contain the `&` character. Doing so would break some pages. (Reported by [@0x7d8](https://github.com/0x7d8))
+- Extension-provided scripts were sometimes ran with root permissions, which was not intentional.
 
 <br/>
 
