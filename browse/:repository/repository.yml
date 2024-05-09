@@ -154,6 +154,21 @@
     icon: :logo/SXC.png
     url: https://www.sourcexchange.net/products/environment-variables
 
+# FiveM Utils
+- name: FiveM Utils
+  author: MinerPL
+  description: Everything and more to manage FiveM servers.
+  thumbnail: :thumbnail/fivemutils.jpg
+  identifier: fivemutils
+  category: extensions
+  downloads:
+  - name: sourceXchange
+    icon: :logo/SXC.png
+    url: https://www.sourcexchange.net/products/fivem-utils
+  - name: BuiltByBit
+    icon: :logo/BBB.png
+    url: https://builtbybit.com/resources/fivem-utils.37958/
+
 # Foxes
 - name: Foxes
   author: SolidSilk
