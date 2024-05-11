@@ -75,13 +75,13 @@ Path to your public directory. All files in this folder are available publicly a
 <br/>
 
 ##### requests
-`views` <tag type="new" content="beta-A428"/></tag>\
+`views`\
 Path to your views directory. This directory is used for creating (partial) views made up of sections which you can import to your admin view and admin/dashboard wrapper. These views can be called from `blueprint.extensions.<identifier>.<view>`.
 
-`controllers` <tag type="new" content="beta-A428"/></tag>\
+`controllers`\
 Directory pointing towards a folder with controllers you can use together with your routes. These controllers exist at `Pterodactyl\BlueprintFramework\Extensions\<identifier>`.
 
-`routers` <tag type="new" content="beta-A428"/></tag>\
+`routers`\
 Create your own route definitions. Suboptions are `application`, `client` and `web`. If no suboptions are defined and `routers` is used as an option, `routers` will act as the `web` suboption.
 
 <br/>
@@ -89,3 +89,9 @@ Create your own route definitions. Suboptions are `application`, `client` and `w
 ##### database
 `migrations`\
 Path to your database migrations folder.
+
+<br/>
+
+##### console
+`artisan` <tag type="new" content="beta-CB38"/></tag>\
+Path to your Artisan commands directory. Artisan command names are **susceptible to conflicts** between extensions, name them wisely.
