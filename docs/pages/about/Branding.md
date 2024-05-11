@@ -66,4 +66,4 @@ Blueprint is called **Blueprint**, no capital P and no space between "blue" and 
 ### Brand Kit
 All assets (including marketplace banners, placeholder icons and other miscellaneous assets) are bundled with releases and are located in `blueprint/assets/` (`.blueprint/assets` on Pterodactyl installations).
 
-You can also download assets [from our GitHub repository](https://github.com/BlueprintFramework/main/tree/main/blueprint/assets) which contains up-to-date brand material.
+You can also download assets [from our GitHub repository](https://github.com/BlueprintFramework/framework/tree/main/blueprint/assets) which contains up-to-date brand material.

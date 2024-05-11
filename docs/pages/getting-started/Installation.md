@@ -55,10 +55,10 @@ Whether you plan to use Blueprint for it's extensions, developer tools or both -
 <br>
 
 #### <i class="bi bi-cloud-arrow-down-fill"></i> Download the latest release.
-Download the latest version of Blueprint onto your server by either downloading the latest release [from GitHub](https://github.com/BlueprintFramework/main/releases/latest) or running the one-liner below (which will save the file as `release.zip`).
+Download the latest version of Blueprint onto your server by either downloading the latest release [from GitHub](https://github.com/BlueprintFramework/framework/releases/latest) or running the one-liner below (which will save the file as `release.zip`).
 
 ```bash
-wget "$(curl -s https://api.github.com/repos/BlueprintFramework/main/releases/latest | grep 'browser_download_url' | cut -d '"' -f 4)" -O release.zip
+wget "$(curl -s https://api.github.com/repos/BlueprintFramework/framework/releases/latest | grep 'browser_download_url' | cut -d '"' -f 4)" -O release.zip
 ```
 
 <br>

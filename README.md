@@ -1,7 +1,7 @@
 <!-- Header -->
 <br/><h3 align="center"><a href="https://github.com/BlueprintFramework"><code>BlueprintFramework</code></a>/<code>web</code></h3>
 <p align="center">
-  <a href="https://github.com/BlueprintFramework/main">Blueprint</a> <b>·</b>
+  <a href="https://github.com/BlueprintFramework/framework">Blueprint</a> <b>·</b>
   <a href="https://blueprint.zip">Website</a> <b>·</b>
   <a href="https://discord.gg/CUwHwv6xRe">Community</a>
 </p>
@@ -11,7 +11,7 @@
 <!-- Information -->
 <br/><h2 align="center">ℹ️ Information</h2>
 
-**`BlueprintFramework/web`** is the repository for [`BlueprintFramework/main`](https://github.com/BlueprintFramework/main)'s landing and documentation website and is specifically made to both improve the user and developer's experience with Blueprint.
+**`BlueprintFramework/web`** is the repository for [`BlueprintFramework/framework`](https://github.com/BlueprintFramework/framework)'s landing and documentation website and is specifically made to both improve the user and developer's experience with Blueprint.
 
 Blueprint's website is made with the following *(mostly open source)* projects, services, frameworks and libraries:
 - [Bootstrap 5](https://getbootstrap.com)

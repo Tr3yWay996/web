@@ -2,7 +2,7 @@
 <h4 class="fw-light">License which source code is protected under.</h4><br/>
 <div class="alert alert-warning" role="alert">
   <i class="bi bi-exclamation-triangle-fill mb-1" style="font-size:23px; float: left;"></i>
-  <div class="ps-3 ms-3">This license is used for <a href="https://github.com/BlueprintFramework/main" class="alert-link">BlueprintFramework/main</a>, <a href="https://github.com/BlueprintFramework/templates" class="alert-link">BlueprintFramework/templates</a> and <a href="https://github.com/BlueprintFramework/web" class="alert-link">BlueprintFramework/web</a>. Extensions might ship with different licenses.</div>
+  <div class="ps-3 ms-3">This license is used for <a href="https://github.com/BlueprintFramework/framework" class="alert-link">BlueprintFramework/framework</a>, <a href="https://github.com/BlueprintFramework/templates" class="alert-link">BlueprintFramework/templates</a> and <a href="https://github.com/BlueprintFramework/web" class="alert-link">BlueprintFramework/web</a>. Extensions might ship with different licenses.</div>
 </div><br/>
 
 ```txt

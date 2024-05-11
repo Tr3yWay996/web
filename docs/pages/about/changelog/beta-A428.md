@@ -13,7 +13,7 @@
 - Add new extension APIs (`views`, `controllers` and `routers`) which can be enabled from [conf.yml](?page=documentation/confyml). These new extension APIs can be useful for expanding extension functionality even further.
 - Each installed extension now gets assigned a filesystem (`blueprint:<identifier>`) automatically which can be used for file uploading, automatic handling of files, etc.
 - Extensions can now check if another extension is installed through a new API in [$blueprint](?page=documentation/$blueprint).
-- Add new hint to the Blueprint admin page that only shows once and promotes the [`BlueprintFramework/main`](https://github.com/BlueprintFramework/main) GitHub repository.
+- Add new hint to the Blueprint admin page that only shows once and promotes the [`BlueprintFramework/framework`](https://github.com/BlueprintFramework/framework) GitHub repository.
 - When using `-upgrade` to update from **this version** to a **later version**, Blueprint will automatically migrate development files over if extension development files are found.
 - Improve the codebase of multiple internal services, controllers and views.
 - Build files (used for installing/updating extensions) have been made more modular by making use of partials and sections, allowing editing them to be much easier.

@@ -3,7 +3,7 @@
 <br/>
 
 #### Changes
-- Templates are no longer stored locally, instead, they are fetched from an external repository that [you can find here](https://github.com/BlueprintFramework/main). This not only allows us to offer community-made templates, it also significantly reduces the size of Blueprint releases.
+- Templates are no longer stored locally, instead, they are fetched from an external repository that [you can find here](https://github.com/BlueprintFramework/framework). This not only allows us to offer community-made templates, it also significantly reduces the size of Blueprint releases.
 - Switch out `README.md` placeholder files with `.gitkeep` files.
 - Change error for unknown `-init` template value in `blueprint.sh`.
 - When upgrading, `blueprint.sh` now no longer wipes the `tools/tmp` folder as it's expected to be empty.
@@ -15,7 +15,7 @@
 - `h`, `-h` and `--h` will now trigger the help menu as well.
 - Consider `awk`, `grep` and `git` dependencies and check for them in `blueprint.sh`.
 - Remove Ko-Fi from `.github/FUNDING.yml`. We no longer accept Ko-Fi donations, donate on Liberapay instead.
-- Update Node.JS installation instructions on `README.md` as the automatic installation script has been deprecated. ([#12](https://github.com/BlueprintFramework/main/pull/12))
+- Update Node.JS installation instructions on `README.md` as the automatic installation script has been deprecated. ([#12](https://github.com/BlueprintFramework/framework/pull/12))
 - Add new "expose" option for extension exporting. This option will host your extension on a self-hosted URL for two minutes to make downloading the exported extension to your device easier.
 - Placeholder logs that are displayed when running `-install` are now grouped.
 - `blueprint.sh` now keeps track of developer mode through `lib-db` instead of using a separate file.
