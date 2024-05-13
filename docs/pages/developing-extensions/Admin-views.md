@@ -14,7 +14,7 @@ The Barebones template includes two files by default, `conf.yml` and `admin.blad
 </p></code></pre>
     <div class="border-top mb-3 code-spacer"></div>
     <div class="overflow-scroll">
-      <img src="/.assets/storage/docs/png/3.png">
+      <img src="../.assets/storage/docs/png/3.png">
     </div>
   </div>
 </div>
@@ -32,7 +32,7 @@ Right now all lines or on the same row. This is due to how Blueprint builds your
 </p></code></pre>
     <div class="border-top mb-3 code-spacer"></div>
     <div class="overflow-scroll">
-      <img src="/.assets/storage/docs/png/5.png">
+      <img src="../.assets/storage/docs/png/5.png">
     </div>
   </div>
 </div>
@@ -57,7 +57,7 @@ We can achieve this with the `box` css class, which is included in the Pterodact
 </div></code></pre>
     <div class="border-top mb-3 code-spacer"></div>
     <div class="overflow-scroll">
-      <img src="/.assets/storage/docs/png/6.png">
+      <img src="../.assets/storage/docs/png/6.png">
     </div>
   </div>
 </div><br>

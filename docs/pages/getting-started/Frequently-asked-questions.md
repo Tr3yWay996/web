@@ -22,7 +22,7 @@
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
       <div class="accordion-body">
-        We have a "browse" section on our website, which you can find <a href="/browse">here</a>. You'll be able to find awesome themes and extensions there which are made with the extension framework.
+        We have a "browse" section on our website, which you can find <a href="../browse">here</a>. You'll be able to find awesome themes and extensions there which are made with the extension framework.
       </div>
     </div>
   </div>
