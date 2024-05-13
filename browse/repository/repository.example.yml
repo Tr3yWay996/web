@@ -2,34 +2,34 @@
 - name: Extension
   author: author
   description: Description
-  thumbnail: :thumbnail/thumbnail.jpg
+  thumbnail: thumbnail.jpg
   identifier: extension
   category: extensions
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://example.com
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://example.com
   - name: GitHub
-    icon: :logo/GH.png
+    icon: GH.png
     url: https://example.com
 
 # Theme
 - name: Theme
   author: author
   description: Description
-  thumbnail: :thumbnail/thumbnail.jpg
+  thumbnail: thumbnail.jpg
   identifier: theme
   category: themes
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://example.com
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://example.com
   - name: GitHub
-    icon: :logo/GH.png
+    icon: GH.png
     url: https://example.com

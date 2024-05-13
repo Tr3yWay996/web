@@ -199,7 +199,7 @@
 
         listItem.innerHTML = `
           <div class="card overflow-hidden bg-dark-subtle">
-            <img src="${product.thumbnail}" onclick="setTimeout(() => {document.getElementById('${product.identifier}Button').click()}, 1)" class="card-img-top img-dim product-image" alt="${product.name}"/>
+            <img src="./assets/${product.thumbnail}" onclick="setTimeout(() => {document.getElementById('${product.identifier}Button').click()}, 1)" class="card-img-top img-dim product-image" alt="${product.name}"/>
             <div class="btn-group position-absolute" style="right: 11px; top: 0px;">
               <button type="button" id="${product.identifier}Button" class="btn btn-secondary rounded-2 backdrop-blur buy-btn" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-basket3-fill"></i>
@@ -211,7 +211,7 @@
                       class="dropdown-item rounded-2" 
                       href="${(download.url.replace(/^https?:\/\//i, '').toLowerCase().startsWith('builtbybit.com'.toLowerCase())) ? 'https://' + download.url.replace(/^https?:\/\//i, '') + '?ref=449337' : download.url}"
                     >
-                      <img src="${download.icon}" alt="" width="24" height="24">
+                      <img src="./assets/source/${download.icon}" alt="" width="24" height="24">
                       ${download.name}
                     </a>
                   </li>
@@ -230,9 +230,9 @@
     }
 
     if(window.location.hostname == "127.0.0.1" && localStorage.getItem("LocalExampleRepository") == "true") {
-      loadYAML("./:repository/repository.example.yml", displayProducts)
+      loadYAML("./repository/repository.example.yml", displayProducts)
     } else {
-      loadYAML("./:repository/repository.yml", displayProducts)
+      loadYAML("./repository/repository.yml", displayProducts)
     }
   </script>
   <style id="css-filter-themes"></style>

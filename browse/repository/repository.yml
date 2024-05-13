@@ -2,454 +2,454 @@
 - name: Announcements
   author: prplwtf
   description: Create announcements for your Pterodactyl dashboard.
-  thumbnail: :thumbnail/announcements.jpg
+  thumbnail: announcements.jpg
   identifier: announcements
   category: extensions
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/announcements
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/announcements-for-pterodactyl.32546
 
 # Arc.io Integration
 - name: Arc.io Integration
   author: Ssmidge
   description: Add Arc to your panel within minutes.
-  thumbnail: :thumbnail/arcio.jpg
+  thumbnail: arcio.jpg
   identifier: arcio
   category: extensions
   downloads:
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/pterodactyl-v1-addon-arc-integration.32109/
 
 # Automation
 - name: Automation
   author: ExperimentalX
   description: Execute power/command actions on multiple servers at once.
-  thumbnail: :thumbnail/sysautomation.jpg
+  thumbnail: sysautomation.jpg
   identifier: sysautomation
   category: extensions
   downloads:
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/automation.37282/
 
 # Cats
 - name: Cats
   author: prplwtf
   description: The fluffiest Blueprint extension out there.
-  thumbnail: :thumbnail/cats.jpg
+  thumbnail: cats.jpg
   identifier: cats
   category: extensions
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/cats
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/cats.40300/
 
 # Cherrydactyl
 - name: Cherrydactyl
   author: PIP
   description: Deep-red theme for Pterodactyl.
-  thumbnail: :thumbnail/cherrydactyl.jpg
+  thumbnail: cherrydactyl.jpg
   identifier: cherrydactyl
   category: themes
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/cherrydactyl
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/cherrydactyl.40523/
 
 # Cookies
 - name: Cookies
   author: prplwtf
   description: Customizable cookie disclaimer for Pterodactyl.
-  thumbnail: :thumbnail/cookies.webp
+  thumbnail: cookies.webp
   identifier: cookies
   category: extensions
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/cookies
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/cookies.38647/
 
 # Custom Server Sort
 - name: Custom Server Sort
   author: Kiip
   description: Server sorting that just works.
-  thumbnail: :thumbnail/customserversort.jpg
+  thumbnail: customserversort.jpg
   identifier: customserversort
   category: extensions
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/custom-server-sort
 
 # Database Import & Export
 - name: Database Import & Export
   author: '0x7d8'
   description: Adds the ability to export and import databases from your Pterodactyl panel.
-  thumbnail: :thumbnail/databaseimportexport.jpg
+  thumbnail: databaseimportexport.jpg
   identifier: databaseimportexport
   category: extensions
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/database-import-export
 
 # Darkenate
 - name: Darkenate
   author: JasonHorkles
   description: A Pterodactyl dark theme inspired by bloom.host's colors and the Recolor theme.
-  thumbnail: :thumbnail/darkenate.jpg
+  thumbnail: darkenate.jpg
   identifier: darkenate
   category: themes
   downloads:
   - name: GitHub
-    icon: :logo/GH.png
+    icon: GH.png
     url: https://github.com/JasonHorkles/darkenate
 
 # dbEdit
 - name: dbEdit
   author: prplwtf
   description: Basic extension to modify database values.
-  thumbnail: :thumbnail/dbedit.jpg
+  thumbnail: dbedit.jpg
   identifier: dbedit
   category: extensions
   downloads:
   - name: GitHub
-    icon: :logo/GH.png
+    icon: GH.png
     url: https://github.com/prplwtf/blueprint-dbedit
 
 # Dogs
 - name: Dogs
   author: Slimi
   description: Random dogs in your admin panel.
-  thumbnail: :thumbnail/dogs.jpg
+  thumbnail: dogs.jpg
   identifier: dogs
   category: extensions
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/dogs
 
 # Environment Variables
 - name: Environment Variables
   author: '0x7d8'
   description: Change environment variables on the fly!
-  thumbnail: :thumbnail/environmentvariables.jpg
+  thumbnail: environmentvariables.jpg
   identifier: environmentvariables
   category: extensions
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/environment-variables
 
 # FiveM Utils
 - name: FiveM Utils
   author: MinerPL
   description: Everything and more to manage FiveM servers.
-  thumbnail: :thumbnail/fivemutils.jpg
+  thumbnail: fivemutils.jpg
   identifier: fivemutils
   category: extensions
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/fivem-utils
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/fivem-utils.37958/
 
 # Foxes
 - name: Foxes
   author: SolidSilk
   description: The cutest fox-related Pterodactyl modification.
-  thumbnail: :thumbnail/foxes.jpg
+  thumbnail: foxes.jpg
   identifier: foxes
   category: extensions
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/foxes
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/foxes.38143/
 
 # Loader
 - name: Loader
   author: prplwtf
   description: Awesome loading animation for Pterodactyl.
-  thumbnail: :thumbnail/loader.jpg
+  thumbnail: loader.jpg
   identifier: loader
   category: extensions
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/loader
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/loader.38846/
 
 # Modpack Installer
 - name: Modpack Installer
   author: ric-rac
   description: Install Minecraft modpacks right from the comfort of your Pterodactyl Panel.
-  thumbnail: :thumbnail/modpackinstaller.webp
+  thumbnail: modpackinstaller.webp
   identifier: modpackinstaller
   category: extensions
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/minecraft-modpack-installer-for-blueprint
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/modpack-installer-for-blueprint.40083
 
 # Nebula
 - name: Nebula
   author: prplwtf
   description: Pterodactyl takes flight.
-  thumbnail: :thumbnail/nebula.jpg
+  thumbnail: nebula.jpg
   identifier: nebula
   category: themes
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/nebula
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/nebula-for-blueprint.32442/
 
 # Plugin Manager
 - name: Plugin Manager
   author: ric-rac
   description: Manage Minecraft plugins directly from your Pterodactyl panel.
-  thumbnail: :thumbnail/minecraftpluginmanager.png
+  thumbnail: minecraftpluginmanager.png
   identifier: minecraftpluginmanager
   category: extensions
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/minecraft-plugin-manager-for-blueprint
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/minecraft-plugin-manager-for-blueprint.41883/
 
 # Pull Files
 - name: Pull Files
   author: '0x7d8'
   description: Upload files from remote URLs.
-  thumbnail: :thumbnail/pullfiles.jpg
+  thumbnail: pullfiles.jpg
   identifier: pullfiles
   category: extensions
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/pull-files
 
 # Recolor
 - name: Recolor
   author: sp11rum
   description: A fresh coat of paint for your panel.
-  thumbnail: :thumbnail/recolor.jpg
+  thumbnail: recolor.jpg
   identifier: recolor
   category: themes
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/recolor
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/recolor.33818/
   - name: GitHub
-    icon: :logo/GH.png
+    icon: GH.png
     url: https://github.com/sp11rum/recolor
 
 # Redirect
 - name: Redirect
   author: prplwtf
   description: Create URL redirects within seconds.
-  thumbnail: :thumbnail/redirect.jpg
+  thumbnail: redirect.jpg
   identifier: redirect
   category: extensions
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/redirect
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/redirect.38191
   - name: GitHub
-    icon: :logo/GH.png
+    icon: GH.png
     url: https://github.com/prplwtf/blueprint-redirect
 
 # ServerID
 - name: ServerID
   author: geoorloofd
   description: Show your server's ID on it's management page.
-  thumbnail: :thumbnail/serverid.jpg
+  thumbnail: serverid.jpg
   identifier: serverid
   category: extensions
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/serverid-in-blueprint
 
 # Show Node IDs
 - name: Show Node IDs
   author: EwweKovacevic
   description: Show the UUID and ID of nodes in the admin panel.
-  thumbnail: :thumbnail/shownodeids.webp
+  thumbnail: shownodeids.webp
   identifier: shownodeids
   category: extensions
   downloads:
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/show-node-ids.35196/
 
 # Simple Favicons
 - name: Simple Favicons
   author: PatrickYu17
   description: Change your panel favicon.
-  thumbnail: :thumbnail/simplefavicons.png
+  thumbnail: simplefavicons.png
   identifier: simplefavicons
   category: extensions
   downloads:
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/simple-favicons.36020/
 
 # Simple Footers
 - name: Simple Footers
   author: PatrickYu17
   description: Create a custom panel footer.
-  thumbnail: :thumbnail/simplefooters.png
+  thumbnail: simplefooters.png
   identifier: simplefooters
   category: extensions
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/simple-footers
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/simple-footers.35488/
 
 # Simple Versions
 - name: Simple Versions
   author: PatrickYu17
   description: Change the version of your Minecraft server with one click.
-  thumbnail: :thumbnail/simpleversions.webp
+  thumbnail: simpleversions.webp
   identifier: simpleversions
   category: extensions
   downloads:
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/simple-versions.40914/
 
 # Simple Visuals
 - name: Simple Visuals
   author: PatrickYu17
   description: A unique, modern and simple visual theme for Pterodactyl.
-  thumbnail: :thumbnail/simplevisuals.webp
+  thumbnail: simplevisuals.webp
   identifier: simplevisuals
   category: themes
   downloads:
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/simple-visuals.36709/
 
 # Slate
 - name: Slate
   author: prplwtf
   description: Admin theming, done right.
-  thumbnail: :thumbnail/slate.jpg
+  thumbnail: slate.jpg
   identifier: slate
   category: themes
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/slate
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/slate-for-pterodactyl.36101/
 
 # Snowflakes
 - name: Snowflakes
   author: prplwtf
   description: Add snowflakes to your Pterodactyl dashboard!
-  thumbnail: :thumbnail/snowflakes.jpg
+  thumbnail: snowflakes.jpg
   identifier: showflakes
   category: themes
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/snowflakes
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/snowflakes.36223
   - name: GitHub
-    icon: :logo/GH.png
+    icon: GH.png
     url: https://github.com/prplwtf/blueprint-snowflakes
 
 # SSH Key Importer
 - name: SSH Key Importer
   author: '0x7d8'
   description: Import SSH keys from GitHub, GitLab and Launchpad.
-  thumbnail: :thumbnail/sshkeyimporter.jpg
+  thumbnail: sshkeyimporter.jpg
   identifier: sshkeyimporter
   category: extensions
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/ssh-key-importer
 
 # Subdomains
 - name: Subdomain manager
   author: Corwin
   description: Subdomain manager via Cloudflare!
-  thumbnail: :thumbnail/subdomains.jpg
+  thumbnail: subdomains.jpg
   identifier: subdomains
   category: extensions
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/subdomain-manager-for-pterodactyl
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/subdomain-manager-for-pterodactyl.42401/
 
 # WidgetBot
 - name: WidgetBot
   author: Xenority
   description: Pterodactyl integration for the WidgetBot Discord bot.
-  thumbnail: :thumbnail/widgetbot.jpg
+  thumbnail: widgetbot.jpg
   identifier: widgetbot
   category: extensions
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/widgetbot-for-blueprint
 
 # World Manager
 - name: World Manager
   author: ric-rac
   description: Manage Minecraft worlds right from Pterodactyl Panel.
-  thumbnail: :thumbnail/minecraftworldmanager.webp
+  thumbnail: minecraftworldmanager.webp
   identifier: minecraftworldmanager
   category: extensions
   downloads:
   - name: sourceXchange
-    icon: :logo/SXC.png
+    icon: SXC.png
     url: https://www.sourcexchange.net/products/minecraft-world-manager-for-blueprint
   - name: BuiltByBit
-    icon: :logo/BBB.png
+    icon: BBB.png
     url: https://builtbybit.com/resources/minecraft-world-manager-for-blueprint.40088
