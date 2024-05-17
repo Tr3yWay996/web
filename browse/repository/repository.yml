@@ -37,6 +37,18 @@
     icon: BBB.png
     url: https://builtbybit.com/resources/automation.37282/
 
+# Catppuccindactyl
+- name: Catppuccindactyl
+  author: Why_Authentic
+  description: Soothing pastel theme for Pterodactyl!
+  thumbnail: catppuccindactyl.jpg
+  identifier: catppuccindactyl
+  category: themes
+  downloads:
+  - name: sourceXchange
+    icon: SXC.png
+    url: https://www.sourcexchange.net/products/catppuccindactyl
+
 # Cats
 - name: Cats
   author: prplwtf
