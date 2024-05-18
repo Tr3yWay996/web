@@ -13,11 +13,11 @@ admin:
 ```
 <br/>
 
-With that part done, go into your `controller.php` file and start by registering the namespace. You might notice the `__identifier__` text, which is a placeholder that automatically gets replaced by Blueprint, which you can learn more about [here](?page=documentation/placeholders).
+With that part done, go into your `controller.php` file and start by registering the namespace. You might notice the `{identifier}` text, which is a placeholder that automatically gets replaced by Blueprint, which you can learn more about [here](?page=documentation/placeholders).
 ```php
 <?php
 // Register namespace
-namespace Pterodactyl\Http\Controllers\Admin\Extensions\__identifier__;
+namespace Pterodactyl\Http\Controllers\Admin\Extensions\{identifier};
 ```
 
 Below that you want to import `View`, `Factory`, `Controller` and `BlueprintExtensionLibrary` to render blade views and make use of Blueprint's [$blueprint](?page=documentation/$blueprint) library.
@@ -32,7 +32,7 @@ use Pterodactyl\BlueprintFramework\Libraries\ExtensionLibrary\Admin\BlueprintAdm
 Create the `identifierExtensionController` class as shown below. Functions from this class will be called when loading your extension's admin page.
 ```php
 // Register extension-specific ExtensionController class.
-class __identifier__ExtensionController extends Controller
+class {identifier}ExtensionController extends Controller
 {
   // Construct class variables.
   public function __construct(
@@ -59,8 +59,8 @@ To render your admin view when loading your extension's admin page in your brows
 public function index(): View
 {
   return $this->view->make(
-    'admin.extensions.^#identifier#^.index', [
-      'root' => "/admin/extensions/^#identifier#^",
+    'admin.extensions.{identifier}.index', [
+      'root' => "/admin/extensions/{identifier}",
       'blueprint' => $this->blueprint,
     ]
   );
