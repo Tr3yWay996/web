@@ -43,3 +43,7 @@
 @media screen and (max-width: 600px) {.bp-screenshot-cutoff {max-height: 25vh !important}}
 @media screen and (max-width: 400px) {.bp-screenshot-cutoff {max-height: 15vh !important}}
 @media screen and (max-width: 200px) {.bp-screenshot-cutoff {max-height: 10vh !important}}
+
+.width-800 {
+  max-width: 800px;
+}
