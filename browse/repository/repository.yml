@@ -355,18 +355,6 @@
     icon: BBB.png
     url: https://builtbybit.com/resources/simple-versions.40914/
 
-# Simple Visuals
-- name: Simple Visuals
-  author: PatrickYu17
-  description: A unique, modern and simple visual theme for Pterodactyl.
-  thumbnail: simplevisuals.webp
-  identifier: simplevisuals
-  category: themes
-  downloads:
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/simple-visuals.36709/
-
 # Slate
 - name: Slate
   author: prplwtf
