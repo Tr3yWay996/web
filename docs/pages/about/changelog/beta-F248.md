@@ -11,6 +11,8 @@
 - Add a brand new `dbForget()` function to [`BlueprintExtensionLibrary`](?page=documentation/$blueprint) that allows for deleting/forgetting database records.
 - Add additional placement options for the server's "Terminal" page to [Components.yml](?page=documentation/componentsyml). ([#34](https://github.com/BlueprintFramework/framework/pull/34))
 - Extension buttons have been redesigned once again and should now look more recognizable for each extension.
+- We've added new marketing material and updated Blueprint's default logo. This includes new versions of Blueprint's icon and full-res images of our stickers.
+- Add a choice for putting the application in maintenance mode when installing/upgrading Blueprint.
 
 <br/>
 
@@ -22,8 +24,10 @@
 - `ServerRouter.tsx` still had a leftover debug line, this has now been fixed. (Reported by [@ArnaudLier](https://github.com/ArnaudLier))
 - Extension information values could not contain the `&` character. Doing so would break some pages. (Reported by [@0x7d8](https://github.com/0x7d8))
 - Extension-provided scripts were sometimes ran with root permissions, which was not intentional.
+- Fixed a typo in Blueprtint's installation log. ([#38](https://github.com/BlueprintFramework/framework/pull/38))
 
 <br/>
 
 #### Breaking Changes
-- None yet.
+- Install, remove and export scripts may no longer be able to use colored logs.
+- Export scripts need an additional flag ([`developerEscalateExportScript`](?page=documentation/flags)) to run with root-level perms, which might be needed in some cases.
