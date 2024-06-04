@@ -343,6 +343,18 @@
     icon: BBB.png
     url: https://builtbybit.com/resources/simple-footers.35488/
 
+# Simple Properties
+- name: Simple Properties
+  author: PatrickYu17
+  description: Frontend for customizing Minecraft server properties.
+  thumbnail: simpleproperties.png
+  identifier: simpleproperties
+  category: extensions
+  downloads:
+  - name: BuiltByBit
+    icon: BBB.png
+    url: https://builtbybit.com/resources/simple-properties.45824/
+
 # Simple Versions
 - name: Simple Versions
   author: PatrickYu17
