@@ -93,5 +93,5 @@ Path to your database migrations folder.
 <br/>
 
 ##### console
-`artisan` <tag type="new" content="beta-CB38"/></tag>\
+`artisan` <tag type="new" content="beta-F248"/></tag>\
 Path to your Artisan commands directory. Artisan command names are **susceptible to conflicts** between extensions, name them wisely.

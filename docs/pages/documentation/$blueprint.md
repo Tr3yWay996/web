@@ -23,7 +23,7 @@ Fetch a record from the database.
 `dbSet(table, record, value)`\
 Set a database record.
 
-`dbForget(table, record)` <tag type="new" content="beta-CB38"/></tag>\
+`dbForget(table, record)` <tag type="new" content="beta-F248"/></tag>\
 Delete/forget a database record.
 
 <br/>

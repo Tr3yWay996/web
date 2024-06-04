@@ -1,5 +1,5 @@
 <span class="badge bg-warning-subtle border border-warning-subtle text-warning-emphasis rounded-pill"><i class="bi bi-binoculars-fill"></i> Pre-release</span>
-# beta-CB38
+# beta-F248
 <br/>
 
 #### Changes
