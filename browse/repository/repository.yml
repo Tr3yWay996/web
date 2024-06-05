@@ -105,6 +105,9 @@
   - name: sourceXchange
     icon: SXC.png
     url: https://www.sourcexchange.net/products/database-import-export
+  - name: BuiltByBit
+    icon: BBB.png
+    url: https://builtbybit.com/resources/database-import-export.45935/
 
 # Darkenate
 - name: Darkenate
