@@ -3,7 +3,7 @@
 
 After setting up your development template (Barebones) [in the previous guide](?page=getting-started/Extension-development), you can now start writing an admin view.
 
-The Barebones template includes two files by default, `conf.yml` and `admin.blade.php`. We'll take a look at `conf.yml` later, but first, open `admin.blade.php` and add the following code:
+The Barebones template includes two files by default, `conf.yml` and `view.blade.php`. We'll take a look at `conf.yml` later, but first, open `view.blade.php` and add the following code:
 
 <div class="row container mb-2">
   <div class="col rounded-1 py-2" style="background-color: #282c34">
