@@ -13,6 +13,8 @@
 - Extension buttons have been redesigned once again and should now look more recognizable for each extension.
 - We've added new marketing material and updated Blueprint's default logo. This includes new versions of Blueprint's icon and full-res images of our stickers.
 - Add a choice for putting the application in maintenance mode when installing/upgrading Blueprint.
+- No longer use folder placeholders for navigating to the Pterodactyl directory. ([#40](https://github.com/BlueprintFramework/framework/pull/40))
+- The extensions page now shows a "<code><icon name="gear-fill"></icon> System</code>" badge on system extensions (such as Blueprint).
 
 <br/>
 
@@ -25,9 +27,12 @@
 - Extension information values could not contain the `&` character. Doing so would break some pages. (Reported by [@0x7d8](https://github.com/0x7d8))
 - Extension-provided scripts were sometimes ran with root permissions, which was not intentional.
 - Fixed a typo in Blueprtint's installation log. ([#38](https://github.com/BlueprintFramework/framework/pull/38))
+- `SettingsContainer.tsx` was extended by the backups component, which was not intentional. (Reported by [@itsvic-dev](https://github.com/itsvic-dev/))
+- Ending extension identifiers with `.blueprint` in `-install` no longer results in a error. ([#41](https://github.com/BlueprintFramework/framework/pull/41))
 
 <br/>
 
 #### Breaking Changes
 - Install, remove and export scripts may no longer be able to use colored logs.
 - Export scripts need an additional flag ([`developerEscalateExportScript`](?page=documentation/flags)) to run with root-level perms, which might be needed in some cases.
+- You can no longer change Blueprint's `$FOLDER` variable by parsing `$_FOLDER` upon first run of the script.
