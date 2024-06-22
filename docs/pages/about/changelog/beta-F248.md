@@ -1,11 +1,12 @@
-<span class="badge bg-warning-subtle border border-warning-subtle text-warning-emphasis rounded-pill"><i class="bi bi-binoculars-fill"></i> Pre-release</span>
+<span class="badge bg-success-subtle border border-success-subtle text-success-emphasis rounded-pill"><i class="bi bi-check-lg"></i> Latest</span>
+<span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill"><i class="bi bi-hash"></i> Supported</span>
 # beta-F248
 <br/>
 
 #### Changes
 - Add `TelemetryService`'s api endpoint to `PlaceholderService` so it can easily be changed everywhere at once.
 - Add new developer [flag](?page=documentation/flags) called `developerKeepApplicationCache` that skips flushing application cache when installed with `-build`.
-- Don't replace `RouteServiceProvider` ([#33](https://github.com/BlueprintFramework/framework/pull/33)) for Blueprint's Laravel routes.
+- Don't replace `RouteServiceProvider` for Blueprint's Laravel routes. ([#33](https://github.com/BlueprintFramework/framework/pull/33))
 - Blueprint's admin page no longer collects telemetry as it's not a useful data point anymore.
 - [`BlueprintExtensionLibrary`](?page=documentation/$blueprint) now has it's functions documented inside of the codebase, enabling easier development with IDEs. (Suggested by [@itsvic-dev](https://github.com/itsvic-dev/))
 - Add a brand new `dbForget()` function to [`BlueprintExtensionLibrary`](?page=documentation/$blueprint) that allows for deleting/forgetting database records.
@@ -15,6 +16,7 @@
 - Add a choice for putting the application in maintenance mode when installing/upgrading Blueprint.
 - No longer use folder placeholders for navigating to the Pterodactyl directory. ([#40](https://github.com/BlueprintFramework/framework/pull/40))
 - The extensions page now shows a "<code><icon name="gear-fill"></icon> System</code>" badge on system extensions (such as Blueprint).
+- Add a new **Console** extension API which allows for creating new Artisan commands and automatically running them with intervals.
 
 <br/>
 
@@ -22,7 +24,7 @@
 - Input validation wasn't done correctly on Blueprint's own admin settings page, this should now be validated better.
 - Custom Laravel routes for extensions were not unlinked correctly when using `-remove` to remove an extension.
 - `logFormat.sh` used `tput` for coloring logs, which was not checked as a dependency by `blueprint.sh`.
-- Fix bad exit code ([#32](https://github.com/BlueprintFramework/framework/pull/32)) in `blueprint.sh`.
+- Fix bad exit code in `blueprint.sh`. ([#32](https://github.com/BlueprintFramework/framework/pull/32))
 - `ServerRouter.tsx` still had a leftover debug line, this has now been fixed. (Reported by [@ArnaudLier](https://github.com/ArnaudLier))
 - Extension information values could not contain the `&` character. Doing so would break some pages. (Reported by [@0x7d8](https://github.com/0x7d8))
 - Extension-provided scripts were sometimes ran with root permissions, which was not intentional.

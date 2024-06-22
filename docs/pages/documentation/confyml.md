@@ -72,6 +72,9 @@ Path to your data directory. These are private extension-specific files which yo
 `public`\
 Path to your public directory. All files in this folder are available publicly and can be seen by anyone, so don't store any secrets or keys here.
 
+`console` <tag type="new" content="beta-F248"/></tag>\
+Path to your console directory which allows for creating Artisan commands and scheduling them. [Learn more](?page=documentation/consoleyml) about the console API.
+
 <br/>
 
 ##### requests
@@ -89,9 +92,3 @@ Create your own route definitions. Suboptions are `application`, `client` and `w
 ##### database
 `migrations`\
 Path to your database migrations folder.
-
-<br/>
-
-##### console
-`artisan` <tag type="new" content="beta-F248"/></tag>\
-Path to your Artisan commands directory. Artisan command names are **susceptible to conflicts** between extensions, name them wisely.
