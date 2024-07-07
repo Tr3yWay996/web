@@ -328,6 +328,21 @@
     icon: SXC.png
     url: https://www.sourcexchange.net/products/serverid-in-blueprint
 
+# Server Splitter
+- name: Server Splitter
+  author: '0x7d8'
+  description: Split server resources into multiple other servers.
+  thumbnail: serversplitter.jpg
+  identifier: serversplitter
+  category: extensions
+  downloads:
+  - name: sourceXchange
+    icon: SXC.png
+    url: https://www.sourcexchange.net/products/server-splitter
+  - name: BuiltByBit
+    icon: BBB.png
+    url: https://builtbybit.com/resources/server-splitter.47533
+
 # Show Node IDs
 - name: Show Node IDs
   author: EwweKovacevic
