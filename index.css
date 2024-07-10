@@ -35,6 +35,10 @@
     linear-gradient(to bottom, transparent 1px, transparent 1px);
 }
 
+.dl-btn {
+  background:
+    linear-gradient(to right, rgba(249,37,257,0.4), rgba(13,7,122,0.4));
+  }
 [data-bs-theme=light] .dl-btn {
   background-color: #0d6efd !important;
   border-color: #0d6efd !important;
