@@ -235,6 +235,21 @@
     icon: BBB.png
     url: https://builtbybit.com/resources/nebula-for-blueprint.32442/
 
+# NPM Installer
+- name: NPM Installer
+  author: Jelco
+  description: Install NodeJS Modules directly from your panel!
+  thumbnail: npminstaller.webp
+  identifier: npminstaller
+  category: extensions
+  downloads:
+  - name: sourceXchange
+    icon: SXC.png
+    url: https://www.sourcexchange.net/products/npm-installer-for-blueprint
+  - name: BuiltByBit
+    icon: BBB.png
+    url: https://builtbybit.com/resources/npm-installer-for-blueprint.47760
+
 # Player Manager
 - name: Player Manager
   author: '0x7d8'
@@ -315,6 +330,21 @@
   - name: GitHub
     icon: GH.png
     url: https://github.com/prplwtf/blueprint-redirect
+
+# Reverse Proxy
+- name: Reverse Proxy
+  author: Jelco
+  description: Create NGINX reverse proxies using the Pterodactyl UI.
+  thumbnail: reverseproxy.png
+  identifier: reverseproxy
+  category: extensions
+  downloads:
+  - name: sourceXchange
+    icon: SXC.png
+    url: https://www.sourcexchange.net/products/reverse-proxy-for-blueprint
+  - name: BuiltByBit
+    icon: BBB.png
+    url: https://builtbybit.com/resources/reverse-proxy-for-blueprint.47759
 
 # ServerID
 - name: ServerID

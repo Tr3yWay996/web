@@ -1,5 +1,5 @@
-<span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill"><i class="bi bi-hash"></i> Supported</span>
-# beta-A428-2
+<span class="badge bg-secondary-subtle border border-secondary-subtle text-secondary-emphasis rounded-pill"><i class="bi bi-x-lg"></i> Unsupported</span>
+# beta-A428
 <br/>
 
 #### Changes
