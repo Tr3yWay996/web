@@ -16,7 +16,7 @@ We have a bunch of different versions of our logo which you may use when referri
   </div>
   <div class="col-lg-4 col-md-12">
     <div class="px-2 py-5 mb-3 border rounded-3">
-      <img src="../.assets/brand/pride2.jpg" width="200" height="200" class="d-block mx-auto rounded-2" alt="Blueprint"/>
+      <img src="../.assets/brand/pride5.jpg" width="200" height="200" class="d-block mx-auto rounded-2" alt="Blueprint"/>
     </div>
   </div>
   <div class="col-lg-4 col-md-12">
