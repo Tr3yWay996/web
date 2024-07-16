@@ -96,6 +96,8 @@ chmod +x blueprint.sh
 bash blueprint.sh
 ```
 
+Optionally you can enable Bash autocompletion by adding `source blueprint;` into your `.bashrc` (or `.zshrc` when using ZSH).
+
 <br>
 
 #### <i class="bi bi-check-circle-fill"></i> Mission complete!

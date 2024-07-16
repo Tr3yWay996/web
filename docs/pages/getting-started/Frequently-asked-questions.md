@@ -21,6 +21,14 @@
 <div class="bg-dark-subtle rounded-4 p-4 mb-3">
   <h5 class="mb-3">How can I install, remove and update extensions?</h5>
   <p class="mb-0">
-    Installing/updating extensions is easy, just throw the "extension.blueprint" file in your Pterodactyl directory and run <code class="text-body-subtle">blueprint -install (extension)</code>. Removing extensions can be done through <code class="text-body-subtle">blueprint -remove (extension)</code>.
+    Installing/updating extensions is easy, just throw the "extension.blueprint" file in your Pterodactyl directory and run <code class="text-body opacity-50">blueprint -install (extension)</code>. Removing extensions can be done through <code class="text-body opacity-50">blueprint -remove (extension)</code>.
+  </p>
+</div>
+
+<!-- How can I install, remove and update extensions? -->
+<div class="bg-dark-subtle rounded-4 p-4 mb-3">
+  <h5 class="mb-3">How do I enable Bash autocompletion for <code class="text-body opacity-50">blueprint</code>?</h5>
+  <p class="mb-0">
+    You can enable Bash autocompletion by adding <code class="text-body opacity-50">source blueprint;</code> into your <code class="text-body opacity-50">.bashrc</code> (or <code class="text-body opacity-50">.zshrc</code> when using ZSH).
   </p>
 </div>
