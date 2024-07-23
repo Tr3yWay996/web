@@ -25,6 +25,18 @@
     icon: BBB.png
     url: https://builtbybit.com/resources/automation.37282/
 
+# Blue Announcements
+- name: Blue Announcements
+  author: Spoopy
+  description: Fully customisable alerts, created straight from the comfort of your panel.
+  thumbnail: blueannouncements.jpg
+  identifier: blueannouncements
+  category: extensions
+  downloads:
+  - name: sourceXchange
+    icon: SXC.png
+    url: https://www.sourcexchange.net/products/blue-announcements-for-blueprint
+
 # Catppuccindactyl
 - name: Catppuccindactyl
   author: Why_Authentic
@@ -510,6 +522,21 @@
   - name: BuiltByBit
     icon: BBB.png
     url: https://builtbybit.com/resources/version-changer.46435
+
+# Votifier Tester
+- name: Votifier Tester
+  author: quantum
+  description: Send test votes to a server using the Votifier plugin.
+  thumbnail: votifiertester.jpg
+  identifier: votifiertester
+  category: extensions
+  downloads:
+  - name: sourceXchange
+    icon: SXC.png
+    url: https://www.sourcexchange.net/products/votifier-tester-for-pterodactyl
+  - name: BuiltByBit
+    icon: BBB.png
+    url: https://builtbybit.com/resources/votifier-tester-for-pterodactyl.47573/
 
 # WidgetBot
 - name: WidgetBot
