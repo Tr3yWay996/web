@@ -36,6 +36,9 @@
   - name: sourceXchange
     icon: SXC.png
     url: https://www.sourcexchange.net/products/blue-announcements-for-blueprint
+  - name: GitHub
+    icon: GH.png
+    url: https://github.com/Spoopy2023/Blue-Announcements
 
 # Catppuccindactyl
 - name: Catppuccindactyl
