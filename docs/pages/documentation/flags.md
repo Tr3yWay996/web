@@ -39,8 +39,8 @@ Skip rebuilding panel assets when installing your extension through developer co
 `developerForceMigrate` <tag type="new" content="beta-A428"/></tag>\
 Forcefully migrate the database non-interactively when installing your extension through developer commands.
 
-`developerKeepApplicationCache` <tag type="new" content="beta-F248"/></tag>\
+`developerKeepApplicationCache` \
 Prevents Blueprint from flushing the application's cache when building extensions through developer commands.
 
-`developerEscalateExportScript` <tag type="new" content="beta-F248"/></tag>\
+`developerEscalateExportScript` \
 Allows you to run export scripts with root permissions instead of running them through the webserver user.

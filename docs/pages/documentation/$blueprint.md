@@ -16,19 +16,19 @@ The BlueprintExtensionLibrary is automatically imported to dashboard wrappers, a
 
 ### **Functions**
 
-##### Databasing <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Universal</span>
+##### Databasing <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Admin <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Client <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Console <i class="bi bi-check"></i></span>
 `dbGet(table, record)`\
 Fetch a record from the database.
 
 `dbSet(table, record, value)`\
 Set a database record.
 
-`dbForget(table, record)` <tag type="new" content="beta-F248"/></tag>\
+`dbForget(table, record)`\
 Delete/forget a database record.
 
 <br/>
 
-##### Notifications <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill">Admin</span>
+##### Notifications <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Admin <i class="bi bi-check"></i></span> <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill opacity-50">Client <i class="bi bi-x"></i></span> <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill opacity-50">Console <i class="bi bi-x"></i></span>
 `notify(text)`\
 Allows you to show notifications on the admin panel. Appears on next reload.
 
@@ -40,7 +40,7 @@ Allows you to show notifications on the admin panel after a delay. This behaves 
 
 <br/>
 
-##### Files <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Universal</span>
+##### Files <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Admin <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Client <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Console <i class="bi bi-check"></i></span>
 `fileRead(path)`\
 Returns the contents of the file defined in `path`.
 
@@ -52,6 +52,15 @@ Removes the file defined in `path` from the filesystem.
 
 <br/>
 
-##### Extensions <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Universal</span>
-`extension(identifier)` <tag type="new" content="beta-A428"/></tag>\
+##### Extensions <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Admin <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Client <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Console <i class="bi bi-check"></i></span>
+`extension(identifier)`\
 Returns true if an extension with the identifier defined in `identifier` is installed, otherwise returns false.
+
+<br/>
+
+##### Import <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Admin <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Client <i class="bi bi-check"></i></span> <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill opacity-50">Console <i class="bi bi-x"></i></span>
+`importStylesheet(url)` <tag type="new" content="beta-2024-08"/></tag>\
+Returns a HTML link tag importing the specified stylesheet with additional URL params to avoid issues with stylesheet cache.
+
+`importScript(url)` <tag type="new" content="beta-2024-08"/></tag>\
+Returns a HTML script tag importing the specified script with additional URL params to avoid issues with script cache.
