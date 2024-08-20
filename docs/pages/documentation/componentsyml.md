@@ -71,6 +71,10 @@ Account:
 Server:
   Terminal:
     BeforeContent: ""
+    BeforeInformation: ""
+    AfterInformation: ""
+    AdditionalPowerButtons: ""
+    CommandRow: ""
     AfterContent: ""
   Files:
     Browse:
