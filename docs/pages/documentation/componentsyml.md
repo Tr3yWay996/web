@@ -45,6 +45,8 @@ Navigation:
   # - { Name: "", Path: "", Type: "account/server", Component: "", AdminOnly: "boolean" }
 
 Dashboard:
+  BeforeContent: "" # beta-2024-08 and later
+  AfterContent: "" # beta-2024-08 and later
   ServerRow:
     BeforeEntryName: ""
     AfterEntryName: ""
@@ -71,9 +73,9 @@ Account:
 Server:
   Terminal:
     BeforeContent: ""
+    AdditionalPowerButtons: ""
     BeforeInformation: ""
     AfterInformation: ""
-    AdditionalPowerButtons: ""
     CommandRow: ""
     AfterContent: ""
   Files:
