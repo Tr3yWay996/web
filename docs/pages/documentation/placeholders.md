@@ -10,7 +10,7 @@ Placeholders allow extensions to easily get information from each and every file
 
 <br/><br/>
 
-### **Placeholders `v2`** <tag type="new" content="beta-A428"/></tag>
+### **Placeholders `v2`** 
 These are the available placeholders you can use on `beta` and later. <b>Unless you set your target version to a beta release</b>, these placeholders will <u>not</u> be available.
 <br/><br/>
 

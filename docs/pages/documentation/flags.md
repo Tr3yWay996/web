@@ -12,7 +12,7 @@ Flags allow for enabling/disabling possibly advanced features that don't have th
 `ignorePlaceholders`\
 Skip applying placeholders. This improves installation speed for extensions with a lot of files, but is generally not recommended.
 
-`forceLegacyPlaceholders` <tag type="new" content="beta-A428"/></tag>\
+`forceLegacyPlaceholders`\
 Force Blueprint to apply legacy placeholders instead of the new ones on extensions with a higher target version than alpha or indev.
 
 <br/>
@@ -36,11 +36,11 @@ Ignore the custom extension installation script when installing your extension t
 `developerIgnoreRebuild`\
 Skip rebuilding panel assets when installing your extension through developer commands.
 
-`developerForceMigrate` <tag type="new" content="beta-A428"/></tag>\
+`developerForceMigrate`\
 Forcefully migrate the database non-interactively when installing your extension through developer commands.
 
-`developerKeepApplicationCache` \
+`developerKeepApplicationCache`\
 Prevents Blueprint from flushing the application's cache when building extensions through developer commands.
 
-`developerEscalateExportScript` \
+`developerEscalateExportScript`\
 Allows you to run export scripts with root permissions instead of running them through the webserver user.

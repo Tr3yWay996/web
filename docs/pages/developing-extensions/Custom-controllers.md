@@ -49,7 +49,10 @@ When visiting your extension's admin page, your browser sends a `GET` request to
 
 `GET`: <code class="text-secondary">index()</code>\
 `PATCH`: <code class="text-secondary">update()</code>\
-`POST`: <code class="text-secondary">post()</code>
+`POST`: <code class="text-secondary">post()</code>\
+`PUT`: <code class="text-secondary">put()</code> <tag type="new" content="beta-2024-08"/></tag>\
+`DELETE`: <code class="text-secondary">delete()</code> <tag type="new" content="beta-2024-08"/></tag>\
+`OPTIONS`: <code class="text-secondary">options()</code> <tag type="new" content="beta-2024-08"/></tag>
 
 <br/>
 
