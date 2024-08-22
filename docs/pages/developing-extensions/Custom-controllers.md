@@ -47,12 +47,11 @@ class {identifier}ExtensionController extends Controller
 
 When visiting your extension's admin page, your browser sends a `GET` request to your Pterodactyl webserver, which calls a function called `index` on your controller. This also applies to a couple other request types which all have their own function calls:
 
-`GET`: <code class="text-secondary">index()</code>\
-`PATCH`: <code class="text-secondary">update()</code>\
-`POST`: <code class="text-secondary">post()</code>\
-`PUT`: <code class="text-secondary">put()</code> <tag type="new" content="beta-2024-08"/></tag>\
-`DELETE`: <code class="text-secondary">delete()</code> <tag type="new" content="beta-2024-08"/></tag>\
-`OPTIONS`: <code class="text-secondary">options()</code> <tag type="new" content="beta-2024-08"/></tag>
+`GET`: <code class="text-secondary">index($request)</code>\
+`PATCH`: <code class="text-secondary">update($request)</code>\
+`POST`: <code class="text-secondary">post($request)</code>\
+`PUT`: <code class="text-secondary">put($request)</code> <tag type="new" content="beta-2024-08"/></tag>\
+`DELETE`: <code class="text-secondary">delete($request, $target, $id)</code> <tag type="new" content="beta-2024-08"/></tag>
 
 <br/>
 
