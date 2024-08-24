@@ -60,3 +60,30 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+
+#social-push {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  max-width: 500px;
+  opacity: 0;
+  transition: opacity .3s;
+}
+#social-push div {
+  margin: 12px;
+  padding: 25px;
+  background-color: #08090a90;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 100;
+  border-radius: 12px;
+}
+[data-bs-theme=light] #social-push div {
+  background-color: #cad2d890;
+}
+
+.pe-pointer {
+  cursor: pointer;
+}
