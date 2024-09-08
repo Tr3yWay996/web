@@ -25,6 +25,7 @@ fetch(a)
 
     // Snippets
     document.querySelectorAll("tag[type=new]").forEach(function(element) {element.innerHTML = '<span class="badge text-primary-emphasis"><i class="bi bi-stars"></i> New in <b>'+element.getAttribute("content")+'</b></span>'; });
+    document.querySelectorAll("tag[type=pending]").forEach(function(element) {element.innerHTML = '<span class="badge text-danger-emphasis"><i class="bi bi-asterisk"></i> Shipping with <b>'+element.getAttribute("content")+'</b></span>'; });
     document.querySelectorAll("tag[type=required]").forEach(function(element) {element.innerHTML = '<span class="badge bg-danger-subtle text-danger-emphasis rounded-pill">Required</span>'; });
     document.querySelectorAll("tag[type=deprecated]").forEach(function(element) {element.innerHTML = '<span class="badge text-danger-emphasis"><i class="bi bi-exclamation-triangle-fill"></i> Deprecated in <b>'+element.getAttribute("content")+'</b></span>'; });
     document.querySelectorAll("tag[type=hotfix]").forEach(function(element) {element.innerHTML = '<span class="badge text-danger-emphasis"><i class="bi bi-exclamation-triangle-fill"></i> Hotfix</b></span>'; });

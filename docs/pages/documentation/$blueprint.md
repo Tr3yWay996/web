@@ -56,6 +56,9 @@ Removes the file defined in `path` from the filesystem.
 `extension(identifier)`\
 Returns true if an extension with the identifier defined in `identifier` is installed, otherwise returns false.
 
+`extensionList()` <tag type="pending" content="beta-2024-10"/></tag>\
+Returns an array containing all installed extensions's identifiers.
+
 <br/>
 
 ##### Import <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Admin <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Client <i class="bi bi-check"></i></span> <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill opacity-50">Console <i class="bi bi-x"></i></span>
