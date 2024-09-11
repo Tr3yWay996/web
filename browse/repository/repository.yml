@@ -142,7 +142,7 @@
 # Darkenate
 - name: Darkenate
   author: JasonHorkles
-  description: A Pterodactyl dark theme inspired by bloom.host's colors and the Recolor theme.
+  description: Pterodactyl dark theme (client + admin) inspired by bloom.host's colors and the Recolor theme.
   thumbnail: darkenate.jpg
   identifier: darkenate
   category: themes
