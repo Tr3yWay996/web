@@ -239,7 +239,7 @@
 - name: Modpack Installer
   author: ric-rac
   description: Install Minecraft modpacks right from the comfort of your Pterodactyl Panel.
-  thumbnail: modpackinstaller.webp
+  thumbnail: modpackinstaller.png
   identifier: modpackinstaller
   category: extensions
   downloads:
@@ -605,7 +605,7 @@
 - name: World Manager
   author: ric-rac
   description: Manage Minecraft worlds right from Pterodactyl Panel.
-  thumbnail: minecraftworldmanager.webp
+  thumbnail: minecraftworldmanager.png
   identifier: minecraftworldmanager
   category: extensions
   downloads:
