@@ -142,7 +142,7 @@
 # Darkenate
 - name: Darkenate
   author: JasonHorkles
-  description: A Pterodactyl dark theme inspired by bloom.host's colors and the Recolor theme.
+  description: Pterodactyl dark theme (client + admin) inspired by bloom.host's colors and the Recolor theme.
   thumbnail: darkenate.jpg
   identifier: darkenate
   category: themes
@@ -264,6 +264,21 @@
   - name: BuiltByBit
     icon: BBB.png
     url: https://builtbybit.com/resources/nebula-for-blueprint.32442/
+
+# Night Admin
+- name: Night Admin
+  author: Joshua Gunter
+  description: Free admin theme for Pterodactyl, better dark theme!
+  thumbnail: nightadmin.jpg
+  identifier: nightadmin
+  category: themes
+  downloads:
+  - name: sourceXchange
+    icon: SXC.png
+    url: https://www.sourcexchange.net/products/blueprint-night-theme
+  - name: BuiltByBit
+    icon: BBB.png
+    url: https://builtbybit.com/resources/blueprint-night-admin-theme.51594
 
 # NPM Installer
 - name: NPM Installer
