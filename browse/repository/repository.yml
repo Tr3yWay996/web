@@ -43,7 +43,7 @@
 # Blue Announcements
 - name: Blue Announcements
   author: Spoopy
-  description: Fully customisable alerts, created straight from the comfort of your panel.
+  description: Easy, custom announcements for Pterodactyl!
   thumbnail: blueannouncements.jpg
   identifier: blueannouncements
   category: extensions
