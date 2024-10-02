@@ -6,10 +6,7 @@ Controllers allow for added functionality and flexibility to your extension's ad
 Before you start writing your custom controller, you will need to create a `controller.php` file. After doing so, you'll want to define it in your extension's [conf.yml](?page=documentation/confyml):
 ```yaml
 admin:
-# view: ""
   controller: "controller.php"
-# css: ""
-# wrapper: ""
 ```
 <br/>
 
