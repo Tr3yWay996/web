@@ -11,8 +11,6 @@ Blueprint extensions can add custom pages to Pterodactyl and content to existing
 Before we can start utilizing this feature, create a directory called `components` and assign it in your [conf.yml](?page=documentation/confyml) configuration like shown below.
 ```yaml
 dashboard:
-# css: ""
-# wrapper: ""
   components: "components"
 ```
 
