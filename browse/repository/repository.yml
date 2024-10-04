@@ -235,11 +235,26 @@
     icon: BBB.png
     url: https://builtbybit.com/resources/loader.38846/
 
+# MC Mods
+- name: MC Mods
+  author: sarthak77
+  description: Modern mod management for Minecraft.
+  thumbnail: mcmods.png
+  identifier: mcmods
+  category: extensions
+  downloads:
+  - name: sourceXchange
+    icon: SXC.png
+    url: https://www.sourcexchange.net/products/mcmods-installer-for-blueprint
+  - name: BuiltByBit
+    icon: BBB.png
+    url: https://builtbybit.com/resources/mc-mods-installer-for-blueprint.52665
+
 # MC Plugins
 - name: MC Plugins
   author: sarthak77
   description: Modern plugin management for Minecraft.
-  thumbnail: mcplugins.jpg
+  thumbnail: mcplugins.png
   identifier: mcplugins
   category: extensions
   downloads:
