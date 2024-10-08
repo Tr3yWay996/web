@@ -1,184 +1,187 @@
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blueprint Documentation</title>
-  <link href="../.modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../.modules/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../.modules/highlight.js/styles/atom-one-dark.css" rel="stylesheet">
-  <link href="../.modules/global/global.css" rel="stylesheet">
-  <link href="./index.css" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blueprint Documentation</title>
+    <link href="../.modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../.modules/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../.modules/highlight.js/styles/atom-one-dark.css" rel="stylesheet">
+    <link href="../.modules/global/global.css" rel="stylesheet">
+    <link href="./index.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
 
-  <!-- Social Embeds -->
-  <meta property="theme-color" content="#4642f5">
-  <meta property="og:title" content="blueprint.zip">
-  <meta property="og:description" content="Powerful, fast and developer-friendly extension framework for Pterodactyl. Utilize extension APIs, inject HTML, modify stylesheets, package extensions and so much more.">
-  <meta property="og:url" content="https://blueprint.zip">
-  <meta property="og:image" content="/.assets/brand/og.jpg">
-  <meta property="og:type" content="website">
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://blueprint.zip">
-  <meta property="twitter:title" content="blueprint.zip">
-  <meta property="twitter:description" content="Powerful, fast and developer-friendly extension framework for Pterodactyl. Utilize extension APIs, inject HTML, modify stylesheets, package extensions and so much more.">
-  <meta property="twitter:image" content="/.assets/brand/og.jpg">
-  
-  <!-- Plausible -->
-  <script defer data-domain="blueprint.zip" src="https://plausible.prpl.wtf/js/script.js"></script>
-</head>
+    <!-- Social Embeds -->
+    <meta property="theme-color" content="#4642f5">
+    <meta property="og:title" content="blueprint.zip">
+    <meta property="og:description" content="Powerful, fast and developer-friendly extension framework for Pterodactyl. Utilize extension APIs, inject HTML, modify stylesheets, package extensions and so much more.">
+    <meta property="og:url" content="https://blueprint.zip">
+    <meta property="og:image" content="/.assets/brand/og.jpg">
+    <meta property="og:type" content="website">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://blueprint.zip">
+    <meta property="twitter:title" content="blueprint.zip">
+    <meta property="twitter:description" content="Powerful, fast and developer-friendly extension framework for Pterodactyl. Utilize extension APIs, inject HTML, modify stylesheets, package extensions and so much more.">
+    <meta property="twitter:image" content="/.assets/brand/og.jpg">
+    
+    <!-- Plausible -->
+    <script defer data-domain="blueprint.zip" src="https://plausible.prpl.wtf/js/script.js"></script>
+  </head>
 
-<body data-bs-theme="dark">
+  <body data-bs-theme="dark">
 
-  <!-- Desktop Navbar -->
-  <div class="p-2 d-lg-inline d-none"></div>
-  <header class="p-3 mb-3 border-bottom fixed-top d-lg-inline d-none blueprint-navbar">
+    <!-- Desktop Navbar -->
+    <div class="p-2 d-lg-inline d-none"></div>
+    <header class="p-3 mb-3 border-bottom fixed-top d-lg-inline d-none blueprint-navbar">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="../" class="d-flex align-items-center mb-2 me-2 mb-lg-0 link-body-emphasis text-decoration-none">
+            <img src="../.assets/brand/logo.jpg" width="35" height="35" class="rounded-3" alt="" />
+          </a>
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="../" class="nav-link px-2 link-body-emphasis">Home</a></li>
+            <li><a href="../browse" class="nav-link px-2 link-body-emphasis">Browse</a></li>
+            <li><a href="." class="nav-link px-2 link-secondary">Documentation</a></li>
+          </ul>
+          <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+            <li class="nav-item me-1 ms-1 py-1"><a class="nav-link px-1" href="https://discord.gg/CUwHwv6xRe"><i class="bi bi-discord"></i></a></li>
+            <li class="nav-item me-1 ms-1 py-1"><a class="nav-link px-1" href="https://github.com/BlueprintFramework"><i class="bi bi-github"></i></a></li>
+            <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+              <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+              <hr class="d-lg-none my-2 text-white-50">
+            </li>
+            <li class="nav-item dropdown">
+              <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (dark)">
+                <i class="bi bi-moon-stars-fill my-1 theme-icon-active"></i>
+                <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end position-absolute gap-1 p-2 rounded-3 mx-0 border-0 shadow w-220px" aria-labelledby="bd-theme-text">
+                <li><button type="button" class="theme-switcher-btn dropdown-item rounded-2 d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false"><i class="bi bi-sun-fill me-2 opacity-50"></i> Light</button></li>
+                <li><button type="button" class="theme-switcher-btn dropdown-item rounded-2 d-flex align-items-center active" data-bs-theme-value="dark" aria-pressed="true"><i class="bi bi-moon-stars-fill me-2 opacity-50"></i> Dark</button></li>
+                <li><button type="button" class="theme-switcher-btn dropdown-item rounded-2 d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false"><i class="bi bi-circle-half me-2 opacity-50"></i> Auto</button></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile/Tablet Navbar -->
+    <div class="p-2 d-lg-none d-inline"></div>
+    <nav class="navbar fixed-top d-lg-none d-inline blueprint-navbar-mobile">
+      <div class="container-fluid">
+        <a href="../" class="d-flex align-items-center mb-2 me-2 mt-2 mb-lg-0 link-body-emphasis text-decoration-none"><img src="../.assets/brand/logo.jpg" width="40" height="40" class="rounded-3" alt="" /></a>
+        <div class="dropdown">
+          <button class="btn btn-secondary bg-dark-subtle border-0 nav-dropdown-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 border-0 shadow w-220px">
+            <li><a class="dropdown-item rounded-2" href="../">Home</a></li>
+            <li><a class="dropdown-item rounded-2" href="../browse">Browse</a></li>
+            <li><a class="dropdown-item rounded-2 disabled" href=".">Documentation</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <div class="mobile-theme-switcher">
+              <a href="#" class="dropdown-item rounded-2 mobile-theme-switcher-btn" data-bs-theme-value="light"><i class="bi bi-sun-fill opacity-50"></i></a>
+              <a href="#" class="dropdown-item rounded-2 mobile-theme-switcher-btn" data-bs-theme-value="dark"><i class="bi bi-moon-stars-fill opacity-50"></i></a>
+              <a href="#" class="dropdown-item rounded-2 mobile-theme-switcher-btn" data-bs-theme-value="auto"><i class="bi bi-circle-half opacity-50"></i></a>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <!-- Content -->
+    <div class="mt-5 opacity-0">.</div>
+    <div class="container mt-1">
+      <div class="row">
+        <div class="col-lg-2 col-md-4 col-sm-12">
+          <div class="docs-category pb-4">
+            <div class="ms-2"><span class="fw-bolder">Getting started</span><br></div>
+            <a href="?page=getting-started/Installation"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Installation</button></a><br>
+            <a href="?page=getting-started/Extension-development"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Extension development</button></a><br>
+            <a href="?page=getting-started/Frequently-asked-questions"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Frequently Asked Questions</button></a><br>
+          </div>
+          <div class="docs-category pb-4">
+            <div class="ms-2"><span class="fw-bolder">Developing extensions</span><br></div>
+            <a href="?page=developing-extensions/Admin-views"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Admin views</button><br></a>
+            <a href="?page=developing-extensions/Custom-controllers"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Custom controllers</button><br></a>
+            <a href="?page=developing-extensions/Admin-configuration"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Admin configuration</button><br></a>
+            <a href="?page=developing-extensions/Dashboard-wrappers"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Dashboard wrappers</button><br></a>
+            <a href="?page=developing-extensions/React-components"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">React components</button><br></a>
+            <a href="?page=developing-extensions/Packaging-extensions"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Packaging extensions</button><br></a>
+          </div>
+          <div class="docs-category pb-4">
+            <div class="ms-2"><span class="fw-bolder">Documentation</span><br></div>
+            <a href="?page=documentation/$blueprint"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">$blueprint</button><br></a>
+            <a href="?page=documentation/confyml"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">conf.yml</button><br></a>
+            <a href="?page=documentation/componentsyml"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Components.yml</button><br></a>
+            <a href="?page=documentation/consoleyml"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Console.yml</button><br></a>
+            <a href="?page=documentation/placeholders"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Placeholders</button><br></a>
+            <a href="?page=documentation/flags"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Flags</button><br></a>
+          </div>
+          <div class="docs-category pb-4">
+            <div class="ms-2"><span class="fw-bolder">About</span><br></div>
+            <a href="?page=about/License"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">License</button><br></a>
+            <a href="?page=about/Changelog"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Changelog</button><br></a>
+            <a href="?page=about/Branding"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Branding</button><br></a>
+          </div>
+        </div>
+        <div class="container d-lg-none d-md-none d-sm-inline mb-4"><div class="border-bottom"></div></div>
+        <div class="col-lg-10 col-md-8 col-sm-12" id="content">
+          <div class="d-flex justify-content-center">
+            <div class="spinner-border spinner-border-sm text-secondary mt-4" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+    <!-- Footer -->
     <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="../" class="d-flex align-items-center mb-2 me-2 mb-lg-0 link-body-emphasis text-decoration-none">
-          <img src="../.assets/brand/logo.jpg" width="35" height="35" class="rounded-3" alt="" />
-        </a>
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="../" class="nav-link px-2 link-body-emphasis">Home</a></li>
-          <li><a href="../browse" class="nav-link px-2 link-body-emphasis">Browse</a></li>
-          <li><a href="." class="nav-link px-2 link-secondary">Documentation</a></li>
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="../" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+            <svg viewBox="0 0 500 500" class="text-body-secondary" xmlns="http://www.w3.org/2000/svg" width="30" height="24" fill="currentColor">
+              <rect x="0" y="166.6666" width="166.6666" height="166.6666"/>
+              <rect x="166.6666" y="0" width="166.6666" height="166.6666"/>
+              <rect x="166.6666" y="333.3332" width="166.667" height="166.6666"/>
+              <rect x="333.3332" y="166.6666" width="166.667" height="333.3332"/>
+            </svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-body-secondary">© 2023-2024 Emma (<a href="https://prpl.wtf" class="text-body-secondary" target="_blank">prpl.wtf</a>)</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a class="text-body-secondary" href="https://discord.gg/CUwHwv6xRe"><i class="bi bi-discord" width="24" height="24"></i></a></li>
+          <li class="ms-3"><a class="text-body-secondary" href="https://github.com/BlueprintFramework/framework"><i class="bi bi-github" width="24" height="24"></i></a></li>
+          <li class="ms-3"><a class="text-body-secondary" href="https://liberapay.com/blueprint"><i class="bi bi-chat-right-heart-fill" width="24" height="24"></i></a></li>
         </ul>
-        <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
-          <li class="nav-item me-1 ms-1 py-1"><a class="nav-link px-1" href="https://discord.gg/CUwHwv6xRe"><i class="bi bi-discord"></i></a></li>
-          <li class="nav-item me-1 ms-1 py-1"><a class="nav-link px-1" href="https://github.com/BlueprintFramework"><i class="bi bi-github"></i></a></li>
-          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
-            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
-            <hr class="d-lg-none my-2 text-white-50">
-          </li>
-          <li class="nav-item dropdown">
-            <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (dark)">
-              <i class="bi bi-moon-stars-fill my-1 theme-icon-active"></i>
-              <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end position-absolute gap-1 p-2 rounded-3 mx-0 border-0 shadow w-220px" aria-labelledby="bd-theme-text">
-              <li><button type="button" class="theme-switcher-btn dropdown-item rounded-2 d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false"><i class="bi bi-sun-fill me-2 opacity-50"></i> Light</button></li>
-              <li><button type="button" class="theme-switcher-btn dropdown-item rounded-2 d-flex align-items-center active" data-bs-theme-value="dark" aria-pressed="true"><i class="bi bi-moon-stars-fill me-2 opacity-50"></i> Dark</button></li>
-              <li><button type="button" class="theme-switcher-btn dropdown-item rounded-2 d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false"><i class="bi bi-circle-half me-2 opacity-50"></i> Auto</button></li>
-            </ul>
-          </li>
-        </ul>
+      </footer>
+    </div>
+
+    <div id="social-push">
+      <div>
+        <p>
+          <b>Become part of Blueprint's Discord community</b> and be one of the first to get notified about new extension releases and framework updates.
+        </p>
+        <a href="https://discord.gg/CUwHwv6xRe" class="link-underline link-underline-opacity-0 me-3"><i class="bi bi-discord me-1"></i> Join the community</a>
+        <a href="#" onclick="dismissSocial()" class="link-underline link-underline-opacity-0 pe-pointer text-secondary"><i class="bi bi-x-lg me-1"></i> Close</a>
       </div>
     </div>
-  </header>
 
-  <!-- Mobile/Tablet Navbar -->
-  <div class="p-2 d-lg-none d-inline"></div>
-  <nav class="navbar fixed-top d-lg-none d-inline blueprint-navbar-mobile">
-    <div class="container-fluid">
-      <a href="../" class="d-flex align-items-center mb-2 me-2 mt-2 mb-lg-0 link-body-emphasis text-decoration-none"><img src="../.assets/brand/logo.jpg" width="40" height="40" class="rounded-3" alt="" /></a>
-      <div class="dropdown">
-        <button class="btn btn-secondary bg-dark-subtle border-0 nav-dropdown-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 border-0 shadow w-220px">
-          <li><a class="dropdown-item rounded-2" href="../">Home</a></li>
-          <li><a class="dropdown-item rounded-2" href="../browse">Browse</a></li>
-          <li><a class="dropdown-item rounded-2 disabled" href=".">Documentation</a></li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <div class="mobile-theme-switcher">
-            <a class="dropdown-item rounded-2 mobile-theme-switcher-btn" data-bs-theme-value="light"><i class="bi bi-sun-fill opacity-50"></i></a>
-            <a class="dropdown-item rounded-2 mobile-theme-switcher-btn" data-bs-theme-value="dark"><i class="bi bi-moon-stars-fill opacity-50"></i></a>
-            <a class="dropdown-item rounded-2 mobile-theme-switcher-btn" data-bs-theme-value="auto"><i class="bi bi-circle-half opacity-50"></i></a>
-          </div>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <script src="../.modules/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../.modules/bootstrap/etc/theme-switcher.js"></script>
+    <script src="../.modules/marked/marked.min.js"></script>
+    <script src="../.modules/highlight.js/highlight.min.js"></script>
+    <script src="../.modules/global/global.js"></script>
+    <script src="./index.js"></script>
 
-
-
-  <!-- Content -->
-  <div class="mt-5 opacity-0">.</div>
-  <div class="container mt-1">
-    <div class="row">
-      <div class="col-lg-2 col-md-4 col-sm-12">
-        <div class="docs-category pb-4">
-          <div class="ms-2"><span class="fw-bolder">Getting started</span><br></div>
-          <a href="?page=getting-started/Installation"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Installation</button></a><br>
-          <a href="?page=getting-started/Extension-development"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Extension development</button></a><br>
-          <a href="?page=getting-started/Frequently-asked-questions"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Frequently Asked Questions</button></a><br>
-        </div>
-        <div class="docs-category pb-4">
-          <div class="ms-2"><span class="fw-bolder">Developing extensions</span><br></div>
-          <a href="?page=developing-extensions/Admin-views"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Admin views</button><br></a>
-          <a href="?page=developing-extensions/Custom-controllers"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Custom controllers</button><br></a>
-          <a href="?page=developing-extensions/Admin-configuration"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Admin configuration</button><br></a>
-          <a href="?page=developing-extensions/Dashboard-wrappers"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Dashboard wrappers</button><br></a>
-          <a href="?page=developing-extensions/React-components"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">React components</button><br></a>
-          <a href="?page=developing-extensions/Packaging-extensions"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Packaging extensions</button><br></a>
-        </div>
-        <div class="docs-category pb-4">
-          <div class="ms-2"><span class="fw-bolder">Documentation</span><br></div>
-          <a href="?page=documentation/$blueprint"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">$blueprint</button><br></a>
-          <a href="?page=documentation/confyml"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">conf.yml</button><br></a>
-          <a href="?page=documentation/componentsyml"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Components.yml</button><br></a>
-          <a href="?page=documentation/consoleyml"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Console.yml</button><br></a>
-          <a href="?page=documentation/placeholders"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Placeholders</button><br></a>
-          <a href="?page=documentation/flags"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Flags</button><br></a>
-        </div>
-        <div class="docs-category pb-4">
-          <div class="ms-2"><span class="fw-bolder">About</span><br></div>
-          <a href="?page=about/License"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">License</button><br></a>
-          <a href="?page=about/Changelog"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Changelog</button><br></a>
-          <a href="?page=about/Branding"><button type="button" class="btn btn-sm text-start docs-nav" style="--bs-btn-padding-y: .1rem;">Branding</button><br></a>
-        </div>
-      </div>
-      <div class="container d-lg-none d-md-none d-sm-inline mb-4"><div class="border-bottom"></div></div>
-      <div class="col-lg-10 col-md-8 col-sm-12" id="content">
-        <div class="d-flex justify-content-center">
-          <div class="spinner-border spinner-border-sm text-secondary mt-4" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-
-
-  <!-- Footer -->
-  <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <div class="col-md-4 d-flex align-items-center">
-        <a href="../" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-          <svg viewBox="0 0 500 500" class="text-body-secondary" xmlns="http://www.w3.org/2000/svg" width="30" height="24" fill="currentColor">
-            <rect x="0" y="166.6666" width="166.6666" height="166.6666"/>
-            <rect x="166.6666" y="0" width="166.6666" height="166.6666"/>
-            <rect x="166.6666" y="333.3332" width="166.667" height="166.6666"/>
-            <rect x="333.3332" y="166.6666" width="166.667" height="333.3332"/>
-          </svg>
-        </a>
-        <span class="mb-3 mb-md-0 text-body-secondary">© 2023-2024 Emma (<a href="https://prpl.wtf" class="text-body-secondary" target="_blank">prpl.wtf</a>)</span>
-      </div>
-
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3"><a class="text-body-secondary" href="https://discord.gg/CUwHwv6xRe"><i class="bi bi-discord" width="24" height="24"></i></a></li>
-        <li class="ms-3"><a class="text-body-secondary" href="https://github.com/BlueprintFramework/framework"><i class="bi bi-github" width="24" height="24"></i></a></li>
-        <li class="ms-3"><a class="text-body-secondary" href="https://liberapay.com/blueprint"><i class="bi bi-chat-right-heart-fill" width="24" height="24"></i></a></li>
-      </ul>
-    </footer>
-  </div>
-
-  <div id="social-push">
-    <div>
-      <p>
-        <b>Become part of Blueprint's Discord community</b> and be one of the first to get notified about new extension releases and framework updates.
-      </p>
-      <a href="https://discord.gg/CUwHwv6xRe" class="link-underline link-underline-opacity-0 me-3"><i class="bi bi-discord me-1"></i> Join the community</a>
-      <a onclick="dismissSocial()" class="link-underline link-underline-opacity-0 pe-pointer text-secondary"><i class="bi bi-x-lg me-1"></i> Close</a>
-    </div>
-  </div>
-
-  <script src="../.modules/bootstrap/js/bootstrap.bundle.js"></script>
-  <script src="../.modules/bootstrap/etc/theme-switcher.js"></script>
-  <script src="../.modules/marked/marked.min.js"></script>
-  <script src="../.modules/highlight.js/highlight.min.js"></script>
-  <script src="../.modules/global/global.js"></script>
-  <script src="./index.js"></script>
-
-</body>
+  </body>
+</html>
