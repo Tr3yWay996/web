@@ -574,6 +574,21 @@
     icon: GH.png
     url: https://github.com/prplwtf/blueprint-snowflakes
 
+# Social Login
+- name: Social Login
+  author: Jelco, prplwtf
+  description: Add oAuth applications to your panel.
+  thumbnail: sociallogin.jpg
+  identifier: sociallogin
+  category: extensions
+  downloads:
+  - name: sourceXchange
+    icon: SXC.png
+    url: https://www.sourcexchange.net/products/social-login
+  - name: BuiltByBit
+    icon: BBB.png
+    url: builtbybit.com/resources/social-login-for-blueprint.53010/
+
 # SSH Key Importer
 - name: SSH Key Importer
   author: '0x7d8'
