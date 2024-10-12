@@ -87,3 +87,8 @@
 .pe-pointer {
   cursor: pointer;
 }
+
+i.bi:not(button#bd-theme i.bi) {
+  font-family: '';
+  line-height: 0px;
+}
