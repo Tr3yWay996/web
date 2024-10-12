@@ -211,7 +211,7 @@
   description: Pterodactyl theme built for the Blueprint framework!
   thumbnail: euphoriatheme.jpg
   identifier: euphoriatheme
-  category: theme
+  category: themes
   downloads:
   - name: BuiltByBit
     icon: BBB.png
