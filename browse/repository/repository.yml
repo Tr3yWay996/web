@@ -205,6 +205,18 @@
     icon: BBB.png
     url: https://builtbybit.com/resources/environment-variables.45937/
 
+# Euphoria
+- name: Euphoria
+  author: repgraphics
+  description: Pterodactyl theme built for the Blueprint framework!
+  thumbnail: euphoriatheme.jpg
+  identifier: euphoriatheme
+  category: theme
+  downloads:
+  - name: BuiltByBit
+    icon: BBB.png
+    url: https://builtbybit.com/resources/euphoria.52856/
+
 # FiveM Utils
 - name: FiveM Utils
   author: MinerPL
