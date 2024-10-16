@@ -213,6 +213,9 @@
   identifier: euphoriatheme
   category: themes
   downloads:
+  - name: sourceXchange
+    icon: SXC.png
+    url: https://www.sourcexchange.net/products/euphoriatheme
   - name: BuiltByBit
     icon: BBB.png
     url: https://builtbybit.com/resources/euphoria.52856/
