@@ -295,6 +295,21 @@
     icon: BBB.png
     url: https://builtbybit.com/resources/mc-plugins-installer-for-blueprint.52526
 
+# Minecraft Icon Changer
+- name: Minecraft Icon Changer
+  author: '0x7d8'
+  description: Allow users to easily change the icon of their Minecraft servers.
+  thumbnail: minecrafticonchanger.jpg
+  identifier: minecrafticonchanger
+  category: extensions
+  downloads:
+  - name: sourceXchange
+    icon: SXC.png
+    url: https://www.sourcexchange.net/products/icon-changer
+  - name: BuiltByBit
+    icon: BBB.png
+    url: https://builtbybit.com/resources/minecraft-icon-changer.53390
+
 # Modpack Installer
 - name: Modpack Installer
   author: ric-rac
