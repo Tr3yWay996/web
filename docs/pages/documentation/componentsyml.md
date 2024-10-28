@@ -45,8 +45,8 @@ Navigation:
   # - { Name: "", Path: "", Type: "account/server", Component: "", AdminOnly: "boolean" }
 
 Dashboard:
-  BeforeContent: "" # beta-2024-08 and later
-  AfterContent: "" # beta-2024-08 and later
+  BeforeContent: ""
+  AfterContent: ""
   ServerRow:
     BeforeEntryName: ""
     AfterEntryName: ""

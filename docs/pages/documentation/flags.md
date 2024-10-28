@@ -42,7 +42,7 @@ Forcefully migrate the database non-interactively when installing your extension
 `developerKeepApplicationCache`\
 Prevents Blueprint from flushing the application's cache when building extensions through developer commands.
 
-`developerEscalateInstallScript` <tag type="new" content="beta-2024-08"/></tag>\
+`developerEscalateInstallScript`\
 Allows you to run install scripts with root permissions instead of running them through the webserver user.
 
 `developerEscalateExportScript`\

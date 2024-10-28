@@ -47,8 +47,8 @@ When visiting your extension's admin page, your browser sends a `GET` request to
 `GET`: <code class="text-secondary">index($request)</code>\
 `PATCH`: <code class="text-secondary">update($request)</code>\
 `POST`: <code class="text-secondary">post($request)</code>\
-`PUT`: <code class="text-secondary">put($request)</code> <tag type="new" content="beta-2024-08"/></tag>\
-`DELETE`: <code class="text-secondary">delete($request, $target, $id)</code> <tag type="new" content="beta-2024-08"/></tag>
+`PUT`: <code class="text-secondary">put($request)</code>\
+`DELETE`: <code class="text-secondary">delete($request, $target, $id)</code>
 
 <br/>
 

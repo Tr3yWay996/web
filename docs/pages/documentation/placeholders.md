@@ -1,15 +1,10 @@
 # Placeholders
 <h4 class="fw-light">Strings that are automatically replaced with specific values upon extension installation.</h4><br/>
 
-<div class="alert mt-2 rounded-4 border" role="alert">
-  <i class="bi bi-regex mb-1" style="font-size:23px; float: left;"></i>
-  <div class="ps-3 ms-3">Placeholders are changing!</b> We are changing how placeholders function and adding some awesome new features for them.</div>
-</div><br>
-
 ### **What are placeholders?**
 Placeholders allow extensions to easily get information from each and every file in their extension, preventing the need to ask users for the Pterodactyl installation path for example.
 
-<br/><br/>
+<br/>
 
 ### **Placeholders `v2`** 
 These are the available placeholders you can use on `beta` and later. <b>Unless you set your target version to a beta release</b>, these placeholders will <u>not</u> be available.
@@ -284,51 +279,3 @@ Placeholders that point towards certain directories or file paths.
     </div>
   </div>
 </div><br/>
-
-
-
-<br/><br/>
-
-### **Placeholders `v1`**
-**Placeholders marked as <span class="text-danger-emphasis">deprecated</span> do not have an equivilent placeholder in Placeholders v2.**
-
-Legacy placeholders __only__ work on extensions either made for `alpha` or `indev` releases or with the `forceLegacyPlaceholders` flag enabled. These placeholders are only around for backwards compatibility and will not receive any new features.
-
-<br/>
-
-##### Static information
-`^#version#^`\
-Version defined in [conf.yml](?page=documentation/confyml).
-
-`^#author#^`\
-Author defined in [conf.yml](?page=documentation/confyml).
-
-`^#name#^`\
-Display name defined in [conf.yml](?page=documentation/confyml).
-
-`^#identifier#^`\
-Identifier defined in [conf.yml](?page=documentation/confyml).
-
-<br/>
-
-##### Variable information
-`^#path#^`\
-The path to the host's Pterodactyl installation folder. You should always use this placeholder instead of guessing a common folder location.
-
-`^#datapath#^`\
-Path to your extension's data directory. To keep your extension from breaking in the future, it's always a good idea to use this placeholder instead of guessing.
-
-`^#publicpath#^`\
-Path to your extension's public data directory. This directory is exposed to the internet, so don't store keys or sensitive information in there! To keep your extension from breaking in the future, it's always a good idea to use this placeholder instead of guessing.
-
-`^#installmode#^`\
-Information about how the extension was installed. Is "normal" when the extension has been installed normally and "developer" when the extension was installed through developer commands.
-
-`^#blueprintversion#^`\
-Blueprint version that installed/built your extension.
-
-`^#timestamp#^`\
-Timestamp of when your extension started installation, specifically the timestamp of when Blueprint started applying extension placeholders.
-
-`^#componentroot#^` <tag type="deprecated" content="beta-A428"/></tag>\
-Root path to your component directory in the format `@/blueprint/extensions/identifier`. Extension developers should refrain from using this path as a filesystem path.
