@@ -1,9 +1,10 @@
-# placeholders
+# Placeholders
 <h4 class="fw-light">Strings that are automatically replaced with specific values upon extension installation.</h4><br/>
-<div class="alert alert-dark" role="alert">
-  <i class="bi bi-regex me-2 mt-1 mb-1" style="font-size:23px; float: left;"></i>
-  <div class="ps-3 ms-3"><b>Placeholders are changing!</b> We are changing how placeholders function and adding some awesome new features for them.</div>
-</div><br/>
+
+<div class="alert mt-2 rounded-4 border" role="alert">
+  <i class="bi bi-regex mb-1" style="font-size:23px; float: left;"></i>
+  <div class="ps-3 ms-3">Placeholders are changing!</b> We are changing how placeholders function and adding some awesome new features for them.</div>
+</div><br>
 
 ### **What are placeholders?**
 Placeholders allow extensions to easily get information from each and every file in their extension, preventing the need to ask users for the Pterodactyl installation path for example.
@@ -177,7 +178,7 @@ Uncategorized and advanced placeholders that do various things.
       <!-- Context -->
       <div>
         <b>Context</b><br>
-        <code><span class="text-primary-emphasis"><a href="?page=developing-extensions/Packaging-extensions">Packaging extensions</a></span></code><br/>
+        <code><span class="text-primary-emphasis"><a href="?page=getting-started/Extension-development">Extension development</a></span></code><br/>
       </div>
     </div>
   </div>

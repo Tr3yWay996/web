@@ -1,8 +1,8 @@
-# flags
-<h4 class="fw-light">Highly-specific options that don't deserve their own configuration option.</h4><br/>
+# Flags
+<h4 class="fw-light">Highly-specific options that don't require their own configuration option.</h4><br/>
 
 ### **What are flags?**
-Flags allow for enabling/disabling possibly advanced features that don't have their own option in your [conf.yml](?page=documentation/confyml) file. Multiple flags must be seperated with comma's.
+Flags allow for enabling/disabling possibly advanced features that don't need their own option in [`conf.yml`](?page=documentation/confyml) file. Multiple flags must be seperated with comma's.
 
 <br/>
 

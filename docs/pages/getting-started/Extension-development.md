@@ -1,7 +1,8 @@
 # Extension development
 <h4 class="fw-light">Set up your extension development environment.</h4><br/>
-<div class="alert alert-dark" role="alert">
-  <i class="bi bi-toggle-on me-2 mt-1 mb-1" style="font-size:23px; float: left;"></i>
+
+<div class="alert mt-2 rounded-4 border" role="alert">
+  <i class="bi bi-toggle-on mt-1" style="font-size:23px; float: left;"></i>
   <div class="ps-3 ms-3"><b>Developer mode</b> needs to be turned on in your <b>admin panel</b> <p- class="opacity-50">(Admin > Extensions > Blueprint)</p-> before you can run developer commands. You only have to do this once.</div>
 </div><br/>
 
@@ -16,8 +17,9 @@ After running this command, you can now find your extension files in the `.bluep
 ```sh
 cd .blueprint/dev
 ```
-<div class="alert alert-light" role="alert">
-  <i class="bi bi-terminal-fill me-2 mt-1 mb-1" style="font-size:23px; float: left;"></i>
+
+<div class="alert mx-1 rounded-4 border" role="alert">
+  <i class="bi bi-quote mt-1" style="font-size:23px; float: left;"></i>
   <div class="ps-3 ms-3">While you can develop extensions without ever leaving your terminal emulator, you can also transfer files from your local machine to your server using SFTP or use specific applications to automate this process (such as <a href="https://open-vsx.org/extension/Natizyskunk/sftp" class="alert-link">this VSCode extension</a>).</div>
 </div><br/>
 

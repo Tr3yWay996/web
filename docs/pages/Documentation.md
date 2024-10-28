@@ -31,7 +31,7 @@
   </div>
 </div>
 
-<div class="alert alert-dark bg-body mt-3 rounded-4 border" role="alert">
+<div class="alert mt-3 rounded-4 border" role="alert">
   <i class="bi bi-quote mb-1" style="font-size:23px; float: left;"></i>
   <div class="ps-3 ms-3">We are currently writing brand new guides for extension development. Some guides may be unfinished or unavailable during this process.</div>
 </div>

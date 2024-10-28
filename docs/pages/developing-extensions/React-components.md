@@ -1,7 +1,7 @@
 # React components
 <h4 class="fw-light">Add your own component on specific places in the Pterodactyl panel.</h4><br/>
 
-<div class="alert alert-dark bg-body mt-3 rounded-4 border" role="alert">
+<div class="alert mt-2 rounded-4 border" role="alert">
   <i class="bi bi-pin-angle-fill mb-1" style="font-size:23px; float: left;"></i>
   <div class="ps-3 ms-3"><b>This guide is still being written.</b> You might run into unfinished explanations, incorrect instructions, outdated or misinformation.</div>
 </div><br/>
