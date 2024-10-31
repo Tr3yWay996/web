@@ -688,6 +688,22 @@
     icon: BBB.png
     url: https://builtbybit.com/resources/subdomain-manager-for-pterodactyl.42401/
 
+# Template Installer
+- name: Template Installer
+  author: '0x7d8'
+  description: Install templates with a click!
+  thumbnail: templateinstaller.webp
+  identifier: templateinstaller
+  category: extensions
+  downloads:
+  - name: sourceXchange
+    icon: SXC.png
+    url: https://www.sourcexchange.net/products/template-installer
+  - name: BuiltByBit
+    icon: BBB.png
+    url: https://builtbybit.com/resources/template-installer.53968/
+
+
 # Version Changer
 - name: Version Changer
   author: '0x7d8'
