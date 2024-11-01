@@ -55,7 +55,7 @@ Removes the file defined in `path` from the filesystem.
 `extension(identifier)`\
 Returns true if an extension with the identifier defined in `identifier` is installed, otherwise returns false.
 
-`extensionList()` <tag type="pending" content="beta-2024-10"/></tag>\
+`extensionList()` <tag type="pending" content="beta-2024-11"/></tag>\
 Returns an array containing all installed extensions's identifiers.
 
 <br/>
