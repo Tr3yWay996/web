@@ -241,6 +241,10 @@ Placeholders that point towards certain directories or file paths.
           <!-- Modifier string --> {root/data}
           <!-- Example value --> <span class="text-secondary">/var/www/pterodactyl/.blueprint/extensions/byte/private</span>
         </code><br/>
+        <code>
+          <!-- Modifier string --> {root/fs}
+          <!-- Example value --> <span class="text-secondary">/var/www/pterodactyl/.blueprint/extensions/byte/fs</span>
+        </code><br/>
       </div>
     </div>
   </div>
