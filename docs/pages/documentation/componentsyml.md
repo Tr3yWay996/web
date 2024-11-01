@@ -31,6 +31,10 @@ Component file paths cannot escape the components directory **and** cannot end w
 The YAML file shown below contains all configuration options that are currently supported by Blueprint's components feature.
 
 ```yaml
+Global:
+  BeforeApplication: "" # beta-2024-11 and later
+  AfterApplication: "" # beta-2024-11 and later
+
 Navigation:
   NavigationBar: 
     BeforeNavigation: ""

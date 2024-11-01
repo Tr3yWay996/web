@@ -29,7 +29,7 @@ After running one of these commands, you'll be left with a `identifier.blueprint
 
 Exported extensions are essentially just archives, this means your **source code** can be seen by **anyone** that aquires the `identifier.blueprint` file. To prevent this from happening, we can compress or obfuscate some files through export scripts.
 
-To enable export scripts, add the [`hasExportScript` flag](?page=documentation/flags) to your `conf.yml` configuration and **create a data directory** if you haven't already, which you also need to enable in `conf.yml`. Inside the root of your data directory, create an `export.sh` file and write your shell script in there.
+To enable export scripts, **create a data directory** and link it to your `conf.yml`. Inside the root of your data directory, create an `export.sh` file and write your shell script in there.
 
 <br>
 

@@ -147,7 +147,7 @@ Uncategorized and advanced placeholders that do various things.
         <!-- Placeholder string --> {timestamp}
         <!-- Example value --> <span class="text-secondary">1712239495</span>
       </code></b><br/>
-      Returns a Unix timestamp that indicates (roughly) when the extension has been installed, specifically when placeholders started initializing.
+      Returns a Unix timestamp that indicates (roughly) when the extension has been installed, specifically when placeholders started initializing. This timestamp is calculated before placeholders are placed and returns the same across all files.
     </div>
     <div class="col-lg-3 col-md-4 col-xs-12">
       <!-- Context -->
@@ -279,6 +279,31 @@ Placeholders that point towards certain directories or file paths.
           <!-- Modifier string --> {webroot/fs}
           <!-- Example value --> <span class="text-secondary">/fs/extensions/byte</span>
         </code><br/>
+      </div>
+    </div>
+  </div>
+</div><br/>
+
+<br/>
+
+##### Advanced
+Technical details about the framework handling the extension.
+
+<!-- Engine -->
+<div class="container bg-dark-subtle rounded-3 p-3">
+  <div class="row">
+    <div class="col-lg-9 col-md-8 col-xs-12">
+      <b><code><icon name="hash"></icon>
+        <!-- Placeholder string --> {engine}
+        <!-- Example value -->
+      </code></b><span class="text-secondary">solstice</span> <tag type="pending" content="beta-2024-11"/></tag><br/>
+      Provides information about the engine handling the extension. Different engines using the extension standard that aren't affiliated with Blueprint are expected to replace this placeholder with their own codenames.
+    </div>
+    <div class="col-lg-3 col-md-4 col-xs-12">
+      <!-- Context -->
+      <div class="mb-3">
+        <b>Context</b><br>
+        <code><span class="text-primary-emphasis">Extension standard</span></code><br/>
       </div>
     </div>
   </div>

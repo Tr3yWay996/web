@@ -16,8 +16,8 @@ The BlueprintExtensionLibrary is automatically imported to dashboard wrappers, a
 ### **Functions**
 
 ##### Databasing <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Admin <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Client <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Console <i class="bi bi-check"></i></span>
-`dbGet(table, record)`\
-Fetch a record from the database.
+`dbGet(table, record, default: optional)` <tag type="pending" content="beta-2024-11"/></tag>\
+Fetch a record from the database. `default` (or `null` if not defined) is returned when the database value is empty.
 
 `dbSet(table, record, value)`\
 Set a database record.
@@ -31,10 +31,10 @@ Delete/forget a database record.
 `notify(text)`\
 Allows you to show notifications on the admin panel. Appears on next reload.
 
-`notifyAfter(delay, text)`\
+~~`notifyAfter(delay, text)`~~ <tag type="deprecated" content="beta-2024-11"/></tag>\
 Allows you to show notifications on the admin panel after a delay. Admin page automatically reloads after specified delay.
 
-`notifyNow(text)`\
+~~`notifyNow(text)`~~ <tag type="deprecated" content="beta-2024-11"/></tag>\
 Allows you to show notifications on the admin panel after a delay. This behaves similarly to using a delay of zero with `notifyAfter()`.
 
 <br/>

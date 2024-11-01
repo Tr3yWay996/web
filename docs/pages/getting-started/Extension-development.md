@@ -3,7 +3,7 @@
 
 <div class="alert mt-2 rounded-4 border" role="alert">
   <i class="bi bi-toggle-on mt-1" style="font-size:23px; float: left;"></i>
-  <div class="ps-3 ms-3"><b>Developer mode</b> needs to be turned on in your <b>admin panel</b> <p- class="opacity-50">(Admin > Extensions > Blueprint)</p-> before you can run developer commands. You only have to do this once.</div>
+  <div class="ps-3 ms-3"><b>Developer mode</b> has to be turned on in your <b>admin panel</b> <p- class="opacity-50">(Admin > Extensions > Blueprint)</p-> before you can run developer commands. You only have to do this once.</div>
 </div><br/>
 
 ### **Quick start**
