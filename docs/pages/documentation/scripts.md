@@ -21,3 +21,48 @@ Scripts can **prevent extensions from being listed** on the [extension browse li
 - Scripts should use **environment variables** or [placeholders](?page=documentation/placeholders) for detecting the webserver folder.
 
 **Export scripts are free from (most of) these limitations** as they are specifically made to help the developer automate actions upon export. As long as you don't cause permanent damages through export scripts, you should be fine.
+
+<br/>
+
+### **Environment variables**
+These variables can be used anywhere in your scripts and are automatically assigned the correct value by Blueprint.
+
+<!-- $ENGINE -->
+`$ENGINE`
+<span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">install.sh <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">remove.sh <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">export.sh <i class="bi bi-check"></i></span>\
+Codename of the engine currently handling the extension.
+
+<!-- $EXTENSION_IDENTIFIER -->
+`$EXTENSION_IDENTIFIER`
+<span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">install.sh <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">remove.sh <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">export.sh <i class="bi bi-check"></i></span>\
+Provides the extension's identifier.
+
+<!-- $EXTENSION_VERSION -->
+`$EXTENSION_VERSION`
+<span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">install.sh <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">remove.sh <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">export.sh <i class="bi bi-check"></i></span>\
+Provides the extension's version.
+
+<!-- $EXTENSION_TARGET -->
+`$EXTENSION_TARGET`
+<span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">install.sh <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">remove.sh <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">export.sh <i class="bi bi-check"></i></span>\
+Provides the extension's defined target version, not to be confused with the version the extension is currently being installed on.
+
+<!-- $PTERODACTYL_DIRECTORY -->
+`$PTERODACTYL_DIRECTORY`
+<span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">install.sh <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">remove.sh <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">export.sh <i class="bi bi-check"></i></span>\
+Path towards the Pterodactyl webserver folder, commonly `/var/www/pterodactyl`.
+
+<!-- $BLUEPRINT_VERSION -->
+`$BLUEPRINT_VERSION`
+<span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">install.sh <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">remove.sh <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">export.sh <i class="bi bi-check"></i></span>\
+Blueprint version currently installed on the target panel.
+
+<!-- $BLUEPRINT_DEVELOPER -->
+`$BLUEPRINT_DEVELOPER`
+<span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">install.sh <i class="bi bi-check"></i></span> <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill opacity-50">remove.sh <i class="bi bi-x"></i></span> <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill opacity-50">export.sh <i class="bi bi-x"></i></span>\
+Either `true` or `false` depending on if the extension was installed through developer commands.
+
+<!-- $BLUEPRINT_EXPORT_DIRECTORY -->
+`$BLUEPRINT_EXPORT_DIRECTORY`
+<span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill opacity-50">install.sh <i class="bi bi-x"></i></span> <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill opacity-50">remove.sh <i class="bi bi-x"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">export.sh <i class="bi bi-check"></i></span>\
+Path towards the folder where Blueprint is building the extension package.
