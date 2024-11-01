@@ -253,6 +253,18 @@
     icon: BBB.png
     url: https://builtbybit.com/resources/foxes.38143/
 
+# Laravel Logs
+- name: Laravel Logs
+  author: repgraphics
+  description: View and download Laravel logs in your admin panel.
+  thumbnail: laravellogs.jpg
+  identifier: laravellogs
+  category: extensions
+  downloads:
+  - name: BuiltByBit
+    icon: BBB.png
+    url: https://builtbybit.com/resources/laravel-logs.53343/
+
 # Loader
 - name: Loader
   author: prplwtf
@@ -373,6 +385,18 @@
     icon: BBB.png
     url: https://builtbybit.com/resources/npm-installer-for-blueprint.47760
 
+# Player Listing
+- name: Player Listing
+  author: repgraphics
+  description: Show player count and (if supported) connected players.
+  thumbnail: playerlisting.jpg
+  identifier: playerlisting
+  category: extensions
+  downloads:
+  - name: BuiltByBit
+    icon: BBB.png
+    url: https://builtbybit.com/resources/player-listing.53200/
+
 # Player Manager
 - name: Player Manager
   author: '0x7d8'
@@ -480,6 +504,18 @@
   - name: sourceXchange
     icon: SXC.png
     url: https://www.sourcexchange.net/products/serverid-in-blueprint
+
+# Server Backgrounds
+- name: Server Backgrounds
+  author: repgraphics
+  description: Add custom backgrounds to each server.
+  thumbnail: serverbackgrounds.jpg
+  identifier: serverbackgrounds
+  category: extensions
+  downloads:
+  - name: BuiltByBit
+    icon: BBB.png
+    url: https://builtbybit.com/resources/server-backgrounds.53917/
 
 # Server Importer
 - name: Server Importer
@@ -651,6 +687,22 @@
   - name: BuiltByBit
     icon: BBB.png
     url: https://builtbybit.com/resources/subdomain-manager-for-pterodactyl.42401/
+
+# Template Installer
+- name: Template Installer
+  author: '0x7d8'
+  description: Install templates with a click!
+  thumbnail: templateinstaller.webp
+  identifier: templateinstaller
+  category: extensions
+  downloads:
+  - name: sourceXchange
+    icon: SXC.png
+    url: https://www.sourcexchange.net/products/template-installer
+  - name: BuiltByBit
+    icon: BBB.png
+    url: https://builtbybit.com/resources/template-installer.53968/
+
 
 # Version Changer
 - name: Version Changer
