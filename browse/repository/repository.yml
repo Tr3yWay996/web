@@ -478,6 +478,18 @@
     icon: GH.png
     url: https://github.com/prplwtf/blueprint-redirect
 
+# Refresh
+- name: Refresh
+  author: repgraphics
+  description: Dark admin theme for Pterodactyl
+  thumbnail: refresh.png
+  identifier: refresh
+  category: themes
+  downloads:
+  - name: BuiltByBit
+    icon: BBB.png
+    url: https://builtbybit.com/resources/refresh.53993/
+
 # Reverse Proxy
 - name: Reverse Proxy
   author: Jelco
