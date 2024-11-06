@@ -261,6 +261,9 @@
   identifier: laravellogs
   category: extensions
   downloads:
+  - name: sourceXchange
+    icon: SXC.png
+    url: https://www.sourcexchange.net/products/laravel-logs
   - name: BuiltByBit
     icon: BBB.png
     url: https://builtbybit.com/resources/laravel-logs.53343/
