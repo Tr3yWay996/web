@@ -512,8 +512,8 @@
 - name: Rust Plugin Manager
   author: Corehost
   description: Manage your Rust plugins with ease!
-  thumbnail: rustpluginmanager.jpg
-  identifier: rustpluginmanager
+  thumbnail: rust_pluginmanager.jpg
+  identifier: rust_pluginmanager
   category: extensions
   downloads:
   - name: sourceXchange
