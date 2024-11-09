@@ -396,6 +396,9 @@
   identifier: playerlisting
   category: extensions
   downloads:
+  - name: sourceXchange
+    icon: SXC.png
+    url: https://www.sourcexchange.net/products/playerlisting
   - name: BuiltByBit
     icon: BBB.png
     url: https://builtbybit.com/resources/player-listing.53200/
@@ -489,6 +492,9 @@
   identifier: refreshtheme
   category: themes
   downloads:
+  - name: sourceXchange
+    icon: SXC.png
+    url: https://www.sourcexchange.net/products/refresh
   - name: BuiltByBit
     icon: BBB.png
     url: https://builtbybit.com/resources/refresh.53993/
@@ -540,6 +546,9 @@
   identifier: serverbackgrounds
   category: extensions
   downloads:
+  - name: sourceXchange
+    icon: SXC.png
+    url: https://www.sourcexchange.net/products/server-backgrounds
   - name: BuiltByBit
     icon: BBB.png
     url: https://builtbybit.com/resources/server-backgrounds.53917/
