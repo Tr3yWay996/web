@@ -92,3 +92,9 @@ i.bi:not(button#bd-theme i.bi) {
   font-family: '';
   line-height: 0px;
 }
+
+.star-button:hover > i {
+  color: #fdd835; 
+  filter: drop-shadow(0 0 5px #fdd835);
+  transition: color 0.5s ease, filter 1s ease;
+}
