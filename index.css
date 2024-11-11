@@ -51,9 +51,3 @@
 .width-800 {
   max-width: 800px;
 }
-
-body > div.bp-grid > div > div > div > a:nth-child(2) > button:hover > i {
-  color: #fdd835; 
-  filter: drop-shadow(0 0 5px #fdd835);
-  transition: color 0.5s ease, filter 1s ease;
-}

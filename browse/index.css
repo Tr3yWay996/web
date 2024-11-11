@@ -68,9 +68,3 @@
   opacity: .5;
   font-size: 15px;
 }
-
-a:hover svg {
-  color: #1ea9fe !important;
-  filter: drop-shadow(0 0 5px #1ea9fe);
-  transition: color 0.5s ease, filter 1s ease;
-}
