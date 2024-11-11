@@ -46,9 +46,3 @@ code.hljs {
 }
 
 [data-bs-theme=light] .code-spacer { border-color: #434955 !important; }
-
-a:hover svg {
-  color: #1ea9fe !important;
-  filter: drop-shadow(0 0 5px #1ea9fe);
-  transition: color 0.5s ease, filter 1s ease;
-}

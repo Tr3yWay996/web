@@ -57,9 +57,3 @@ body > div.bp-grid > div > div > div > a:nth-child(2) > button:hover > i {
   filter: drop-shadow(0 0 5px #fdd835);
   transition: color 0.5s ease, filter 1s ease;
 }
-
-a:hover svg {
-  color: #1ea9fe !important;
-  filter: drop-shadow(0 0 5px #1ea9fe);
-  transition: color 0.5s ease, filter 1s ease;
-}
