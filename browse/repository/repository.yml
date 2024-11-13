@@ -97,6 +97,21 @@
     icon: BBB.png
     url: https://builtbybit.com/resources/cherrydactyl.40523/
 
+# Console Logs
+- name: Console Logs
+  author: repgraphics
+  description: Copy your console logs with a single click.
+  thumbnail: consolelogs.jpg
+  identifier: consolelogs
+  category: extensions
+  downloads:
+  - name: sourceXchange
+    icon: SXC.png
+    url: https://www.sourcexchange.net/products/console-logs
+  - name: BuiltByBit
+    icon: BBB.png
+    url: https://builtbybit.com/resources/console-logs.54296/
+
 # Cookies
 - name: Cookies
   author: prplwtf
@@ -302,7 +317,7 @@
 - name: MC Plugins
   author: sarthak77
   description: Modern plugin management for Minecraft.
-  thumbnail: mcplugins.png
+  thumbnail: mcplugins.jpg
   identifier: mcplugins
   category: extensions
   downloads:
