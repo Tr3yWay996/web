@@ -23,31 +23,6 @@ To package an extension for distribution, we need to convert it into a `identifi
 
 After running one of these commands, you'll be left with a `identifier.blueprint` file which you can in turn use to distribute your extension to the outside world. 
 
-<br>
-
-### **Scripting**
-
-Exported extensions are essentially just archives, this means your **source code** can be seen by **anyone** that aquires the `identifier.blueprint` file. To prevent this from happening, we can compress or obfuscate some files through export scripts.
-
-To enable export scripts, **create a data directory** and link it to your `conf.yml`. Inside the root of your data directory, create an `export.sh` file and write your shell script in there.
-
-<br>
-
-When exporting extensions with custom export scripts, Blueprint automatically parses some useful variables to make your life as a developer easier. Keep in mind, however, that **placeholders do not work in export scripts** as they are applied upon installation, not when exporting.
-```sh
-$EXTENSION_IDENTIFIER       # Extension identifier
-$EXTENSION_VERSION          # Extension version
-$EXTENSION_TARGET           # Extension target version
-$PTERODACTYL_DIRECTORY      # Pterodactyl directory path
-$BLUEPRINT_EXPORT_DIRECTORY # Blueprint build directory
-$BLUEPRINT_VERSION          # Blueprint version
-```
-
-<br>
-
-We hope you can create something that suits your needs with the export script feature, and if you don't have any use for it, at least you know that it exist.
-
-
 <div class="btn-group docs-navigator" role="group" aria-label="Navigation" style="float: right">
   <a href="?page=developing-extensions/React-components" class="btn btn-dark bg-light-subtle border-light-subtle">Previous</a>
   <button type="button" class="btn btn-dark bg-light-subtle border-light-subtle text-secondary disabled">Next</button>

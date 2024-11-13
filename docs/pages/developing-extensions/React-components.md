@@ -6,6 +6,8 @@
   <div class="ps-3 ms-3"><b>This section is still being written.</b> You might run into unfinished explanations, incorrect instructions, outdated or misinformation.</div>
 </div><br/>
 
+### **Preparation**
+
 Blueprint extensions can add custom pages to Pterodactyl and content to existing pages through the [Components.yml](?page=documentation/componentsyml) feature.
 
 Before we can start utilizing this feature, create a directory called `components` and assign it in your [conf.yml](?page=documentation/confyml) configuration like shown below.
@@ -16,7 +18,11 @@ dashboard:
 
 Inside of that directory, create a file called `Components.yml`, which will contain our Components configuration. Inside of that file, add the example configuration from the [Components.yml](?page=documentation/componentsyml) documentation.
 
-Now create a file called `ExampleComponent.tsx` and define it as a new route in your `Components.yml` configuration.
+<br>
+
+### **Creating a custom page**
+
+Create a file called `ExampleComponent.tsx` (inside of the `components` folder) and define it as a new route in your `Components.yml` configuration.
 ```tsx
 // ExampleComponent.tsx
 import React from 'react';
