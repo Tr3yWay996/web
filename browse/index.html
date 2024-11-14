@@ -110,34 +110,48 @@
       </div>
     </div>
 
-    <!-- Sorting -->
-    <div class="container mb-4 position-sticky g-5" style="top: 90px; z-index: 5;">
-      <div class="row bg-dark-subtle rounded-3 border" style="border: rgba(255,255,255,0.15) 1px">
-        <div class="col-1">
-          <i class="bi bi-filter text-body-tertiary text-start py-3 mx-2 float-start" style="font-size:30px"></i>
+<!-- Sorting -->
+<div class="container mb-4 position-sticky g-5" style="top: 90px; z-index: 5;">
+  <div class="row bg-dark-subtle rounded-3 border align-items-center p-2" style="border: rgba(255,255,255,0.15) 1px;">
+    <div class="col-2 col-md-1 d-flex align-items-center justify-content-center">
+      <i class="bi bi-search text-body-tertiary" style="font-size: 24px;"></i>
+    </div>
+
+    <!-- Search Input for Filtering Products -->
+    <div class="col-10 col-md-5 mb-2 mb-md-0 position-relative">
+      <input type="text" id="productSearch" placeholder="Search products..." class="form-control bg-dark text-body-tertiary border-0" style="height: 40px;">
+      <!-- Dropdown suggestion for filtering authors -->
+      <div id="authorSuggestion" class="dropdown-menu show bg-dark text-light border-0" style="display: none; position: absolute; top: 100%; left: 0;">
+        <a href="#" id="filterByAuthor" class="dropdown-item">Filter by Author</a>
+      </div>
+    </div>
+
+    <!-- Filter Buttons Container -->
+    <div class="col-12 col-md d-flex justify-content-center justify-content-md-end">
+      <!-- Extensions Filter Button -->
+      <div class="bg-dark py-1 px-3 rounded-2 mx-1 sort-button">
+        <div class="form-check d-flex align-items-center justify-content-center">
+          <input class="form-check-input" type="checkbox" value="" id="filterExtensions">
+          <label class="form-check-label text-body-tertiary ms-2" for="filterExtensions">
+            <i class="bi bi-puzzle-fill d-lg-none d-inline" style="font-size: 20px;"></i>
+            <span class="d-none d-lg-inline">Extensions</span>
+          </label>
         </div>
-        <div class="col" style="padding-top:13px">
-          <div class="bg-dark float-end py-1 px-3 rounded-2 mx-2 sort-button">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="filterExtensions">
-              <label class="form-check-label text-body-tertiary" style="margin-top:.5px" for="filterExtensions">
-                <i class="bi bi-puzzle-fill d-lg-none d-inline" style="font-size:23px"></i> 
-                <span class="d-lg-inline d-none">Extensions</span>
-              </label>
-            </div>
-          </div>
-          <div class="bg-dark float-end py-1 px-3 rounded-2 mx-2 sort-button">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="filterThemes">
-              <label class="form-check-label text-body-tertiary" style="margin-top:.5px" for="filterThemes">
-                <i class="bi bi-palette2 d-lg-none d-inline" style="font-size:21px"></i>
-                <span class="d-lg-inline d-none">Themes</span>
-              </label>
-            </div>
-          </div>
+      </div>
+
+      <!-- Themes Filter Button -->
+      <div class="bg-dark py-1 px-3 rounded-2 mx-1 sort-button">
+        <div class="form-check d-flex align-items-center justify-content-center">
+          <input class="form-check-input" type="checkbox" value="" id="filterThemes">
+          <label class="form-check-label text-body-tertiary ms-2" for="filterThemes">
+            <i class="bi bi-palette2 d-lg-none d-inline" style="font-size: 20px;"></i>
+            <span class="d-none d-lg-inline">Themes</span>
+          </label>
         </div>
       </div>
     </div>
+  </div>
+</div>
 
     <!-- Products -->
     <div class="container">
@@ -191,26 +205,28 @@
     <script src="../.modules/global/global.js"></script>
     <script>
       function loadYAML(url, callback) {
-        var xhr = new XMLHttpRequest()
-        xhr.open("GET", url, true)
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", url, true);
         xhr.onreadystatechange = function () {
           if (xhr.readyState == 4 && xhr.status == 200) {
-            var result = jsyaml.load(xhr.responseText)
-            callback(result)
+            var result = jsyaml.load(xhr.responseText);
+            callback(result);
           }
-        }
-        xhr.send()
+        };
+        xhr.send();
       }
-
+    
+      let allProducts = []; // Store all products globally
+    
       function displayProducts(products) {
-        var productList = document.getElementById("products")
-
+        const productList = document.getElementById("products");
+        productList.innerHTML = ''; // Clear the existing products
+    
         products.forEach(function (product) {
-          var listItem = document.createElement("div")
-          if(product.category == "themes")     { categoryClass="filter-themes" }
-          if(product.category == "extensions") { categoryClass="filter-extensions" }
-          listItem.className = "col-sm-12 col-md-6 col-lg-4 mb-4 "+categoryClass
-
+          var listItem = document.createElement("div");
+          var categoryClass = product.category === "themes" ? "filter-themes" : "filter-extensions";
+    
+          listItem.className = "col-sm-12 col-md-6 col-lg-4 mb-4 " + categoryClass;
           listItem.innerHTML = `
             <div class="card overflow-hidden bg-dark-subtle">
               <img src="./assets/${product.thumbnail}" onclick="setTimeout(() => {document.getElementById('${product.identifier}Button').click()}, 1)" class="card-img-top img-dim product-image" alt="${product.name}"/>
@@ -237,16 +253,61 @@
                 <p class="card-text text-truncate">${product.description}</p>
               </div>
             </div>
-          `
-
-          productList.appendChild(listItem)
-        })
+          `;
+          productList.appendChild(listItem);
+        });
       }
-
-      if(window.location.hostname == "127.0.0.1" && localStorage.getItem("LocalExampleRepository") == "true") {
-        loadYAML("./repository/repository.example.yml", displayProducts)
+    
+      function filterProducts() {
+        const searchQuery = document.getElementById("productSearch").value.toLowerCase();
+        
+        // Check if search query matches an author
+        const authorMatch = allProducts.find(product => product.author.toLowerCase().includes(searchQuery));
+        const authorSuggestion = document.getElementById("authorSuggestion");
+    
+        if (authorMatch && searchQuery.length > 1) {
+          // Show "Filter by Author" suggestion
+          authorSuggestion.style.display = 'block';
+          authorSuggestion.querySelector("#filterByAuthor").textContent = `Filter by Author: ${authorMatch.author}`;
+          authorSuggestion.dataset.author = authorMatch.author.toLowerCase();
+        } else {
+          authorSuggestion.style.display = 'none';
+        }
+    
+        // Filter products based on search query (name or description)
+        const filteredProducts = allProducts.filter(product => 
+          product.name.toLowerCase().includes(searchQuery) || 
+          product.description.toLowerCase().includes(searchQuery)
+        );
+        displayProducts(filteredProducts);
+      }
+    
+      // Filter by author when "Filter by Author" is clicked
+      document.getElementById("filterByAuthor").addEventListener("click", function (event) {
+        event.preventDefault();
+        const authorQuery = document.getElementById("authorSuggestion").dataset.author;
+        
+        if (authorQuery) {
+          const filteredByAuthor = allProducts.filter(product => 
+            product.author.toLowerCase().includes(authorQuery)
+          );
+          displayProducts(filteredByAuthor);
+          document.getElementById("authorSuggestion").style.display = 'none';
+        }
+      });
+    
+      document.getElementById("productSearch").addEventListener("input", filterProducts);
+    
+      if (window.location.hostname === "127.0.0.1" && localStorage.getItem("LocalExampleRepository") === "true") {
+        loadYAML("./repository/repository.example.yml", function (products) {
+          allProducts = products; // Save all products
+          displayProducts(allProducts); // Initial display of all products
+        });
       } else {
-        loadYAML("./repository/repository.yml", displayProducts)
+        loadYAML("./repository/repository.yml", function (products) {
+          allProducts = products; // Save all products
+          displayProducts(allProducts); // Initial display of all products
+        });
       }
     </script>
     <style id="css-filter-themes"></style>
