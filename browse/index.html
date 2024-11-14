@@ -117,9 +117,11 @@
       <i class="bi bi-search text-body-tertiary" style="font-size: 24px;"></i>
     </div>
 
-    <!-- Search Input for Filtering Products -->
+    <!-- Search Input with Clear Button -->
     <div class="col-10 col-md-5 mb-2 mb-md-0 position-relative">
       <input type="text" id="productSearch" placeholder="Search products..." class="form-control bg-dark text-body-tertiary border-0" style="height: 40px;">
+      <span id="clearSearch" class="position-absolute text-light" style="right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; display: none; padding-right: 2.5%;">&times;</span>
+      
       <!-- Dropdown suggestion for filtering authors -->
       <div id="authorSuggestion" class="dropdown-menu show bg-dark text-light border-0" style="display: none; position: absolute; top: 100%; left: 0;">
         <a href="#" id="filterByAuthor" class="dropdown-item">Filter by Author</a>
@@ -260,13 +262,15 @@
     
       function filterProducts() {
         const searchQuery = document.getElementById("productSearch").value.toLowerCase();
-        
+        const authorSuggestion = document.getElementById("authorSuggestion");
+        const clearSearch = document.getElementById("clearSearch");
+    
+        clearSearch.style.display = searchQuery ? "inline" : "none"; // Show "X" button if input is not empty
+    
         // Check if search query matches an author
         const authorMatch = allProducts.find(product => product.author.toLowerCase().includes(searchQuery));
-        const authorSuggestion = document.getElementById("authorSuggestion");
     
         if (authorMatch && searchQuery.length > 1) {
-          // Show "Filter by Author" suggestion
           authorSuggestion.style.display = 'block';
           authorSuggestion.querySelector("#filterByAuthor").textContent = `Filter by Author: ${authorMatch.author}`;
           authorSuggestion.dataset.author = authorMatch.author.toLowerCase();
@@ -274,7 +278,6 @@
           authorSuggestion.style.display = 'none';
         }
     
-        // Filter products based on search query (name or description)
         const filteredProducts = allProducts.filter(product => 
           product.name.toLowerCase().includes(searchQuery) || 
           product.description.toLowerCase().includes(searchQuery)
@@ -282,11 +285,21 @@
         displayProducts(filteredProducts);
       }
     
+      // Clear search input when "X" is clicked and reset the product list
+      document.getElementById("clearSearch").addEventListener("click", function () {
+        document.getElementById("productSearch").value = '';
+        document.getElementById("authorSuggestion").style.display = 'none';
+        displayProducts(allProducts); // Show all products again
+        this.style.display = 'none'; // Hide "X" button
+      });
+    
+      document.getElementById("productSearch").addEventListener("input", filterProducts);
+    
       // Filter by author when "Filter by Author" is clicked
       document.getElementById("filterByAuthor").addEventListener("click", function (event) {
         event.preventDefault();
         const authorQuery = document.getElementById("authorSuggestion").dataset.author;
-        
+    
         if (authorQuery) {
           const filteredByAuthor = allProducts.filter(product => 
             product.author.toLowerCase().includes(authorQuery)
@@ -295,8 +308,6 @@
           document.getElementById("authorSuggestion").style.display = 'none';
         }
       });
-    
-      document.getElementById("productSearch").addEventListener("input", filterProducts);
     
       if (window.location.hostname === "127.0.0.1" && localStorage.getItem("LocalExampleRepository") === "true") {
         loadYAML("./repository/repository.example.yml", function (products) {
