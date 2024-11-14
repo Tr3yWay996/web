@@ -288,6 +288,7 @@
       // Clear search input when "X" is clicked and reset the product list
       document.getElementById("clearSearch").addEventListener("click", function () {
         document.getElementById("productSearch").value = '';
+        document.getElementById("productSearch").placeholder = 'Search products...'; // Reset placeholder
         document.getElementById("authorSuggestion").style.display = 'none';
         displayProducts(allProducts); // Show all products again
         this.style.display = 'none'; // Hide "X" button
@@ -306,6 +307,7 @@
           );
           displayProducts(filteredByAuthor);
           document.getElementById("authorSuggestion").style.display = 'none';
+          document.getElementById("productSearch").value = `Author: ${authorQuery.charAt(0).toUpperCase() + authorQuery.slice(1)}`; // Display author filter in search bar
         }
       });
     
@@ -320,7 +322,7 @@
           displayProducts(allProducts); // Initial display of all products
         });
       }
-    </script>
+    </script>    
     <style id="css-filter-themes"></style>
     <style id="css-filter-extensions"></style>
     <script>
