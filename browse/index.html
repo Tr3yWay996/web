@@ -113,126 +113,47 @@
 <!-- Sorting -->
 <div class="container mb-4 position-sticky g-5" style="top: 90px; z-index: 5;">
   <div
-    class="row bg-dark-subtle rounded-3 border p-2"
+    class="row bg-dark-subtle rounded-3 border py-2"
     style="border: rgba(255,255,255,0.15) 1px;"
   >
-    <!-- Top Row: Filter Dropdown and Search Input -->
-    <div class="col-12 d-flex flex-column flex-md-row align-items-center">
-      <!-- Dropdown Filter -->
-      <div class="dropdown me-2 mb-2 mb-md-0" style="z-index: 10;">
-        <button
-          class="btn dropdown-toggle bg-dark text-light border-0 d-flex align-items-center"
+    <div class="d-flex flex-row py-1">
+
+      <!-- Search -->
+      <div class="input-group me-sm-2">
+        <span class="input-group-text border-0 pe-0"><i class="bi bi-search"></i></span>
+        <button 
           id="filterDropdown"
+          class="btn btn-secondary bg-body-tertiary border-0 dropdown-toggle"
           type="button"
           data-bs-toggle="dropdown"
           aria-expanded="false"
-          style="font-size: 16px; padding: 8px 12px;"
         >
-          <i
-            class="bi bi-filter me-2"
-            style="font-size: 22px; vertical-align: middle;"
-          ></i>
-          <span id="filterTypeLabel" style="line-height: 1.2;">Products</span>
+          <span id="filterTypeLabel">Products</span>
         </button>
-        <ul
-          class="dropdown-menu bg-dark text-light"
-          aria-labelledby="filterDropdown"
-        >
-          <li>
-            <a
-              class="dropdown-item text-light"
-              id="toggleFilterProducts"
-              href="#"
-              data-filter="products"
-            >
-              Products
-            </a>
-          </li>
-          <li>
-            <a
-              class="dropdown-item text-light"
-              id="toggleFilterAuthors"
-              href="#"
-              data-filter="authors"
-            >
-              Authors
-            </a>
-          </li>
+        <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 border-0 shadow" aria-labelledby="filterDropdown">
+          <li><a class="dropdown-item rounded-2" id="toggleFilterProducts" data-filter="products">Products</a></li>
+          <li><a class="dropdown-item rounded-2" id="toggleFilterAuthors" data-filter="authors">Authors</a></li>
         </ul>
-      </div>
-
-      <!-- Search Input -->
-      <div class="position-relative w-100">
         <input
           type="text"
+          class="form-control bg-dark border-0"
           id="productSearch"
-          placeholder="Search products..."
-          class="form-control bg-dark text-body-tertiary border-0 ps-5"
-          style="height: 40px;"
-        />
-
-        <!-- Search Icon -->
-        <i
-          class="bi bi-search position-absolute text-body-tertiary"
-          style="left: 10px; top: 50%; transform: translateY(-50%); font-size: 20px;"
-        ></i>
-
-        <!-- Clear Button -->
-        <span
-          id="clearSearch"
-          class="position-absolute text-light"
-          style="right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; display: none;"
-        >
-          &times;
-        </span>
+          placeholder="Search products..">
       </div>
-    </div>
 
-    <!-- Bottom Row: Filter Buttons -->
-    <div
-      class="col-12 d-flex flex-wrap justify-content-center align-items-center mt-3"
-    >
-      <!-- Extensions Filter Button -->
-      <div class="bg-dark py-1 px-3 rounded-2 mx-2 sort-button">
-        <div class="form-check d-flex align-items-center justify-content-center">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            value=""
-            id="filterExtensions"
-          />
-          <label
-            class="form-check-label text-body-tertiary ms-2"
-            for="filterExtensions"
-          >
-            <i
-              class="bi bi-puzzle-fill d-lg-none d-inline"
-              style="font-size: 20px;"
-            ></i>
-            <span class="d-none d-lg-inline">Extensions</span>
-          </label>
+      <!-- Filters -->
+      <div class="d-sm-flex flex-row d-none" style="width: auto;">
+        <div class="input-group flex-row me-2" style="flex-wrap: nowrap;">
+          <span class="input-group-text border-0">
+            <input class="form-check-input mt-0" type="checkbox" value="" id="filterExtensions">
+          </span>
+          <span class="input-group-text ps-0 border-0"><label for="filterExtensions">Extensions</label></span>
         </div>
-      </div>
-
-      <!-- Themes Filter Button -->
-      <div class="bg-dark py-1 px-3 rounded-2 mx-2 sort-button">
-        <div class="form-check d-flex align-items-center justify-content-center">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            value=""
-            id="filterThemes"
-          />
-          <label
-            class="form-check-label text-body-tertiary ms-2"
-            for="filterThemes"
-          >
-            <i
-              class="bi bi-palette2 d-lg-none d-inline"
-              style="font-size: 20px;"
-            ></i>
-            <span class="d-none d-lg-inline">Themes</span>
-          </label>
+        <div class="input-group flex-row" style="flex-wrap: nowrap;">
+          <span class="input-group-text border-0">
+            <input class="form-check-input mt-0" type="checkbox" value="" id="filterThemes">
+          </span>
+          <span class="input-group-text ps-0 border-0"><label for="filterThemes">Themes</label></span>
         </div>
       </div>
     </div>
@@ -358,8 +279,6 @@
     
       function filterProducts() {
         const searchQuery = document.getElementById("productSearch").value.toLowerCase();
-        const clearSearch = document.getElementById("clearSearch");
-        clearSearch.style.display = searchQuery ? "inline" : "none"; // Show "X" button if input is not empty
     
         let filteredItems = [];
     
@@ -400,25 +319,17 @@
       // Update filter type and label
       if (selectedFilter === "products") {
         filterTypeLabel.textContent = "Products";
-        searchInput.placeholder = "Search products...";
+        searchInput.placeholder = "Search products..";
         filterType = "products";
       } else if (selectedFilter === "authors") {
         filterTypeLabel.textContent = "Authors";
-        searchInput.placeholder = "Search authors...";
+        searchInput.placeholder = "Search authors..";
         filterType = "authors";
       }
 
         // Apply filters
         filterProducts();
         });
-      });
-    
-      // Clear search input when "X" is clicked
-      document.getElementById("clearSearch").addEventListener("click", function () {
-        document.getElementById("productSearch").value = "";
-        document.getElementById("productSearch").placeholder = `Search ${filterType}...`; // Reset placeholder
-        displayProducts(allProducts); // Show all products again
-        this.style.display = "none"; // Hide "X" button
       });
     
       // Event listeners for filtering
