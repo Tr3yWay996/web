@@ -112,41 +112,125 @@
 
 <!-- Sorting -->
 <div class="container mb-4 position-sticky g-5" style="top: 90px; z-index: 5;">
-  <div class="row bg-dark-subtle rounded-3 border align-items-center p-2" style="border: rgba(255,255,255,0.15) 1px;">
-    <div class="col-2 col-md-1 d-flex align-items-center justify-content-center">
-      <i class="bi bi-search text-body-tertiary" style="font-size: 24px;"></i>
-    </div>
+  <div
+    class="row bg-dark-subtle rounded-3 border p-2"
+    style="border: rgba(255,255,255,0.15) 1px;"
+  >
+    <!-- Top Row: Filter Dropdown and Search Input -->
+    <div class="col-12 d-flex flex-column flex-md-row align-items-center">
+      <!-- Dropdown Filter -->
+      <div class="dropdown me-2 mb-2 mb-md-0" style="z-index: 10;">
+        <button
+          class="btn dropdown-toggle bg-dark text-light border-0 d-flex align-items-center"
+          id="filterDropdown"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          style="font-size: 16px; padding: 8px 12px;"
+        >
+          <i
+            class="bi bi-filter me-2"
+            style="font-size: 22px; vertical-align: middle;"
+          ></i>
+          <span id="filterTypeLabel" style="line-height: 1.2;">Products</span>
+        </button>
+        <ul
+          class="dropdown-menu bg-dark text-light"
+          aria-labelledby="filterDropdown"
+        >
+          <li>
+            <a
+              class="dropdown-item text-light"
+              id="toggleFilterProducts"
+              href="#"
+              data-filter="products"
+            >
+              Products
+            </a>
+          </li>
+          <li>
+            <a
+              class="dropdown-item text-light"
+              id="toggleFilterAuthors"
+              href="#"
+              data-filter="authors"
+            >
+              Authors
+            </a>
+          </li>
+        </ul>
+      </div>
 
-    <!-- Search Input with Clear Button -->
-    <div class="col-10 col-md-5 mb-2 mb-md-0 position-relative">
-      <input type="text" id="productSearch" placeholder="Search products..." class="form-control bg-dark text-body-tertiary border-0" style="height: 40px;">
-      <span id="clearSearch" class="position-absolute text-light" style="right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; display: none; padding-right: 2.5%;">&times;</span>
-      
-      <!-- Dropdown suggestion for filtering authors -->
-      <div id="authorSuggestion" class="dropdown-menu show bg-dark text-light border-0" style="display: none; position: absolute; top: 100%; left: 0;">
-        <a href="#" id="filterByAuthor" class="dropdown-item">Filter by Author</a>
+      <!-- Search Input -->
+      <div class="position-relative w-100">
+        <input
+          type="text"
+          id="productSearch"
+          placeholder="Search products..."
+          class="form-control bg-dark text-body-tertiary border-0 ps-5"
+          style="height: 40px;"
+        />
+
+        <!-- Search Icon -->
+        <i
+          class="bi bi-search position-absolute text-body-tertiary"
+          style="left: 10px; top: 50%; transform: translateY(-50%); font-size: 20px;"
+        ></i>
+
+        <!-- Clear Button -->
+        <span
+          id="clearSearch"
+          class="position-absolute text-light"
+          style="right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; display: none;"
+        >
+          &times;
+        </span>
       </div>
     </div>
 
-    <!-- Filter Buttons Container -->
-    <div class="col-12 col-md d-flex justify-content-center justify-content-md-end">
+    <!-- Bottom Row: Filter Buttons -->
+    <div
+      class="col-12 d-flex flex-wrap justify-content-center align-items-center mt-3"
+    >
       <!-- Extensions Filter Button -->
-      <div class="bg-dark py-1 px-3 rounded-2 mx-1 sort-button">
+      <div class="bg-dark py-1 px-3 rounded-2 mx-2 sort-button">
         <div class="form-check d-flex align-items-center justify-content-center">
-          <input class="form-check-input" type="checkbox" value="" id="filterExtensions">
-          <label class="form-check-label text-body-tertiary ms-2" for="filterExtensions">
-            <i class="bi bi-puzzle-fill d-lg-none d-inline" style="font-size: 20px;"></i>
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="filterExtensions"
+          />
+          <label
+            class="form-check-label text-body-tertiary ms-2"
+            for="filterExtensions"
+          >
+            <i
+              class="bi bi-puzzle-fill d-lg-none d-inline"
+              style="font-size: 20px;"
+            ></i>
             <span class="d-none d-lg-inline">Extensions</span>
           </label>
         </div>
       </div>
 
       <!-- Themes Filter Button -->
-      <div class="bg-dark py-1 px-3 rounded-2 mx-1 sort-button">
+      <div class="bg-dark py-1 px-3 rounded-2 mx-2 sort-button">
         <div class="form-check d-flex align-items-center justify-content-center">
-          <input class="form-check-input" type="checkbox" value="" id="filterThemes">
-          <label class="form-check-label text-body-tertiary ms-2" for="filterThemes">
-            <i class="bi bi-palette2 d-lg-none d-inline" style="font-size: 20px;"></i>
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="filterThemes"
+          />
+          <label
+            class="form-check-label text-body-tertiary ms-2"
+            for="filterThemes"
+          >
+            <i
+              class="bi bi-palette2 d-lg-none d-inline"
+              style="font-size: 20px;"
+            ></i>
             <span class="d-none d-lg-inline">Themes</span>
           </label>
         </div>
@@ -154,6 +238,7 @@
     </div>
   </div>
 </div>
+
 
     <!-- Products -->
     <div class="container">
@@ -206,6 +291,12 @@
     <script src="../.modules/js-yaml/js-yaml.min.js"></script>
     <script src="../.modules/global/global.js"></script>
     <script>
+      const filterTypeLabel = document.getElementById("filterTypeLabel");
+      const searchInput = document.getElementById("productSearch");
+
+      let allProducts = []; // Store all products globally
+      let filterType = "products"; // Default filter type: products
+    
       function loadYAML(url, callback) {
         var xhr = new XMLHttpRequest();
         xhr.open("GET", url, true);
@@ -218,15 +309,14 @@
         xhr.send();
       }
     
-      let allProducts = []; // Store all products globally
-    
       function displayProducts(products) {
         const productList = document.getElementById("products");
-        productList.innerHTML = ''; // Clear the existing products
+        productList.innerHTML = ""; // Clear the existing products
     
         products.forEach(function (product) {
           var listItem = document.createElement("div");
-          var categoryClass = product.category === "themes" ? "filter-themes" : "filter-extensions";
+          var categoryClass =
+            product.category === "themes" ? "filter-themes" : "filter-extensions";
     
           listItem.className = "col-sm-12 col-md-6 col-lg-4 mb-4 " + categoryClass;
           listItem.innerHTML = `
@@ -237,17 +327,21 @@
                   <i class="bi bi-chevron-down"></i>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 border-0 shadow w-220px">
-                  ${product.downloads.map(download => `
+                  ${product.downloads
+                    .map(
+                      (download) => `
                     <li>
                       <a
                         class="dropdown-item rounded-2" 
-                        href="${(download.url.replace(/^https?:\/\//i, '').toLowerCase().startsWith('builtbybit.com'.toLowerCase())) ? 'https://' + download.url.replace(/^https?:\/\//i, '') + '?ref=449337&' : (download.url + '?')}utm_source=blueprint.zip&utm_medium=card&utm_content=for_${product.identifier}"
+                        href="${download.url}?utm_source=blueprint.zip&utm_medium=card&utm_content=for_${product.identifier}"
                       >
                         <img src="./assets/source/${download.icon}" alt="" width="24" height="24">
                         ${download.name}
                       </a>
                     </li>
-                  `).join('')}
+                  `
+                    )
+                    .join("")}
                 </ul>
               </div>
               <div class="card-body">
@@ -262,55 +356,75 @@
     
       function filterProducts() {
         const searchQuery = document.getElementById("productSearch").value.toLowerCase();
-        const authorSuggestion = document.getElementById("authorSuggestion");
         const clearSearch = document.getElementById("clearSearch");
-    
         clearSearch.style.display = searchQuery ? "inline" : "none"; // Show "X" button if input is not empty
     
-        // Check if search query matches an author
-        const authorMatch = allProducts.find(product => product.author.toLowerCase().includes(searchQuery));
+        let filteredItems = [];
     
-        if (authorMatch && searchQuery.length > 1) {
-          authorSuggestion.style.display = 'block';
-          authorSuggestion.querySelector("#filterByAuthor").textContent = `Filter by Author: ${authorMatch.author}`;
-          authorSuggestion.dataset.author = authorMatch.author.toLowerCase();
-        } else {
-          authorSuggestion.style.display = 'none';
+        // Filter logic based on type (Products or Authors)
+        if (filterType === "products") {
+          filteredItems = allProducts.filter(
+            (product) =>
+              product.name.toLowerCase().includes(searchQuery) ||
+              product.description.toLowerCase().includes(searchQuery)
+          );
+        } else if (filterType === "authors") {
+          filteredItems = allProducts.filter((product) =>
+            product.author.toLowerCase().includes(searchQuery)
+          );
         }
     
-        const filteredProducts = allProducts.filter(product => 
-          product.name.toLowerCase().includes(searchQuery) || 
-          product.description.toLowerCase().includes(searchQuery)
-        );
-        displayProducts(filteredProducts);
+        // Apply category filters
+        const extensionsChecked = document.getElementById("filterExtensions").checked;
+        const themesChecked = document.getElementById("filterThemes").checked;
+    
+        if (!extensionsChecked) {
+          filteredItems = filteredItems.filter((product) => product.category !== "extensions");
+        }
+    
+        if (!themesChecked) {
+          filteredItems = filteredItems.filter((product) => product.category !== "themes");
+        }
+    
+        displayProducts(filteredItems);
       }
     
-      // Clear search input when "X" is clicked and reset the product list
-      document.getElementById("clearSearch").addEventListener("click", function () {
-        document.getElementById("productSearch").value = '';
-        document.getElementById("productSearch").placeholder = 'Search products...'; // Reset placeholder
-        document.getElementById("authorSuggestion").style.display = 'none';
-        displayProducts(allProducts); // Show all products again
-        this.style.display = 'none'; // Hide "X" button
-      });
-    
-      document.getElementById("productSearch").addEventListener("input", filterProducts);
-    
-      // Filter by author when "Filter by Author" is clicked
-      document.getElementById("filterByAuthor").addEventListener("click", function (event) {
+      // Handle filter dropdown toggle
+      document.querySelectorAll(".dropdown-item").forEach((item) => {
+      item.addEventListener("click", (event) => {
         event.preventDefault();
-        const authorQuery = document.getElementById("authorSuggestion").dataset.author;
-    
-        if (authorQuery) {
-          const filteredByAuthor = allProducts.filter(product => 
-            product.author.toLowerCase().includes(authorQuery)
-          );
-          displayProducts(filteredByAuthor);
-          document.getElementById("authorSuggestion").style.display = 'none';
-          document.getElementById("productSearch").value = `Author: ${authorQuery.charAt(0).toUpperCase() + authorQuery.slice(1)}`; // Display author filter in search bar
-        }
+        const selectedFilter = item.dataset.filter;
+
+      // Update filter type and label
+      if (selectedFilter === "products") {
+        filterTypeLabel.textContent = "Products";
+        searchInput.placeholder = "Search products...";
+        filterType = "products";
+      } else if (selectedFilter === "authors") {
+        filterTypeLabel.textContent = "Authors";
+        searchInput.placeholder = "Search authors...";
+        filterType = "authors";
+      }
+
+        // Apply filters
+        filterProducts();
+        });
       });
     
+      // Clear search input when "X" is clicked
+      document.getElementById("clearSearch").addEventListener("click", function () {
+        document.getElementById("productSearch").value = "";
+        document.getElementById("productSearch").placeholder = `Search ${filterType}...`; // Reset placeholder
+        displayProducts(allProducts); // Show all products again
+        this.style.display = "none"; // Hide "X" button
+      });
+    
+      // Event listeners for filtering
+      document.getElementById("productSearch").addEventListener("input", filterProducts);
+      document.getElementById("filterExtensions").addEventListener("change", filterProducts);
+      document.getElementById("filterThemes").addEventListener("change", filterProducts);
+    
+      // Load products
       if (window.location.hostname === "127.0.0.1" && localStorage.getItem("LocalExampleRepository") === "true") {
         loadYAML("./repository/repository.example.yml", function (products) {
           allProducts = products; // Save all products
