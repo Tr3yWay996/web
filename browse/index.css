@@ -34,6 +34,10 @@
   background-image: linear-gradient(to bottom, #21252900, #212529);
 }
 
+.sort-button {
+  height: 40px !important;
+}
+
 [data-bs-theme=light] .bp-fade { background-image: linear-gradient(to bottom, #ffffff00, #ffffff); }
 [data-bs-theme=light] .bp-grid { 
   background-image:
