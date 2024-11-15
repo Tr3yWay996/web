@@ -116,43 +116,45 @@
     class="row bg-dark-subtle rounded-3 border py-2"
     style="border: rgba(255,255,255,0.15) 1px;"
   >
-    <div class="d-flex py-1">
+    <div class="d-flex flex-row py-1">
 
       <!-- Search -->
       <div class="input-group me-2">
-        <span class="input-group-text border-0"><i class="bi bi-search"></i></span>
+        <span class="input-group-text border-0 pe-0"><i class="bi bi-search"></i></span>
         <button 
           id="filterDropdown"
-          class="btn btn-secondary bg-dark border-0 dropdown-toggle"
+          class="btn btn-secondary bg-body-tertiary border-0 dropdown-toggle"
           type="button"
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
           <span id="filterTypeLabel">Products</span>
         </button>
-        <ul class="dropdown-menu" aria-labelledby="filterDropdown">
-          <li><a class="dropdown-item" id="toggleFilterProducts" data-filter="products">Products</a></li>
-          <li><a class="dropdown-item" id="toggleFilterAuthors" data-filter="authors">Authors</a></li>
+        <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 border-0 shadow" aria-labelledby="filterDropdown">
+          <li><a class="dropdown-item rounded-2" id="toggleFilterProducts" data-filter="products">Products</a></li>
+          <li><a class="dropdown-item rounded-2" id="toggleFilterAuthors" data-filter="authors">Authors</a></li>
         </ul>
         <input
           type="text"
           class="form-control bg-dark border-0"
           id="productSearch"
-          placeholder="Search for anything..">
+          placeholder="Search products..">
       </div>
 
       <!-- Filters -->
-      <div class="input-group">
-        <span class="input-group-text border-0">
-          <input class="form-check-input mt-0" type="checkbox" value="" id="filterExtensions">
-        </span>
-        <span class="input-group-text border-0"><label for="filterExtensions">Extensions</label></span>
-      </div>
-      <div class="input-group">
-        <span class="input-group-text border-0">
-          <input class="form-check-input mt-0" type="checkbox" value="" id="filterThemes">
-        </span>
-        <span class="input-group-text border-0"><label for="filterThemes">Themes</label></span>
+      <div class="d-flex flex-row" style="width: auto;">
+        <div class="input-group flex-row me-2" style="flex-wrap: nowrap;">
+          <span class="input-group-text border-0">
+            <input class="form-check-input mt-0" type="checkbox" value="" id="filterExtensions">
+          </span>
+          <span class="input-group-text ps-0 border-0"><label for="filterExtensions">Extensions</label></span>
+        </div>
+        <div class="input-group flex-row" style="flex-wrap: nowrap;">
+          <span class="input-group-text border-0">
+            <input class="form-check-input mt-0" type="checkbox" value="" id="filterThemes">
+          </span>
+          <span class="input-group-text ps-0 border-0"><label for="filterThemes">Themes</label></span>
+        </div>
       </div>
     </div>
   </div>
@@ -275,8 +277,6 @@
     
       function filterProducts() {
         const searchQuery = document.getElementById("productSearch").value.toLowerCase();
-        const clearSearch = document.getElementById("clearSearch");
-        clearSearch.style.display = searchQuery ? "inline" : "none"; // Show "X" button if input is not empty
     
         let filteredItems = [];
     
@@ -317,25 +317,17 @@
       // Update filter type and label
       if (selectedFilter === "products") {
         filterTypeLabel.textContent = "Products";
-        searchInput.placeholder = "Search products...";
+        searchInput.placeholder = "Search products..";
         filterType = "products";
       } else if (selectedFilter === "authors") {
         filterTypeLabel.textContent = "Authors";
-        searchInput.placeholder = "Search authors...";
+        searchInput.placeholder = "Search authors..";
         filterType = "authors";
       }
 
         // Apply filters
         filterProducts();
         });
-      });
-    
-      // Clear search input when "X" is clicked
-      document.getElementById("clearSearch").addEventListener("click", function () {
-        document.getElementById("productSearch").value = "";
-        document.getElementById("productSearch").placeholder = `Search ${filterType}...`; // Reset placeholder
-        displayProducts(allProducts); // Show all products again
-        this.style.display = "none"; // Hide "X" button
       });
     
       // Event listeners for filtering
