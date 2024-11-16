@@ -313,6 +313,18 @@
     icon: BBB.png
     url: https://builtbybit.com/resources/mc-mods-installer-for-blueprint.52665
 
+# MC Logs
+- name: MC Logs
+  author: repgraphics
+  description: Easily send Server Logs to MCLOGS API with a few Clicks.
+  thumbnail: mclogs.png
+  identifier: mclogs
+  category: extensions
+  downloads:
+  - name: BuiltByBit
+    icon: BBB.png
+    url: https://builtbybit.com/resources/mc-logs.54597
+
 # MC Plugins
 - name: MC Plugins
   author: sarthak77
