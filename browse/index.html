@@ -110,55 +110,99 @@
       </div>
     </div>
 
-<!-- Sorting -->
-<div class="container mb-4 position-sticky g-5" style="top: 90px; z-index: 5;">
-  <div
-    class="row bg-dark-subtle rounded-3 border py-2"
-    style="border: rgba(255,255,255,0.15) 1px;"
-  >
-    <div class="d-flex flex-row py-1">
+    <!-- Sorting -->
+    <div class="container mb-4 position-sticky g-5" style="top: 90px; z-index: 5;">
+      <div
+        class="row bg-dark-subtle rounded-3 border py-2"
+        style="border: rgba(255,255,255,0.15) 1px;"
+      >
+        <div class="d-flex flex-row py-1">
 
-      <!-- Search -->
-      <div class="input-group me-sm-2">
-        <span class="input-group-text border-0 pe-0"><i class="bi bi-search"></i></span>
-        <button 
-          id="filterDropdown"
-          class="btn btn-secondary bg-body-tertiary border-0 dropdown-toggle"
-          type="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          <span id="filterTypeLabel">Products</span>
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 border-0 shadow" aria-labelledby="filterDropdown">
-          <li><a class="dropdown-item rounded-2" id="toggleFilterProducts" data-filter="products">Products</a></li>
-          <li><a class="dropdown-item rounded-2" id="toggleFilterAuthors" data-filter="authors">Authors</a></li>
-        </ul>
-        <input
-          type="text"
-          class="form-control bg-dark border-0"
-          id="productSearch"
-          placeholder="Search products..">
-      </div>
+          <!-- Search -->
+          <div class="input-group me-2">
+            <span class="input-group-text border-0 pe-0"><i class="bi bi-search"></i></span>
+            <button 
+              id="filterDropdown"
+              class="btn btn-secondary bg-body-tertiary border-0 dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span id="filterTypeLabel">Products</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 border-0 shadow" aria-labelledby="filterDropdown">
+              <li><a class="dropdown-item rounded-2" id="toggleFilterProducts" data-filter="products">Products</a></li>
+              <li><a class="dropdown-item rounded-2" id="toggleFilterAuthors" data-filter="authors">Authors</a></li>
+            </ul>
+            <input
+              type="text"
+              class="form-control bg-dark border-0"
+              id="productSearch"
+              placeholder="Search products..">
+          </div>
 
-      <!-- Filters -->
-      <div class="d-sm-flex flex-row d-none" style="width: auto;">
-        <div class="input-group flex-row me-2" style="flex-wrap: nowrap;">
-          <span class="input-group-text border-0">
-            <input class="form-check-input mt-0" type="checkbox" value="" id="filterExtensions">
-          </span>
-          <span class="input-group-text ps-0 border-0"><label for="filterExtensions">Extensions</label></span>
-        </div>
-        <div class="input-group flex-row" style="flex-wrap: nowrap;">
-          <span class="input-group-text border-0">
-            <input class="form-check-input mt-0" type="checkbox" value="" id="filterThemes">
-          </span>
-          <span class="input-group-text ps-0 border-0"><label for="filterThemes">Themes</label></span>
+          <!-- Filters -->
+          <div class="d-sm-flex flex-row d-none" style="width: auto;">
+            <div class="input-group flex-row me-2" style="flex-wrap: nowrap;">
+              <span class="input-group-text border-0">
+                <input class="form-check-input mt-0" type="checkbox" value="" id="filterExtensions">
+              </span>
+              <span class="input-group-text ps-0 border-0"><label for="filterExtensions">Extensions</label></span>
+            </div>
+            <div class="input-group flex-row" style="flex-wrap: nowrap;">
+              <span class="input-group-text border-0">
+                <input class="form-check-input mt-0" type="checkbox" value="" id="filterThemes">
+              </span>
+              <span class="input-group-text ps-0 border-0"><label for="filterThemes">Themes</label></span>
+            </div>
+          </div>
+          <div class="d-flex flex-row d-sm-none" style="width: auto;">
+            <div class="input-group flex-row" style="flex-wrap: nowrap;">
+              <button 
+                class="btn btn-secondary bg-body-tertiary border-0"
+                type="button"
+                aria-expanded="false"
+                data-bs-toggle="modal"
+                data-bs-target="#filterModal"
+              >
+                <i class="bi bi-three-dots"></i>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
+
+    <div class="modal fade" id="filterModal" aria-hidden="true" aria-labelledby="filterModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="filterModalToggleLabel"><i class="bi bi-filter"></i> Filters</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div>
+              <p>
+                <b>Extension type</b>
+              </p>
+              <div class="input-group mb-2">
+                <span class="input-group-text border-0">
+                  <input class="form-check-input mt-0" type="checkbox" value="" onclick='document.getElementById("filterExtensions").click()' id="filterModalExtensions">
+                </span>
+                <span class="input-group-text ps-0 border-0"><label for="filterModalExtensions">Extensions</label></span>
+              </div>
+              <div class="input-group">
+                <span class="input-group-text border-0">
+                  <input class="form-check-input mt-0" type="checkbox" value="" onclick='document.getElementById("filterThemes").click()' id="filterModalThemes">
+                </span>
+                <span class="input-group-text ps-0 border-0"><label for="filterModalThemes">Themes</label></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
 
 
     <!-- Products -->
@@ -364,6 +408,7 @@
       var filterExtensions = document.getElementById('filterExtensions')
 
       function handleThemeFilter() { 
+        syncFilters()
         var a = document.getElementById("css-filter-themes");
         if (filterThemes.checked) { 
           param('1', 'y') 
@@ -375,6 +420,7 @@
         byteconfused()
       }
       function handleExtensionFilter() { 
+        syncFilters()
         var a = document.getElementById("css-filter-extensions");
         if (filterExtensions.checked) { 
           param('2', 'y')
@@ -397,6 +443,19 @@
         else byte.style.display = "none"
       }
 
+      function syncFilters() {
+        if(filterExtensions.checked) {
+          document.getElementById('filterModalExtensions').checked = true
+        } else {
+          document.getElementById('filterModalExtensions').checked = false
+        }
+        if(filterThemes.checked) {
+          document.getElementById('filterModalThemes').checked = true
+        } else {
+          document.getElementById('filterModalThemes').checked = false
+        }
+      }
+
       filterThemes.addEventListener('change', handleThemeFilter)
       filterExtensions.addEventListener('change', handleExtensionFilter)
 
@@ -415,6 +474,7 @@
         else if(url.searchParams.get('2') == 'n') { b.innerHTML = ".filter-extensions { display: none }"; d.checked = false }
         else { b.innerHTML = ""; d.checked = true }
         byteconfused()
+        syncFilters()
       }
       filter()
       byteconfused()
