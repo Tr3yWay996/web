@@ -40,6 +40,21 @@
     icon: BBB.png
     url: https://builtbybit.com/resources/automation.37282/
 
+# Auto Allocation Manager
+- name: Auto Allocation Manager
+  author: '0x7d8'
+  description: Automatically allocate specific port ranges/extra allocations.
+  thumbnail: autoallocationmanager.jpg
+  identifier: autoallocationmanager
+  category: extensions
+  downloads:
+  - name: sourceXchange
+    icon: SXC.png
+    url: https://www.sourcexchange.net/products/auto-allocation-manager
+  - name: BuiltByBit
+    icon: BBB.png
+    url: https://builtbybit.com/resources/auto-allocation-manager.54674/
+
 # Blue Announcements
 - name: Blue Announcements
   author: Spoopy
@@ -300,15 +315,15 @@
 
 # MC Logs
 - name: MC Logs
-author: repgraphics
-description: Easily send Server Logs to MCLOGS API with a few Clicks.
-thumbnail: mclogs.png
-identifier: mclogs
-category: extensions
-downloads:
-- name: BuiltByBit
-  icon: BBB.png
-  url: https://builtbybit.com/resources/mc-logs.54597
+  author: repgraphics
+  description: Easily send Server Logs to MCLOGS API with a few Clicks.
+  thumbnail: mclogs.png
+  identifier: mclogs
+  category: extensions
+  downloads:
+  - name: BuiltByBit
+    icon: BBB.png
+    url: https://builtbybit.com/resources/mc-logs.54597
 
 # MC Mods
 - name: MC Mods
