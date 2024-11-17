@@ -321,6 +321,9 @@
   identifier: mclogs
   category: extensions
   downloads:
+  - name: sourceXchange
+    icon: SXC.png
+    url: https://www.sourcexchange.net/products/mc-logs
   - name: BuiltByBit
     icon: BBB.png
     url: https://builtbybit.com/resources/mc-logs.54597
