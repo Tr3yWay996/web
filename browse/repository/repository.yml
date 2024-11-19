@@ -70,6 +70,18 @@
     icon: GH.png
     url: https://github.com/Spoopy2023/Blue-Announcements
 
+# Blue Tables
+- name: Blue Tables
+  author: Tyler
+  description: Turns your server row into a visually appealing table.
+  thumbnail: bluetables.jpg
+  identifier: bluetables
+  category: extensions
+  downloads:
+  - name: sourceXchange
+    icon: SXC.png
+    url: https://www.sourcexchange.net/products/blue-tables
+
 # Catppuccindactyl
 - name: Catppuccindactyl
   author: Why_Authentic
