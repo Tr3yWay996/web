@@ -97,7 +97,7 @@
 # Cats
 - name: Cats
   author: prplwtf
-  description: The fluffiest Blueprint extension out there.
+  description: The fluffiest extension out there.
   thumbnail: cats.jpg
   identifier: cats
   category: extensions
@@ -253,7 +253,7 @@
 # Euphoria
 - name: Euphoria
   author: repgraphics
-  description: Pterodactyl theme built for the Blueprint framework!
+  description: Feature-packed and highly-customizable theme.
   thumbnail: euphoriatheme.jpg
   identifier: euphoriatheme
   category: themes
