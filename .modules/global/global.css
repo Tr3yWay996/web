@@ -98,3 +98,12 @@ i.bi:not(button#bd-theme i.bi) {
   filter: drop-shadow(0 0 5px #fdd835);
   transition: color 0.5s ease, filter 1s ease;
 }
+
+.nav-svg img {
+  width: 16px;
+  height: 20px;
+  padding-top: 5px;
+}
+[data-bs-theme=light] .nav-svg img {
+  filter: invert()
+}
