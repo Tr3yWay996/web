@@ -131,7 +131,7 @@
 - name: Cookies
   author: prplwtf
   description: Customizable cookie disclaimer for Pterodactyl.
-  thumbnail: cookies.webp
+  thumbnail: cookies.jpg
   identifier: cookies
   category: extensions
   downloads:
