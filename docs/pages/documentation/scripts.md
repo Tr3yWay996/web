@@ -1,4 +1,5 @@
 # Scripts
+
 <h4 class="fw-light">Advanced feature allowing extensions to go beyond Blueprint's extension API.</h4><br/>
 
 <div class="alert mt-2 rounded-4 border" role="alert">
@@ -11,9 +12,11 @@
 </div><br/>
 
 ### **What are scripts?**
+
 Extension scripts are advanced collections of commands allowing extensions to extend parts of Pterodactyl that are out of Blueprint's scope. Due to the nature of the complexity related to these scripts, they are advised against.
 
 Scripts can **prevent extensions from being listed** on the [extension browse list](../browse) if they do not meet **all of the following requirements**:
+
 - Scripts <u>should never</u> cause conflicts with other extensions respecting these guidelines.
   - This means extensions are not allowed to overwrite files outside of the scope of their own extensions and must use search-and-replace instead.
 - Scripts must stay <u>within the Pterodactyl instance</u> and not edit anything outside of the panel's webserver folder without user consent.
@@ -27,31 +30,38 @@ Scripts can **prevent extensions from being listed** on the [extension browse li
 <br/>
 
 ### **Environment variables**
+
 These variables can be used anywhere in your scripts and are automatically assigned the correct value by Blueprint.
 
 ##### Baseline
 
 <!-- $ENGINE -->
+
 `$ENGINE`\
 Codename of the engine currently handling the extension.
 
 <!-- $EXTENSION_IDENTIFIER -->
+
 `$EXTENSION_IDENTIFIER`\
 Provides the extension's identifier.
 
 <!-- $EXTENSION_VERSION -->
+
 `$EXTENSION_VERSION`\
 Provides the extension's version.
 
 <!-- $EXTENSION_TARGET -->
+
 `$EXTENSION_TARGET`\
 Provides the extension's defined target version, not to be confused with the version the extension is currently being installed on.
 
 <!-- $PTERODACTYL_DIRECTORY -->
+
 `$PTERODACTYL_DIRECTORY`\
 Path towards the Pterodactyl webserver folder, commonly `/var/www/pterodactyl`.
 
 <!-- $BLUEPRINT_VERSION -->
+
 `$BLUEPRINT_VERSION`\
 Blueprint version currently installed on the target panel.
 
@@ -60,11 +70,13 @@ Blueprint version currently installed on the target panel.
 ##### Limited availability
 
 <!-- $BLUEPRINT_DEVELOPER -->
+
 `$BLUEPRINT_DEVELOPER`
 <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">install.sh <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">update.sh <i class="bi bi-check"></i></span> <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill opacity-50">remove.sh <i class="bi bi-x"></i></span> <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill opacity-50">export.sh <i class="bi bi-x"></i></span>\
 Either `true` or `false` depending on if the extension was installed through developer commands.
 
 <!-- $BLUEPRINT_TMP -->
+
 `$BLUEPRINT_TMP` <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill opacity-50">install.sh <i class="bi bi-x"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">update.sh <i class="bi bi-check"></i></span> <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill opacity-50">remove.sh <i class="bi bi-x"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">export.sh <i class="bi bi-check"></i></span>\
 Path towards the folder where Blueprint is either building the extension package or preparing the extension for installation depending on script type.
 
@@ -73,5 +85,6 @@ Path towards the folder where Blueprint is either building the extension package
 ##### Deprecated
 
 <!-- $BLUEPRINT_EXPORT_DIRECTORY -->
-~~`$BLUEPRINT_EXPORT_DIRECTORY`~~ <tag type="deprecated" content="beta-2024-11"/></tag>\
+
+~~`$BLUEPRINT_EXPORT_DIRECTORY`~~ <tag type="deprecated" content="beta-2024-12"/></tag>\
 Path towards the folder where Blueprint is building the extension package.

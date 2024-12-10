@@ -1,7 +1,9 @@
 # conf.yml
+
 <h4 class="fw-light">Change extension configuration options, add extension flags and tell Blueprint what to do with your extension.</h4><br/>
 
 ### **What is conf.yml?**
+
 When installing extensions, Blueprint needs to know a lot of things about an extension before it can start doing file operations. For this reason, every single extension is required to have a "conf.yml" file to inform Blueprint about what it should do with your extension.
 
 <br/>
@@ -9,6 +11,7 @@ When installing extensions, Blueprint needs to know a lot of things about an ext
 ### **Options**
 
 ##### info
+
 `name` <tag type="required"/></tag>\
 The display name of your extension.
 
@@ -39,6 +42,7 @@ URL to your extension's website. Will be linked on the extension's admin page.
 <br/>
 
 ##### admin
+
 `view` <tag type="required"/></tag>\
 Path to your admin view.
 
@@ -54,6 +58,7 @@ Path to blade code that you want to add to the Pterodactyl admin dashboard layou
 <br/>
 
 ##### dashboard
+
 `css`\
 Add custom css to the Pterodactyl client panel, provide the path to your `.css` file here.
 
@@ -66,6 +71,7 @@ Directory with React components which can be used to integrate your extension di
 <br/>
 
 ##### data
+
 `directory`\
 Path to your data directory. These are private extension-specific files which you can store anything in. Even without this option enabled, private directories still get utilized by Blueprint.
 
@@ -78,10 +84,11 @@ Path to your console directory which allows for creating Artisan commands and sc
 <br/>
 
 ##### requests
+
 `views`\
 Path to your views directory. This directory is used for creating (partial) views made up of sections which you can import to your admin view and admin/dashboard wrapper. These views can be called from `blueprint.extensions.<identifier>.<view>`.
 
-`app` <tag type="pending" content="beta-2024-11"/></tag>\
+`app` <tag type="pending" content="beta-2024-12"/></tag>\
 Directory pointing towards a folder with classes you can use with your application. These exist in the `Pterodactyl\BlueprintFramework\Extensions\<identifier>` namespace. Referred to as `controllers` in older versions of Blueprint.
 
 `routers`\
@@ -90,5 +97,6 @@ Create your own route definitions. Suboptions are `application`, `client` and `w
 <br/>
 
 ##### database
+
 `migrations`\
 Path to your database migrations folder.

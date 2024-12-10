@@ -1,12 +1,15 @@
 # Components.yml
+
 <h4 class="fw-light">Define which React components should be added on given views.</h4><br/>
 
 ### **What is Components.yml?**
+
 While you can add React components to your extension without a `Components.yml` file, they won't be applied anywhere. `Components.yml` allows you to tell Blueprint where to apply a specific component, one or multiple targets.
 
 <br/>
 
 ### **Paths**
+
 Paths towards component files are **different** from how you would normally define file paths for extension configuration files.
 
 Component file paths cannot escape the components directory **and** cannot end with `.tsx`, `.ts`, `.jsx` or `.js`.
@@ -28,11 +31,12 @@ Component file paths cannot escape the components directory **and** cannot end w
 <br/>
 
 ### **Configuration**
+
 The YAML file shown below contains all configuration options that are currently supported by Blueprint's components feature.
 
 ```yaml
 Navigation:
-  NavigationBar: 
+  NavigationBar:
     BeforeNavigation: ""
     AdditionalItems: ""
     AfterNavigation: ""
@@ -46,8 +50,8 @@ Navigation:
 
 Dashboard:
   Global:
-    BeforeSection: "" # beta-2024-11 and later
-    AfterSection: "" # beta-2024-11 and later
+    BeforeSection: "" # beta-2024-12 and later
+    AfterSection: "" # beta-2024-12 and later
   Serverlist:
     BeforeContent: ""
     AfterContent: ""

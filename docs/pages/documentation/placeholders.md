@@ -1,17 +1,20 @@
 # Placeholders
+
 <h4 class="fw-light">Strings that are automatically replaced with specific values upon extension installation.</h4><br/>
 
 ### **What are placeholders?**
+
 Placeholders allow extensions to easily get information from each and every file in their extension, preventing the need to ask users for the Pterodactyl installation path for example.
 
 <br/>
 
-### **Placeholders `v2`** 
+### **Placeholders `v2`**
+
 These are the available placeholders you can use on `beta` and later. <b>Unless you set your target version to a beta release</b>, these placeholders will <u>not</u> be available.
 <br/><br/>
 
-
 ##### Configuration values
+
 This placeholder group counts for most extension-config-related values.
 
 <!-- Identifier -->
@@ -117,6 +120,7 @@ This placeholder group counts for most extension-config-related values.
 <br/>
 
 ##### Miscellaneous
+
 Uncategorized and advanced placeholders that do various things.
 
 <!-- Random -->
@@ -210,6 +214,7 @@ Uncategorized and advanced placeholders that do various things.
 <br/>
 
 ##### Directories
+
 Placeholders that point towards certain directories or file paths.
 
 <!-- Root -->
@@ -287,6 +292,7 @@ Placeholders that point towards certain directories or file paths.
 <br/>
 
 ##### Advanced
+
 Technical details about the framework handling the extension.
 
 <!-- Engine -->
@@ -296,7 +302,7 @@ Technical details about the framework handling the extension.
       <b><code><icon name="hash"></icon>
         <!-- Placeholder string --> {engine}
         <!-- Example value -->
-      </code></b><span class="text-secondary">solstice</span> <tag type="pending" content="beta-2024-11"/></tag><br/>
+      </code></b><span class="text-secondary">solstice</span> <tag type="pending" content="beta-2024-12"/></tag><br/>
       Provides information about the engine handling the extension. Different engines using the extension standard that aren't affiliated with Blueprint are expected to replace this placeholder with their own codenames.
     </div>
     <div class="col-lg-3 col-md-4 col-xs-12">
