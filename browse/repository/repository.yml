@@ -6,12 +6,12 @@
   identifier: admin98
   category: themes
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/admin98
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/admin98.51358
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/admin98
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/admin98.51358
 
 # Announcements
 - name: Announcements
@@ -21,12 +21,12 @@
   identifier: announcements
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/announcements
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/announcements-for-pterodactyl.32546
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/announcements
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/announcements-for-pterodactyl.32546
 
 # Automation
 - name: Automation
@@ -36,24 +36,24 @@
   identifier: sysautomation
   category: extensions
   downloads:
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/automation.37282/
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/automation.37282/
 
 # Auto Allocation Manager
 - name: Auto Allocation Manager
-  author: '0x7d8'
+  author: "0x7d8"
   description: Automatically allocate specific port ranges/extra allocations.
   thumbnail: autoallocationmanager.jpg
   identifier: autoallocationmanager
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/auto-allocation-manager
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/auto-allocation-manager.54674/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/auto-allocation-manager
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/auto-allocation-manager.54674/
 
 # Blue Announcements
 - name: Blue Announcements
@@ -63,12 +63,12 @@
   identifier: blueannouncements
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/blue-announcements-for-blueprint
-  - name: GitHub
-    icon: GH.png
-    url: https://github.com/Spoopy2023/Blue-Announcements
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/blue-announcements-for-blueprint
+    - name: GitHub
+      icon: GH.png
+      url: https://github.com/Spoopy2023/Blue-Announcements
 
 # Blue Tables
 - name: Blue Tables
@@ -78,9 +78,9 @@
   identifier: bluetables
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/blue-tables
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/blue-tables
 
 # Catppuccindactyl
 - name: Catppuccindactyl
@@ -90,9 +90,9 @@
   identifier: catppuccindactyl
   category: themes
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/catppuccindactyl
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/catppuccindactyl
 
 # Cats
 - name: Cats
@@ -102,12 +102,12 @@
   identifier: cats
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/cats
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/cats.40300/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/cats
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/cats.40300/
 
 # Cherrydactyl
 - name: Cherrydactyl
@@ -117,12 +117,12 @@
   identifier: cherrydactyl
   category: themes
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/cherrydactyl
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/cherrydactyl.40523/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/cherrydactyl
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/cherrydactyl.40523/
 
 # Console Logs
 - name: Console Logs
@@ -132,12 +132,12 @@
   identifier: consolelogs
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/console-logs
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/console-logs.54296/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/console-logs
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/console-logs.54296/
 
 # Cookies
 - name: Cookies
@@ -147,12 +147,12 @@
   identifier: cookies
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/cookies
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/cookies.38647/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/cookies
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/cookies.38647/
 
 # Custom Server Sort
 - name: Custom Server Sort
@@ -162,27 +162,27 @@
   identifier: customserversort
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/custom-server-sort
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/custom-server-sort.53525/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/custom-server-sort
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/custom-server-sort.53525/
 
 # Database Import & Export
 - name: Database Import & Export
-  author: '0x7d8'
+  author: "0x7d8"
   description: Adds the ability to export and import databases from your Pterodactyl panel.
   thumbnail: databaseimportexport.jpg
   identifier: databaseimportexport
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/database-import-export
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/database-import-export.45935/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/database-import-export
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/database-import-export.45935/
 
 # Darkenate
 - name: Darkenate
@@ -192,9 +192,9 @@
   identifier: darkenate
   category: themes
   downloads:
-  - name: GitHub
-    icon: GH.png
-    url: https://github.com/JasonHorkles/darkenate
+    - name: GitHub
+      icon: GH.png
+      url: https://github.com/JasonHorkles/darkenate
 
 # dbEdit
 - name: dbEdit
@@ -204,9 +204,9 @@
   identifier: dbedit
   category: extensions
   downloads:
-  - name: GitHub
-    icon: GH.png
-    url: https://github.com/prplwtf/blueprint-dbedit
+    - name: GitHub
+      icon: GH.png
+      url: https://github.com/prplwtf/blueprint-dbedit
 
 # Dogs
 - name: Dogs
@@ -216,39 +216,39 @@
   identifier: dogs
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/dogs
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/dogs
 
 # Egg changer
 - name: Egg changer
-  author: '0x7d8'
+  author: "0x7d8"
   description: Switch between eggs easily.
   thumbnail: eggchanger.jpg
   identifier: eggchanger
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/egg-changer
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/egg-changer.53049/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/egg-changer
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/egg-changer.53049/
 
 # Environment Variables
 - name: Environment Variables
-  author: '0x7d8'
+  author: "0x7d8"
   description: Change environment variables on the fly!
   thumbnail: environmentvariables.jpg
   identifier: environmentvariables
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/environment-variables
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/environment-variables.45937/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/environment-variables
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/environment-variables.45937/
 
 # Euphoria
 - name: Euphoria
@@ -258,12 +258,12 @@
   identifier: euphoriatheme
   category: themes
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/euphoriatheme
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/euphoria.52856/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/euphoriatheme
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/euphoria.52856/
 
 # FiveM Utils
 - name: FiveM Utils
@@ -273,12 +273,12 @@
   identifier: fivemutils
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/fivem-utils
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/fivem-utils.37958/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/fivem-utils
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/fivem-utils.37958/
 
 # Foxes
 - name: Foxes
@@ -288,12 +288,12 @@
   identifier: foxes
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/foxes
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/foxes.38143/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/foxes
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/foxes.38143/
 
 # Laravel Logs
 - name: Laravel Logs
@@ -303,12 +303,12 @@
   identifier: laravellogs
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/laravel-logs
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/laravel-logs.53343/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/laravel-logs
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/laravel-logs.53343/
 
 # Loader
 - name: Loader
@@ -318,12 +318,12 @@
   identifier: loader
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/loader
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/loader.38846/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/loader
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/loader.38846/
 
 # MC Logs
 - name: MC Logs
@@ -333,12 +333,12 @@
   identifier: mclogs
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/mc-logs
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/mc-logs.54597
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/mc-logs
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/mc-logs.54597
 
 # MC Mods
 - name: MC Mods
@@ -348,12 +348,12 @@
   identifier: mcmods
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/mcmods-installer-for-blueprint
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/mc-mods-installer-for-blueprint.52665
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/mcmods-installer-for-blueprint
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/mc-mods-installer-for-blueprint.52665
 
 # MC Plugins
 - name: MC Plugins
@@ -363,27 +363,42 @@
   identifier: mcplugins
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/mcplugins-installer-for-blueprint
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/mc-plugins-installer-for-blueprint.52526
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/mcplugins-installer-for-blueprint
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/mc-plugins-installer-for-blueprint.52526
 
 # Minecraft Icon Changer
 - name: Minecraft Icon Changer
-  author: '0x7d8'
+  author: "0x7d8"
   description: Allow users to easily change the icon of their Minecraft servers.
   thumbnail: minecrafticonchanger.jpg
   identifier: minecrafticonchanger
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/icon-changer
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/minecraft-icon-changer.53390
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/icon-changer
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/minecraft-icon-changer.53390
+
+# Minecraft Mod Manager
+- name: Minecraft Mod Manager
+  author: ric-rac
+  description: Install, update and delete Minecraft mods.
+  thumbnail: minecraftmodmanager.png
+  identifier: minecraftmodmanager
+  category: extensions
+  downloads:
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/minecraft-mod-manager-for-pterodactyl
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/minecraft-mod-manager.52869/
 
 # Modpack Installer
 - name: Modpack Installer
@@ -393,12 +408,12 @@
   identifier: modpackinstaller
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/minecraft-modpack-installer-for-blueprint
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/modpack-installer-for-blueprint.40083
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/minecraft-modpack-installer-for-blueprint
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/modpack-installer-for-blueprint.40083
 
 # Nebula
 - name: Nebula
@@ -408,12 +423,12 @@
   identifier: nebula
   category: themes
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/nebula
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/nebula-for-blueprint.32442/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/nebula
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/nebula-for-blueprint.32442/
 
 # Night Admin
 - name: Night Admin
@@ -423,12 +438,12 @@
   identifier: nightadmin
   category: themes
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/blueprint-night-theme
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/blueprint-night-admin-theme.51594
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/blueprint-night-theme
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/blueprint-night-admin-theme.51594
 
 # NPM Installer
 - name: NPM Installer
@@ -438,12 +453,12 @@
   identifier: npminstaller
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/npm-installer-for-blueprint
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/npm-installer-for-blueprint.47760
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/npm-installer-for-blueprint
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/npm-installer-for-blueprint.47760
 
 # Player Listing
 - name: Player Listing
@@ -453,27 +468,27 @@
   identifier: playerlisting
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/playerlisting
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/player-listing.53200/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/playerlisting
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/player-listing.53200/
 
 # Player Manager
 - name: Player Manager
-  author: '0x7d8'
+  author: "0x7d8"
   description: The most advanced player manager yet.
   thumbnail: minecraftplayermanager.jpg
   identifier: minecraftplayermanager
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://sourcexchange.net/products/player-manager
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/47042
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://sourcexchange.net/products/player-manager
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/47042
 
 # Plugin Manager
 - name: Plugin Manager
@@ -483,27 +498,27 @@
   identifier: minecraftpluginmanager
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/minecraft-plugin-manager-for-blueprint
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/minecraft-plugin-manager-for-blueprint.41883/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/minecraft-plugin-manager-for-blueprint
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/minecraft-plugin-manager-for-blueprint.41883/
 
 # Pull Files
 - name: Pull Files
-  author: '0x7d8'
+  author: "0x7d8"
   description: Upload files from remote URLs.
   thumbnail: pullfiles.jpg
   identifier: pullfiles
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/pull-files
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/pull-files.43381/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/pull-files
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/pull-files.43381/
 
 # Recolor
 - name: Recolor
@@ -513,15 +528,15 @@
   identifier: recolor
   category: themes
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/recolor
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/recolor.33818/
-  - name: GitHub
-    icon: GH.png
-    url: https://github.com/sp11rum/recolor
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/recolor
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/recolor.33818/
+    - name: GitHub
+      icon: GH.png
+      url: https://github.com/sp11rum/recolor
 
 # Redirect
 - name: Redirect
@@ -531,15 +546,15 @@
   identifier: redirect
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/redirect
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/redirect.38191
-  - name: GitHub
-    icon: GH.png
-    url: https://github.com/prplwtf/blueprint-redirect
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/redirect
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/redirect.38191
+    - name: GitHub
+      icon: GH.png
+      url: https://github.com/prplwtf/blueprint-redirect
 
 # Refresh
 - name: Refresh
@@ -549,12 +564,12 @@
   identifier: refreshtheme
   category: themes
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/refresh
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/refresh.53993/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/refresh
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/refresh.53993/
 
 # Reverse Proxy
 - name: Reverse Proxy
@@ -564,12 +579,12 @@
   identifier: reverseproxy
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/reverse-proxy-for-blueprint
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/reverse-proxy-for-blueprint.47759
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/reverse-proxy-for-blueprint
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/reverse-proxy-for-blueprint.47759
 
 # Rust Plugin Manager
 - name: Rust Plugin Manager
@@ -579,9 +594,9 @@
   identifier: rust_pluginmanager
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/rustplugin_manager
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/rustplugin_manager
 
 # ServerID
 - name: ServerID
@@ -591,9 +606,9 @@
   identifier: serverid
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/serverid-in-blueprint
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/serverid-in-blueprint
 
 # Server Backgrounds
 - name: Server Backgrounds
@@ -603,42 +618,42 @@
   identifier: serverbackgrounds
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/server-backgrounds
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/server-backgrounds.53917/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/server-backgrounds
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/server-backgrounds.53917/
 
 # Server Importer
 - name: Server Importer
-  author: '0x7d8'
+  author: "0x7d8"
   description: Import servers using SFTP/FTP credentials.
   thumbnail: serverimporter.jpg
   identifier: serverimporter
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/server-importer
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/server-importer.50490
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/server-importer
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/server-importer.50490
 
 # Server Splitter
 - name: Server Splitter
-  author: '0x7d8'
+  author: "0x7d8"
   description: Split server resources into multiple other servers.
   thumbnail: serversplitter.jpg
   identifier: serversplitter
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/server-splitter
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/server-splitter.47533
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/server-splitter
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/server-splitter.47533
 
 # Show Node IDs
 - name: Show Node IDs
@@ -648,9 +663,9 @@
   identifier: shownodeids
   category: extensions
   downloads:
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/show-node-ids.35196/
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/show-node-ids.35196/
 
 # Simple Favicons
 - name: Simple Favicons
@@ -660,9 +675,9 @@
   identifier: simplefavicons
   category: extensions
   downloads:
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/simple-favicons.36020/
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/simple-favicons.36020/
 
 # Simple Footers
 - name: Simple Footers
@@ -672,12 +687,12 @@
   identifier: simplefooters
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/simple-footers
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/simple-footers.35488/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/simple-footers
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/simple-footers.35488/
 
 # Simple Properties
 - name: Simple Properties
@@ -687,9 +702,9 @@
   identifier: simpleproperties
   category: extensions
   downloads:
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/simple-properties.45824/
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/simple-properties.45824/
 
 # Simple Versions
 - name: Simple Versions
@@ -699,9 +714,9 @@
   identifier: simpleversions
   category: extensions
   downloads:
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/simple-versions.40914/
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/simple-versions.40914/
 
 # Slate
 - name: Slate
@@ -711,12 +726,12 @@
   identifier: slate
   category: themes
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/slate
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/slate-for-pterodactyl.36101/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/slate
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/slate-for-pterodactyl.36101/
 
 # Snowflakes
 - name: Snowflakes
@@ -726,15 +741,15 @@
   identifier: showflakes
   category: themes
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/snowflakes
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/snowflakes.36223
-  - name: GitHub
-    icon: GH.png
-    url: https://github.com/prplwtf/blueprint-snowflakes
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/snowflakes
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/snowflakes.36223
+    - name: GitHub
+      icon: GH.png
+      url: https://github.com/prplwtf/blueprint-snowflakes
 
 # Social Login
 - name: Social Login
@@ -744,42 +759,42 @@
   identifier: sociallogin
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/social-login
-  - name: BuiltByBit
-    icon: BBB.png
-    url: builtbybit.com/resources/social-login-for-blueprint.53010/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/social-login
+    - name: BuiltByBit
+      icon: BBB.png
+      url: builtbybit.com/resources/social-login-for-blueprint.53010/
 
 # SSH Key Importer
 - name: SSH Key Importer
-  author: '0x7d8'
+  author: "0x7d8"
   description: Import SSH keys from GitHub, GitLab and Launchpad.
   thumbnail: sshkeyimporter.jpg
   identifier: sshkeyimporter
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/ssh-key-importer
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/ssh-key-importer.45936/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/ssh-key-importer
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/ssh-key-importer.45936/
 
 # Statistics
 - name: Statistics
   author: NaysKutzu
-  description: Stats about your nodes and servers. 
+  description: Stats about your nodes and servers.
   thumbnail: statistics.jpg
   identifier: statistics
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/pterodactyl-statistics-blueprint
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/54187/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/pterodactyl-statistics-blueprint
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/54187/
 
 # Subdomains
 - name: Subdomain manager
@@ -789,27 +804,27 @@
   identifier: subdomains
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/subdomain-manager-for-blueprint
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/subdomain-manager-for-pterodactyl.42401/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/subdomain-manager-for-blueprint
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/subdomain-manager-for-pterodactyl.42401/
 
 # Template Installer
 - name: Template Installer
-  author: '0x7d8'
+  author: "0x7d8"
   description: Install templates with a click!
   thumbnail: templateinstaller.webp
   identifier: templateinstaller
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/template-installer
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/template-installer.53968/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/template-installer
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/template-installer.53968/
 
 # TXAdmin Integration
 - name: TXAdmin Integration
@@ -819,24 +834,24 @@
   identifier: txadminintegration
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/txadmin-integration
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/txadmin-integration
 
 # Version Changer
 - name: Version Changer
-  author: '0x7d8'
+  author: "0x7d8"
   description: Switch Minecraft versions in an instant!
   thumbnail: versionchanger.jpg
   identifier: versionchanger
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/version-changer
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/version-changer.46435
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/version-changer
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/version-changer.46435
 
 # Votifier Tester
 - name: Votifier Tester
@@ -846,12 +861,12 @@
   identifier: votifiertester
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/votifier-tester-for-pterodactyl
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/votifier-tester-for-pterodactyl.47573/
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/votifier-tester-for-pterodactyl
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/votifier-tester-for-pterodactyl.47573/
 
 # WidgetBot
 - name: WidgetBot
@@ -861,9 +876,9 @@
   identifier: widgetbot
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/widgetbot-for-blueprint
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/widgetbot-for-blueprint
 
 # World Manager
 - name: World Manager
@@ -873,9 +888,9 @@
   identifier: minecraftworldmanager
   category: extensions
   downloads:
-  - name: sourceXchange
-    icon: SXC.png
-    url: https://www.sourcexchange.net/products/minecraft-world-manager-for-blueprint
-  - name: BuiltByBit
-    icon: BBB.png
-    url: https://builtbybit.com/resources/minecraft-world-manager-for-blueprint.40088
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/minecraft-world-manager-for-blueprint
+    - name: BuiltByBit
+      icon: BBB.png
+      url: https://builtbybit.com/resources/minecraft-world-manager-for-blueprint.40088
