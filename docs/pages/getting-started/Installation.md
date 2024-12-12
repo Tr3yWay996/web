@@ -34,8 +34,7 @@ apt-get install -y nodejs</code></pre>
       <pre><code class="language-bash">npm i -g yarn</code></pre>
       <p>Navigate to your Pterodactyl (usually <code>/var/www/pterodactyl</code>) and run the following command to initialize dependencies:</p>
       <pre><code class="language-bash">cd /path/to/pterodactyl # Replace with actual path
-yarn
-yarn add cross-env</code></pre>
+yarn</code></pre>
     </div>
     <!-- Additional dependencies -->
     <div class="col col-12">
