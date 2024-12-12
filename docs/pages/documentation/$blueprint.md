@@ -28,6 +28,15 @@ Set a database record.
 `dbForget(table, record)`\
 Delete/forget a database record.
 
+`dbGetMany(table, string_array: optional)` <tag type="pending" content="beta-2024-12"/></tag>\
+Fetches multiple records from the database in an associative array.
+
+`dbSetMany(table, associative_array)` <tag type="pending" content="beta-2024-12"/></tag>\
+Sets multiple records in the database at once.
+
+`dbForgetMany(table, array)` <tag type="pending" content="beta-2024-12"/></tag>\
+Deletes/forgets multiple records from the database.
+
 <br/>
 
 ##### Notifications <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Admin <i class="bi bi-check"></i></span> <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill opacity-50">Client <i class="bi bi-x"></i></span> <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill opacity-50">Console <i class="bi bi-x"></i></span>
