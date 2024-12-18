@@ -894,3 +894,15 @@
     - name: BuiltByBit
       icon: BBB.png
       url: https://builtbybit.com/resources/minecraft-world-manager-for-blueprint.40088
+
+# UltraDark Admin
+- name: UltraDark Admin
+  author: ZelearFox
+  description: Ultra dark theme for your admin panel!
+  thumbnail: ultradarkadmin.jpg
+  identifier: ultradarkadmin
+  category: themes
+  downloads:
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/ultradarkadmin
