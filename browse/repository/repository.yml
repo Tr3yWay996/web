@@ -900,7 +900,7 @@
   author: ZelearFox
   description: Ultra dark theme for your admin panel!
   thumbnail: ultradarkadmin.jpg
-  identifier: theme
+  identifier: ultradarkadmin
   category: themes
   downloads:
     - name: sourceXchange
