@@ -421,7 +421,7 @@
   description: Unique admin theme that combines style and utility.
   thumbnail: mythicalui.png
   identifier: mythicalui
-  category: extensions
+  category: themes
   downloads:
     - name: sourceXchange
       icon: SXC.png
