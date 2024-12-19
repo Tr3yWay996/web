@@ -415,6 +415,18 @@
       icon: BBB.png
       url: https://builtbybit.com/resources/modpack-installer-for-blueprint.40083
 
+# MythicalUI
+- name: MythicalUI
+  author: NaysKutzu
+  description: Unique admin theme that combines style and utility.
+  thumbnail: mythicalui.png
+  identifier: mythicalui
+  category: themes
+  downloads:
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/mythicalui-pterodactyl-theme
+
 # Nebula
 - name: Nebula
   author: prplwtf
@@ -781,21 +793,6 @@
       icon: BBB.png
       url: https://builtbybit.com/resources/ssh-key-importer.45936/
 
-# Statistics
-- name: Statistics
-  author: NaysKutzu
-  description: Stats about your nodes and servers.
-  thumbnail: statistics.jpg
-  identifier: statistics
-  category: extensions
-  downloads:
-    - name: sourceXchange
-      icon: SXC.png
-      url: https://www.sourcexchange.net/products/pterodactyl-statistics-blueprint
-    - name: BuiltByBit
-      icon: BBB.png
-      url: https://builtbybit.com/resources/54187/
-
 # Subdomains
 - name: Subdomain manager
   author: Corwin
@@ -837,6 +834,18 @@
     - name: sourceXchange
       icon: SXC.png
       url: https://www.sourcexchange.net/products/txadmin-integration
+
+# UltraDark Admin
+- name: UltraDark Admin
+  author: ZelearFox
+  description: Ultra dark theme for your admin panel!
+  thumbnail: ultradarkadmin.jpg
+  identifier: ultradarkadmin
+  category: themes
+  downloads:
+    - name: sourceXchange
+      icon: SXC.png
+      url: https://www.sourcexchange.net/products/ultradarkadmin
 
 # Version Changer
 - name: Version Changer
