@@ -1,138 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="darkreader-lock" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blueprint Extensions</title>
-    <link href="../.modules/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../.modules/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-    <link href="../.modules/global/global.css" rel="stylesheet" />
-    <link href="./index.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link href="../.modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../.modules/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../.modules/global/global.css" rel="stylesheet">
+    <link href="./index.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
 
     <!-- Social Embeds -->
-    <meta property="theme-color" content="#4642f5" />
-    <meta property="og:title" content="blueprint.zip" />
-    <meta property="og:description" content="Powerful, fast and developer-friendly extension framework for Pterodactyl. Utilize extension APIs, inject HTML, modify stylesheets, package extensions and so much more." />
-    <meta property="og:url" content="https://blueprint.zip" />
-    <meta property="og:image" content="/.assets/brand/og.jpg" />
-    <meta property="og:type" content="website" />
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://blueprint.zip" />
-    <meta property="twitter:title" content="blueprint.zip" />
-    <meta property="twitter:description" content="Powerful, fast and developer-friendly extension framework for Pterodactyl. Utilize extension APIs, inject HTML, modify stylesheets, package extensions and so much more." />
-    <meta property="twitter:image" content="/.assets/brand/og.jpg" />
+    <meta property="theme-color" content="#4642f5">
+    <meta property="og:title" content="blueprint.zip">
+    <meta property="og:description" content="Powerful, fast and developer-friendly extension framework for Pterodactyl. Utilize extension APIs, inject HTML, modify stylesheets, package extensions and so much more.">
+    <meta property="og:url" content="https://blueprint.zip">
+    <meta property="og:image" content="/.assets/brand/og.jpg">
+    <meta property="og:type" content="website">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://blueprint.zip">
+    <meta property="twitter:title" content="blueprint.zip">
+    <meta property="twitter:description" content="Powerful, fast and developer-friendly extension framework for Pterodactyl. Utilize extension APIs, inject HTML, modify stylesheets, package extensions and so much more.">
+    <meta property="twitter:image" content="/.assets/brand/og.jpg">
   </head>
 
   <body data-bs-theme="dark">
+
     <!-- Desktop Navbar -->
     <div class="p-2 d-lg-inline d-none"></div>
-    <header
-      class="p-3 mb-3 border-bottom fixed-top d-lg-inline d-none blueprint-navbar"
-    >
+    <header class="p-3 mb-3 border-bottom fixed-top d-lg-inline d-none blueprint-navbar">
       <div class="container">
-        <div
-          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
-        >
-          <a
-            href="../"
-            class="d-flex align-items-center mb-2 me-2 mb-lg-0 link-body-emphasis text-decoration-none"
-          >
-            <img
-              src="../.assets/brand/logo.jpg"
-              width="35"
-              height="35"
-              class="rounded-3"
-              alt=""
-            />
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="../" class="d-flex align-items-center mb-2 me-2 mb-lg-0 link-body-emphasis text-decoration-none">
+            <img src="../.assets/brand/logo.jpg" width="35" height="35" class="rounded-3" alt="" />
           </a>
-          <ul
-            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
-          >
-            <li>
-              <a href="../" class="nav-link px-2 link-body-emphasis">Home</a>
-            </li>
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="../" class="nav-link px-2 link-body-emphasis">Home</a></li>
             <li><a href="." class="nav-link px-2 link-secondary">Browse</a></li>
-            <li>
-              <a href="../docs" class="nav-link px-2 link-body-emphasis"
-                >Documentation</a
-              >
-            </li>
+            <li><a href="../docs" class="nav-link px-2 link-body-emphasis">Documentation</a></li>
           </ul>
           <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
-            <li class="nav-item me-1 ms-1">
-              <a
-                class="nav-link px-1 nav-svg"
-                href="https://bsky.app/profile/blueprint.zip"
-                ><img src="../.assets/storage/icons/bluesky.svg"
-              /></a>
-            </li>
-            <li class="nav-item me-1 ms-1 py-1">
-              <a class="nav-link px-1" href="https://discord.gg/CUwHwv6xRe"
-                ><i class="bi bi-discord"></i
-              ></a>
-            </li>
-            <li class="nav-item me-1 ms-1 py-1">
-              <a
-                class="nav-link px-1"
-                href="https://github.com/BlueprintFramework"
-                ><i class="bi bi-github"></i
-              ></a>
-            </li>
+            <li class="nav-item me-1 ms-1"><a class="nav-link px-1 nav-svg" href="https://bsky.app/profile/blueprint.zip"><img src="../.assets/storage/icons/bluesky.svg"/></a></li>
+            <li class="nav-item me-1 ms-1 py-1"><a class="nav-link px-1" href="https://discord.gg/CUwHwv6xRe"><i class="bi bi-discord"></i></a></li>
+            <li class="nav-item me-1 ms-1 py-1"><a class="nav-link px-1" href="https://github.com/BlueprintFramework"><i class="bi bi-github"></i></a></li>
             <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
               <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
-              <hr class="d-lg-none my-2 text-white-50" />
+              <hr class="d-lg-none my-2 text-white-50">
             </li>
             <li class="nav-item dropdown">
-              <button
-                class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
-                id="bd-theme"
-                type="button"
-                aria-expanded="false"
-                data-bs-toggle="dropdown"
-                data-bs-display="static"
-                aria-label="Toggle theme (dark)"
-              >
+              <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (dark)">
                 <i class="bi bi-moon-stars-fill my-1 theme-icon-active"></i>
-                <span class="d-lg-none ms-2" id="bd-theme-text"
-                  >Toggle theme</span
-                >
+                <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
               </button>
-              <ul
-                class="dropdown-menu dropdown-menu-end position-absolute gap-1 p-2 rounded-3 mx-0 border-0 shadow w-220px"
-                aria-labelledby="bd-theme-text"
-              >
-                <li>
-                  <button
-                    type="button"
-                    class="theme-switcher-btn dropdown-item rounded-2 d-flex align-items-center"
-                    data-bs-theme-value="light"
-                    aria-pressed="false"
-                  >
-                    <i class="bi bi-sun-fill me-2 opacity-50"></i> Light
-                  </button>
-                </li>
-                <li>
-                  <button
-                    type="button"
-                    class="theme-switcher-btn dropdown-item rounded-2 d-flex align-items-center active"
-                    data-bs-theme-value="dark"
-                    aria-pressed="true"
-                  >
-                    <i class="bi bi-moon-stars-fill me-2 opacity-50"></i> Dark
-                  </button>
-                </li>
-                <li>
-                  <button
-                    type="button"
-                    class="theme-switcher-btn dropdown-item rounded-2 d-flex align-items-center"
-                    data-bs-theme-value="auto"
-                    aria-pressed="false"
-                  >
-                    <i class="bi bi-circle-half me-2 opacity-50"></i> Auto
-                  </button>
-                </li>
+              <ul class="dropdown-menu dropdown-menu-end position-absolute gap-1 p-2 rounded-3 mx-0 border-0 shadow w-220px" aria-labelledby="bd-theme-text">
+                <li><button type="button" class="theme-switcher-btn dropdown-item rounded-2 d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false"><i class="bi bi-sun-fill me-2 opacity-50"></i> Light</button></li>
+                <li><button type="button" class="theme-switcher-btn dropdown-item rounded-2 d-flex align-items-center active" data-bs-theme-value="dark" aria-pressed="true"><i class="bi bi-moon-stars-fill me-2 opacity-50"></i> Dark</button></li>
+                <li><button type="button" class="theme-switcher-btn dropdown-item rounded-2 d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false"><i class="bi bi-circle-half me-2 opacity-50"></i> Auto</button></li>
               </ul>
             </li>
           </ul>
@@ -144,93 +67,41 @@
     <div class="p-2 d-lg-none d-inline"></div>
     <nav class="navbar fixed-top d-lg-none d-inline blueprint-navbar-mobile">
       <div class="container-fluid">
-        <a
-          href="../"
-          class="d-flex align-items-center mb-2 me-2 mt-2 mb-lg-0 link-body-emphasis text-decoration-none"
-          ><img
-            src="../.assets/brand/logo.jpg"
-            width="40"
-            height="40"
-            class="rounded-3"
-            alt=""
-        /></a>
+        <a href="../" class="d-flex align-items-center mb-2 me-2 mt-2 mb-lg-0 link-body-emphasis text-decoration-none"><img src="../.assets/brand/logo.jpg" width="40" height="40" class="rounded-3" alt="" /></a>
         <div class="dropdown">
-          <button
-            class="btn btn-secondary bg-dark-subtle border-0 nav-dropdown-btn"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
+          <button class="btn btn-secondary bg-dark-subtle border-0 nav-dropdown-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <ul
-            class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 border-0 shadow w-220px"
-          >
+          <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 border-0 shadow w-220px">
             <li><a class="dropdown-item rounded-2" href="../">Home</a></li>
+            <li><a class="dropdown-item rounded-2 disabled" href=".">Browse</a></li>
+            <li><a class="dropdown-item rounded-2" href="../docs">Documentation</a></li>
             <li>
-              <a class="dropdown-item rounded-2 disabled" href=".">Browse</a>
-            </li>
-            <li>
-              <a class="dropdown-item rounded-2" href="../docs"
-                >Documentation</a
-              >
-            </li>
-            <li>
-              <hr class="dropdown-divider" />
+              <hr class="dropdown-divider">
             </li>
             <div class="mobile-theme-switcher">
-              <a
-                href="javascript:void"
-                class="dropdown-item rounded-2 mobile-theme-switcher-btn"
-                data-bs-theme-value="light"
-                ><i class="bi bi-sun-fill opacity-50"></i
-              ></a>
-              <a
-                href="javascript:void"
-                class="dropdown-item rounded-2 mobile-theme-switcher-btn"
-                data-bs-theme-value="dark"
-                ><i class="bi bi-moon-stars-fill opacity-50"></i
-              ></a>
-              <a
-                href="javascript:void"
-                class="dropdown-item rounded-2 mobile-theme-switcher-btn"
-                data-bs-theme-value="auto"
-                ><i class="bi bi-circle-half opacity-50"></i
-              ></a>
+              <a href="javascript:void" class="dropdown-item rounded-2 mobile-theme-switcher-btn" data-bs-theme-value="light"><i class="bi bi-sun-fill opacity-50"></i></a>
+              <a href="javascript:void" class="dropdown-item rounded-2 mobile-theme-switcher-btn" data-bs-theme-value="dark"><i class="bi bi-moon-stars-fill opacity-50"></i></a>
+              <a href="javascript:void" class="dropdown-item rounded-2 mobile-theme-switcher-btn" data-bs-theme-value="auto"><i class="bi bi-circle-half opacity-50"></i></a>
             </div>
           </ul>
         </div>
       </div>
     </nav>
 
+
+
     <!-- Content -->
-    <div class="bp-grid mb-5" style="overflow-x: hidden">
+    <div class="bp-grid mb-5" style="overflow-x:hidden">
       <div class="bp-fade">
         <div class="container mt-5">
           <div class="row flex-lg-row-reverse align-items-center g-5 pt-5">
             <div class="col-lg-7 col-sm-12">
-              <h1
-                class="display-4 fw-normal lh-1 mb-3 d-lg-inline d-none byte-txt"
-                style="color: #bbd7ff"
-              >
-                Discover <b>powerful extensions</b>.
-              </h1>
-              <h1
-                class="display-4 fw-normal lh-1 mb-2 d-lg-none d-block text-center byte-txt"
-                style="color: #fff"
-              >
-                Discover <b>powerful extensions</b>.
-              </h1>
+              <h1 class="display-4 fw-normal lh-1 mb-3 d-lg-inline d-none byte-txt" style="color: #bbd7ff">Discover <b>powerful extensions</b>.</h1>
+              <h1 class="display-4 fw-normal lh-1 mb-2 d-lg-none d-block text-center byte-txt" style="color: #fff">Discover <b>powerful extensions</b>.</h1>
             </div>
             <div class="col-5 d-none d-sm-none d-lg-inline">
-              <img
-                src="../.assets/storage/misc/png/3.png"
-                class="d-block mx-lg-auto img-fluid byte-img"
-                alt="byte.sh"
-                loading="lazy"
-                width="700"
-                height="500"
-              />
+              <img src="../.assets/storage/misc/png/3.png" class="d-block mx-lg-auto img-fluid byte-img" alt="byte.sh" loading="lazy" width="700" height="500">
             </div>
           </div>
         </div>
@@ -238,21 +109,17 @@
     </div>
 
     <!-- Sorting -->
-    <div
-      class="container mb-4 position-sticky g-5"
-      style="top: 90px; z-index: 5"
-    >
+    <div class="container mb-4 position-sticky g-5" style="top: 90px; z-index: 5;">
       <div
         class="row bg-dark-subtle rounded-3 border py-2"
-        style="border: rgba(255, 255, 255, 0.15) 1px"
+        style="border: rgba(255,255,255,0.15) 1px;"
       >
         <div class="d-flex flex-row py-1">
+
           <!-- Search -->
           <div class="input-group me-2">
-            <span class="input-group-text border-0 pe-0"
-              ><i class="bi bi-search"></i
-            ></span>
-            <button
+            <span class="input-group-text border-0 pe-0"><i class="bi bi-search"></i></span>
+            <button 
               id="filterDropdown"
               class="btn btn-secondary bg-body-tertiary border-0 dropdown-toggle"
               type="button"
@@ -261,67 +128,35 @@
             >
               <span id="filterTypeLabel">Products</span>
             </button>
-            <ul
-              class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 border-0 shadow"
-              aria-labelledby="filterDropdown"
-            >
-              <li>
-                <a
-                  class="dropdown-item rounded-2"
-                  id="toggleFilterProducts"
-                  data-filter="products"
-                  >Products</a
-                >
-              </li>
-              <li>
-                <a
-                  class="dropdown-item rounded-2"
-                  id="toggleFilterAuthors"
-                  data-filter="authors"
-                  >Authors</a
-                >
-              </li>
+            <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 border-0 shadow" aria-labelledby="filterDropdown">
+              <li><a class="dropdown-item rounded-2" id="toggleFilterProducts" data-filter="products">Products</a></li>
+              <li><a class="dropdown-item rounded-2" id="toggleFilterAuthors" data-filter="authors">Authors</a></li>
             </ul>
             <input
               type="text"
               class="form-control bg-dark border-0"
               id="productSearch"
-              placeholder="Search products.."
-            />
+              placeholder="Search products..">
           </div>
 
           <!-- Filters -->
-          <div class="d-sm-flex flex-row d-none" style="width: auto">
-            <div class="input-group flex-row me-2" style="flex-wrap: nowrap">
+          <div class="d-sm-flex flex-row d-none" style="width: auto;">
+            <div class="input-group flex-row me-2" style="flex-wrap: nowrap;">
               <span class="input-group-text border-0">
-                <input
-                  class="form-check-input mt-0"
-                  type="checkbox"
-                  value=""
-                  id="filterExtensions"
-                />
+                <input class="form-check-input mt-0" type="checkbox" value="" id="filterExtensions">
               </span>
-              <span class="input-group-text ps-0 border-0"
-                ><label for="filterExtensions">Extensions</label></span
-              >
+              <span class="input-group-text ps-0 border-0"><label for="filterExtensions">Extensions</label></span>
             </div>
-            <div class="input-group flex-row" style="flex-wrap: nowrap">
+            <div class="input-group flex-row" style="flex-wrap: nowrap;">
               <span class="input-group-text border-0">
-                <input
-                  class="form-check-input mt-0"
-                  type="checkbox"
-                  value=""
-                  id="filterThemes"
-                />
+                <input class="form-check-input mt-0" type="checkbox" value="" id="filterThemes">
               </span>
-              <span class="input-group-text ps-0 border-0"
-                ><label for="filterThemes">Themes</label></span
-              >
+              <span class="input-group-text ps-0 border-0"><label for="filterThemes">Themes</label></span>
             </div>
           </div>
-          <div class="d-flex flex-row d-sm-none" style="width: auto">
-            <div class="input-group flex-row" style="flex-wrap: nowrap">
-              <button
+          <div class="d-flex flex-row d-sm-none" style="width: auto;">
+            <div class="input-group flex-row" style="flex-wrap: nowrap;">
+              <button 
                 class="btn btn-secondary bg-body-tertiary border-0"
                 type="button"
                 aria-expanded="false"
@@ -336,25 +171,12 @@
       </div>
     </div>
 
-    <div
-      class="modal fade"
-      id="filterModal"
-      aria-hidden="true"
-      aria-labelledby="filterModalToggleLabel"
-      tabindex="-1"
-    >
+    <div class="modal fade" id="filterModal" aria-hidden="true" aria-labelledby="filterModalToggleLabel" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="filterModalToggleLabel">
-              <i class="bi bi-filter"></i> Filters
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+            <h1 class="modal-title fs-5" id="filterModalToggleLabel"><i class="bi bi-filter"></i> Filters</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <div>
@@ -363,124 +185,56 @@
               </p>
               <div class="input-group mb-2">
                 <span class="input-group-text border-0">
-                  <input
-                    class="form-check-input mt-0"
-                    type="checkbox"
-                    value=""
-                    onclick='document.getElementById("filterExtensions").click()'
-                    id="filterModalExtensions"
-                  />
+                  <input class="form-check-input mt-0" type="checkbox" value="" onclick='document.getElementById("filterExtensions").click()' id="filterModalExtensions">
                 </span>
-                <span class="input-group-text ps-0 border-0"
-                  ><label for="filterModalExtensions">Extensions</label></span
-                >
+                <span class="input-group-text ps-0 border-0"><label for="filterModalExtensions">Extensions</label></span>
               </div>
               <div class="input-group">
                 <span class="input-group-text border-0">
-                  <input
-                    class="form-check-input mt-0"
-                    type="checkbox"
-                    value=""
-                    onclick='document.getElementById("filterThemes").click()'
-                    id="filterModalThemes"
-                  />
+                  <input class="form-check-input mt-0" type="checkbox" value="" onclick='document.getElementById("filterThemes").click()' id="filterModalThemes">
                 </span>
-                <span class="input-group-text ps-0 border-0"
-                  ><label for="filterModalThemes">Themes</label></span
-                >
+                <span class="input-group-text ps-0 border-0"><label for="filterModalThemes">Themes</label></span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    
+
 
     <!-- Products -->
     <div class="container">
       <div class="row" id="products"></div>
       <div class="row" id="byte-confused" style="display: none">
-        <p class="text-center">
-          <img
-            src="../.assets/storage/misc/png/5.png"
-            class="byte-confused-img"
-            style="width: 150px; opacity: 0.2"
-          />
-        </p>
+        <p class="text-center"><img src="../.assets/storage/misc/png/5.png" class="byte-confused-img" style="width: 150px; opacity: .2"></p>
       </div>
     </div>
 
     <div class="container mt-3">
-      <p class="text-muted opacity-75">
-        Blueprint may earn compensation when purchasing extensions from select
-        links displayed on this page. Revenue generated from these links goes
-        towards development and upkeep of the framework.
-      </p>
+      <p class="text-muted opacity-75">Blueprint may earn compensation when purchasing extensions from select links displayed on this page. Revenue generated from these links goes towards development and upkeep of the framework.</p>
     </div>
+
 
     <!-- Footer -->
     <div class="container">
-      <footer
-        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
-      >
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <div class="col-md-4 d-flex align-items-center">
-          <a
-            href="../"
-            class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
-          >
-            <svg
-              viewBox="0 0 500 500"
-              class="text-body-secondary"
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="24"
-              fill="currentColor"
-            >
-              <rect x="0" y="166.6666" width="166.6666" height="166.6666" />
-              <rect x="166.6666" y="0" width="166.6666" height="166.6666" />
-              <rect
-                x="166.6666"
-                y="333.3332"
-                width="166.667"
-                height="166.6666"
-              />
-              <rect
-                x="333.3332"
-                y="166.6666"
-                width="166.667"
-                height="333.3332"
-              />
+          <a href="../" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+            <svg viewBox="0 0 500 500" class="text-body-secondary" xmlns="http://www.w3.org/2000/svg" width="30" height="24" fill="currentColor">
+              <rect x="0" y="166.6666" width="166.6666" height="166.6666"/>
+              <rect x="166.6666" y="0" width="166.6666" height="166.6666"/>
+              <rect x="166.6666" y="333.3332" width="166.667" height="166.6666"/>
+              <rect x="333.3332" y="166.6666" width="166.667" height="333.3332"/>
             </svg>
           </a>
-          <span class="mb-3 mb-md-0 text-body-secondary"
-            >© 2023-2024 Emma (<a
-              href="https://prpl.wtf"
-              class="text-body-secondary"
-              target="_blank"
-              >prpl.wtf</a
-            >)</span
-          >
+          <span class="mb-3 mb-md-0 text-body-secondary">© 2023-2024 Emma (<a href="https://prpl.wtf" class="text-body-secondary" target="_blank">prpl.wtf</a>)</span>
         </div>
 
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <li class="ms-3">
-            <a class="text-body-secondary" href="https://discord.gg/CUwHwv6xRe"
-              ><i class="bi bi-discord" width="24" height="24"></i
-            ></a>
-          </li>
-          <li class="ms-3">
-            <a
-              class="text-body-secondary"
-              href="https://github.com/BlueprintFramework"
-              ><i class="bi bi-github" width="24" height="24"></i
-            ></a>
-          </li>
-          <li class="ms-3">
-            <a
-              class="text-body-secondary"
-              href="https://github.com/sponsors/prplwtf"
-              ><i class="bi bi-chat-right-heart-fill" width="24" height="24"></i
-            ></a>
-          </li>
+          <li class="ms-3"><a class="text-body-secondary" href="https://discord.gg/CUwHwv6xRe"><i class="bi bi-discord" width="24" height="24"></i></a></li>
+          <li class="ms-3"><a class="text-body-secondary" href="https://github.com/BlueprintFramework"><i class="bi bi-github" width="24" height="24"></i></a></li>
+          <li class="ms-3"><a class="text-body-secondary" href="https://github.com/sponsors/prplwtf"><i class="bi bi-chat-right-heart-fill" width="24" height="24"></i></a></li>
         </ul>
       </footer>
     </div>
@@ -488,21 +242,10 @@
     <div id="social-push">
       <div>
         <p>
-          <b>Become part of Blueprint's Discord community</b> and be one of the
-          first to get notified about new extension releases and framework
-          updates.
+          <b>Become part of Blueprint's Discord community</b> and be one of the first to get notified about new extension releases and framework updates.
         </p>
-        <a
-          href="https://discord.gg/CUwHwv6xRe"
-          class="link-underline link-underline-opacity-0 me-3"
-          ><i class="bi bi-discord me-1"></i> Join the community</a
-        >
-        <a
-          href="javascript:void"
-          onclick="dismissSocial()"
-          class="link-underline link-underline-opacity-0 pe-pointer text-secondary"
-          ><i class="bi bi-x-lg me-1"></i> Close</a
-        >
+        <a href="https://discord.gg/CUwHwv6xRe" class="link-underline link-underline-opacity-0 me-3"><i class="bi bi-discord me-1"></i> Join the community</a>
+        <a href="javascript:void" onclick="dismissSocial()" class="link-underline link-underline-opacity-0 pe-pointer text-secondary"><i class="bi bi-x-lg me-1"></i> Close</a>
       </div>
     </div>
 
