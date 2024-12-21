@@ -251,57 +251,97 @@
 
     <script src="../.modules/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="../.modules/bootstrap/etc/theme-switcher.js"></script>
-    <script src="../.modules/js-yaml/js-yaml.min.js"></script>
     <script src="../.modules/global/global.js"></script>
     <script>
-      const filterTypeLabel = document.getElementById("filterTypeLabel");
-      const searchInput = document.getElementById("productSearch");
+      const filterTypeLabel = document.getElementById("filterTypeLabel"),
+        searchInput = document.getElementById("productSearch");
 
-      let allProducts = []; // Store all products globally
-      let filterType = "products"; // Default filter type: products
-    
-      function loadYAML(url, callback) {
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", url, true);
-        xhr.onreadystatechange = function () {
-          if (xhr.readyState == 4 && xhr.status == 200) {
-            var result = jsyaml.load(xhr.responseText);
-            callback(result);
-          }
-        };
-        xhr.send();
+      /**
+       * @typedef {{
+       *  name: string;
+       *  summary: string;
+       *  banner: string;
+       *  identifier: string;
+       *  author: { name: string; };
+       *  type: 'THEME' | 'EXTENSION';
+       *  created: string;
+       *  platforms: Record<string, {
+       *   url: string;
+       *   price: number;
+       *   currency: string;
+       *  }>;
+       * }} Product
+       *
+       * @type {Product[]}
+       */
+      let allProducts = [];
+
+      /** @type {'products' | 'authors'} */
+      let filterType = "products";
+
+      /** @type {Object<string, [name: string, icon: string]>} */
+      const platforms = {
+        BUILTBYBIT: ["BuiltByBit", "BBB.png"],
+        SOURCEXCHANGE: ["sourceXchange", "SXC.png"],
+        GITHUB: ["GitHub", "GH.png"],
+      };
+
+      /**
+       * @param {Product[]} products
+       * @returns {Product[]}
+       */
+      function sortProducts(products) {
+        return products.sort((a, b) => a.name.localeCompare(b.name));
       }
-    
+
+      /** @param {Product[]} products */
       function displayProducts(products) {
         const productList = document.getElementById("products");
-        productList.innerHTML = ""; // Clear the existing products
-    
-        products.forEach(function (product) {
-          var listItem = document.createElement("div");
-          var categoryClass =
-            product.category === "themes" ? "filter-themes" : "filter-extensions";
-    
-          listItem.className = "col-sm-12 col-md-6 col-lg-4 mb-4 " + categoryClass;
+        productList.innerHTML = "";
+
+        for (const product of sortProducts(products)) {
+          const listItem = document.createElement("div");
+          const categoryClass =
+            product.type === "THEME" ? "filter-themes" : "filter-extensions";
+
+          listItem.className =
+            "col-sm-12 col-md-6 col-lg-4 mb-4 " + categoryClass;
           listItem.innerHTML = `
             <div class="card overflow-hidden bg-dark-subtle">
-              <img src="./assets/${product.thumbnail}" onclick="setTimeout(() => {document.getElementById('${product.identifier}Button').click()}, 1)" class="card-img-top img-dim product-image" alt="${product.name}"/>
+              <img src="${
+                product.banner
+              }" onclick="setTimeout(() => {document.getElementById('${
+                product.identifier
+              }Button').click()}, 1)" class="card-img-top img-dim product-image" alt="${
+                product.name
+              }"/>
               <div class="btn-group position-absolute" style="right: 11px; top: 0px;">
-                <button type="button" id="${product.identifier}Button" class="btn btn-secondary rounded-2 buy-btn border-0 backdrop-blur" data-bs-toggle="dropdown" aria-expanded="false">
+                <button type="button" id="${
+                  product.identifier
+                }Button" class="btn btn-secondary rounded-2 buy-btn border-0 backdrop-blur" data-bs-toggle="dropdown" aria-expanded="false">
                   <i class="bi bi-chevron-down"></i>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 border-0 shadow w-220px">
-                  ${product.downloads
+                  ${Object.entries(product.platforms)
                     .map(
-                      (download) => `
+                      ([platform, data]) => `
                     <li>
                     <a
                     class="dropdown-item rounded-2"
-                    href="${(download.url.replace(/^https?:\/\//i, '').toLowerCase().startsWith('builtbybit.com'.toLowerCase())) 
-                    ? 'https://' + download.url.replace(/^https?:\/\//i, '') + '?ref=449337&' 
-                    : (download.url + '?')}utm_source=blueprint.zip&utm_medium=card&utm_content=for_${product.identifier}"
+                    href="${
+                      platform === "BUILTBYBIT"
+                        ? "https://" +
+                          data.url.replace(/^https?:\/\//i, "") +
+                          "?ref=449337&"
+                        : data.url + "?"
+                    }utm_source=blueprint.zip&utm_medium=card&utm_content=for_${
+                        product.identifier
+                      }"
                     >
-                      <img src="./assets/source/${download.icon}" alt="" width="24" height="24">
-                        ${download.name}
+                      <img src="/browse/assets/source/${
+                        platforms[platform][1]
+                      }" alt="" width="24" height="24">
+                        ${platforms[platform][0]}
                     </a>
                     </li>
                   `
@@ -310,172 +350,211 @@
                 </ul>
               </div>
               <div class="card-body">
-                <h5 class="card-title text-truncate">${product.name} <span class="author-tag">by ${product.author}</span></h5>
-                <p class="card-text text-truncate">${product.description}</p>
+                <h5 class="card-title text-truncate">${
+                  product.name
+                } <span class="author-tag">by ${product.author.name}</span></h5>
+                <p class="card-text text-truncate">${product.summary}</p>
               </div>
             </div>
           `;
+
           productList.appendChild(listItem);
-        });
+        }
       }
-    
+
       function filterProducts() {
-        const searchQuery = document.getElementById("productSearch").value.toLowerCase();
-    
+        const searchQuery = document
+          .getElementById("productSearch")
+          .value.toLowerCase();
+
+        /** @type {Product[]} */
         let filteredItems = [];
-    
+
         // Filter logic based on type (Products or Authors)
         if (filterType === "products") {
           filteredItems = allProducts.filter(
             (product) =>
               product.name.toLowerCase().includes(searchQuery) ||
-              product.description.toLowerCase().includes(searchQuery)
+              product.summary.toLowerCase().includes(searchQuery)
           );
         } else if (filterType === "authors") {
           filteredItems = allProducts.filter((product) =>
-            product.author.toLowerCase().includes(searchQuery)
+            product.author.name.toLowerCase().includes(searchQuery)
           );
         }
-    
+
         // Apply category filters
-        const extensionsChecked = document.getElementById("filterExtensions").checked;
+        const extensionsChecked =
+          document.getElementById("filterExtensions").checked;
         const themesChecked = document.getElementById("filterThemes").checked;
-    
+
         if (!extensionsChecked) {
-          filteredItems = filteredItems.filter((product) => product.category !== "extensions");
+          filteredItems = filteredItems.filter(
+            (product) => product.category !== "extensions"
+          );
         }
-    
+
         if (!themesChecked) {
-          filteredItems = filteredItems.filter((product) => product.category !== "themes");
+          filteredItems = filteredItems.filter(
+            (product) => product.category !== "themes"
+          );
         }
-    
+
         displayProducts(filteredItems);
       }
-    
+
       // Handle filter dropdown toggle
       document.querySelectorAll(".dropdown-item").forEach((item) => {
-      item.addEventListener("click", (event) => {
-        event.preventDefault();
-        const selectedFilter = item.dataset.filter;
+        item.addEventListener("click", (event) => {
+          event.preventDefault();
 
-      // Update filter type and label
-      if (selectedFilter === "products") {
-        filterTypeLabel.textContent = "Products";
-        searchInput.placeholder = "Search products..";
-        filterType = "products";
-      } else if (selectedFilter === "authors") {
-        filterTypeLabel.textContent = "Authors";
-        searchInput.placeholder = "Search authors..";
-        filterType = "authors";
-      }
+          /** @type {'products' | 'authors'} */
+          const selectedFilter = item.dataset.filter;
 
-        // Apply filters
-        filterProducts();
+          // Update filter type and label
+          if (selectedFilter === "products") {
+            filterTypeLabel.textContent = "Products";
+            searchInput.placeholder = "Search products..";
+            filterType = "products";
+          } else if (selectedFilter === "authors") {
+            filterTypeLabel.textContent = "Authors";
+            searchInput.placeholder = "Search authors..";
+            filterType = "authors";
+          }
+
+          // Apply filters
+          filterProducts();
         });
       });
-    
+
       // Event listeners for filtering
-      document.getElementById("productSearch").addEventListener("input", filterProducts);
-      document.getElementById("filterExtensions").addEventListener("change", filterProducts);
-      document.getElementById("filterThemes").addEventListener("change", filterProducts);
-    
+      document
+        .getElementById("productSearch")
+        .addEventListener("input", filterProducts);
+      document
+        .getElementById("filterExtensions")
+        .addEventListener("change", filterProducts);
+      document
+        .getElementById("filterThemes")
+        .addEventListener("change", filterProducts);
+
       // Load products
-      if (window.location.hostname === "127.0.0.1" && localStorage.getItem("LocalExampleRepository") === "true") {
-        loadYAML("./repository/repository.example.yml", function (products) {
-          allProducts = products; // Save all products
-          displayProducts(allProducts); // Initial display of all products
+      fetch("https://api.blueprintframe.work/api/extensions")
+        .then((response) => response.json())
+        .then((data) => {
+          allProducts = data;
+          displayProducts(data);
         });
-      } else {
-        loadYAML("./repository/repository.yml", function (products) {
-          allProducts = products; // Save all products
-          displayProducts(allProducts); // Initial display of all products
-        });
-      }
-    </script>    
+    </script>
     <style id="css-filter-themes"></style>
     <style id="css-filter-extensions"></style>
     <script>
       function param(key, value) {
-        let u = new URL(window.location.href)
-        u.searchParams.set(key, value)
-        window.history.replaceState({}, '', u.toString())
+        let u = new URL(window.location.href);
+        u.searchParams.set(key, value);
+        window.history.replaceState({}, "", u.toString());
       }
 
+      const filterThemes = document.getElementById("filterThemes");
+      const filterExtensions = document.getElementById("filterExtensions");
 
-      var filterThemes = document.getElementById('filterThemes')
-      var filterExtensions = document.getElementById('filterExtensions')
+      function handleThemeFilter() {
+        syncFilters();
+        const a = document.getElementById("css-filter-themes");
 
-      function handleThemeFilter() { 
-        syncFilters()
-        var a = document.getElementById("css-filter-themes");
-        if (filterThemes.checked) { 
-          param('1', 'y') 
-          a.innerHTML = ""; 
-        } else { 
-          param('1', 'n') 
-          a.innerHTML = ".filter-themes { display: none }"; 
+        if (filterThemes.checked) {
+          param("1", "y");
+          a.innerHTML = "";
+        } else {
+          param("1", "n");
+          a.innerHTML = ".filter-themes { display: none }";
         }
-        byteconfused()
+
+        byteconfused();
       }
-      function handleExtensionFilter() { 
-        syncFilters()
-        var a = document.getElementById("css-filter-extensions");
-        if (filterExtensions.checked) { 
-          param('2', 'y')
-          a.innerHTML = ""; 
-        } else { 
-          param('2', 'n'); 
-          a.innerHTML = ".filter-extensions { display: none }"; 
+
+      function handleExtensionFilter() {
+        syncFilters();
+        const a = document.getElementById("css-filter-extensions");
+
+        if (filterExtensions.checked) {
+          param("2", "y");
+          a.innerHTML = "";
+        } else {
+          param("2", "n");
+          a.innerHTML = ".filter-extensions { display: none }";
         }
-        byteconfused()
+
+        byteconfused();
       }
 
       function byteconfused() {
-        var byte = document.getElementById("byte-confused")
-        var url = new URL(window.location.href)
-        var c = document.getElementById('filterThemes')
-        var d = document.getElementById('filterExtensions')
+        var byte = document.getElementById("byte-confused");
+        var url = new URL(window.location.href);
+        var c = document.getElementById("filterThemes");
+        var d = document.getElementById("filterExtensions");
 
-        if(url.searchParams.get('1') == 'n' && url.searchParams.get('2') == 'n') { byte.style.display = "inline" }
-        else if(!c.checked && !d.checked) { byte.style.display = "inline" }
-        else byte.style.display = "none"
+        if (
+          url.searchParams.get("1") == "n" &&
+          url.searchParams.get("2") == "n"
+        ) {
+          byte.style.display = "inline";
+        } else if (!c.checked && !d.checked) {
+          byte.style.display = "inline";
+        } else byte.style.display = "none";
       }
 
       function syncFilters() {
-        if(filterExtensions.checked) {
-          document.getElementById('filterModalExtensions').checked = true
+        if (filterExtensions.checked) {
+          document.getElementById("filterModalExtensions").checked = true;
         } else {
-          document.getElementById('filterModalExtensions').checked = false
+          document.getElementById("filterModalExtensions").checked = false;
         }
-        if(filterThemes.checked) {
-          document.getElementById('filterModalThemes').checked = true
+        if (filterThemes.checked) {
+          document.getElementById("filterModalThemes").checked = true;
         } else {
-          document.getElementById('filterModalThemes').checked = false
+          document.getElementById("filterModalThemes").checked = false;
         }
       }
 
-      filterThemes.addEventListener('change', handleThemeFilter)
-      filterExtensions.addEventListener('change', handleExtensionFilter)
+      filterThemes.addEventListener("change", handleThemeFilter);
+      filterExtensions.addEventListener("change", handleExtensionFilter);
 
       function filter() {
-        var url = new URL(window.location.href)
-        var a = document.getElementById("css-filter-themes")
-        var b = document.getElementById("css-filter-extensions")
-        var c = document.getElementById('filterThemes')
-        var d = document.getElementById('filterExtensions')
+        const url = new URL(window.location.href);
+        const a = document.getElementById("css-filter-themes"),
+          b = document.getElementById("css-filter-extensions"),
+          c = document.getElementById("filterThemes"),
+          d = document.getElementById("filterExtensions");
 
-        if(url.searchParams.get('1') == 'y') { a.innerHTML = ""; c.checked = true }
-        else if(url.searchParams.get('1') == 'n') { a.innerHTML = ".filter-themes { display: none }"; c.checked = false }
-        else { a.innerHTML = ""; c.checked = true }
+        if (url.searchParams.get("1") == "y") {
+          a.innerHTML = "";
+          c.checked = true;
+        } else if (url.searchParams.get("1") == "n") {
+          a.innerHTML = ".filter-themes { display: none }";
+          c.checked = false;
+        } else {
+          a.innerHTML = "";
+          c.checked = true;
+        }
 
-        if(url.searchParams.get('2') == 'y') { b.innerHTML = ""; d.checked = true }
-        else if(url.searchParams.get('2') == 'n') { b.innerHTML = ".filter-extensions { display: none }"; d.checked = false }
-        else { b.innerHTML = ""; d.checked = true }
-        byteconfused()
-        syncFilters()
+        if (url.searchParams.get("2") == "y") {
+          b.innerHTML = "";
+          d.checked = true;
+        } else if (url.searchParams.get("2") == "n") {
+          b.innerHTML = ".filter-extensions { display: none }";
+          d.checked = false;
+        } else {
+          b.innerHTML = "";
+          d.checked = true;
+        }
+
+        byteconfused();
+        syncFilters();
       }
-      filter()
-      byteconfused()
+
+      filter();
+      byteconfused();
     </script>
   </body>
 </html>
