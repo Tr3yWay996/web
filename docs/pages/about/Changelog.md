@@ -38,6 +38,11 @@
       </div>
     </a>
   </div>
+</div>
+<br/>
+
+<h4 class="text-secondary fw-bold">Unsupported/Deprecated releases</h4>
+<div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-3 pt-3">
   <div class="col">
     <a href="?page=about/changelog/beta-2024-07" class="link-underline-opacity-0 link-underline">
       <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark bg-hover-dark changelog-btn">
@@ -47,11 +52,6 @@
       </div>
     </a>
   </div>
-</div>
-<br/>
-
-<h4 class="text-secondary fw-bold">Unsupported/Deprecated releases</h4>
-<div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-3 pt-3">
   <div class="col">
     <a href="?page=about/changelog/beta-F248" class="link-underline-opacity-0 link-underline">
       <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark bg-hover-dark changelog-btn">
