@@ -38,6 +38,13 @@
   height: 40px !important;
 }
 
+@media screen and (max-width: 767px) {
+  #productSearch {
+    border-top-right-radius: var(--bs-border-radius);
+    border-bottom-right-radius: var(--bs-border-radius);
+  }
+}
+
 [data-bs-theme=light] .bp-fade { background-image: linear-gradient(to bottom, #ffffff00, #ffffff); }
 [data-bs-theme=light] .bp-grid { 
   background-image:

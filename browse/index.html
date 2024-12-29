@@ -129,8 +129,16 @@
               <span id="filterTypeLabel">Products</span>
             </button>
             <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 border-0 shadow" aria-labelledby="filterDropdown">
-              <li><a class="dropdown-item rounded-2" id="toggleFilterProducts" data-filter="products">Products</a></li>
-              <li><a class="dropdown-item rounded-2" id="toggleFilterAuthors" data-filter="authors">Authors</a></li>
+              <li>
+                <a class="dropdown-item rounded-2" id="toggleFilterProducts" data-filter="products">
+                  Products
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item rounded-2" id="toggleFilterAuthors" data-filter="authors">
+                  Authors
+                </a>
+              </li>
             </ul>
             <input
               type="text"
@@ -138,9 +146,10 @@
               id="productSearch"
               placeholder="Search products..">
 
+            <span class="d-none d-md-block input-group-text border-0 pe-0"><i class="bi bi-sort-down"></i></span>
             <button 
-              id="filterDropdown"
-              class="btn btn-secondary bg-body-tertiary border-0 dropdown-toggle"
+              id="sortDropdown"
+              class="btn btn-secondary bg-body-tertiary border-0 dropdown-toggle d-none d-md-block"
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
@@ -148,15 +157,31 @@
               <span id="sortLabel">Name</span>
             </button>
             <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 border-0 shadow" aria-labelledby="filterDropdown">
-              <li><a class="dropdown-item rounded-2" id="toggleSortName" data-sort="name">Name</a></li>
-              <li><a class="dropdown-item rounded-2" id="toggleSortCreated" data-sort="created">Created</a></li>
-              <li><a class="dropdown-item rounded-2" id="toggleSortAuthor" data-sort="author">Author</a></li>
-              <li><a class="dropdown-item rounded-2" id="toggleSortpopularity" data-sort="popularity">Popularity</a></li>
+              <li>
+                <a class="dropdown-item rounded-2" id="toggleSortName" data-sort="name">
+                  Name
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item rounded-2" id="toggleSortCreated" data-sort="created">
+                  Created
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item rounded-2" id="toggleSortAuthor" data-sort="author">
+                  Author
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item rounded-2" id="toggleSortpopularity" data-sort="popularity">
+                  Popularity
+                </a>
+              </li>
             </ul>
           </div>
 
           <!-- Filters -->
-          <div class="d-sm-flex flex-row d-none" style="width: auto;">
+          <div class="d-md-flex flex-row d-none" style="width: auto;">
             <div class="input-group flex-row me-2" style="flex-wrap: nowrap;">
               <span class="input-group-text border-0">
                 <input class="form-check-input mt-0" type="checkbox" value="" id="filterExtensions">
@@ -170,7 +195,7 @@
               <span class="input-group-text ps-0 border-0"><label for="filterThemes">Themes</label></span>
             </div>
           </div>
-          <div class="d-flex flex-row d-sm-none" style="width: auto;">
+          <div class="d-flex flex-row d-md-none" style="width: auto;">
             <div class="input-group flex-row" style="flex-wrap: nowrap;">
               <button 
                 class="btn btn-secondary bg-body-tertiary border-0"
@@ -195,21 +220,63 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div>
+            <div class="mb-4">
               <p>
                 <b>Extension type</b>
               </p>
               <div class="input-group mb-2">
-                <span class="input-group-text border-0">
+
+                <span class="input-group-text border-0 rounded-start-2">
                   <input class="form-check-input mt-0" type="checkbox" value="" onclick='document.getElementById("filterExtensions").click()' id="filterModalExtensions">
                 </span>
-                <span class="input-group-text ps-0 border-0"><label for="filterModalExtensions">Extensions</label></span>
-              </div>
-              <div class="input-group">
-                <span class="input-group-text border-0">
+                <span class="input-group-text ps-0 border-0 rounded-end-2 me-2"><label for="filterModalExtensions">Extensions</label></span>
+
+                <span class="input-group-text border-0 rounded-start-2">
                   <input class="form-check-input mt-0" type="checkbox" value="" onclick='document.getElementById("filterThemes").click()' id="filterModalThemes">
                 </span>
-                <span class="input-group-text ps-0 border-0"><label for="filterModalThemes">Themes</label></span>
+                <span class="input-group-text ps-0 border-0 rounded-end-2"><label for="filterModalThemes">Themes</label></span>
+
+              </div>
+            </div>
+            <div>
+              <p>
+                <b>Sorting</b>
+              </p>
+              <div class="input-group mb-2">
+
+                <span class="input-group-text border-0 pe-0"><i class="bi bi-sort-down"></i></span>
+                <button 
+                  id="mobileSortDropdown"
+                  class="btn btn-secondary bg-body-tertiary border-0 dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span id="mobileSortLabel">Name</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 border-0 shadow" aria-labelledby="filterDropdown">
+                  <li>
+                    <a class="dropdown-item rounded-2" id="mobileToggleSortName" data-sort="name">
+                      Name
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item rounded-2" id="mobileToggleSortCreated" data-sort="created">
+                      Created
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item rounded-2" id="mobileToggleSortAuthor" data-sort="author">
+                      Author
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item rounded-2" id="mobileToggleSortpopularity" data-sort="popularity">
+                      Popularity
+                    </a>
+                  </li>
+                </ul>
+
               </div>
             </div>
           </div>
@@ -271,6 +338,7 @@
     <script>
       const filterTypeLabel = document.getElementById("filterTypeLabel"),
         sortLabel = document.getElementById("sortLabel"),
+        mobileSortLabel = document.getElementById("mobileSortLabel"),
         searchInput = document.getElementById("productSearch");
 
       /**
@@ -460,21 +528,25 @@
           switch (selectedSort) {
             case "name":
               sortLabel.textContent = "Name";
+              mobileSortLabel.textContent = "Name";
               sortType = "name";
               break;
 
             case "created":
               sortLabel.textContent = "Created";
+              mobileSortLabel.textContent = "Created";
               sortType = "created";
               break;
 
             case "author":
               sortLabel.textContent = "Author";
+              mobileSortLabel.textContent = "Author";
               sortType = "author";
               break;
 
             case "popularity":
               sortLabel.textContent = "Popularity";
+              mobileSortLabel.textContent = "Popularity";
               sortType = "popularity";
               break;
           }
