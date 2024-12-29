@@ -137,6 +137,22 @@
               class="form-control bg-dark border-0"
               id="productSearch"
               placeholder="Search products..">
+
+            <button 
+              id="filterDropdown"
+              class="btn btn-secondary bg-body-tertiary border-0 dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span id="sortLabel">Name</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 border-0 shadow" aria-labelledby="filterDropdown">
+              <li><a class="dropdown-item rounded-2" id="toggleSortName" data-sort="name">Name</a></li>
+              <li><a class="dropdown-item rounded-2" id="toggleSortCreated" data-sort="created">Created</a></li>
+              <li><a class="dropdown-item rounded-2" id="toggleSortAuthor" data-sort="author">Author</a></li>
+              <li><a class="dropdown-item rounded-2" id="toggleSortPanels" data-sort="panels">Installed Panels</a></li>
+            </ul>
           </div>
 
           <!-- Filters -->
@@ -254,6 +270,7 @@
     <script src="../.modules/global/global.js"></script>
     <script>
       const filterTypeLabel = document.getElementById("filterTypeLabel"),
+        sortLabel = document.getElementById("sortLabel"),
         searchInput = document.getElementById("productSearch");
 
       /**
@@ -270,6 +287,9 @@
        *   price: number;
        *   currency: string;
        *  }>;
+       *  stats: {
+       *   panels: number;
+       *  };
        * }} Product
        *
        * @type {Product[]}
@@ -278,6 +298,9 @@
 
       /** @type {'products' | 'authors'} */
       let filterType = "products";
+
+      /** @type {'name' | 'created' | 'author' | 'panels'} */
+      let sortType = "name";
 
       /** @type {Object<string, [name: string, icon: string]>} */
       const platforms = {
@@ -291,7 +314,16 @@
        * @returns {Product[]}
        */
       function sortProducts(products) {
-        return products.sort((a, b) => a.name.localeCompare(b.name));
+        switch (sortType) {
+          case "created":
+            return products.sort((a, b) => new Date(a.created) < new Date(b.created) ? -1 : 1);
+          case "author":
+            return products.sort((a, b) => a.author.name.localeCompare(b.author.name));
+          case "panels":
+            return products.sort((a, b) => b.stats.panels - a.stats.panels);
+          default:
+            return products.sort((a, b) => a.name.localeCompare(b.name));
+        }
       }
 
       /** @param {Product[]} products */
@@ -408,7 +440,7 @@
         item.addEventListener("click", (event) => {
           event.preventDefault();
 
-          /** @type {'products' | 'authors'} */
+          /** @type {typeof filterType} */
           const selectedFilter = item.dataset.filter;
 
           // Update filter type and label
@@ -420,6 +452,31 @@
             filterTypeLabel.textContent = "Authors";
             searchInput.placeholder = "Search authors..";
             filterType = "authors";
+          }
+
+          /** @type {typeof sortType} */
+          const selectedSort = item.dataset.sort;
+
+          switch (selectedSort) {
+            case "name":
+              sortLabel.textContent = "Name";
+              sortType = "name";
+              break;
+
+            case "created":
+              sortLabel.textContent = "Created";
+              sortType = "created";
+              break;
+
+            case "author":
+              sortLabel.textContent = "Author";
+              sortType = "author";
+              break;
+
+            case "panels":
+              sortLabel.textContent = "Installed Panels";
+              sortType = "panels";
+              break;
           }
 
           // Apply filters
