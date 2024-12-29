@@ -5,13 +5,13 @@
   -webkit-backdrop-filter: blur(0px);
   mask-image: linear-gradient(
     to bottom,
-    transparent,
-    black 80%
+    transparent 40%,
+    black 90%
   );
   -webkit-mask-image: linear-gradient(
     to bottom,
-    transparent,
-    black 80%
+    transparent 40%,
+    black 90%
   );
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
