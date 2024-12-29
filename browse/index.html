@@ -151,7 +151,7 @@
               <li><a class="dropdown-item rounded-2" id="toggleSortName" data-sort="name">Name</a></li>
               <li><a class="dropdown-item rounded-2" id="toggleSortCreated" data-sort="created">Created</a></li>
               <li><a class="dropdown-item rounded-2" id="toggleSortAuthor" data-sort="author">Author</a></li>
-              <li><a class="dropdown-item rounded-2" id="toggleSortPanels" data-sort="panels">Installed Panels</a></li>
+              <li><a class="dropdown-item rounded-2" id="toggleSortpopularity" data-sort="popularity">Popularity</a></li>
             </ul>
           </div>
 
@@ -299,7 +299,7 @@
       /** @type {'products' | 'authors'} */
       let filterType = "products";
 
-      /** @type {'name' | 'created' | 'author' | 'panels'} */
+      /** @type {'name' | 'created' | 'author' | 'popularity'} */
       let sortType = "name";
 
       /** @type {Object<string, [name: string, icon: string]>} */
@@ -319,7 +319,7 @@
             return products.sort((a, b) => new Date(a.created) < new Date(b.created) ? -1 : 1);
           case "author":
             return products.sort((a, b) => a.author.name.localeCompare(b.author.name));
-          case "panels":
+          case "popularity":
             return products.sort((a, b) => b.stats.panels - a.stats.panels);
           default:
             return products.sort((a, b) => a.name.localeCompare(b.name));
@@ -473,9 +473,9 @@
               sortType = "author";
               break;
 
-            case "panels":
-              sortLabel.textContent = "Installed Panels";
-              sortType = "panels";
+            case "popularity":
+              sortLabel.textContent = "Popularity";
+              sortType = "popularity";
               break;
           }
 
