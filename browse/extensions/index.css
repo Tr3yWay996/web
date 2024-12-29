@@ -39,3 +39,14 @@
   --bs-btn-disabled-bg: #f8f9fa;
   --bs-btn-disabled-border-color: #f8f9fa;
 }
+
+.extension-card-content {
+  --card-padding-top: 100px;
+  padding-top: var(--card-padding-top) !important;
+}
+
+@media screen and (min-width: 992px) {
+  .extension-card-content {
+    --card-padding-top: 240px;
+  }
+}
