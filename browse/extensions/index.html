@@ -93,7 +93,7 @@
 
     <!-- Content -->
     <div class="container mt-5 mb-5 pt-5" id="productContainer">
-      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg pt-5">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-3 shadow-lg pt-5">
         <div class="d-flex flex-column h-100 p-5 pb-4 text-white text-shadow-1">
           <h3 class="pt-5 mt-5 mb-3 placeholder-wave">
             <span class="placeholder col-6 rounded-3"></span>
@@ -176,44 +176,92 @@
       /** @param {Product[]} products */
       function displayProduct(data) {
         const productContainer = document.getElementById("productContainer");
+        let date = new Date(data.created);
+        date = date.toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        });
         productContainer.innerHTML = `
-          <div class="shadow-lg rounded-4">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 rounded-bottom-0 position-relative pt-5" style="background: url('${data.banner}') center; background-size: cover; border: unset;">
-              <div class="blur-gradient-overlay"></div>
-              <div class="d-flex flex-column h-100 p-5 pt-5 text-white text-shadow-1 position-relative extension-card-content">
-                <h3 class="pt-5 mt-5 mb-3 fw-bolder">
-                  ${data.name}
-                </h3>
-                ${data.summary}
-              </div>
+          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-3 position-relative pt-5 mb-4" style="background: url('${data.banner}') center; background-size: cover; border: unset;">
+            <div class="blur-gradient-overlay"></div>
+            <div class="d-flex flex-column h-100 p-5 pt-5 text-white text-shadow-1 position-relative extension-card-content">
+              <h3 class="pt-5 mt-5 mb-3 fw-bolder">
+                ${data.name}
+              </h3>
+              ${data.summary}
             </div>
-            <div class="rounded-4 rounded-top-0 bg-dark-subtle p-4 py-2">
-              <div class="row">
-                ${Object.entries(data.platforms)
-                  .map(
-                    ([platform, _data]) => `
-                  <a
-                  class="dropdown-item rounded-2 col m-2"
-                  href="${
-                    platform === "BUILTBYBIT"
-                      ? "https://" +
-                        _data.url.replace(/^https?:\/\//i, "") +
-                        "?ref=449337&"
-                      : _data.url + "?"
-                  }utm_source=blueprint.zip&utm_medium=card&utm_content=for_${
-                      data.identifier
-                    }"
-                  >
-                    <button class="btn btn-dark platform-button w-100">
-                      <img src="/browse/assets/source/${
-                        platforms[platform][1]
-                      }" alt="" width="24" height="24">
-                        ${platforms[platform][0]}
-                    </button>
-                  </a>
-                `
-                  )
-                  .join("")}
+          </div>
+
+          <div class="row g-4">
+            <div class="col-8">
+              <center>
+                <div class="w-75">
+                  <img src="../../.assets/storage/misc/png/13.png" height="150"/>
+                  <h2 class="h3 my-3">
+                    Install and manage this extension with <b>Blueprint</b>!
+                  </h2>
+                  <p>
+                    <i class="bi bi-check"></i> Avoid conflicts between modifications
+                    <br><i class="bi bi-check"></i> Extensions install within minutes
+                    <br><i class="bi bi-check"></i> Loved by developers and system administrators
+                  </p>
+                </div>
+              </center>
+            </div>
+            <div class="col-4">
+              ${Object.entries(data.platforms)
+                .map(
+                  ([platform, _data]) => `
+                    <div class="platform-button">
+                      <a href="${
+                        platform === "BUILTBYBIT"
+                          ? "https://" +
+                            _data.url.replace(/^https?:\/\//i, "") +
+                            "?ref=449337&"
+                          : _data.url + "?"
+                      }utm_source=blueprint.zip&utm_medium=card&utm_content=for_${
+                          data.identifier
+                        }"
+                      >
+                        <div class="input-group mb-2 flex-nowrap">
+                          <label class="input-group-text w-100 border-0 platform-button-content">
+                            <img src="/browse/assets/source/${
+                              platforms[platform][1]
+                            }" alt="" width="24" height="24" class="me-2">  
+                            ${platforms[platform][0]}
+                          </label>
+                          <label class="input-group-text border-0 text-secondary platform-button-content">${_data.price} ${_data.currency}</label>
+                        </div>
+                      </a>
+                    </div>
+                `)
+                .join("")}
+
+              <div class="bg-secondary-subtle p-3 mt-4 rounded-2">
+                <span>
+                  <i class="bi bi-calendar-week-fill"></i>
+                  Released on
+                  <span class="opacity-50">
+                    ${date}
+                  </span>
+                </span>
+                <br>
+                <span>
+                  <i class="bi bi-people-fill"></i>
+                  Created by
+                  <span class="opacity-50">
+                    ${data.author.name}
+                  </span>
+                </span>
+                <br>
+                <span>
+                  <i class="bi bi-bar-chart-fill"></i>
+                  Used by
+                  <span class="opacity-50">
+                    ~${data.stats.panels} installations
+                  </span>
+                </span>
               </div>
             </div>
           </div>
@@ -222,6 +270,10 @@
 
       // Load product
       const extension_id = (new URL(window.location)).hash.slice(1);
+
+      if(!extension_id) {
+        window.location = "../"
+      }
 
       fetch("https://api.blueprintframe.work/api/extensions/"+extension_id)
         .then((response) => response.json())

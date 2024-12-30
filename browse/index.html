@@ -408,53 +408,21 @@
             "col-sm-12 col-md-6 col-lg-4 mb-4 " + categoryClass;
           listItem.innerHTML = `
             <div class="card overflow-hidden bg-dark-subtle">
-              <img src="${
-                product.banner
-              }" onclick="setTimeout(() => {document.getElementById('${
-                product.identifier
-              }Button').click()}, 1)" class="card-img-top img-dim product-image" alt="${
-                product.name
-              }"/>
-              <div class="btn-group position-absolute" style="right: 11px; top: 0px;">
-                <button type="button" id="${
+              <a href="./extensions/#${product.identifier}" class="text-decoration-none text-body">
+                <img src="${
+                  product.banner
+                }" onclick="setTimeout(() => {document.getElementById('${
                   product.identifier
-                }Button" class="btn btn-secondary rounded-2 buy-btn border-0 backdrop-blur" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="bi bi-chevron-down"></i>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 border-0 shadow w-220px">
-                  ${Object.entries(product.platforms)
-                    .map(
-                      ([platform, data]) => `
-                    <li>
-                    <a
-                    class="dropdown-item rounded-2"
-                    href="${
-                      platform === "BUILTBYBIT"
-                        ? "https://" +
-                          data.url.replace(/^https?:\/\//i, "") +
-                          "?ref=449337&"
-                        : data.url + "?"
-                    }utm_source=blueprint.zip&utm_medium=card&utm_content=for_${
-                        product.identifier
-                      }"
-                    >
-                      <img src="/browse/assets/source/${
-                        platforms[platform][1]
-                      }" alt="" width="24" height="24">
-                        ${platforms[platform][0]}
-                    </a>
-                    </li>
-                  `
-                    )
-                    .join("")}
-                </ul>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title text-truncate">${
+                }Button').click()}, 1)" class="card-img-top img-dim product-image" alt="${
                   product.name
-                } <span class="author-tag">by ${product.author.name}</span></h5>
-                <p class="card-text text-truncate">${product.summary}</p>
-              </div>
+                }"/>
+                <div class="card-body">
+                  <h5 class="card-title text-truncate">${
+                    product.name
+                  } <span class="author-tag">by ${product.author.name}</span></h5>
+                  <p class="card-text text-truncate">${product.summary}</p>
+                </div>
+                </a>
             </div>
           `;
 
