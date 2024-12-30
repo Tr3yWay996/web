@@ -31,7 +31,11 @@
   cursor: pointer;
 }
 .platform-button:hover .platform-button-content {
-  background-color: color-mix(in hsl, var(--bs-body-bg) 90%, white);
+  --background-color: color-mix(in hsl, var(--bs-body-bg) 90%, white);
+  background-color: var(--background-color);
+}
+[data-bs-theme=light] .platform-button-content {
+  --background-color: color-mix(in hsl, var(--bs-body-bg) 90%, black) !important;
 }
 
 .extension-card-content {

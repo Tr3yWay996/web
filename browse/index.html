@@ -652,6 +652,19 @@
 
       filter();
       byteconfused();
+
+      
+      // Focus search bar on CTRL+F
+      document.addEventListener('keydown', (e) => {
+        if (e.ctrlKey && e.key === 'f') {
+          e.preventDefault();
+          
+          const elementToFocus = document.getElementById('productSearch');
+          if (elementToFocus) {
+            elementToFocus.focus();
+          }
+        }
+      });
     </script>
   </body>
 </html>
