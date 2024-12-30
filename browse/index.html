@@ -398,17 +398,22 @@
       function displayProducts(products) {
         const productList = document.getElementById("products");
         productList.innerHTML = "";
+        const twoWeeksAgo = new Date();
+        twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
 
         for (const product of sortProducts(products)) {
           const listItem = document.createElement("div");
           const categoryClass =
             product.type === "THEME" ? "filter-themes" : "filter-extensions";
+          
+          const createdDate = new Date(product.created);
+          const isNew = createdDate > twoWeeksAgo;
 
           listItem.className =
             "col-sm-12 col-md-6 col-lg-4 mb-4 " + categoryClass;
           listItem.innerHTML = `
-            <div class="card overflow-hidden bg-dark-subtle">
-              <a href="./extensions/#${product.identifier}" class="text-decoration-none text-body">
+            <a href="./extensions/#${product.identifier}" class="text-decoration-none text-body">
+              <div class="card overflow-hidden bg-dark-subtle">
                 <img src="${
                   product.banner
                 }" onclick="setTimeout(() => {document.getElementById('${
@@ -420,10 +425,18 @@
                   <h5 class="card-title text-truncate">${
                     product.name
                   } <span class="author-tag">by ${product.author.name}</span></h5>
-                  <p class="card-text text-truncate">${product.summary}</p>
+                  <p class="card-text text-truncate mb-0">${product.summary}</p>
+                  ${
+                    (isNew) ? (`
+                      <span class="badge bg-primary text-body-emphasis placeholder-wave position-absolute rounded-pill top-0 start-0 m-2">
+                        <i class="bi bi-stars"></i>
+                        <b>NEW</b>
+                      </span>
+                    `) : ('')
+                  }
                 </div>
-                </a>
-            </div>
+              </div>
+            </a>
           `;
 
           productList.appendChild(listItem);
