@@ -194,10 +194,10 @@
           </div>
 
           <div class="row g-4">
-            <div class="col-8">
+            <div class="col-lg-8 col-xs-12 order-lg-0 order-1">
               <center>
-                <div class="w-75">
-                  <img src="../../.assets/storage/misc/png/13.png" height="150"/>
+                <div class="blueprint-promotion">
+                  <img src="../../.assets/storage/misc/png/13.png" width="250" style="max-width: 90%"/>
                   <h2 class="h3 my-3">
                     Install and manage this extension with <b>Blueprint</b>!
                   </h2>
@@ -209,11 +209,11 @@
                 </div>
               </center>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4 col-md-12">
               ${Object.entries(data.platforms)
                 .map(
                   ([platform, _data]) => `
-                    <div class="platform-button">
+                    <div class="platform-button placeholder-wave">
                       <a href="${
                         platform === "BUILTBYBIT"
                           ? "https://" +

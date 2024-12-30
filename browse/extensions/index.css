@@ -44,3 +44,13 @@
     --card-padding-top: 240px;
   }
 }
+
+.blueprint-promotion {
+  --width: 75%;
+  width: var(--width);
+}
+@media screen and (max-width: 768px) {
+  .blueprint-promotion {
+    --width: 100% !important;
+  }
+}

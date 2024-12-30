@@ -384,7 +384,7 @@
       function sortProducts(products) {
         switch (sortType) {
           case "created":
-            return products.sort((a, b) => new Date(a.created) < new Date(b.created) ? -1 : 1);
+            return products.sort((a, b) => new Date(a.created) < new Date(b.created) ? -1 : 1).reverse();
           case "author":
             return products.sort((a, b) => a.author.name.localeCompare(b.author.name));
           case "popularity":
