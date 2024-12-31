@@ -81,6 +81,7 @@
 }
 
 [data-bs-theme=light] #filterTypeLabel,
+[data-bs-theme=light] #sortDropdown,
 [data-bs-theme=light] #filterDropdown::after {
   color: var(--bs-body-color) !important;
 }
