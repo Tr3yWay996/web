@@ -1,10 +1,19 @@
+<div class="position-relative p-4 text-body bg-body border rounded-4 d-flex align-items-center">
+  <div class="me-3">
+    <i class="bi bi-book h2"></i>
+  </div>
+  <p class="me-3 my-0">
+    Written by those who've walked the path. Want to improve our guides? Contribute and help build something awesome!
+  </p>
+  <a href="https://github.com/BlueprintFramework/web/tree/main/docs/pages/developing-extensions">
+    <button class="btn btn-primary px-4 rounded-pill placeholder-wave" type="button">
+      Contribute
+    </button>
+  </a>
+</div><br>
+
 # React components
 <h4 class="fw-light">Add your own component on specific places in the Pterodactyl panel.</h4><br/>
-
-<div class="alert mt-2 rounded-4 border" role="alert">
-  <i class="bi bi-pin-angle-fill mb-1" style="font-size:23px; float: left;"></i>
-  <div class="ps-3 ms-3"><b>This section is still being written.</b> You might run into unfinished explanations, incorrect instructions, outdated or misinformation.</div>
-</div><br/>
 
 ### **Preparation**
 

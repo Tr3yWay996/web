@@ -32,7 +32,7 @@
       <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <a href="." class="d-flex align-items-center mb-2 me-2 mb-lg-0 link-body-emphasis text-decoration-none">
-            <img src="./.assets/brand/logo.jpg" width="35" height="35" class="rounded-3" alt="" />
+            <img src="./.assets/brand/retro.png" height="35" class="rounded-3" alt="" />
           </a>
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li><a href="." class="nav-link px-2 link-secondary">Home</a></li>
@@ -67,27 +67,75 @@
     <!--<div class="p-2 d-lg-none d-inline"></div>-->
     <nav class="navbar fixed-top d-lg-none d-inline blueprint-navbar-mobile">
       <div class="container-fluid">
-        <a href="." class="d-flex align-items-center mb-2 me-2 mt-2 mb-lg-0 link-body-emphasis text-decoration-none"><img src="./.assets/brand/logo.jpg" width="40" height="40" class="rounded-3" alt="" /></a>
-        <div class="dropdown">
-          <button class="btn btn-secondary bg-dark-subtle border-0 nav-dropdown-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 border-0 shadow w-220px">
-            <li><a class="dropdown-item rounded-2 disabled" href=".">Home</a></li>
-            <li><a class="dropdown-item rounded-2" href="./browse">Browse</a></li>
-            <li><a class="dropdown-item rounded-2" href="./docs">Documentation</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <div class="mobile-theme-switcher">
-              <a href="javascript:void" class="dropdown-item rounded-2 mobile-theme-switcher-btn" data-bs-theme-value="light"><i class="bi bi-sun-fill opacity-50"></i></a>
-              <a href="javascript:void" class="dropdown-item rounded-2 mobile-theme-switcher-btn" data-bs-theme-value="dark"><i class="bi bi-moon-stars-fill opacity-50"></i></a>
-              <a href="javascript:void" class="dropdown-item rounded-2 mobile-theme-switcher-btn" data-bs-theme-value="auto"><i class="bi bi-circle-half opacity-50"></i></a>
-            </div>
-          </ul>
-        </div>
+        <a href="./" class="d-flex align-items-center mb-2 me-2 mt-2 mb-lg-0 link-body-emphasis text-decoration-none"><img src="./.assets/brand/retro.jpg" height="40" class="rounded-3" alt="" /></a>
+        <button class="btn btn-secondary bg-dark-subtle border-0 nav-dropdown-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
     </nav>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navigation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a href="./" class="btn btn-dark rounded-2 d-flex gap-2 py-2 px-3 lh-sm text-start align-items-center position-absolute mobile-nav-link bg-light-subtle">
+              <div>
+                <i class="bi bi-house-fill h1"></i>
+              </div>
+              <div class="text-truncate">
+                <strong class="d-block">Home</strong>
+                <small>Learn more about Blueprint, what is is, and why it was made</small>
+              </div>
+            </a>
+            <div class="mobile-nav-spacer"></div>
+          </li>
+          <li class="nav-item">
+            <a href="../browse" class="btn btn-dark rounded-2 d-flex gap-2 py-2 px-3 lh-sm text-start align-items-center position-absolute mobile-nav-link">
+              <div>
+                <i class="bi bi-puzzle-fill h1"></i>
+              </div>
+              <div class="text-truncate">
+                <strong class="d-block">Browse</strong>
+                <small>Explore and search extensions made by the community</small>
+              </div>
+            </a>
+            <div class="mobile-nav-spacer"></div>
+          </li>
+          <li class="nav-item">
+            <a href="../docs" class="btn btn-dark rounded-2 d-flex gap-2 py-2 px-3 lh-sm text-start align-items-center position-absolute mobile-nav-link">
+              <div>
+                <i class="bi bi-book-fill h1"></i>
+              </div>
+              <div class="text-truncate">
+                <strong class="d-block">Documentation</strong>
+                <small>Guides and docs about interacting with Blueprint</small>
+              </div>
+            </a>
+            <div class="mobile-nav-spacer"></div>
+          </li>
+          <div class="mobile-theme-switcher row position-absolute start-0 bottom-0 ms-1 mb-4">
+            <div class="col-4">
+              <a href="javascript:void" class="rounded-2 mobile-theme-switcher-btn" data-bs-theme-value="light">
+                <i class="bi bi-sun-fill opacity-50 text-body" style="padding: 0 50%;"></i>
+              </a>
+            </div>
+            <div class="col-4">
+              <a href="javascript:void" class="rounded-2 mobile-theme-switcher-btn" data-bs-theme-value="dark">
+                <i class="bi bi-moon-stars-fill opacity-50 text-body" style="padding: 0 50%;"></i>
+              </a>
+            </div>
+            <div class="col-4">
+              <a href="javascript:void" class="rounded-2 mobile-theme-switcher-btn" data-bs-theme-value="auto">
+                <i class="bi bi-circle-half opacity-50 text-body" style="padding: 0 50%;"></i>
+              </a>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
 
 
 
@@ -249,7 +297,7 @@
               <rect x="333.3332" y="166.6666" width="166.667" height="333.3332"/>
             </svg>
           </a>
-          <span class="mb-3 mb-md-0 text-body-secondary">© 2023-2024 Emma (<a href="https://prpl.wtf" class="text-body-secondary" target="_blank">prpl.wtf</a>)</span>
+          <span class="mb-3 mb-md-0 text-body-secondary">© 2023-2025 Emma (<a href="https://prpl.wtf" class="text-body-secondary" target="_blank">prpl.wtf</a>)</span>
         </div>
 
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">

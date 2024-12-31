@@ -1,8 +1,22 @@
+<div class="position-relative p-4 text-body bg-body border rounded-4 d-flex align-items-center">
+  <div class="me-3">
+    <i class="bi bi-book h2"></i>
+  </div>
+  <p class="me-3 my-0">
+    Written by those who've walked the path. Want to improve our guides? Contribute and help build something awesome!
+  </p>
+  <a href="https://github.com/BlueprintFramework/web/tree/main/docs/pages/getting-started">
+    <button class="btn btn-primary px-4 rounded-pill placeholder-wave" type="button">
+      Contribute
+    </button>
+  </a>
+</div><br>
+
 # Extension development
 <h4 class="fw-light">Set up your extension development environment.</h4><br/>
 
 <div class="alert mt-2 rounded-4 border" role="alert">
-  <i class="bi bi-toggle-on mt-1" style="font-size:23px; float: left;"></i>
+  <i class="bi bi-pin-angle-fill mb-1" style="font-size:23px; float: left;"></i>
   <div class="ps-3 ms-3"><b>Developer mode</b> has to be turned on in your <b>admin panel</b> <p- class="opacity-50">(Admin > Extensions > Blueprint)</p-> before you can run developer commands. You only have to do this once.</div>
 </div><br/>
 
@@ -17,11 +31,7 @@ After running this command, you can now find your extension files in the `.bluep
 ```sh
 cd .blueprint/dev
 ```
-
-<div class="alert mx-1 rounded-4 border" role="alert">
-  <i class="bi bi-quote mt-1" style="font-size:23px; float: left;"></i>
-  <div class="ps-3 ms-3">While you can develop extensions without ever leaving your terminal emulator, you can also transfer files from your local machine to your server using SFTP or use specific applications to automate this process (such as <a href="https://open-vsx.org/extension/Natizyskunk/sftp" class="alert-link">this VSCode extension</a>).</div>
-</div><br/>
+<br>
 
 
 ### **Applying changes**

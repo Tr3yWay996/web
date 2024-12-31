@@ -12,16 +12,23 @@
 .nav-dropdown-btn { background-color: transparent !important; }
 [data-bs-theme=light] .invert-light { filter: invert() }
 
-.mobile-theme-switcher {
-  display: flex !important;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
 .mobile-theme-switcher-btn {
-  width: 33.33% !important;
+  width: 100% !important;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+.mobile-theme-switcher {
+  width: calc(100% - 24px);
+}
+.mobile-nav-link {
+  width: calc(100% - 32px);
+  overflow: hidden;
+  box-shadow: unset;
+}
+.mobile-nav-spacer {
+  display: block;
+  padding-bottom: 72px;
 }
 
 
