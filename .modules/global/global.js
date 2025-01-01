@@ -11,6 +11,10 @@ window.addEventListener('DOMContentLoaded', () => {
         socialpush.style.display = "none"
     }
 
+    document.querySelectorAll(".currentYear").forEach(element => {
+        element.innerHTML = (new Date).getFullYear()
+    });
+
 });
 
 function dismissSocial() {
