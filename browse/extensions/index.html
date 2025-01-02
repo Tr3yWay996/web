@@ -10,7 +10,7 @@
     <link href="./index.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../../favicon.ico">
 
-    <script defer data-domain="blueprint.zip" src="https://plausible.prpl.wtf/js/script.hash.outbound-links.revenue.js"></script>
+    <script defer data-domain="blueprint.zip" src="https://plausible.prpl.wtf/js/script.hash.outbound-links.revenue.tagged-events.js"></script>
 
     <!-- Social Embeds -->
     <meta property="theme-color" content="#3b7cfe">
@@ -334,6 +334,7 @@
                       }utm_source=blueprint.zip&utm_medium=listing&utm_content=blueprint_${
                           data.identifier
                         }"
+                        class="plausible-event-name=${platforms[platform][0]} plausible-revenue-amount=${_data.price} plausible-revenue-currency=${_data.currency}"
                       >
                         <div class="input-group mb-2 flex-nowrap">
                           <label class="input-group-text w-100 border-0 platform-button-content">
