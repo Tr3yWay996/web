@@ -1,26 +1,15 @@
 .bp-hero {
-  --bp-hero-1: 59,137,214;
+  --bp-hero-1: 203,166,247;
   --bp-hero-2: 33,37,41;
-  --bp-hero-3: 42,147,252;
-  --bp-hero-4: 249,37,157;
-  --bp-hero-5: 178,17,214;
-  --bp-hero-6: 13,7,122;
+
   background-image: 
-    linear-gradient(180deg, rgba(var(--bp-hero-1), 0.01), rgba(var(--bp-hero-2), 1) 85%),
-    radial-gradient(ellipse at top left, rgba(var(--bp-hero-3), 0.5), transparent 50%),
-    radial-gradient(ellipse at top right, rgba(var(--bp-hero-4), 0.5), transparent 50%),
-    radial-gradient(ellipse at center right, rgba(var(--bp-hero-5), 0.5), transparent 50%),
-    radial-gradient(ellipse at center left, rgba(var(--bp-hero-6), 0.5), transparent 50%);
+    linear-gradient(180deg, rgba(var(--bp-hero-1), 0.01), rgba(var(--bp-hero-2), 1) 85%);
   padding-top: 150px;
   padding-bottom: 75px;
 }
 [data-bs-theme=light] .bp-hero {
   --bp-hero-1: 59,137,214;
   --bp-hero-2: 255,255,255;
-  --bp-hero-3: 42,147,252;
-  --bp-hero-4: 249,37,257;
-  --bp-hero-5: 178,40,214;
-  --bp-hero-6: 13,30,122;
 }
 
 .bp-grid {
@@ -31,15 +20,11 @@
 }
 [data-bs-theme=light] .bp-grid {
   background-image:
-    linear-gradient(to right, transparent 1px, transparent 1px),
-    linear-gradient(to bottom, transparent 1px, transparent 1px);
+    linear-gradient(to right, #00000010 1px, transparent 1px),
+    linear-gradient(to bottom, #00000010 1px, transparent 1px);
 }
 
 .dl-btn {
-  background:
-    linear-gradient(to right, rgba(249,37,257,0.4), rgba(13,7,122,0.4));
-  }
-[data-bs-theme=light] .dl-btn {
   background-color: #0d6efd !important;
   border-color: #0d6efd !important;
 }
@@ -50,4 +35,28 @@
 
 .width-800 {
   max-width: 800px;
+}
+
+.bp-highlight {
+  --bp-color-1: rgba(243, 139, 168, 1);
+  --bp-color-2: rgba(250, 179, 135, 1);
+  --bp-color-3: rgba(249, 226, 175, 1);
+  --bp-color-4: rgba(166, 227, 161, 1);
+  --bp-color-5: rgba(137, 180, 250, 1);
+  --bp-color-6: rgba(203, 166, 247, 1);
+
+  background: 
+    linear-gradient(90deg, 
+      rgba(243, 139, 168, 1),
+      rgba(250, 179, 135, 1),
+      rgba(249, 226, 175, 1),
+      rgba(166, 227, 161, 1),
+      rgba(137, 180, 250, 1),
+      rgba(203, 166, 247, 1)
+    );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
 }
