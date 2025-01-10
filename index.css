@@ -60,3 +60,59 @@
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
 }
+
+
+.glyph-container {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0;
+}
+
+.glyph-square {
+  background: white;
+  width: 101%;
+  height: 101%;
+  opacity: 0;
+  animation: glyph-fadeIn 0.5s forwards;
+}
+
+.glyph-square:nth-child(1) {
+  grid-column: 2;
+  grid-row: 1;
+  animation-delay: 0s;
+}
+.glyph-square:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+  animation-delay: 0.1s;
+}
+.glyph-square:nth-child(3) {
+  grid-column: 3;
+  grid-row: 2;
+  animation-delay: 0.2s;
+}
+.glyph-square:nth-child(4) {
+  grid-column: 2;
+  grid-row: 3;
+  animation-delay: 0.3s;
+}
+.glyph-square:nth-child(5) {
+  grid-column: 3;
+  grid-row: 3;
+  animation-delay: 0.4s;
+}
+
+@keyframes glyph-fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
