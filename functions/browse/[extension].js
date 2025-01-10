@@ -51,13 +51,13 @@ export const onRequest = async(context) => {
 
 			return new Response(insertMetadata({
 				...meta,
-				'og:title': `blueprint.zip | ${data.name}`,
-				'description': `${meta.description}\n\n${data.summary}`,
-				'og:description': `${meta['og:description']}\n\n${data.summary}`,
-				'og:image': data.banner,
-				'twitter:title': `blueprint.zip | ${data.name}`,
-				'twitter:description': `${meta['twitter:description']}\n\n${data.summary}`,
-				'twitter:image': data.banner
+				'og:title': `blueprint.zip | ${extensionData.name}`,
+				'description': `${meta.description}\n\n${extensionData.summary}`,
+				'og:description': `${meta['og:description']}\n\n${extensionData.summary}`,
+				'og:image': extensionData.banner,
+				'twitter:title': `blueprint.zip | ${extensionData.name}`,
+				'twitter:description': `${meta['twitter:description']}\n\n${extensionData.summary}`,
+				'twitter:image': extensionData.banner
 			}, ExtensionsHtml), {
 				headers: {
 					'Content-Type': 'text/html'
