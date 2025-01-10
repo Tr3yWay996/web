@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Extensions - Blueprint</title>
-    <link href="../../.modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../.modules/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="../../.modules/global/global.css" rel="stylesheet">
+    <link href="/.modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/.modules/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/.modules/global/global.css" rel="stylesheet">
     <link href="./index.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
     <script defer data-domain="blueprint.zip" src="https://plausible.prpl.wtf/js/script.hash.outbound-links.js"></script>
 
@@ -22,16 +22,16 @@
     <header class="p-3 mb-3 border-bottom fixed-top d-lg-inline d-none blueprint-navbar">
       <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="../../" class="d-flex align-items-center mb-2 me-3 mb-lg-0 link-body-emphasis text-decoration-none">
-            <img src="../../.assets/brand/retro.png" height="30" alt="" />
+          <a href="/" class="d-flex align-items-center mb-2 me-3 mb-lg-0 link-body-emphasis text-decoration-none">
+            <img src="/.assets/brand/retro.png" height="30" alt="" />
           </a>
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="../../" class="nav-link px-2 link-body-emphasis">Home</a></li>
+            <li><a href="/" class="nav-link px-2 link-body-emphasis">Home</a></li>
             <li><a href="../" class="nav-link px-2 link-body-emphasis">Browse</a></li>
-            <li><a href="../../docs" class="nav-link px-2 link-body-emphasis">Documentation</a></li>
+            <li><a href="/docs" class="nav-link px-2 link-body-emphasis">Documentation</a></li>
           </ul>
           <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
-            <li class="nav-item me-1 ms-1"><a class="nav-link px-1 nav-svg" href="https://bsky.app/profile/blueprint.zip"><img src="../../.assets/storage/icons/bluesky.svg"/></a></li>
+            <li class="nav-item me-1 ms-1"><a class="nav-link px-1 nav-svg" href="https://bsky.app/profile/blueprint.zip"><img src="/.assets/storage/icons/bluesky.svg"/></a></li>
             <li class="nav-item me-1 ms-1 py-1"><a class="nav-link px-1" href="https://discord.gg/CUwHwv6xRe"><i class="bi bi-discord"></i></a></li>
             <li class="nav-item me-1 ms-1 py-1"><a class="nav-link px-1" href="https://github.com/BlueprintFramework"><i class="bi bi-github"></i></a></li>
             <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
@@ -58,7 +58,7 @@
     <div class="p-2 d-lg-none d-inline"></div>
     <nav class="navbar fixed-top d-lg-none d-inline blueprint-navbar-mobile">
       <div class="container-fluid">
-        <a href="../../" class="d-flex align-items-center mx-2 my-3 mb-lg-0 link-body-emphasis text-decoration-none"><img src="../../.assets/brand/retro.png" height="35" alt="" /></a>
+        <a href="/" class="d-flex align-items-center mx-2 my-3 mb-lg-0 link-body-emphasis text-decoration-none"><img src="/.assets/brand/retro.png" height="35" alt="" /></a>
         <button class="btn btn-secondary bg-dark-subtle border-0 nav-dropdown-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -72,7 +72,7 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a href="../../" class="btn btn-dark rounded-2 d-flex gap-2 py-2 px-3 lh-sm text-start align-items-center position-absolute mobile-nav-link">
+            <a href="/" class="btn btn-dark rounded-2 d-flex gap-2 py-2 px-3 lh-sm text-start align-items-center position-absolute mobile-nav-link">
               <div>
                 <i class="bi bi-house-fill h1"></i>
               </div>
@@ -96,7 +96,7 @@
             <div class="mobile-nav-spacer"></div>
           </li>
           <li class="nav-item">
-            <a href="../../docs" class="btn btn-dark rounded-2 d-flex gap-2 py-2 px-3 lh-sm text-start align-items-center position-absolute mobile-nav-link">
+            <a href="/docs" class="btn btn-dark rounded-2 d-flex gap-2 py-2 px-3 lh-sm text-start align-items-center position-absolute mobile-nav-link">
               <div>
                 <i class="bi bi-book-fill h1"></i>
               </div>
@@ -230,9 +230,9 @@
       </div>
     </div>
 
-    <script src="../../.modules/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../../.modules/bootstrap/etc/theme-switcher.js"></script>
-    <script src="../../.modules/global/global.js"></script>
+    <script src="/.modules/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/.modules/bootstrap/etc/theme-switcher.js"></script>
+    <script src="/.modules/global/global.js"></script>
     <script>
       /**
        * @typedef {{
@@ -253,7 +253,7 @@
        *  };
        * }} Product
        *
-       * @type {Product[]}
+       * @type {Product}
        */
       let product;
 
@@ -264,7 +264,7 @@
         GITHUB: ["GitHub", "GH.png"],
       };
 
-      /** @param {Product[]} products */
+      /** @param {Product} data */
       function displayProduct(data) {
         const productContainer = document.getElementById("productContainer");
         const createdDate = new Date(data.created);
@@ -293,7 +293,7 @@
             <div class="col-lg-8 col-xs-12 order-lg-0 order-1">
               <center>
                 <div class="blueprint-promotion">
-                  <img src="../../.assets/storage/misc/png/13.png" width="250" style="max-width: 90%"/>
+                  <img src="/.assets/storage/misc/png/13.png" width="250" style="max-width: 90%"/>
                   <h2 class="h3 my-3">
                     Install and manage this extension with <b>Blueprint</b>!
                   </h2>
@@ -302,7 +302,7 @@
                     <br><i class="bi bi-check"></i> Extensions install within minutes
                     <br><i class="bi bi-check"></i> Loved by developers and system administrators
                   </p>
-                  <a href="../../" target="_blank" class="text-decoration-none">
+                  <a href="/" target="_blank" class="text-decoration-none">
                     Learn more
                     <i class="bi bi-chevron-right"></i>
                   </a>
@@ -396,21 +396,23 @@
       }
 
       // Load product
-      const extension_id = (new URL(window.location)).hash.slice(1);
+      let extension_id = window.location.pathname.split("/").pop();
 
-      if(!extension_id) {
-        window.location = "../"
+      if (!extension_id) {
+        window.location = "/browse"
+      } else if (extension_id === "extensions") {
+        extension_id = window.location.hash.slice(1);
       }
 
-      fetch("https://api.blueprintframe.work/api/extensions/"+extension_id)
+      fetch(`https://api.blueprintframe.work/api/extensions/${extension_id}`)
         .then((response) => response.json())
         .then((data) => {
           displayProduct(data);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          window.location = "/browse"
         });
-
-      window.addEventListener('hashchange', () => {
-        window.location.reload();
-      });
     </script>
   </body>
 </html>

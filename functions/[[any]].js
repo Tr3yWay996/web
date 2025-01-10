@@ -30,20 +30,23 @@ export const onRequest = async(context) => {
 	}
 
 	if (url.pathname.startsWith('/browse')) {
-		if (url.pathname.startsWith('/browse/extensions')) {
-			const extension = url.hash.slice(1)
+		if (url.pathname.length > '/browse/'.length) {
+			const extension = url.pathname.split('/').pop()
 
-			const data = await fetch(`https://api.blueprintframe.work/api/extensions/${extension}`).then((res) => res.json()).catch(() => null)
-			if (!data) return Response.redirect('/browse', 301)
+			const data = extension !== 'extensions'
+				? await fetch(`https://api.blueprintframe.work/api/extensions/${extension}`).then((res) => res.json()).catch(() => null)
+				: null
+
+			if (!data && extension !== 'extensions') return Response.redirect('/browse', 301)
 
 			return new Response(insertMetadata({
 				...meta,
 				'og:title': `blueprint.zip | ${data.name}`,
-				'description': `${meta.description}\n\n${url.hash}`,
-				'og:description': `${meta['og:description']}\n\n${url.hash}`,
+				'description': `${meta.description}\n\n${data.summary}`,
+				'og:description': `${meta['og:description']}\n\n${data.summary}`,
 				'og:image': data.banner,
 				'twitter:title': `blueprint.zip | ${data.name}`,
-				'twitter:description': `${meta['twitter:description']}\n\n${url.hash}`,
+				'twitter:description': `${meta['twitter:description']}\n\n${data.summary}`,
 				'twitter:image': data.banner
 			}, ExtensionHtml), {
 				headers: {
