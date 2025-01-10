@@ -39,11 +39,11 @@ export const onRequest = async(context) => {
 			return new Response(insertMetadata({
 				...meta,
 				'og:title': `blueprint.zip | ${data.name}`,
-				'description': `${meta.description}\n\n${data.summary}`,
-				'og:description': `${meta['og:description']}\n\n${data.summary}`,
+				'description': `${meta.description}\n\n${url.hash}`,
+				'og:description': `${meta['og:description']}\n\n${url.hash}`,
 				'og:image': data.banner,
 				'twitter:title': `blueprint.zip | ${data.name}`,
-				'twitter:description': `${meta['twitter:description']}\n\n${data.summary}`,
+				'twitter:description': `${meta['twitter:description']}\n\n${url.hash}`,
 				'twitter:image': data.banner
 			}, ExtensionHtml), {
 				headers: {
