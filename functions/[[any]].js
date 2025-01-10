@@ -32,7 +32,7 @@ export const onRequest = async(context) => {
 	if (url.pathname.startsWith('/browse')) {
 		const disallowed = ['assets', 'repository', '.css', '.js']
 
-		if (url.pathname.length > '/browse/'.length && !disallowed.some((x) => url.pathname.includes(x))) {
+		if (url.pathname.length > '/browse/'.length && disallowed.every((x) => !url.pathname.includes(x))) {
 			const extension = url.pathname.split('/').pop()
 
 			const data = extension !== 'extensions'
@@ -57,30 +57,32 @@ export const onRequest = async(context) => {
 			})
 		}
 
-		meta['og:image'] = '/.assets/brand/og-browse.jpg'
-		meta['twitter:image'] = '/.assets/brand/og-browse.jpg'
+		if (url.pathname === '/browse' || url.pathname === '/browse/') {
+			meta['og:image'] = '/.assets/brand/og-browse.jpg'
+			meta['twitter:image'] = '/.assets/brand/og-browse.jpg'
 
-		const data = await fetch('https://api.blueprintframe.work/api/extensions').then((res) => res.json()).catch(() => null)
-		if (data) {
-			return new Response(insertMetadata({
-				...meta,
-				'og:title': 'blueprint.zip | Browse Extensions',
-				'description': `${meta.description}\n\nBrowse ${data.length} extensions for blueprint.zip.`,
-				'og:description': `${meta['og:description']}\n\nBrowse ${data.length} extensions for blueprint.zip.`,
-				'twitter:title': 'blueprint.zip | Browse Extensions',
-				'twitter:description': `${meta['twitter:description']}\n\nBrowse ${data.length} extensions for blueprint.zip.`
-			}, BrowseHtml), {
+			const data = await fetch('https://api.blueprintframe.work/api/extensions').then((res) => res.json()).catch(() => null)
+			if (data) {
+				return new Response(insertMetadata({
+					...meta,
+					'og:title': 'blueprint.zip | Browse Extensions',
+					'description': `${meta.description}\n\nBrowse ${data.length} extensions for blueprint.zip.`,
+					'og:description': `${meta['og:description']}\n\nBrowse ${data.length} extensions for blueprint.zip.`,
+					'twitter:title': 'blueprint.zip | Browse Extensions',
+					'twitter:description': `${meta['twitter:description']}\n\nBrowse ${data.length} extensions for blueprint.zip.`
+				}, BrowseHtml), {
+					headers: {
+						'Content-Type': 'text/html'
+					}
+				})
+			}
+
+			return new Response(insertMetadata(meta, BrowseHtml), {
 				headers: {
 					'Content-Type': 'text/html'
 				}
 			})
 		}
-
-		return new Response(insertMetadata(meta, BrowseHtml), {
-			headers: {
-				'Content-Type': 'text/html'
-			}
-		})
 	}
 
 	return context.env.ASSETS.fetch(url)
