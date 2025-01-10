@@ -1,182 +1,427 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <style>
-    body {
-      background: #1a1a1a;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-    }
-    canvas {
-      background: #1a1a1a;
-      border: 1px solid #333;
-    }
-  </style>
-</head>
-<body>
-  <canvas id="puzzleCanvas" width="300" height="300"></canvas>
-  <script>
-    const canvas = document.getElementById('puzzleCanvas');
-    const ctx = canvas.getContext('2d');
-    const GRID_SIZE = 3;
-    const CELL_SIZE = canvas.width / GRID_SIZE;
-    
-    // Target state (your logo pattern)
-    const TARGET = [
-      [0, 1, 0],
-      [1, 0, 1],
-      [0, 1, 1]
-    ];
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Extensions - Blueprint</title>
+    <link href="../../.modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../.modules/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../../.modules/global/global.css" rel="stylesheet">
+    <link href="./index.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
 
-    // Current state of the puzzle
-    let currentState = {
-      grid: [],
-      emptyPos: { x: 1, y: 1 }  // Always start with empty center
-    };
+    <script defer data-domain="blueprint.zip" src="https://plausible.prpl.wtf/js/script.hash.outbound-links.js"></script>
 
-    // Animation state
-    let isAnimating = false;
-    let moveQueue = [];
-    let currentMove = null;
-    let animationProgress = 0;
+    <!-- Social Embeds -->
+    <meta property="theme-color" content="#3b7cfe">
+    <meta property="og:title" content="blueprint.zip">
+    <meta property="og:description" content="Powerful, fast and developer-friendly extension framework for Pterodactyl. Utilize extension APIs, inject HTML, modify stylesheets, package extensions and so much more.">
+    <meta property="og:url" content="https://blueprint.zip">
+    <meta property="og:image" content="/.assets/brand/og-browse.jpg">
+    <meta property="og:type" content="website">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://blueprint.zip">
+    <meta property="twitter:title" content="blueprint.zip">
+    <meta property="twitter:description" content="Powerful, fast and developer-friendly extension framework for Pterodactyl. Utilize extension APIs, inject HTML, modify stylesheets, package extensions and so much more.">
+    <meta property="twitter:image" content="/.assets/brand/og-browse.jpg">
+  </head>
 
-    function initializeRandomPuzzle() {
-      // Create a shuffled version of the target
-      let pieces = [];
-      for (let i = 0; i < GRID_SIZE; i++) {
-        for (let j = 0; j < GRID_SIZE; j++) {
-          if (TARGET[i][j] === 1) {
-            pieces.push({x: j, y: i});
-          }
-        }
+  <body data-bs-theme="dark">
+
+    <!-- Desktop Navbar -->
+    <div class="p-2 d-lg-inline d-none"></div>
+    <header class="p-3 mb-3 border-bottom fixed-top d-lg-inline d-none blueprint-navbar">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="../../" class="d-flex align-items-center mb-2 me-3 mb-lg-0 link-body-emphasis text-decoration-none">
+            <img src="../../.assets/brand/retro.png" height="30" alt="" />
+          </a>
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="../../" class="nav-link px-2 link-body-emphasis">Home</a></li>
+            <li><a href="../" class="nav-link px-2 link-body-emphasis">Browse</a></li>
+            <li><a href="../../docs" class="nav-link px-2 link-body-emphasis">Documentation</a></li>
+          </ul>
+          <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+            <li class="nav-item me-1 ms-1"><a class="nav-link px-1 nav-svg" href="https://bsky.app/profile/blueprint.zip"><img src="../../.assets/storage/icons/bluesky.svg"/></a></li>
+            <li class="nav-item me-1 ms-1 py-1"><a class="nav-link px-1" href="https://discord.gg/CUwHwv6xRe"><i class="bi bi-discord"></i></a></li>
+            <li class="nav-item me-1 ms-1 py-1"><a class="nav-link px-1" href="https://github.com/BlueprintFramework"><i class="bi bi-github"></i></a></li>
+            <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+              <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+              <hr class="d-lg-none my-2 text-white-50">
+            </li>
+            <li class="nav-item dropdown">
+              <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (dark)">
+                <i class="bi bi-moon-stars-fill my-1 theme-icon-active"></i>
+                <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end position-absolute gap-1 p-2 rounded-3 mx-0 border-0 shadow w-220px" aria-labelledby="bd-theme-text">
+                <li><button type="button" class="theme-switcher-btn dropdown-item rounded-2 d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false"><i class="bi bi-sun-fill me-2 opacity-50"></i> Light</button></li>
+                <li><button type="button" class="theme-switcher-btn dropdown-item rounded-2 d-flex align-items-center active" data-bs-theme-value="dark" aria-pressed="true"><i class="bi bi-moon-stars-fill me-2 opacity-50"></i> Dark</button></li>
+                <li><button type="button" class="theme-switcher-btn dropdown-item rounded-2 d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false"><i class="bi bi-circle-half me-2 opacity-50"></i> Auto</button></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile/Tablet Navbar -->
+    <div class="p-2 d-lg-none d-inline"></div>
+    <nav class="navbar fixed-top d-lg-none d-inline blueprint-navbar-mobile">
+      <div class="container-fluid">
+        <a href="../../" class="d-flex align-items-center mx-2 my-3 mb-lg-0 link-body-emphasis text-decoration-none"><img src="../../.assets/brand/retro.png" height="35" alt="" /></a>
+        <button class="btn btn-secondary bg-dark-subtle border-0 nav-dropdown-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navigation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a href="../../" class="btn btn-dark rounded-2 d-flex gap-2 py-2 px-3 lh-sm text-start align-items-center position-absolute mobile-nav-link">
+              <div>
+                <i class="bi bi-house-fill h1"></i>
+              </div>
+              <div class="text-truncate">
+                <strong class="d-block">Home</strong>
+                <small>Learn more about Blueprint, what is is, and why it was made</small>
+              </div>
+            </a>
+            <div class="mobile-nav-spacer"></div>
+          </li>
+          <li class="nav-item">
+            <a href="../" class="btn btn-dark rounded-2 d-flex gap-2 py-2 px-3 lh-sm text-start align-items-center position-absolute mobile-nav-link bg-light-subtle">
+              <div>
+                <i class="bi bi-puzzle-fill h1"></i>
+              </div>
+              <div class="text-truncate">
+                <strong class="d-block">Browse</strong>
+                <small>Explore and search extensions made by the community</small>
+              </div>
+            </a>
+            <div class="mobile-nav-spacer"></div>
+          </li>
+          <li class="nav-item">
+            <a href="../../docs" class="btn btn-dark rounded-2 d-flex gap-2 py-2 px-3 lh-sm text-start align-items-center position-absolute mobile-nav-link">
+              <div>
+                <i class="bi bi-book-fill h1"></i>
+              </div>
+              <div class="text-truncate">
+                <strong class="d-block">Documentation</strong>
+                <small>Guides and docs about interacting with Blueprint</small>
+              </div>
+            </a>
+            <div class="mobile-nav-spacer"></div>
+          </li>
+          <div class="mobile-theme-switcher row position-absolute start-0 bottom-0 ms-1 mb-4">
+            <div class="col-4">
+              <a href="javascript:void" class="rounded-2 mobile-theme-switcher-btn" data-bs-theme-value="light">
+                <i class="bi bi-sun-fill opacity-50 text-body" style="padding: 0 50%;"></i>
+              </a>
+            </div>
+            <div class="col-4">
+              <a href="javascript:void" class="rounded-2 mobile-theme-switcher-btn" data-bs-theme-value="dark">
+                <i class="bi bi-moon-stars-fill opacity-50 text-body" style="padding: 0 50%;"></i>
+              </a>
+            </div>
+            <div class="col-4">
+              <a href="javascript:void" class="rounded-2 mobile-theme-switcher-btn" data-bs-theme-value="auto">
+                <i class="bi bi-circle-half opacity-50 text-body" style="padding: 0 50%;"></i>
+              </a>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <!-- Content -->
+    <div class="container mt-5 mb-5 pt-5" id="productContainer">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-3 position-relative pt-5 mb-4">
+        <div class="d-flex flex-column h-100 p-5 pb-4 text-white text-shadow-1 extension-card-content">
+          <h3 class="pt-5 mt-5 mb-3 placeholder-wave">
+            <span class="placeholder col-6 rounded-3"></span>
+          </h3>
+          <p class="placeholder-wave">
+            <span class="placeholder col-12 rounded-5"></span>
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-8 col-xs-12 order-lg-0 order-1">
+          <center>
+            <div class="blueprint-promotion">
+              <h2 class="h3 my-3">
+                <span class="placeholder-wave">
+                  <span class="placeholder col-5 rounded-3"></span>
+                </span>
+              </h2>
+              <p>
+                <span class="placeholder-wave">
+                  <span class="placeholder col-8 rounded-3"></span>
+                  <span class="placeholder col-8 rounded-3"></span>
+                  <span class="placeholder col-8 rounded-3"></span>
+                </span>
+              </p>
+              <span class="placeholder-wave">
+                <span class="placeholder col-4 rounded-3"></span>
+              </span>
+            </div>
+          </center>
+        </div>
+        <div class="col-lg-4 col-md-12">
+          <div class="platform-button placeholder-wave">
+            <span class="placeholder col-12 rounded-3 mb-2"></span>
+          </div>
+
+          <div class="bg-secondary-subtle p-3 mt-4 rounded-2">
+            <span class="placeholder-wave">
+              <span class="placeholder col-9 rounded-3"></span>
+            </span>
+            <br>
+            <span class="placeholder-wave">
+              <span class="placeholder col-10 rounded-3"></span>
+            </span>
+            <br>
+            <span class="placeholder-wave">
+              <span class="placeholder col-4 rounded-3"></span>
+            </span>
+
+            <div class="mt-2">
+              <span class="placeholder-wave">
+                <span class="placeholder col-2 rounded-3"></span>
+                <span class="placeholder col-3 rounded-3"></span>
+                <span class="placeholder col-4 rounded-3"></span>
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="../" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+            <svg viewBox="0 0 500 500" class="text-body-secondary" xmlns="http://www.w3.org/2000/svg" width="30" height="24" fill="currentColor">
+              <rect x="0" y="166.6666" width="166.6666" height="166.6666"/>
+              <rect x="166.6666" y="0" width="166.6666" height="166.6666"/>
+              <rect x="166.6666" y="333.3332" width="166.667" height="166.6666"/>
+              <rect x="333.3332" y="166.6666" width="166.667" height="333.3332"/>
+            </svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-body-secondary">© 2023-<span class="currentYear">2025</span> Emma (<a href="https://prpl.wtf" class="text-body-secondary" target="_blank">prpl.wtf</a>)</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a class="text-body-secondary" href="https://discord.gg/CUwHwv6xRe"><i class="bi bi-discord" width="24" height="24"></i></a></li>
+          <li class="ms-3"><a class="text-body-secondary" href="https://github.com/BlueprintFramework"><i class="bi bi-github" width="24" height="24"></i></a></li>
+          <li class="ms-3"><a class="text-body-secondary" href="https://github.com/sponsors/prplwtf"><i class="bi bi-chat-right-heart-fill" width="24" height="24"></i></a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <div id="social-push">
+      <div>
+        <p>
+          <b>Become part of Blueprint's Discord community</b> and be one of the first to get notified about new extension releases and framework updates.
+        </p>
+        <a href="https://discord.gg/CUwHwv6xRe" class="link-underline link-underline-opacity-0 me-3"><i class="bi bi-discord me-1"></i> Join the community</a>
+        <a href="javascript:void" onclick="dismissSocial()" class="link-underline link-underline-opacity-0 pe-pointer text-secondary"><i class="bi bi-x-lg me-1"></i> Close</a>
+      </div>
+    </div>
+
+    <script src="../../.modules/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../../.modules/bootstrap/etc/theme-switcher.js"></script>
+    <script src="../../.modules/global/global.js"></script>
+    <script>
+      /**
+       * @typedef {{
+       *  name: string;
+       *  summary: string;
+       *  banner: string;
+       *  identifier: string;
+       *  author: { name: string; };
+       *  type: 'THEME' | 'EXTENSION';
+       *  created: string;
+       *  platforms: Record<string, {
+       *   url: string;
+       *   price: number;
+       *   currency: string;
+       *  }>;
+       *  stats: {
+       *   panels: number;
+       *  };
+       * }} Product
+       *
+       * @type {Product[]}
+       */
+      let product;
+
+      /** @type {Object<string, [name: string, icon: string]>} */
+      const platforms = {
+        BUILTBYBIT: ["BuiltByBit", "BBB.png"],
+        SOURCEXCHANGE: ["sourceXchange", "SXC.png"],
+        GITHUB: ["GitHub", "GH.png"],
+      };
+
+      /** @param {Product[]} products */
+      function displayProduct(data) {
+        const productContainer = document.getElementById("productContainer");
+        const createdDate = new Date(data.created);
+        const date = createdDate.toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        });
+
+        const twoWeeksAgo = new Date(); 
+        twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
+        const isNew = createdDate > twoWeeksAgo;
+
+        productContainer.innerHTML = `
+          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-3 position-relative pt-5 mb-4" style="background: url('${data.banner}') center; background-size: cover; border: unset;">
+            <div class="blur-gradient-overlay"></div>
+            <div class="d-flex flex-column h-100 p-5 pt-5 text-white text-shadow-1 position-relative extension-card-content">
+              <h3 class="pt-5 mt-5 mb-3 fw-bolder">
+                ${data.name}
+              </h3>
+              ${data.summary}
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-8 col-xs-12 order-lg-0 order-1">
+              <center>
+                <div class="blueprint-promotion">
+                  <img src="../../.assets/storage/misc/png/13.png" width="250" style="max-width: 90%"/>
+                  <h2 class="h3 my-3">
+                    Install and manage this extension with <b>Blueprint</b>!
+                  </h2>
+                  <p>
+                    <i class="bi bi-check"></i> Avoid conflicts between modifications
+                    <br><i class="bi bi-check"></i> Extensions install within minutes
+                    <br><i class="bi bi-check"></i> Loved by developers and system administrators
+                  </p>
+                  <a href="../../" target="_blank" class="text-decoration-none">
+                    Learn more
+                    <i class="bi bi-chevron-right"></i>
+                  </a>
+                </div>
+              </center>
+            </div>
+            <div class="col-lg-4 col-md-12">
+              ${Object.entries(data.platforms)
+                .map(
+                  ([platform, _data]) => `
+                    <div class="platform-button placeholder-wave">
+                      <a href="${
+                        platform === "BUILTBYBIT"
+                          ? "https://" +
+                            _data.url.replace(/^https?:\/\//i, "") +
+                            "?ref=449337&"
+                          : _data.url + "?"
+                      }utm_source=blueprint.zip&utm_medium=listing&utm_content=blueprint_${
+                          data.identifier
+                        }"
+                      >
+                        <div class="input-group mb-2 flex-nowrap">
+                          <label class="input-group-text w-100 border-0 platform-button-content">
+                            <img src="/browse/assets/source/${
+                              platforms[platform][1]
+                            }" alt="" width="24" height="24" class="me-2">  
+                            ${platforms[platform][0]}
+                          </label>
+                          <label class="input-group-text border-0 text-secondary platform-button-content">${_data.price} ${_data.currency}</label>
+                        </div>
+                      </a>
+                    </div>
+                `)
+                .join("")}
+
+              <div class="bg-secondary-subtle p-3 mt-4 rounded-2">
+                <span>
+                  <i class="bi bi-calendar-week-fill"></i>
+                  Released on
+                  <span class="opacity-50">
+                    ${date}
+                  </span>
+                </span>
+                <br>
+                <span>
+                  <i class="bi bi-people-fill"></i>
+                  Created by
+                  <span class="opacity-50">
+                    ${data.author.name}
+                  </span>
+                </span>
+                <br>
+                <span>
+                  <i class="bi bi-bar-chart-fill"></i>
+                  Used by
+                  <span class="opacity-50">
+                    ~${data.stats.panels} installations
+                  </span>
+                </span>
+
+                <div class="mt-2">
+                  ${
+                    (isNew) ? (`
+                      <span class="badge bg-primary text-light-emphasis rounded-pill placeholder-wave">
+                        <i class="bi bi-stars"></i>
+                        new
+                      </span>
+                    `) : ('')
+                  }
+                  <span class="badge bg-light-subtle text-light-emphasis rounded-pill">
+                    ${
+                      (data.type == "THEME") ? (`
+                        <i class="bi bi-palette2"></i>
+                        theme
+                      `) : (`
+                        <i class="bi bi-puzzle-fill"></i>
+                        extension
+                      `)
+                    }
+                  </span>
+                  <span class="badge bg-light-subtle text-light-emphasis rounded-pill">
+                    <i class="bi bi-tag-fill"></i>
+                    ${data.identifier}
+                  </span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        `
       }
-      
-      // Shuffle pieces
-      pieces.sort(() => Math.random() - 0.5);
-      
-      // Create initial grid
-      currentState.grid = Array(GRID_SIZE).fill().map(() => Array(GRID_SIZE).fill(0));
-      currentState.emptyPos = { x: 1, y: 1 };  // Keep center empty
-      
-      // Place pieces
-      pieces.forEach(piece => {
-        let placed = false;
-        while (!placed) {
-          const x = Math.floor(Math.random() * GRID_SIZE);
-          const y = Math.floor(Math.random() * GRID_SIZE);
-          if (x === 1 && y === 1) continue;  // Skip center
-          if (currentState.grid[y][x] === 0) {
-            currentState.grid[y][x] = 1;
-            placed = true;
-          }
-        }
+
+      // Load product
+      const extension_id = (new URL(window.location)).hash.slice(1);
+
+      if(!extension_id) {
+        window.location = "../"
+      }
+
+      fetch("https://api.blueprintframe.work/api/extensions/"+extension_id)
+        .then((response) => response.json())
+        .then((data) => {
+          displayProduct(data);
+        });
+
+      window.addEventListener('hashchange', () => {
+        window.location.reload();
       });
-    }
-
-    function drawPuzzle() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      // Draw current state
-      for (let y = 0; y < GRID_SIZE; y++) {
-        for (let x = 0; x < GRID_SIZE; x++) {
-          if (currentState.grid[y][x] === 1) {
-            let drawX = x * CELL_SIZE;
-            let drawY = y * CELL_SIZE;
-            
-            // Apply animation offset if this is the moving piece
-            if (currentMove && x === currentMove.fromX && y === currentMove.fromY) {
-              drawX += currentMove.dx * CELL_SIZE * animationProgress;
-              drawY += currentMove.dy * CELL_SIZE * animationProgress;
-            }
-            
-            ctx.fillStyle = '#000';
-            ctx.fillRect(
-              drawX + 2,
-              drawY + 2,
-              CELL_SIZE - 4,
-              CELL_SIZE - 4
-            );
-          }
-        }
-      }
-    }
-
-    function findNextMove() {
-      const possibleMoves = [
-        { dx: -1, dy: 0 },
-        { dx: 1, dy: 0 },
-        { dx: 0, dy: -1 },
-        { dx: 0, dy: 1 }
-      ].filter(move => {
-        const newX = currentState.emptyPos.x + move.dx;
-        const newY = currentState.emptyPos.y + move.dy;
-        return newX >= 0 && newX < GRID_SIZE && newY >= 0 && newY < GRID_SIZE;
-      });
-
-      // Find a move that gets us closer to the target
-      for (const move of possibleMoves) {
-        const newX = currentState.emptyPos.x + move.dx;
-        const newY = currentState.emptyPos.y + move.dy;
-        
-        if (TARGET[newY][newX] === 0 && currentState.grid[newY][newX] === 1) {
-          return {
-            fromX: newX,
-            fromY: newY,
-            dx: -move.dx,
-            dy: -move.dy
-          };
-        }
-      }
-      
-      return null;
-    }
-
-    function animate(timestamp) {
-      if (!isAnimating) return;
-
-      if (!currentMove) {
-        currentMove = findNextMove();
-        if (!currentMove) {
-          isAnimating = false;
-          setTimeout(startPuzzle, 2000);  // Reset after completion
-          return;
-        }
-        animationProgress = 0;
-      }
-
-      // Update animation
-      animationProgress += 0.1;
-      
-      if (animationProgress >= 1) {
-        // Complete the move
-        const newX = currentMove.fromX + currentMove.dx;
-        const newY = currentMove.fromY + currentMove.dy;
-        
-        currentState.grid[newY][newX] = currentState.grid[currentMove.fromY][currentMove.fromX];
-        currentState.grid[currentMove.fromY][currentMove.fromX] = 0;
-        currentState.emptyPos = { x: currentMove.fromX, y: currentMove.fromY };
-        
-        currentMove = null;
-        animationProgress = 0;
-      }
-
-      drawPuzzle();
-      requestAnimationFrame(animate);
-    }
-
-    function startPuzzle() {
-      initializeRandomPuzzle();
-      isAnimating = true;
-      currentMove = null;
-      animationProgress = 0;
-      requestAnimationFrame(animate);
-    }
-
-    // Start the puzzle
-    startPuzzle();
-  </script>
-</body>
+    </script>
+  </body>
 </html>
