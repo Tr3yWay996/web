@@ -28,10 +28,14 @@ export const onRequest = async(context) => {
 		'twitter:image': '/.assets/brand/og-browse.jpg'
 	}
 
+	if (url.pathname.endsWith('/')) {
+		url.pathname = url.pathname.slice(0, -1)
+	}
+
 	if (!url.pathname.includes('assets') && !url.pathname.includes('.js') && !url.pathname.includes('.css')) {
 		const data = await fetch('https://api.blueprintframe.work/api/extensions').then((res) => res.json()).catch(() => null),
 			extension = url.pathname.split('/').pop()
-		
+
 		if (!data) {
 			return new Response(insertMetadata(meta, ExtensionsHtml), {
 				headers: {
@@ -43,7 +47,7 @@ export const onRequest = async(context) => {
 		if (data.some((x) => x.identifier === extension || x.id.toString() === extension)) {
 			const extensionData = data.find((x) => x.identifier === extension || x.id.toString() === extension)
 
-			if (!extensionData && extension !== 'extensions') return Response.redirect('/browse', 301)
+			if (!extensionData) return context.env.ASSETS.fetch(url)
 
 			return new Response(insertMetadata({
 				...meta,
