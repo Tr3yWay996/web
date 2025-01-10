@@ -79,6 +79,9 @@
   opacity: 0;
   animation: glyph-fadeIn 0.5s forwards;
 }
+[data-bs-theme=light] .glyph-square {
+  background: black;
+}
 
 .glyph-square:nth-child(1) {
   grid-column: 2;
