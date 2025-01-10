@@ -26,11 +26,13 @@ export const onRequest = async(context) => {
 		'twitter:url': context.request.url,
 		'twitter:title': 'blueprint.zip',
 		'twitter:description': 'Powerful, fast and developer-friendly extension framework for Pterodactyl. Utilize extension APIs, inject HTML, modify stylesheets, package extensions and so much more.',
-		'twitter:image': '/.assets/brand/og.jpg',
+		'twitter:image': '/.assets/brand/og.jpg'
 	}
 
 	if (url.pathname.startsWith('/browse')) {
-		if (url.pathname.length > '/browse/'.length) {
+		const disallowed = ['assets', 'repository', '.css', '.js']
+
+		if (url.pathname.length > '/browse/'.length && !disallowed.some((x) => url.pathname.includes(x))) {
 			const extension = url.pathname.split('/').pop()
 
 			const data = extension !== 'extensions'
