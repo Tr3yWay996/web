@@ -30,8 +30,10 @@ export const onRequest = async(context) => {
 	}
 
 	if (url.pathname.startsWith('/browse')) {
-		if (url.hash.startsWith('#')) {
-			const data = await fetch(`https://api.blueprintframe.work/api/extensions/${url.hash.slice(1)}`).then((res) => res.json()).catch(() => null)
+		if (url.pathname.startsWith('/browse/extensions')) {
+			const extension = url.hash.slice(1)
+
+			const data = await fetch(`https://api.blueprintframe.work/api/extensions/${extension}`).then((res) => res.json()).catch(() => null)
 			if (!data) return Response.redirect('/browse', 301)
 
 			return new Response(insertMetadata({
@@ -49,6 +51,9 @@ export const onRequest = async(context) => {
 				}
 			})
 		}
+
+		meta['og:image'] = '/.assets/brand/og-browse.jpg'
+		meta['twitter:image'] = '/.assets/brand/og-browse.jpg'
 
 		const data = await fetch('https://api.blueprintframe.work/api/extensions').then((res) => res.json()).catch(() => null)
 		if (data) {
