@@ -1,5 +1,5 @@
 import BrowseHtml from "../browse/index.html"
-import ExtensionHtml from "../browse/extensions/index.html"
+import ExtensionHtml from "../browse/[[extension]]/index.html"
 
 function insertMetadata(data, html) {
 	let meta = ''
