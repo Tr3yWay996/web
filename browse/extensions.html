@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Extensions - Blueprint</title>
+    <title id="title">Extensions - Blueprint</title>
     <link href="/.modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/.modules/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="/.modules/global/global.css" rel="stylesheet">
@@ -277,6 +277,8 @@
         const twoWeeksAgo = new Date(); 
         twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
         const isNew = createdDate > twoWeeksAgo;
+
+        document.getElementById("title").innerHTML = `${data.name} - Blueprint`;
 
         productContainer.innerHTML = `
           <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-3 position-relative pt-5 mb-4" style="background: url('${data.banner}') center; background-size: cover; border: unset;">

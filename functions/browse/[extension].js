@@ -15,8 +15,8 @@ export const onRequest = async(context) => {
 
 	const meta = {
 		'theme-color': '#4642f5',
-		'description': 'Powerful, fast and developer-friendly extension framework for Pterodactyl. Utilize extension APIs, inject HTML, modify stylesheets, package extensions and so much more.',
-		'og:description': 'Powerful, fast and developer-friendly extension framework for Pterodactyl. Utilize extension APIs, inject HTML, modify stylesheets, package extensions and so much more.',
+		'description': '',
+		'og:description': '',
 		'og:title': 'blueprint.zip',
 		'og:image': '/.assets/brand/og-browse.jpg',
 		'og:url': context.request.url,
@@ -24,7 +24,7 @@ export const onRequest = async(context) => {
 		'twitter:card': 'summary_large_image',
 		'twitter:url': context.request.url,
 		'twitter:title': 'blueprint.zip',
-		'twitter:description': 'Powerful, fast and developer-friendly extension framework for Pterodactyl. Utilize extension APIs, inject HTML, modify stylesheets, package extensions and so much more.',
+		'twitter:description': '',
 		'twitter:image': '/.assets/brand/og-browse.jpg'
 	}
 
@@ -51,12 +51,12 @@ export const onRequest = async(context) => {
 
 			return new Response(insertMetadata({
 				...meta,
-				'og:title': `blueprint.zip | ${extensionData.name}`,
-				'description': `${meta.description}\n\n${extensionData.summary}`,
-				'og:description': `${meta['og:description']}\n\n${extensionData.summary}`,
+				'og:title': `${extensionData.name}`,
+				'description': `${extensionData.summary}`,
+				'og:description': `${extensionData.summary}`,
 				'og:image': extensionData.banner,
-				'twitter:title': `blueprint.zip | ${extensionData.name}`,
-				'twitter:description': `${meta['twitter:description']}\n\n${extensionData.summary}`,
+				'twitter:title': `${extensionData.name}`,
+				'twitter:description': `${extensionData.summary}`,
 				'twitter:image': extensionData.banner
 			}, ExtensionsHtml), {
 				headers: {
