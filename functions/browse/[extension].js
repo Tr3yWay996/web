@@ -10,7 +10,7 @@ function insertMetadata(data) {
 	return ExtensionsHtml.replace('<!-- META -->', meta)
 }
 
-function insertReviewData(data) {
+function insertReviewData(html, data) {
 	const totalReviews = Object.values(data.platforms).reduce((sum, platform) => sum + platform.reviews, 0)
 	const platformsWithRatings = Object.values(data.platforms).filter((x) => x.rating)
 	const averageRating = platformsWithRatings.length > 0
@@ -47,7 +47,7 @@ function insertReviewData(data) {
 		}
 	}
 
-	return data.replace('<!-- JSON-LD -->', `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`)
+	return html.replace('<!-- JSON-LD -->', `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`)
 }
 
 export const onRequest = async(context) => {
