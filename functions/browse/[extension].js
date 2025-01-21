@@ -98,7 +98,7 @@ export const onRequest = async(context) => {
 				'twitter:title': `${extensionData.name}`,
 				'twitter:description': `${extensionData.summary}`,
 				'twitter:image': extensionData.banner
-			})), {
+			}), extensionData), {
 				headers: {
 					'Content-Type': 'text/html'
 				}
