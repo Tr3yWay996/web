@@ -1,13 +1,53 @@
 import ExtensionsHtml from "../../browse/extensions.html"
 
-function insertMetadata(data, html) {
+function insertMetadata(data) {
 	let meta = ''
 
 	for (const key in data) {
 		meta += `<meta name="${key}" content="${data[key]}">`
 	}
 
-	return html.replace('<!-- META -->', meta)
+	return ExtensionsHtml.replace('<!-- META -->', meta)
+}
+
+function insertReviewData(data) {
+	const totalReviews = Object.values(data.platforms).reduce((sum, platform) => sum + platform.reviews, 0)
+	const platformsWithRatings = Object.values(data.platforms).filter((x) => x.rating)
+	const averageRating = platformsWithRatings.length > 0
+		? platformsWithRatings.reduce((sum, platform) => sum + platform.rating, 0) / platformsWithRatings.length
+		: 0
+
+	const jsonLd = {
+		'@context': 'https://schema.org/',
+		'@type': 'Product',
+		'name': data.name,
+		'image': data.banner,
+		'description': data.summary,
+		'brand': {
+			'@type': 'Thing',
+			'name': data.author.name
+		},
+		'sku': data.identifier,
+		'offers': Object.values(data.platforms).map((platform) => ({
+			'@type': 'Offer',
+			'url': platform.url,
+			'price': platform.price.toFixed(2),
+			'priceCurrency': platform.currency,
+			'availability': 'https://schema.org/InStock'
+		}))
+	}
+
+	if (totalReviews > 0 && averageRating > 0) {
+		jsonLd.aggregateRating = {
+			'@type': 'AggregateRating',
+			'ratingValue': averageRating.toFixed(1),
+			'reviewCount': totalReviews.toString(),
+			'bestRating': '5',
+			'worstRating': '1'
+		}
+	}
+
+	return data.replace('<!-- JSON-LD -->', `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`)
 }
 
 export const onRequest = async(context) => {
@@ -37,7 +77,7 @@ export const onRequest = async(context) => {
 			extension = url.pathname.split('/').pop()
 
 		if (!data) {
-			return new Response(insertMetadata(meta, ExtensionsHtml), {
+			return new Response(insertMetadata(meta), {
 				headers: {
 					'Content-Type': 'text/html'
 				}
@@ -49,7 +89,7 @@ export const onRequest = async(context) => {
 
 			if (!extensionData) return context.env.ASSETS.fetch(url)
 
-			return new Response(insertMetadata({
+			return new Response(insertReviewData(insertMetadata({
 				...meta,
 				'og:title': `${extensionData.name}`,
 				'description': `${extensionData.summary}`,
@@ -58,7 +98,7 @@ export const onRequest = async(context) => {
 				'twitter:title': `${extensionData.name}`,
 				'twitter:description': `${extensionData.summary}`,
 				'twitter:image': extensionData.banner
-			}, ExtensionsHtml), {
+			})), {
 				headers: {
 					'Content-Type': 'text/html'
 				}
