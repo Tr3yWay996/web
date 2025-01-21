@@ -281,9 +281,10 @@
         document.getElementById("title").innerHTML = `${data.name} - Blueprint`;
 
         productContainer.innerHTML = `
-          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-3 position-relative pt-5 mb-4" style="background: url('${data.banner}') center; background-size: cover; border: unset;">
-            <div class="blur-gradient-overlay"></div>
-            <div class="d-flex flex-column h-100 p-5 pt-5 text-white text-shadow-1 position-relative extension-card-content">
+          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-3 position-relative pt-5 mb-4 border-0">
+            <div class="blur-gradient-overlay z-2"></div>
+            <img src="${data.banner}" class="product-image object-fit-cover z-1 top-0 start-0 w-100 h-100">
+            <div class="d-flex flex-column h-100 p-5 pt-5 text-white text-shadow-1 position-relative extension-card-content z-3">
               <h3 class="pt-5 mt-5 mb-3 fw-bolder">
                 ${data.name}
               </h3>
@@ -398,11 +399,11 @@
       }
 
       // Load product
-      let extension_id = window.location.pathname.split("/").pop();
+      let extension_id = window.location.pathname.split("/").pop() || window.location.hash;
 
       if (!extension_id) {
         window.location = "/browse"
-      } else if (extension_id === "extensions") {
+      } else if (extension_id === "extensions" || extension_id === "extensions.html") {
         extension_id = window.location.hash.slice(1);
       }
 

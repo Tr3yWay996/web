@@ -23,6 +23,11 @@
   );
 }
 
+.product-image {
+  position: absolute !important;
+  pointer-events: all;
+}
+
 .platform-button > * {
   text-decoration: none !important;
 }
