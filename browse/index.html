@@ -227,6 +227,11 @@
                   Popularity
                 </a>
               </li>
+              <li>
+                <a class="dropdown-item rounded-2" id="toggleSortRating" data-sort="rating">
+                  Rating
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -325,6 +330,11 @@
                       Popularity
                     </a>
                   </li>
+                  <li>
+                    <a class="dropdown-item rounded-2" id="mobileToggleSortRating" data-sort="rating">
+                      Rating
+                    </a>
+                  </li>
                 </ul>
 
               </div>
@@ -404,6 +414,8 @@
        *   url: string;
        *   price: number;
        *   currency: string;
+       *   reviews: number;
+       *   rating?: number;
        *  }>;
        *  stats: {
        *   panels: number;
@@ -417,7 +429,7 @@
       /** @type {'products' | 'authors'} */
       let filterType = "products";
 
-      /** @type {'name' | 'created' | 'author' | 'popularity'} */
+      /** @type {'name' | 'created' | 'author' | 'popularity' | 'rating'} */
       let sortType = "name";
 
       /** @type {Object<string, [name: string, icon: string]>} */
@@ -439,6 +451,19 @@
             return products.sort((a, b) => a.author.name.localeCompare(b.author.name));
           case "popularity":
             return products.sort((a, b) => b.stats.panels - a.stats.panels);
+          case "rating":
+            return products.map((product) => {
+              const totalReviews = Object.values(product.platforms).reduce((sum, platform) => sum + platform.reviews, 0);
+              const platformsWithRatings = Object.values(product.platforms).filter((x) => x.rating);
+              const averageRating = platformsWithRatings.length > 0
+                ? platformsWithRatings.reduce((sum, platform) => sum + platform.rating, 0) / platformsWithRatings.length
+                : 0;
+
+              return {
+                product,
+                ratingIndex: averageRating * totalReviews,
+              };
+            }).sort((a, b) => b.ratingIndex - a.ratingIndex).map((x) => x.product);
           default:
             return products.sort((a, b) => a.name.localeCompare(b.name));
         }
@@ -579,6 +604,12 @@
               sortLabel.textContent = "Popularity";
               mobileSortLabel.textContent = "Popularity";
               sortType = "popularity";
+              break;
+
+            case "rating":
+              sortLabel.textContent = "Rating";
+              mobileSortLabel.textContent = "Rating";
+              sortType = "rating";
               break;
           }
 

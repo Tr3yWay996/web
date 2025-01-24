@@ -248,6 +248,8 @@
        *   url: string;
        *   price: number;
        *   currency: string;
+       *   reviews: number;
+       *   rating?: number;
        *  }>;
        *  stats: {
        *   panels: number;
@@ -274,6 +276,12 @@
           month: 'long',
           day: 'numeric',
         });
+
+        const totalReviews = Object.values(data.platforms).reduce((sum, platform) => sum + platform.reviews, 0)
+        const platformsWithRatings = Object.values(data.platforms).filter((x) => x.rating)
+        const averageRating = platformsWithRatings.length > 0
+          ? platformsWithRatings.reduce((sum, platform) => sum + platform.rating, 0) / platformsWithRatings.length
+          : 0 
 
         const twoWeeksAgo = new Date(); 
         twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
@@ -356,6 +364,14 @@
                   Created by
                   <span class="opacity-50">
                     ${data.author.name}
+                  </span>
+                </span>
+                <br>
+                <span>
+                  <i class="bi bi-star-fill"></i>
+                  Average rating
+                  <span class="opacity-50">
+                    ${averageRating.toFixed(1)} (${totalReviews} reviews)
                   </span>
                 </span>
                 <br>
