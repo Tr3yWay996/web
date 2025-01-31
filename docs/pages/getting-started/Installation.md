@@ -76,13 +76,20 @@ unzip release.zip
 <br>
 
 #### <i class="bi bi-gear-fill"></i> Configuration.
-This step allows Blueprint to function and know where itself and Pterodactyl are located.
+This step allows Blueprint to function and know where itself and Pterodactyl are located and which permissions to use. Create a file called `.blueprintrc` inside of your Pterodactyl directory to begin.
+
+```bash
+touch /path/to/pterodactyl/.blueprintrc
+```
 
 Modify the `$FOLDER`, `$WEBUSER`, `$USERSHELL` and `$PERMISSIONS` values to your needs. If you don't have a unusual webserver path or user/group, you can skip this step or run the command shown below without any modifications.
 
 ```bash
-FOLDER="/var/www/pterodactyl"; WEBUSER="www-data"; USERSHELL="/bin/bash"; PERMISSIONS="www-data:www-data";
-sed -i -E -e "s|WEBUSER=\"www-data\" #;|WEBUSER=\"$WEBUSER\" #;|g" -e "s|USERSHELL=\"/bin/bash\" #;|USERSHELL=\"$USERSHELL\" #;|g" -e "s|OWNERSHIP=\"www-data:www-data\" #;|OWNERSHIP=\"$PERMISSIONS\" #;|g" $FOLDER/blueprint.sh
+echo \
+'FOLDER="/var/www/pterodactyl";
+WEBUSER="www-data";
+OWNERSHIP="www-data:www-data";
+USERSHELL="/bin/bash";' >> /path/to/pterodactyl/.blueprintrc
 ```
 
 <br>
