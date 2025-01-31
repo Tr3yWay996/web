@@ -6,7 +6,7 @@
 <h4 class="text-warning fw-bold">Pre-releases</h4>
 <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-3 pt-3">
   <div class="col">
-    <a href="?page=about/changelog/beta-2025-01" class="link-underline-opacity-0 link-underline">
+    <a href="?page=about/changelog/beta-2025-02" class="link-underline-opacity-0 link-underline">
       <div class="card card-cover h-100 overflow-hidden rounded-4 bg-dark bg-hover-dark changelog-btn">
         <div class="d-flex flex-column h-100 p-4 text-shadow-1">
           <h3 class="fw-bolder">beta-2025-02 <span class="badge bg-warning border border-warning rounded-pill text-dark">Unstable</span></h3>
