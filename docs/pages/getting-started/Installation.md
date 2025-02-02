@@ -82,12 +82,11 @@ This step allows Blueprint to function and know where itself and Pterodactyl are
 touch /path/to/pterodactyl/.blueprintrc
 ```
 
-Modify the `$FOLDER`, `$WEBUSER`, `$USERSHELL` and `$PERMISSIONS` values to your needs. If you don't have a unusual webserver path or user/group, you can skip this step or run the command shown below without any modifications.
+Modify the `$WEBUSER`, `$USERSHELL` and `$PERMISSIONS` values to match your environment. Provided below is the standard configuration for Debian-based systems, but you might need to make your own modifications.
 
 ```bash
 echo \
-'FOLDER="/var/www/pterodactyl";
-WEBUSER="www-data";
+'WEBUSER="www-data";
 OWNERSHIP="www-data:www-data";
 USERSHELL="/bin/bash";' >> /path/to/pterodactyl/.blueprintrc
 ```
