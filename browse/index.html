@@ -515,6 +515,9 @@
           const createdDate = new Date(product.created);
           const isNew = createdDate > twoWeeksAgo;
 
+          const price = Object.values(product.platforms)[0]?.price;
+          const currency = Object.values(product.platforms)[0]?.currency || "USD"; // Fallback to USD if no currency is defined ( just in case :) )
+
           listItem.className =
             "col-sm-12 col-md-6 col-lg-4 mb-4 " + categoryClass;
           listItem.innerHTML = `
@@ -540,6 +543,9 @@
                       </span>
                     `) : ('')
                   }
+                  <div class="price mt-2">
+                    <strong>Price: ${price ? `${price.toFixed(2)} ${currency}` : "Free"}</strong>
+                  </div>
                 </div>
               </div>
             </a>
