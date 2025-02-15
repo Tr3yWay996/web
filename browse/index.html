@@ -475,8 +475,8 @@
             }).sort((a, b) => b.ratingIndex - a.ratingIndex).map((x) => x.product);
           case "price":
             return products.sort((a, b) => {
-              const priceA = Object.values(a.platforms)[0]?.price || 0;
-              const priceB = Object.values(b.platforms)[0]?.price || 0;
+              const priceA = Math.min(...Object.values(a.platforms).map(platform => platform.price));
+              const priceB = Math.min(...Object.values(b.platforms).map(platform => platform.price));
               return priceA - priceB;
             });
           default:
@@ -499,8 +499,11 @@
           const createdDate = new Date(product.created);
           const isNew = createdDate > twoWeeksAgo;
 
-          const price = Object.values(product.platforms)[0]?.price;
-          const currency = Object.values(product.platforms)[0]?.currency || "USD"; // Fallback to USD if no currency is defined ( just in case :) )
+          const lowestPrice = Object.values(product.platforms)
+            .reduce((lowest, platform) => platform.price < lowest.price ? platform : lowest, { price: Infinity });
+
+          const price = lowestPrice.price;
+          const currency = lowestPrice.currency || "USD"; // Fallback to USD if no currency is defined ( just in case :) )
 
           listItem.className =
             "col-sm-12 col-md-6 col-lg-4 mb-4 " + categoryClass;
