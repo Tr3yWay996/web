@@ -510,13 +510,18 @@
           listItem.innerHTML = `
             <a href="/browse/${product.identifier}" class="text-decoration-none text-body">
               <div class="card overflow-hidden bg-dark-subtle">
-                <img src="${
-                  product.banner
-                }" onclick="setTimeout(() => {document.getElementById('${
-                  product.identifier
-                }Button').click()}, 1)" class="card-img-top img-dim product-image" alt="${
-                  product.name
-                }"/>
+                <div class="position-relative">
+                  <img src="${
+                    product.banner
+                  }" onclick="setTimeout(() => {document.getElementById('${
+                    product.identifier
+                  }Button').click()}, 1)" class="card-img-top img-dim product-image" alt="${
+                    product.name
+                  }"/>
+                  <span class="badge bg-dark text-body-emphasis position-absolute bottom-0 end-0 m-2 border fw-normal">
+                    <b>${price ? `${price.toFixed(2)} ${currency}` : 'Free'}</b>
+                  </span>
+                </div>
                 <div class="card-body">
                   <h5 class="card-title text-truncate">${
                     product.name
@@ -530,11 +535,6 @@
                       </span>
                     `) : ('')
                   } 
-                  <div class="mt-4">
-                    <span class="badge bg-dark text-body-emphasis position-absolute bottom-0 end-0 m-2">
-                      <b>${price ? `${price.toFixed(2)} ${currency}` : 'Free'}</b>
-                    </span>
-                  <div/>
                 </div>
               </div>
             </a>
