@@ -233,13 +233,8 @@
                 </a>
               </li>
               <li>
-                <a class="dropdown-item rounded-2" id="ToggleSortPriceLowToHigh" data-sort="priceLowToHigh">
-                  Price (Low to High)
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item rounded-2" id="ToggleSortPriceHighToLow" data-sort="priceHighToLow">
-                  Price (High to Low)
+                <a class="dropdown-item rounded-2" id="ToggleSortPrice" data-sort="price">
+                  Price
                 </a>
               </li>
             </ul>
@@ -346,13 +341,8 @@
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item rounded-2" id="mobileToggleSortPriceLowToHigh" data-sort="priceLowToHigh">
-                      Price (Low to High)
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item rounded-2" id="mobileToggleSortPriceHighToLow" data-sort="priceHighToLow">
-                      Price (High to Low)
+                    <a class="dropdown-item rounded-2" id="mobileToggleSortPrice" data-sort="price">
+                      Price
                     </a>
                   </li>
                 </ul>
@@ -448,7 +438,7 @@
       /** @type {'products' | 'authors'} */
       let filterType = "products";
 
-      /** @type {'name' | 'created' | 'author' | 'popularity' | 'rating' | 'priceLowToHigh' | 'priceHighToLow'} */
+      /** @type {'name' | 'created' | 'author' | 'popularity' | 'rating' | 'price'} */
       let sortType = "name";
 
       /** @type {Object<string, [name: string, icon: string]>} */
@@ -483,17 +473,11 @@
                 ratingIndex: averageRating * totalReviews,
               };
             }).sort((a, b) => b.ratingIndex - a.ratingIndex).map((x) => x.product);
-          case "priceLowToHigh":
+          case "price":
             return products.sort((a, b) => {
               const priceA = Object.values(a.platforms)[0]?.price || 0;
               const priceB = Object.values(b.platforms)[0]?.price || 0;
               return priceA - priceB;
-            });
-          case "priceHighToLow":
-            return products.sort((a, b) => {
-              const priceA = Object.values(a.platforms)[0]?.price || 0;
-              const priceB = Object.values(b.platforms)[0]?.price || 0;
-              return priceB - priceA; 
             });
           default:
             return products.sort((a, b) => a.name.localeCompare(b.name));
@@ -650,16 +634,10 @@
               mobileSortLabel.textContent = "Rating";
               sortType = "rating";
               break;
-            case "priceLowToHigh":
-              sortLabel.textContent = "Price (Low to High)";
-              mobileSortLabel.textContent = "Price (Low to High)";
-              sortType = "priceLowToHigh";
-              break;
-
-            case "priceHighToLow":
-              sortLabel.textContent = "Price (High to Low)";
-              mobileSortLabel.textContent = "Price (High to Low)";
-              sortType = "priceHighToLow";
+            case "price":
+              sortLabel.textContent = "Price";
+              mobileSortLabel.textContent = "Price";
+              sortType = "price";
               break;
           }
 
