@@ -79,7 +79,8 @@
   opacity: .5;
   font-size: 15px;
 }
-
+[data-bs-theme=light] #mobileSortLabel,
+[data-bs-theme=light] .bi-three-dots,
 [data-bs-theme=light] #filterTypeLabel,
 [data-bs-theme=light] #sortDropdown,
 [data-bs-theme=light] #filterDropdown::after {
