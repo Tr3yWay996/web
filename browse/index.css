@@ -79,11 +79,16 @@
   opacity: .5;
   font-size: 15px;
 }
-
+[data-bs-theme=light] #mobileSortLabel,
+[data-bs-theme=light] .bi-three-dots,
 [data-bs-theme=light] #filterTypeLabel,
 [data-bs-theme=light] #sortDropdown,
 [data-bs-theme=light] #filterDropdown::after {
   color: var(--bs-body-color) !important;
+}
+[data-bs-theme=light] #pricetag {
+  background-color: var(--bs-secondary-bg) !important;
+  border-color: var(--bs-dark) !important; 
 }
 [data-bs-theme=light] #productSearch {
   background-color: var(--bs-secondary-bg) !important;
