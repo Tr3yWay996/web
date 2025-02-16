@@ -85,6 +85,10 @@
 [data-bs-theme=light] #filterDropdown::after {
   color: var(--bs-body-color) !important;
 }
+[data-bs-theme=light] #pricetag {
+  background-color: var(--bs-secondary-bg) !important;
+  border-color: var(--bs-dark) !important; 
+}
 [data-bs-theme=light] #productSearch {
   background-color: var(--bs-secondary-bg) !important;
 }
