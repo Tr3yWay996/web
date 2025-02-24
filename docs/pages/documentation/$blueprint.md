@@ -19,7 +19,7 @@ The BlueprintExtensionLibrary is automatically imported to dashboard wrappers, a
 
 ##### Databasing <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Admin <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Client <i class="bi bi-check"></i></span> <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">Console <i class="bi bi-check"></i></span>
 
-`dbGet(table, record, default: optional)` <tag type="pending" content="beta-2024-12"/></tag>\
+`dbGet(table, record, default: optional)` <tag type="new" content="beta-2024-12"/></tag>\
 Fetch a record from the database. `default` (or `null` if not defined) is returned when the database value is empty.
 
 `dbSet(table, record, value)`\
@@ -28,13 +28,13 @@ Set a database record.
 `dbForget(table, record)`\
 Delete/forget a database record.
 
-`dbGetMany(table, string_array: optional)` <tag type="pending" content="beta-2024-12"/></tag>\
+`dbGetMany(table, string_array: optional)` <tag type="new" content="beta-2024-12"/></tag>\
 Fetches multiple records from the database in an associative array.
 
-`dbSetMany(table, associative_array)` <tag type="pending" content="beta-2024-12"/></tag>\
+`dbSetMany(table, associative_array)` <tag type="new" content="beta-2024-12"/></tag>\
 Sets multiple records in the database at once.
 
-`dbForgetMany(table, array)` <tag type="pending" content="beta-2024-12"/></tag>\
+`dbForgetMany(table, array)` <tag type="new" content="beta-2024-12"/></tag>\
 Deletes/forgets multiple records from the database.
 
 <br/>
@@ -70,7 +70,7 @@ Removes the file defined in `path` from the filesystem.
 `extension(identifier)`\
 Returns true if an extension with the identifier defined in `identifier` is installed, otherwise returns false.
 
-`extensions()` <tag type="pending" content="beta-2024-12"/></tag>\
+`extensions()` <tag type="new" content="beta-2024-12"/></tag>\
 Returns an array containing all installed extensions's identifiers.
 
 <br/>

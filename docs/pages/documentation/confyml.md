@@ -88,7 +88,7 @@ Path to your console directory which allows for creating Artisan commands and sc
 `views`\
 Path to your views directory. This directory is used for creating (partial) views made up of sections which you can import to your admin view and admin/dashboard wrapper. These views can be called from `blueprint.extensions.<identifier>.<view>`.
 
-`app` <tag type="pending" content="beta-2024-12"/></tag>\
+`app` <tag type="new" content="beta-2024-12"/></tag>\
 Directory pointing towards a folder with classes you can use with your application. These exist in the `Pterodactyl\BlueprintFramework\Extensions\<identifier>` namespace. Referred to as `controllers` in older versions of Blueprint.
 
 `routers`\

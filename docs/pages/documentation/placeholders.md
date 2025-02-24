@@ -302,7 +302,7 @@ Technical details about the framework handling the extension.
       <b><code><icon name="hash"></icon>
         <!-- Placeholder string --> {engine}
         <!-- Example value -->
-      </code></b><span class="text-secondary">solstice</span> <tag type="pending" content="beta-2024-12"/></tag><br/>
+      </code></b><span class="text-secondary">solstice</span> <tag type="new" content="beta-2024-12"/></tag><br/>
       Provides information about the engine handling the extension. Different engines using the extension standard that aren't affiliated with Blueprint are expected to replace this placeholder with their own codenames.
     </div>
     <div class="col-lg-3 col-md-4 col-xs-12">
