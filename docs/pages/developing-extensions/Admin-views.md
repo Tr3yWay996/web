@@ -79,6 +79,6 @@ We can achieve this with the `box` css class, which is included in the Pterodact
 You have now created your very own admin page through Blueprint. Try experimenting a bit with it, and once you are ready, move onto the next guide.
 
 <div class="btn-group docs-navigator" role="group" aria-label="Navigation" style="float: right">
-  <a href="?page=getting-started/Extension-development" class="btn btn-dark bg-light-subtle border-light-subtle">Previous</a>
-  <a href="?page=developing-extensions/Custom-controllers" class="btn btn-dark bg-light-subtle border-light-subtle">Next</a>
+  <a href="?page=getting-started/Extension-development" class="btn btn-dark bg-light-subtle border-0 rounded-start-pill">Previous</a>
+  <a href="?page=developing-extensions/Custom-controllers" class="btn btn-dark bg-light-subtle border-0 rounded-end-pill">Next</a>
 </div>

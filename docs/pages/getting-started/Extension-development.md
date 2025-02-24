@@ -41,6 +41,6 @@ blueprint -build
 ```
 
 <div class="btn-group docs-navigator" role="group" aria-label="Navigation" style="float: right">
-  <button type="button" class="btn btn-dark bg-light-subtle border-light-subtle text-secondary disabled">Previous</button>
-  <a href="?page=developing-extensions/Admin-views" class="btn btn-dark bg-light-subtle border-light-subtle">Next</a>
+  <button type="button" class="btn btn-dark bg-light-subtle border-0 text-secondary rounded-start-pill disabled">Previous</button>
+  <a href="?page=developing-extensions/Admin-views" class="btn btn-dark bg-light-subtle border-0 rounded-end-pill">Next</a>
 </div>

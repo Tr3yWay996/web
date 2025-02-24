@@ -90,6 +90,6 @@ return (
 With the code mentioned above, you've added the `Content.tsx` component into the `ExampleComponent.tsx`. We can add `Content.tsx` to existing pages as well through the [Components.yml](?page=documentation/componentsyml) configuration. Try assigning it to one of the placement options in the components configuration and see what it does.
 
 <div class="btn-group docs-navigator" role="group" aria-label="Navigation" style="float: right">
-  <a href="?page=developing-extensions/Dashboard-wrappers" class="btn btn-dark bg-light-subtle border-light-subtle">Previous</a>
-  <a href="?page=developing-extensions/Packaging-extensions" class="btn btn-dark bg-light-subtle border-light-subtle">Next</a>
+  <a href="?page=developing-extensions/Dashboard-wrappers" class="btn btn-dark bg-light-subtle border-0 rounded-start-pill">Previous</a>
+  <a href="?page=developing-extensions/Packaging-extensions" class="btn btn-dark bg-light-subtle border-0 rounded-end-pill">Next</a>
 </div>

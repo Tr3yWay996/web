@@ -49,7 +49,7 @@ fetch(a)
     editButton.target = '_blank';
     editButton.rel = 'noopener noreferrer';
     editButton.classList = 'float-end'
-    editButton.innerHTML = '<button type="button" class="btn btn-dark bg-light-subtle border-light-subtle git-button" style="margin-right: 5px;"><i class="bi bi-git mx-1"></i></button>';
+    editButton.innerHTML = '<button type="button" class="btn btn-dark bg-light-subtle border-0 rounded-pill git-button" style="margin-right: 5px;"><i class="bi bi-git mx-1"></i></button>';
 
     // Find the parent element of the btn-group in the contentDiv
     const btnGroup = contentDiv.querySelector('.docs-navigator');

@@ -38,6 +38,6 @@ To package an extension for distribution, we need to convert it into a `identifi
 After running one of these commands, you'll be left with a `identifier.blueprint` file which you can in turn use to distribute your extension to the outside world. 
 
 <div class="btn-group docs-navigator" role="group" aria-label="Navigation" style="float: right">
-  <a href="?page=developing-extensions/React-components" class="btn btn-dark bg-light-subtle border-light-subtle">Previous</a>
-  <button type="button" class="btn btn-dark bg-light-subtle border-light-subtle text-secondary disabled">Next</button>
+  <a href="?page=developing-extensions/React-components" class="btn btn-dark bg-light-subtle border-0 rounded-start-pill">Previous</a>
+  <button type="button" class="btn btn-dark bg-light-subtle border-0 text-secondary rounded-end-pill disabled">Next</button>
 </div>
