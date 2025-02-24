@@ -1,4 +1,9 @@
-<div class="alert alert-warning" role="alert">
-  <i class="bi bi-exclamation-triangle-fill mb-1" style="font-size:23px; float: left;"></i>
-  <div class="ps-3 ms-3">The page you were trying to visit does not exist or encountered an unknown error.</div>
-</div>
+<div class="position-relative p-5 text-center text-danger-emphasis bg-danger-subtle border rounded-4 border-danger-subtle">
+  <div class="mt-4 mb-3">
+    <i class="bi bi-ban h1"></i>
+  </div>
+  <h1 class="text-danger-emphasis">An error occurred</h1>
+  <p class="col-lg-6 mx-auto mb-4">
+    We weren't able to serve you the page you requested. Check your network connection and try again.
+  </p>
+</div><br>

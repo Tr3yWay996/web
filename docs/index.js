@@ -2,11 +2,12 @@ var u = new URL(window.location.href);
 var d = u.searchParams.get('page');
 try { document.querySelector('a[href="?page='+d+'"] button').classList += (" disabled border border-2 text-secondary border-secondary border-top-0 border-end-0 border-bottom-0 rounded-0 text-start") } catch {  }
 if(d) { a = '/docs/pages/'+d+'.md' } else { a = '/docs/pages/Documentation.md' }
+
 fetch(a)
   .then(b => {
     if (!b.ok) {
-      throw new Error(`Network response was not ok: ${b.status}`);
       window.location="?page=Error"
+      throw new Error(`Network response was not ok: ${b.status}`);
     }
     return b.text();
   })
