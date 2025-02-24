@@ -448,6 +448,13 @@
         GITHUB: ["GitHub", "GH.png"],
       };
 
+      /** @type {Object<string, [currency: string, symbol: string]>} */
+      const currencySymbols = {
+        USD: '$',
+        GBP: '£',
+        EUR: '€'
+      };
+
       /**
        * @param {Product[]} products
        * @returns {Product[]}
@@ -504,6 +511,7 @@
 
           const price = lowestPrice.price;
           const currency = lowestPrice.currency || "USD"; // Fallback to USD if no currency is defined ( just in case :) )
+          const symbol = currencySymbols[currency];
 
           listItem.className =
             "col-sm-12 col-md-6 col-lg-4 mb-4 " + categoryClass;
@@ -518,9 +526,11 @@
                   }Button').click()}, 1)" class="card-img-top img-dim product-image" alt="${
                     product.name
                   }"/>
-                  <span class="badge bg-dark text-body-emphasis position-absolute bottom-0 end-0 m-2 border fw-normal" id="pricetag">
-                    <b>${price ? `${price.toFixed(2)} ${currency}` : 'Free'}</b>
+                  ${price ? `
+                  <span class="badge bg-dark text-body-emphasis position-absolute top-0 end-0 me-2 border border-top-0 rounded-top-0 fw-normal" id="pricetag">
+                    <b>${symbol}${price.toFixed(2)}</b>
                   </span>
+                  ` : ''}
                 </div>
                 <div class="card-body">
                   <h5 class="card-title text-truncate">${
