@@ -6,7 +6,7 @@ This marks the beginning of your journey with Blueprint, and maybe even Pterodac
 Want to run Blueprint through Docker instead? Take a peek at the official <a href="https://github.com/BlueprintFramework/docker" class="text-primary-emphasis link-underline-opacity-0 link-underline"><i class="bi bi-box"></i> Blueprint Docker</a> repository [here](https://github.com/BlueprintFramework/docker).
 
 <br><div class="bg-dark-subtle rounded-4 p-4 pb-3">
-  <h4><i class="bi bi-rocket-takeoff-fill"></i> Prepare for liftoff.</h4>
+  <h4><i class="bi bi-rocket-takeoff-fill"></i> Prepare for liftoff</h4>
   <p class="pb-3">Before we start running a bunch of commands, we need to prepare a couple things. This won't take long!</p>
 
   <div class="row">
@@ -53,7 +53,7 @@ Whether you plan to use Blueprint for it's extensions, developer tools or both -
 
 <br>
 
-#### <i class="bi bi-cloud-arrow-down-fill"></i> Download the latest release.
+#### <i class="bi bi-cloud-arrow-down-fill"></i> Download the latest release
 Download the latest version of Blueprint onto your server by either downloading the latest release [from GitHub](https://github.com/BlueprintFramework/framework/releases/latest) or running the one-liner below (which will save the file as `release.zip`).
 
 ```bash
@@ -62,7 +62,7 @@ wget "$(curl -s https://api.github.com/repos/BlueprintFramework/framework/releas
 
 <br>
 
-#### <i class="bi bi-file-zip-fill"></i> Unarchive release.
+#### <i class="bi bi-file-zip-fill"></i> Extract release
 Unarchive the release you downloaded in the previous step in your Pterodactyl folder.
 
 ```bash
@@ -75,7 +75,7 @@ unzip release.zip
 
 <br>
 
-#### <i class="bi bi-gear-fill"></i> Configuration.
+#### <i class="bi bi-gear-fill"></i> Configuration
 This step allows Blueprint to function and know where itself and Pterodactyl are located and which permissions to use. Create a file called `.blueprintrc` inside of your Pterodactyl directory to begin.
 
 ```bash
@@ -93,7 +93,7 @@ USERSHELL="/bin/bash";' >> /path/to/pterodactyl/.blueprintrc
 
 <br>
 
-#### <i class="bi bi-robot"></i> Let Blueprint do the rest.
+#### <i class="bi bi-robot"></i> Let Blueprint do the rest
 All that's left is giving `blueprint.sh` execute permissions and running it. Blueprint will then do the necessary commands to operate correctly automatically.
 
 ```bash
