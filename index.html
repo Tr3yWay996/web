@@ -29,8 +29,18 @@
   <body data-bs-theme="dark">
 
     <!-- Desktop Navbar -->
-    <!--<div class="p-2 d-lg-inline d-none"></div>-->
-    <header class="p-3 mb-3 border-bottom fixed-top d-lg-inline d-none blueprint-navbar">
+    <div class="sticky-top start-0 w-100" style="top: -1000px;">
+      <div class="bg-dark-subtle p-3 text-center">
+        <b>After 2 years of Blueprint, we're going nonprofit!</b>
+        <i class="bi bi-dot"></i>
+        <a href="https://hcb.hackclub.com/donations/start/blueprint" target="_blank" class="link link-success">
+          Support our future
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <header class="p-3 mb-0 border-bottom sticky-top d-lg-block d-none blueprint-navbar">
       <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <a href="." class="d-flex align-items-center mb-2 me-3 mb-lg-0 link-body-emphasis text-decoration-none">
@@ -66,8 +76,7 @@
     </header>
 
     <!-- Mobile/Tablet Navbar -->
-    <!--<div class="p-2 d-lg-none d-inline"></div>-->
-    <nav class="navbar fixed-top d-lg-none d-inline blueprint-navbar-mobile">
+    <nav class="navbar sticky-top d-lg-none d-block blueprint-navbar-mobile">
       <div class="container-fluid">
         <a href="/" class="d-flex align-items-center mx-2 my-3 mb-lg-0 link-body-emphasis text-decoration-none"><img src=".assets/brand/retro.png" height="35" alt="" /></a>
         <button class="btn btn-secondary bg-dark-subtle border-0 nav-dropdown-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Toggle navigation">
