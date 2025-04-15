@@ -12,7 +12,7 @@
   </a>
 </div><br>
 
-# Creating custon web routes
+# Creating custom web routes
 <h4 class="fw-light">Add your own web routes accessable from everywhere within blueprint.</h4><br/>
 
 This guide provides a step-by-step overview on how to define custom web routes using a dedicated controller within a Blueprint extension.<br/><br/>
