@@ -18,5 +18,5 @@
 
 <div class="btn-group docs-navigator" role="group" aria-label="Navigation" style="float: right">
   <a href="?page=developing-extensions/Custom-controllers" class="btn btn-dark bg-light-subtle border-0 rounded-start-pill">Previous</a>
-  <a href="?page=developing-extensions/Dashboard-wrappers" class="btn btn-dark bg-light-subtle border-0 rounded-end-pill">Next</a>
+  <a href="?page=developing-extensions/Custom-table-and-migrations" class="btn btn-dark bg-light-subtle border-0 rounded-end-pill">Next</a>
 </div>
