@@ -66,3 +66,48 @@ fetch(a)
       console.error('btn-group element not found.');
     }
   }
+
+function changethepath() { // this is used to change path in code blocks
+  const dirPath = document.getElementById('dirPath').value.trim();
+  if (!dirPath) {
+    resetPaths();
+    return;
+  }
+  
+  const codeBlocks = document.querySelectorAll('pre code');
+  codeBlocks.forEach(block => {
+    if (!block.dataset.original) {
+      block.dataset.original = block.innerHTML || block.textContent;
+    }
+    
+    let content = block.dataset.original;
+    
+    if (content.includes('/path/to/pterodactyl')) {
+      if (block.innerHTML) {
+        block.innerHTML = content.replaceAll('/path/to/pterodactyl', dirPath);
+      } else {
+        block.textContent = content.replaceAll('/path/to/pterodactyl', dirPath);
+      }
+    }
+  });
+}
+
+function resetPaths() {
+  const codeBlocks = document.querySelectorAll('pre code');
+  codeBlocks.forEach(block => {
+    if (block.dataset.original) {
+      if (block.innerHTML) {
+        block.innerHTML = block.dataset.original;
+      } else {
+        block.textContent = block.dataset.original;
+      }
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const codeBlocks = document.querySelectorAll('pre code');
+  codeBlocks.forEach(block => {
+    block.dataset.original = block.innerHTML || block.textContent;
+  });
+});  // end code block editor thingy 

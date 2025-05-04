@@ -9,6 +9,14 @@ Want to run Blueprint through Docker instead? Take a peek at the official <a hre
   <h4><i class="bi bi-rocket-takeoff-fill"></i> Prepare for liftoff</h4>
   <p class="pb-3">Before we start running a bunch of commands, we need to prepare a couple things. This won't take long!</p>
 
+  <div class="bg-body rounded-3 p-3 mb-3">
+    <h5><i class="bi bi-folder2-open"></i> What's your Pterodactyl path?</h5>
+    <p class="mb-2 text-secondary"><small>We'll update the commands below to work for your specific installation</small></p>
+    <div class="input-group mb-3">
+      <input type="text" id="dirPath" class="form-control" placeholder="/path/to/pterodactyl" aria-label="Pterodactyl path" oninput="changethepath()">
+    </div>
+  </div>
+
   <div class="row">
     <!-- Node.js -->
     <div class="col col-12 col-md-6 pb-3">
@@ -33,7 +41,7 @@ apt-get install -y nodejs</code></pre>
       <p>Pterodactyl uses Yarn for managing it's node modules, which we'll need to install as well.</p>
       <pre><code class="language-bash">npm i -g yarn</code></pre>
       <p>Navigate to your Pterodactyl (usually <code>/var/www/pterodactyl</code>) and run the following command to initialize dependencies:</p>
-      <pre><code class="language-bash">cd /path/to/pterodactyl # Replace with actual path
+      <pre><code class="ptero-cmd language-bash">cd /path/to/pterodactyl
 yarn</code></pre>
     </div>
     <!-- Additional dependencies -->
