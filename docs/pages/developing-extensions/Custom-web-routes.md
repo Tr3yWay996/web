@@ -106,3 +106,8 @@ Route::get('/data', [ExtensionDashboardController::class, 'getData']);
   <i class="bi bi-globe mb-1 float-start fs-4"></i>
   <div class="ps-3 ms-3">For detailed route configuration, visit the <a href="https://laravel.com/docs/10.x/routing">Laravel routing documentation</a>.</div>
 </div><br/>
+
+<div class="btn-group docs-navigator" role="group" aria-label="Navigation" style="float: right">
+  <a href="?page=developing-extensions/React-components" class="btn btn-dark bg-light-subtle border-0 rounded-start-pill">Previous</a>
+  <a href="?page=developing-extensions/Packaging-extensions" class="btn btn-dark bg-light-subtle border-0 rounded-end-pill">Next</a>
+</div>
