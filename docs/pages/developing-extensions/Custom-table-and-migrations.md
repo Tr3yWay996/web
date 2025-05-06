@@ -15,7 +15,7 @@
 # Custom table and migrations
 <h4 class="fw-light">Add custom database tables to store user-specific or complex data structures.</h4><br/>
 
-While the [$blueprint library's](?page=documentation/$blueprint) `dbGet()` and `dbSet()` functions provide a convenient way to store extension-wide data, sometimes more granular control is needed—such as storing user-specific settings or complex datasets. This is where custom database tables and migrations come into play.
+While the [BlueprintExtensionLibrary](?page=documentation/$blueprint)'s `dbGet()` and `dbSet()` functions provide a convenient way to store extension-wide data, sometimes more granular control is needed—such as storing user-specific settings or complex datasets. This is where custom database tables and migrations come into play.
 
 <br>
 
@@ -29,10 +29,10 @@ database:
   migrations: "migrations"
 ```
 
-<div class="p-2 border-start border-4 mb-5">
-    <i class="bi bi-info-circle me-1 text-primary"></i>
-    You define a directory, <b>not a single file</b>, because migrations are versioned and only run once. Future updates to your schema should be handled by additional migration files.
-</div>
+<div class="alert mt-2 rounded-4 border" role="alert">
+  <i class="bi bi-info-circle mb-1 float-start fs-4"></i>
+  <div class="ps-3 ms-3">You define a directory, <b>not a single file</b>, because migrations are versioned and only run once. Future updates to your schema should be handled by additional migration files.</div>
+</div><br/>
 
 ### Migration file structure
 
@@ -97,10 +97,10 @@ In most cases, such as this example, you simply remove the table using `Schema::
 
 This structure makes database migrations both forward-compatible (via `up()`) and reversible (via `down()`), providing a clean way to version and maintain schema changes over time.
 
-<div class="p-2 border-start border-4 mb-5">
-    <i class="bi bi-globe text-primary me-1"></i>
-    For more information about migrations, take a look inside the <a href="https://laravel.com/docs/10.x/migrations">Laravel's migration documentation</a>.
-</div>
+<div class="alert mt-2 rounded-4 border" role="alert">
+  <i class="bi bi-globe mb-1 float-start fs-4"></i>
+  <div class="ps-3 ms-3">For more information about migrations, take a look inside the <a href="https://laravel.com/docs/10.x/migrations">Laravel's migration documentation</a>.</div>
+</div><br/>
 
 ## Reading data from your table
 
