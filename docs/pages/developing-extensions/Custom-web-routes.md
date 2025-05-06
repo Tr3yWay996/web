@@ -36,10 +36,10 @@ requests:
 - `app`: Points to the folder containing your controller classes.
 - `web`: Defines the file responsible for registering your web routes.
 
-<div class="p-2 border-start border-4 mb-5">
-    <i class="bi bi-journal-text text-primary me-1"></i>
-    For more details on configuration, refer to the <a href="?page=documentation/confyml">conf.yml documentation</a>.
-</div>
+<div class="alert mt-2 rounded-4 border" role="alert">
+  <i class="bi bi-journal-text mb-1 float-start fs-4"></i>
+  <div class="ps-3 ms-3">For more details on configuration, refer to the <a href="?page=documentation/confyml">conf.yml documentation</a>.</div>
+</div><br/>
 
 ### **Creating a controller**
 
@@ -71,13 +71,15 @@ class ExtensionDashboardController extends Controller
 ```
 - This controller defines a `getData()` method that returns a JSON response.
 
-<div class="p-2 border-start border-4 mb-5">
-    <i class="bi bi-globe text-primary me-1"></i>
-    For advanced controller techniques, see the <a href="https://laravel.com/docs/10.x/controllers">Laravel controller documentation</a>.
-    <br/>
-    <i class="bi bi-globe text-primary me-1"></i>
-    For different response types (redirects, files, etc.), refer to <a href="https://laravel.com/docs/10.x/responses">Laravel HTTP responses documentation</a>.
-</div>
+<div class="alert mt-2 rounded-4 border" role="alert">
+  <div>
+    <i class="bi bi-globe mb-1 float-start fs-4"></i>
+    <div class="ps-3 ms-3">For advanced controller techniques, see the <a href="https://laravel.com/docs/10.x/controllers">Laravel controller documentation</a>.</div>
+  </div>
+  <div>
+  <div class="ps-3 ms-3">For different response types (redirects, files, etc.), refer to <a href="https://laravel.com/docs/10.x/responses">Laravel HTTP responses documentation</a>.</div>
+  </div>
+</div><br/>
 
 ### **Registering routes**
 
@@ -95,10 +97,12 @@ Route::get('/data', [ExtensionDashboardController::class, 'getData']);
 - All routes registered in this file are automatically prefixed with `/extensions/{identifier}`.
 - This example registers a new GET route accessible at `/extensions/{identifier}/data` and connects it to the `getData` function from `ExtensionDashboardController`.
 
-<div class="p-2 border-start border-4 mb-5">
-    <i class="bi bi-exclamation-diamond text-warning me-1"></i>
-    Be sure to update the second <code>use</code> statement to match the correct namespace and class name of your controller.
-    <br/>
-    <i class="bi bi-globe text-primary me-1"></i>
-    For detailed route configuration, visit the <a href="https://laravel.com/docs/10.x/routing">Laravel routing documentation</a>.
+<div class="alert mt-2 rounded-4 border" role="alert">
+  <i class="bi bi-exclamation-diamond text-warning mb-1 float-start fs-4"></i>
+  <div class="ps-3 ms-3">Be sure to update the second <code>use</code> statement to match the correct namespace and class name of your controller.</div>
 </div>
+
+<div class="alert mt-2 rounded-4 border" role="alert">
+  <i class="bi bi-globe mb-1 float-start fs-4"></i>
+  <div class="ps-3 ms-3">For detailed route configuration, visit the <a href="https://laravel.com/docs/10.x/routing">Laravel routing documentation</a>.</div>
+</div><br/>
