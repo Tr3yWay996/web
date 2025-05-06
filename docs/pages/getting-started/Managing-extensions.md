@@ -12,7 +12,7 @@
   </a>
 </div><br>
 
-# Manage Extensions
+# Managing Extensions
 <h4 class="fw-light">Install, remove, and configure Blueprint extensions.</h4><br/>
 
 <div class="alert mt-2 rounded-4 border" role="alert">
