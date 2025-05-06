@@ -15,7 +15,7 @@
 # Admin configuration
 <h4 class="fw-light">Add configuration options to your extension's admin page.</h4><br/>
 
-This example demonstrates how to create an admin controller that loads and saves extension-specific configuration values using the `$blueprint` database utility. It also includes input validation via a custom form request.
+This example demonstrates how to create an admin controller that loads and saves extension-specific configuration values using the `BlueprintExtensionLibrary` database utility. It also includes input validation via a custom form request.
 
 <br/>
 
@@ -100,10 +100,10 @@ public function index(): View
 The `$blueprint->dbGet()` function is used to retrieve values from the database. If no value is found, the default is applied and saved using dbSet().
 At the end of the function, the Blade view is returned along with the configuration values.
 
-<div class="p-2 border-start border-4 mb-5">
-    <i class="bi bi-journal-text text-primary me-1"></i>
-    For more information about Blueprints database helper functions, take a look at the <a href="?page=documentation/$blueprint">$blueprint documentation</a>
-</div>
+<div class="alert mt-2 rounded-4 border" role="alert">
+  <i class="bi bi-journal-text mb-1 float-start fs-4"></i>
+  <div class="ps-3 ms-3">For more information about Blueprints database helper functions, take a look at the <a href="?page=documentation/$blueprint">BlueprintExtensionLibrary documentation</a>.</div>
+</div><br/>
 
 ### Saving configuration
 
@@ -155,10 +155,10 @@ class {identifier}SettingsFormRequest extends AdminFormRequest
 
 - `attributes()` provides user-friendly names for use in validation error messages.
 
-<div class="p-2 border-start border-4 mb-5">
-    <i class="bi bi-globe text-primary me-1"></i>
-    For more information about validation rules, see <a href="https://laravel.com/docs/10.x/validation#available-validation-rules">Laravel’s validation documentation</a>.
-</div>
+<div class="alert mt-2 rounded-4 border" role="alert">
+  <i class="bi bi-globe mb-1 float-start fs-4"></i>
+  <div class="ps-3 ms-3">For more information about validation rules, see <a href="https://laravel.com/docs/10.x/validation#available-validation-rules">Laravel’s validation documentation</a>.</div>
+</div><br/>
 
 ## View
 
