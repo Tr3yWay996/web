@@ -48,7 +48,7 @@ Below is a minimal example showing how a wrapper can be used to conditionally re
 
 ```php
 @php
-  $isEnabled = $blueprint->dbGet('coolextension', 'enabled');
+  $isEnabled = $blueprint->dbGet('spaceinvaders', 'enabled');
 @endphp
 
 @if($isEnabled)
@@ -58,11 +58,11 @@ Below is a minimal example showing how a wrapper can be used to conditionally re
 @endif
 ```
 
-This checks the `enabled` setting of the `coolextension` extension and displays a corresponding message. While this example is simple, it demonstrates how you can embed logic using the `BlueprintExtensionLibrary` within your Blade wrappers.
+This checks the `enabled` setting of the `spaceinvaders` extension and displays a corresponding message. While this example is simple, it demonstrates how you can embed logic using the `BlueprintExtensionLibrary` within your Blade wrappers.
 
 <div class="alert mt-2 rounded-4 border" role="alert">
   <i class="bi bi-globe mb-1 float-start fs-4"></i>
-  <div class="ps-3 ms-3">For more information about blade views, visit the <a href="https://laravel.com/docs/10.x/blade">Laravel’s blade template documentation</a>.</div>
+  <div class="ps-3 ms-3">For more information about blade views, visit <a href="https://laravel.com/docs/10.x/blade">Laravel’s blade template documentation</a>.</div>
 </div><br/>
 
 <div class="btn-group docs-navigator" role="group" aria-label="Navigation" style="float: right">
