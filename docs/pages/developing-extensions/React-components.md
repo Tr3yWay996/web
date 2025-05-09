@@ -91,5 +91,5 @@ With the code mentioned above, you've added the `Content.tsx` component into the
 
 <div class="btn-group docs-navigator" role="group" aria-label="Navigation" style="float: right">
   <a href="?page=developing-extensions/Dashboard-wrappers" class="btn btn-dark bg-light-subtle border-0 rounded-start-pill">Previous</a>
-  <a href="?page=developing-extensions/Packaging-extensions" class="btn btn-dark bg-light-subtle border-0 rounded-end-pill">Next</a>
+  <a href="?page=developing-extensions/Custom-web-routes" class="btn btn-dark bg-light-subtle border-0 rounded-end-pill">Next</a>
 </div>
