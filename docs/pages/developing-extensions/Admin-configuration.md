@@ -15,7 +15,7 @@
 # Admin configuration
 <h4 class="fw-light">Add configuration options to your extension's admin page.</h4><br/>
 
-This example demonstrates how to create an admin controller that loads and saves extension-specific configuration values using the `BlueprintExtensionLibrary` database utility. It also includes input validation via a custom form request.
+This example demonstrates how to create an admin controller that loads and saves extension-specific configuration values using the [BlueprintExtensionLibrary](?page=documentation/$blueprint) database utility. It also includes input validation via a custom form request.
 
 <br/>
 
@@ -97,7 +97,7 @@ public function index(): View
 
 ```
 
-The `$blueprint->dbGet()` function is used to retrieve values from the database. If no value is found, the default is applied and saved using dbSet().
+The `$blueprint->dbGet()` function is used to retrieve values from the database. If no value is found, the default is applied and saved using `dbSet()`.
 At the end of the function, the Blade view is returned along with the configuration values.
 
 <div class="alert mt-2 rounded-4 border" role="alert">
@@ -135,8 +135,8 @@ class {identifier}SettingsFormRequest extends AdminFormRequest
     public function rules(): array
     {
         return [
-            'theme' => 'string',
-            'customName' => 'string',
+            'theme' => ['string', 'in:1,2,3'],
+            'customName' => ['string'],
         ];
     }
 
