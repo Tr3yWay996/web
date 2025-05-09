@@ -13,7 +13,7 @@
 </div><br>
 
 # Creating custom web routes
-<h4 class="fw-light">Add your own web routes accessible from everywhere within blueprint.</h4><br/>
+<h4 class="fw-light">Add your own web routes accessible from everywhere within Blueprint.</h4><br/>
 
 This guide provides a step-by-step overview on how to define custom web routes using a dedicated controller within a Blueprint extension.<br/><br/>
 
@@ -34,12 +34,24 @@ requests:
 ```
 
 - `app`: Points to the folder containing your controller classes.
-- `web`: Defines the file responsible for registering your web routes.
+- `routers:web`: Defines the file responsible for registering your web routes.
 
 <div class="alert mt-2 rounded-4 border" role="alert">
   <i class="bi bi-journal-text mb-1 float-start fs-4"></i>
   <div class="ps-3 ms-3">For more details on configuration, refer to the <a href="?page=documentation/confyml">conf.yml documentation</a>.</div>
-</div><br/>
+</div>
+
+Depending on your use case, you may also define routes using `routers:application` or `routers:client`. Unlike `web` routes, which are publicly accessible, even to unauthenticated users, these route types are protected:
+
+- `client`: Can only be accessed by logged in user and via API key.
+- `application`: Can only be accessed via API key. Exact permissions can be defined.
+
+Each route also has a different url prefix:
+
+- `application`: `/api/application/extensions/{identifier}`
+- `client`: `/api/client/extensions/{identifier}`
+- `web`: `/extensions/{identifier}`
+
 
 ### **Creating a controller**
 
