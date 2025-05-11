@@ -20,6 +20,32 @@
   <div class="ps-3 ms-3">Blueprint extensions must be installed, updated, built and removed via the command line. Shell access is required to perform these actions.</div>
 </div><br/>
 
+### **Upload Extensions**
+
+<div class="alert mt-2 rounded-4 border" role="alert">
+  <i class="bi bi-exclamation-diamond mb-1 text-info float-start fs-4"></i>
+  <div class="ps-3 ms-3">Before wanting to install any blueprint extensions, you first need to upload the files to your server where Blueprint is installed on by using an SFTP client program.</div>
+</div><br/>
+
+<details class="mb-3">
+  <summary class="fw-bold cursor-pointer">
+    <i class=Upload-Dropdown></i> How to upload extensions using SFTP clients (Only if you don't know already know that.)
+  </summary>
+  <div class="ps-3 pt-3">
+<p>Before wanting to install any blueprint extensions you need to upload them to your server where your pterodactyl panel with blueprint is running on.</p>
+
+<p>For that you can use a software called <strong><a href="https://filezilla-project.org/">FileZilla</a></strong>.</p>
+
+<p>If it is your first time using these kind of tools (SFTP clients), bellow is a simple guide of the connection process to your remote server. <strong><i>These steps are not including the installation process of FileZilla on your platform, only the connection process.</i></strong></p>
+
+<p>On the main window you will see a file manager, now fill the information needed in the "Host:your-server-IP", "Username:root" "Password:your-root-user-password", "Port:22" and click "Quickconnect".</p>
+<p>Welcome to your remote server storage, now go over your pterodactyl path (default: /path/to/pterodactyl) and upload your extension file and enjoy your new extension!.
+
+<p>An SSH key is a lot more secure and is preferred over a simple password but will still work with an password</p>
+
+  </div>
+</details>
+
 ### **Install Exstensions**
 
 <div class="alert mt-2 rounded-4 border" role="alert">
