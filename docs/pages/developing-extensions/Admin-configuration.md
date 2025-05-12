@@ -15,7 +15,7 @@
 # Admin configuration
 <h4 class="fw-light">Add configuration options to your extension's admin page.</h4><br/>
 
-This example demonstrates how to create an admin controller that loads and saves extension-specific configuration values using the [BlueprintExtensionLibrary](?page=documentation/$blueprint) database utility. It also includes input validation via a custom form request.
+This example demonstrates how to create an admin controller that loads and saves extension-specific configuration values using the [BlueprintExtensionLibrary](?page=documentation/$blueprint) database utility. It also covers how to define the corresponding migration to initialize default configuration values, along with input validation through a custom form request.
 
 <br/>
 
@@ -62,34 +62,24 @@ public function __construct(
 
 <br/>
 
-### Loading configuration and setting defaults
+### Loading configuration
 
-To handle configuration, extend your `index()` function to retrieve the current values (or fall back to defaults if none exist). 
+To handle configuration, extend your `index()` function to retrieve the current values. 
 
-For this example, we will add the configuration `theme` and `customName`:
+For this example, we will add the configuration `theme`, `customName` and `count`:
 
 ```php
 public function index(): View
 {
     $theme = $this->blueprint->dbGet('{identifier}', 'theme');
     $customName = $this->blueprint->dbGet('{identifier}', 'customName');
-
-    $defaulttheme = 0;
-    $defaultCustomName = "superuser";
-
-    if ($theme == "") {
-        $this->blueprint->dbSet('{identifier}', 'theme', $defaulttheme);
-        $theme = $defaulttheme;
-    }
-    if ($customName == "") {
-        $this->blueprint->dbSet('{identifier}', 'customName', $defaultCustomName;
-        $customName = $defaultCustomName;
-    }
+    $count = $this->blueprint->dbGet('{identifier}', 'count');
 
     return $this->view->make(
       'admin.extensions.{identifier}.index', [
         'theme' => $theme,
         'customName' => $customName,
+        'count' => $count,
         'root' => "/admin/extensions/{identifier}",
         'blueprint' => $this->blueprint,
     ]
@@ -97,13 +87,13 @@ public function index(): View
 
 ```
 
-The `$blueprint->dbGet()` function is used to retrieve values from the database. If no value is found, the default is applied and saved using `dbSet()`.
+The `$blueprint->dbGet()` function is used to retrieve values from the database.
 At the end of the function, the Blade view is returned along with the configuration values.
 
 <div class="alert mt-2 rounded-4 border" role="alert">
   <i class="bi bi-journal-text mb-1 float-start fs-4"></i>
   <div class="ps-3 ms-3">For more information about Blueprints database helper functions, take a look at the <a href="?page=documentation/$blueprint">BlueprintExtensionLibrary documentation</a>.</div>
-</div><br/>
+</div><br>
 
 ### Saving configuration
 
@@ -137,6 +127,7 @@ class {identifier}SettingsFormRequest extends AdminFormRequest
         return [
             'theme' => ['string', 'in:1,2,3'],
             'customName' => ['string'],
+            'count' => ['numeric'],
         ];
     }
 
@@ -144,7 +135,8 @@ class {identifier}SettingsFormRequest extends AdminFormRequest
     {
         return [
             'theme' => 'Theme',
-            'customName' => 'Custom Name,
+            'customName' => 'Custom Name',
+            'count' => 'Count,
         ];
     }
 }
@@ -159,6 +151,54 @@ class {identifier}SettingsFormRequest extends AdminFormRequest
   <i class="bi bi-globe mb-1 float-start fs-4"></i>
   <div class="ps-3 ms-3">For more information about validation rules, see <a href="https://laravel.com/docs/10.x/validation#available-validation-rules">Laravel’s validation documentation</a>.</div>
 </div><br/>
+
+
+## Defining default configuration values with migrations
+
+
+<div class="alert mt-2 rounded-4 border" role="alert">
+  <i class="bi bi-exclamation-diamond text-warning mb-1 float-start fs-4"></i>
+  <div class="ps-3 ms-3">This section provides a basic introduction to migrations. For a more in-depth understanding, as well as how to actual define migrations in Blueprint, refer to the <a href="?page=developing-extensions/Custom-table-and-migrations">Custom Table and Migrations</a> guide before continuing.</div>
+</div><br>
+
+To define the structure of your extension's configuration and register default values, you can use a database migration. This ensures your settings are initialized correctly when the extension is installed.
+
+[Create a migration file](?page=developing-extensions/Custom-table-and-migrations) and include the following logic:
+
+```php
+<?php
+
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Migrations\Migration;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        DB::table('settings')->insert([
+            'key' => '{identifier}::theme',
+            'value' => serialize('0'),
+        ],
+        [
+            'key' => '{identifier}::customName',
+            'value' => serialize('superuser'),
+        ],
+        [
+            'key' => '{identifier}::count',
+            'value' => 10,
+        ]);
+    }
+
+    public function down(): void
+    {
+        DB::table('settings')->where('key', 'like', '{identifier}::%')->delete();
+    }
+};
+```
+
+The `up` function inserts default key-value pairs into the `settings` table. Keys must be prefixed with `{identifier}::` to ensure proper namespacing for your extension. Values can be stored as plain data types; however, **strings must be serialized using PHP’s `serialize()` function**.
+
+The `down` function reverses these changes by removing all settings entries that match your extension’s key prefix.
 
 ## View
 
@@ -183,7 +223,7 @@ This is because [HTML Forms do not support this request method](https://laravel.
 
 ### Form fields
 
-To go along with the current example, we add a text `input` for `customName` and a `dropdown` for `theme` to the `form`:
+To go along with the current example, we add a text `input` for `customName`, a `dropdown` for `theme` and a number `input` for `count` to the `form`:
 ```html
 <form id="config-form" action="" method="POST">
   <input 
@@ -199,6 +239,15 @@ To go along with the current example, we add a text `input` for `customName` and
     <option value="1" @if($theme == "1") selected @endif>Theme 2</option>
     <option value="2" @if($theme == "2") selected @endif>Theme 3</option>
   </select>
+
+  <input 
+    type="number"
+    name="count"
+    id="count"
+    value="{{ $count }}"
+    placeholder="10"
+    class="form-control"
+  />
 
   {{ csrf_field() }}
   <button type="submit" name="_method" value="PATCH" class="btn btn-primary">Save Changes</button>
