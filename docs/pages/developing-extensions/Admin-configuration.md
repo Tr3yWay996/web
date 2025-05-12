@@ -35,7 +35,6 @@ namespace Pterodactyl\Http\Controllers\Admin\Extensions\{identifier};
 use Illuminate\View\View;
 use Illuminate\View\Factory as ViewFactory;
 use Pterodactyl\Http\Controllers\Controller;
-use Pterodactyl\Contracts\Repository\SettingsRepositoryInterface;
 use Pterodactyl\Http\Requests\Admin\AdminFormRequest;
 use Illuminate\Http\RedirectResponse;
 
@@ -46,7 +45,6 @@ Most of these classes should be familiar from the [custom controller](?page=deve
 
 Here’s what’s new:
 
-- `SettingsRepositoryInterface`: Used to persist settings to the database.
 - `AdminFormRequest`: Handles form input validation.
 - `RedirectResponse`: Used to return the user back to the admin page after saving changes.
 
@@ -103,7 +101,7 @@ To save the configuration, add an `update()` function to your controller. This w
 public function update({identifier}SettingsFormRequest $request): RedirectResponse
 {
     foreach ($request->normalize() as $key => $value) {
-        $this->settings->set('{identifier}::' . $key, $value);
+        $this->blueprint->dbSet("{identifier}", $key, $value);
     }
 
     return redirect()->route('admin.extensions.{identifier}.index');
@@ -111,7 +109,7 @@ public function update({identifier}SettingsFormRequest $request): RedirectRespon
 
 ```
 
-The `update()` function accepts a validated form request and saves each setting using the `SettingsRepositoryInterface`. At the end you will be redirect to the `index()` function to refresh all the data on your extension's admin page to check if everything got saved correctly.
+The `update()` function accepts a validated form request and saves each setting using the `dbSet()` function of the [BlueprintExtensionLibrary](?page=documentation/$blueprint). At the end you will be redirect to the `index()` function to refresh all the data on your extension's admin page to check if everything got saved correctly.
 
 <br/>
 
@@ -170,22 +168,18 @@ To define the structure of your extension's configuration and register default v
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Migrations\Migration;
+use Pterodactyl\BlueprintFramework\Libraries\ExtensionLibrary\Admin\BlueprintAdminLibrary as BlueprintExtensionLibrary;
 
 return new class extends Migration
 {
     public function up(): void
     {
-        DB::table('settings')->insert([
-            'key' => '{identifier}::theme',
-            'value' => serialize('0'),
-        ],
-        [
-            'key' => '{identifier}::customName',
-            'value' => serialize('superuser'),
-        ],
-        [
-            'key' => '{identifier}::count',
-            'value' => 10,
+        $blueprint = app(BlueprintExtensionLibrary::class);
+
+        $blueprint->dbSetMany("{identifier}", [
+            'theme' => '0',
+            'customName' => 'superuser',
+            'count' => 10,
         ]);
     }
 
@@ -196,7 +190,7 @@ return new class extends Migration
 };
 ```
 
-The `up` function inserts default key-value pairs into the `settings` table. Keys must be prefixed with `{identifier}::` to ensure proper namespacing for your extension. Values can be stored as plain data types; however, **strings must be serialized using PHP’s `serialize()` function**.
+The `up` function inserts default key-value pairs via <a href="?page=documentation/$blueprint">BlueprintExtensionLibrary</a>'s `dbSetMany()` function.
 
 The `down` function reverses these changes by removing all settings entries that match your extension’s key prefix.
 
