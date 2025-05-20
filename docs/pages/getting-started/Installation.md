@@ -42,7 +42,7 @@ apt-get install -y nodejs</code></pre>
       <p>Pterodactyl uses Yarn for managing it's node modules, which we'll need to install as well.</p>
       <pre><code class="language-bash">npm i -g yarn</code></pre>
       <p>Navigate to your Pterodactyl (usually <code>/var/www/pterodactyl</code>) and run the following command to initialize dependencies:</p>
-      <pre><code class="ptero-cmd language-bash">cd /var/www/pterodactyl #Default pterodactyl path
+      <pre><code class="ptero-cmd language-bash">cd /var/www/pterodactyl
 yarn</code></pre>
     </div>
     <!-- Additional dependencies -->
@@ -76,7 +76,7 @@ Unarchive the release you downloaded in the previous step in your Pterodactyl fo
 
 ```bash
 mv release.zip /var/www/pterodactyl/release.zip
-cd /var/www/pterodactyl  #Default pterodactyl path
+cd /var/www/pterodactyl
 unzip release.zip
 ```
 
